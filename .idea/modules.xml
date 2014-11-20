@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/business/business.iml" filepath="$PROJECT_DIR$/business/business.iml" />
+      <module fileurl="file://$PROJECT_DIR$/business/business-Web/business-Web.iml" filepath="$PROJECT_DIR$/business/business-Web/business-Web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/business/business-business/business-business.iml" filepath="$PROJECT_DIR$/business/business-business/business-business.iml" />
+      <module fileurl="file://$PROJECT_DIR$/fundamental/fundamental.iml" filepath="$PROJECT_DIR$/fundamental/fundamental.iml" />
+      <module fileurl="file://$PROJECT_DIR$/fundamental/fundamental-config/fundamental-config.iml" filepath="$PROJECT_DIR$/fundamental/fundamental-config/fundamental-config.iml" />
+      <module fileurl="file://$PROJECT_DIR$/fundamental/fundamental-dataSource/fundamental-dataSource.iml" filepath="$PROJECT_DIR$/fundamental/fundamental-dataSource/fundamental-dataSource.iml" />
+      <module fileurl="file://$PROJECT_DIR$/project.iml" filepath="$PROJECT_DIR$/project.iml" />
+    </modules>
+  </component>
+</project>
+
