@@ -14,6 +14,8 @@
     <modules>
         <module>fundamental-config</module>
         <module>fundamental-dataSource</module>
+        <module>fundamental-logger</module>
+        <module>fundamental-util</module>
     </modules>
 
 

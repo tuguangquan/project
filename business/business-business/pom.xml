@@ -17,24 +17,20 @@
          <dependency>
              <groupId>org.springframework</groupId>
              <artifactId>spring-context</artifactId>
-             <version>4.0.2.RELEASE</version>
          </dependency>
          <dependency>
              <groupId>org.springframework</groupId>
              <artifactId>spring-core</artifactId>
-             <version>4.0.2.RELEASE</version>
          </dependency>
 
          <dependency>
              <groupId>org.springframework</groupId>
              <artifactId>spring-jdbc</artifactId>
-             <version>4.0.2.RELEASE</version>
          </dependency>
 
          <dependency>
              <groupId>org.springframework</groupId>
              <artifactId>spring-beans</artifactId>
-             <version>4.0.2.RELEASE</version>
          </dependency>
          <dependency>
              <groupId>org.springframework</groupId>
@@ -44,7 +40,6 @@
          <dependency>
              <groupId>javax.servlet</groupId>
              <artifactId>servlet-api</artifactId>
-             <version>2.5</version>
          </dependency>
          <dependency>
              <groupId>org.glassfish.jersey.containers</groupId>
@@ -55,20 +50,17 @@
         <dependency>
             <groupId>org.mybatis</groupId>
             <artifactId>mybatis</artifactId>
-            <version>3.2.3</version>
         </dependency>
 
         <dependency>
             <groupId>org.mybatis</groupId>
             <artifactId>mybatis-spring</artifactId>
-            <version>1.2.2</version>
         </dependency>
 
         <!-- spring jersey -->
         <dependency>
             <groupId>org.glassfish.jersey.ext</groupId>
             <artifactId>jersey-spring3</artifactId>
-            <version>2.5.1</version>
         </dependency>
 
         <dependency>
@@ -76,7 +68,16 @@
             <artifactId>fundamental-datasource</artifactId>
             <version>${project.version}</version>
         </dependency>
-
+         <dependency>
+             <groupId>project</groupId>
+             <artifactId>fundamental-logger</artifactId>
+             <version>${project.version}</version>
+         </dependency>
+         <dependency>
+             <groupId>project</groupId>
+             <artifactId>fundamental-util</artifactId>
+             <version>${project.version}</version>
+         </dependency>
         <dependency>
             <groupId>org.springframework.security</groupId>
             <artifactId>spring-security-core</artifactId>
@@ -87,7 +88,6 @@
         <dependency>
             <groupId>org.springframework.security</groupId>
             <artifactId>spring-security-web</artifactId>
-            <version>3.2.0.RELEASE</version>
         </dependency>
 
     </dependencies>

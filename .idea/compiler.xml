@@ -28,8 +28,9 @@
         <module name="businessWeb" />
         <module name="fundamental-config" />
         <module name="fundamental-dataSource" />
+        <module name="fundamental-logger" />
+        <module name="fundamental-util" />
       </profile>
     </annotationProcessing>
   </component>
 </project>
-

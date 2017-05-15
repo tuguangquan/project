@@ -10,6 +10,7 @@ import org.whut.seis.business.entity.User;
 import org.whut.seis.business.service.AuthorityService;
 import org.whut.seis.business.service.UserAuthorityService;
 import org.whut.seis.business.service.UserService;
+import util.json.JsonResultUtils;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.ws.rs.*;
@@ -72,7 +73,7 @@ public class UserServiceWeb {
             return "ERROR";
         }
         // 新增操作时，返回操作状态和状态码给客户端，数据区是为空的
-        return user.getPassword();
+        return JsonResultUtils.getObjectResultByStringAsDefault(user, JsonResultUtils.Code.SUCCESS);
     }
     @Produces( MediaType.APPLICATION_JSON + ";charset=UTF-8")
     @Path("/currentUser")
