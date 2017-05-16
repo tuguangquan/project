@@ -5,6 +5,7 @@
   </component>
   <component name="FrameworkDetectionExcludesConfiguration">
     <file type="web" url="file://$PROJECT_DIR$/business/business-Web" />
+    <file type="web" url="file://$PROJECT_DIR$/taojinke/taojinke-web" />
   </component>
   <component name="IdProvider" IDEtalkID="BE6C78C93911FA01BD78431943A6C7DE" />
   <component name="MavenProjectsManager">

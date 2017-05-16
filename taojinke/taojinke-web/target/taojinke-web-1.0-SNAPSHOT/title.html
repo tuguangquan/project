@@ -1,0 +1,70 @@
+<style type="text/css">
+    #title{
+        width:100%;
+        text-align: center;
+        font-size: 30px;
+        background-image: url("images/header_bg.jpg");
+        height: 68px;
+        line-height: 68px;
+    }
+
+    #userInfo{
+        position: absolute;
+        bottom: 0;
+        right: 5px;
+        font-size: 14px;
+        display: none;
+    }
+
+
+    #userInfo div{
+       float: left;
+    }
+    #userNameDiv
+    {
+        cursor: pointer;
+    }
+    a{
+       text-decoration: none;
+        color: #000000;
+    }
+</style>
+<script>
+    var currentUser = null;
+    $(document).ready(function(){
+        $.get($.URL.user.currentUserInfo,null,userInfoCallback,"json");
+    });
+
+    function userInfoCallback(data){
+        if(data!=null){
+
+            currentUser = data.data;
+
+            var userName = currentUser.name;
+            if(userName==null){
+                userName = currentUser.userName;
+            }
+
+            $("#userInfo").show();
+            $("#userNameDiv").html('<a href="userUploadImage.jsp" target="_blank">'+userName+'</a>');
+
+            if(data.data.userRole.indexOf("ROLE_ADMIN")>-1){
+                $("#adminLinkDiv").show();
+            }
+
+            if(data.data.appName!=null && data.data.appName!=""){
+               $("#titleLink").html(data.data.appName);
+            }
+
+            $("#userImage").attr("src",currentUser.image);
+        }
+    }
+</script>
+<div id="title"><a href="index.jsp" id="titleLink">淘金客</a></div>
+<div id="userInfo">
+    <div>欢迎您，</div>
+    <div id="userNameDiv"></div>
+    <div id="adminLinkDiv" style="display: none">|<a href="admin.html">管理后台</a></div>
+    <div id="logoutDiv">|<a href="logout">安全退出</a></div>
+</div>
+

@@ -34,7 +34,17 @@
     <dependencies>
         <dependency>
             <groupId>project</groupId>
-            <artifactId>business-business</artifactId>
+            <artifactId>business-app</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>project</groupId>
+            <artifactId>business-menu</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>project</groupId>
+            <artifactId>business-user</artifactId>
             <version>${project.version}</version>
         </dependency>
         <dependency>

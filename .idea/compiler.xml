@@ -22,15 +22,22 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
-        <module name="business-business" />
+        <module name="business-app" />
+        <module name="business-menu" />
+        <module name="business-user" />
         <module name="business-Web" />
         <module name="business-web" />
         <module name="businessWeb" />
         <module name="fundamental-config" />
         <module name="fundamental-dataSource" />
+        <module name="fundamental-exception" />
         <module name="fundamental-logger" />
+        <module name="fundamental-orm" />
         <module name="fundamental-util" />
+        <module name="taojinke-business" />
+        <module name="taojinke-web" />
       </profile>
     </annotationProcessing>
   </component>
 </project>
+

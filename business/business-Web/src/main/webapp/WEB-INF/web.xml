@@ -59,7 +59,7 @@
         <servlet-class>org.glassfish.jersey.servlet.ServletContainer</servlet-class>
         <init-param>
             <param-name>jersey.config.server.provider.packages</param-name>
-            <param-value>org.whut.seis.business</param-value>
+            <param-value>org.kmd.platform.business</param-value>
         </init-param>
     </servlet>
 
