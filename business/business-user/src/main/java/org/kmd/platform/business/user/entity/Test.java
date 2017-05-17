@@ -2,7 +2,7 @@ package org.kmd.platform.business.user.entity;
 
 /**
  * Created with IntelliJ IDEA.
- * User: choumiaoer
+ * User: tuguangquan
  * Date: 14-3-27
  * Time: 下午9:37
  * To change this template use File | Settings | File Templates.

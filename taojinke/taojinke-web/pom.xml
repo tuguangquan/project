@@ -70,6 +70,11 @@
             <version>${project.version}</version>
         </dependency>
         <dependency>
+            <groupId>project</groupId>
+            <artifactId>taojinke-business</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-context</artifactId>
             <version>4.0.2.RELEASE</version>

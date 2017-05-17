@@ -7,6 +7,7 @@
     http://www.springframework.org/schema/security
     http://www.springframework.org/schema/security/spring-security-3.2.xsd">
 
+    <http pattern="/index.jsp" security="none"/>
     <!-- 以下文件不检查权限 -->
     <http auto-config='true'>
         <custom-filter before="FILTER_SECURITY_INTERCEPTOR" ref="myFilter" />
