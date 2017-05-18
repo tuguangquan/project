@@ -33,11 +33,17 @@ public class AgentInfoService {
     public List<AgentInfo> list(){
         return mapper.findByCondition(new HashMap<String, Object>());
     }
-    public AgentInfo getIdByAppID(String appID){
+    public AgentInfo getAgentInfoByAppID(String appID){
         if(appID==null || appID.trim().equals("")){
             return null;
         }
-        return mapper.getIdByAppID(appID);
+        return mapper.getAgentInfoByAppID(appID);
+    }
+    public AgentInfo getAgentInfoByAgentId(String agentId){
+        if(agentId==null || agentId.trim().equals("")){
+            return null;
+        }
+        return mapper.getAgentInfoByAgentId(agentId);
     }
 
 }

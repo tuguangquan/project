@@ -10,10 +10,14 @@ import javax.net.ssl.HttpsURLConnection;
 import javax.net.ssl.SSLContext;
 import javax.net.ssl.SSLSocketFactory;
 import javax.net.ssl.TrustManager;
-import java.util.Date;
-import java.util.Map;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
+import java.util.Date;
+import java.util.List;
+import java.util.Map;
+
+import net.sf.json.JSONArray;
 import net.sf.json.JSONException;
 import net.sf.json.JSONObject;
 import org.kmd.platform.business.taojinbao.util.AccessToken;
@@ -27,10 +31,11 @@ import org.slf4j.LoggerFactory;
  * Created by Administrator on 2017/5/18 0018.
  */
 public class WeiXinService {
-    private static Logger log = LoggerFactory.getLogger(WeiXinService.class);
-    public static String menu_create_url = "https://api.weixin.qq.com/cgi-bin/menu/create?access_token=ACCESS_TOKEN";
-    public final static String access_token_url = "https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=APPID&secret=APPSECRET";
 
+    private static Logger log = LoggerFactory.getLogger(WeiXinService.class);
+    public final static String menu_create_url = "https://api.weixin.qq.com/cgi-bin/menu/create?access_token=ACCESS_TOKEN";
+    public final static String access_token_url = "https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=APPID&secret=APPSECRET";
+    public final static String  get_user_url = "https://api.weixin.qq.com/cgi-bin/user/get?access_token=ACCESS_TOKEN";
     /**
      * 发起https请求并获取结果
      * @param requestUrl    请求地址
@@ -38,7 +43,7 @@ public class WeiXinService {
      * @param outputStr     提交的数据
      * @return JSONObject(通过JSONObject.get(key)的方式获取json对象的属性值)
      */
-    public static JSONObject httpRequest(String requestUrl, String requestMethod, String outputStr) {
+    public  JSONObject httpRequest(String requestUrl, String requestMethod, String outputStr) {
         JSONObject jsonObject = null;
         StringBuffer buffer = new StringBuffer();
         try {
@@ -89,7 +94,7 @@ public class WeiXinService {
         return jsonObject;
     }
 
-    public static int createMenu(String jsonMenu, String accessToken) {
+    public  int createMenu(String jsonMenu, String accessToken) {
         int result = 0;
         // 拼装创建菜单的url
         String url = menu_create_url.replace("ACCESS_TOKEN", accessToken);
@@ -103,15 +108,10 @@ public class WeiXinService {
         }
         return result;
     }
-    /**
-     * 获取access_token
-     * @param appid     凭证
-     * @param appsecret 密钥
-     * @return
-     */
-    public static AccessToken getAccessToken(String appid, String appsecret) {
+
+    public  AccessToken getAccessToken(String appId,String appSecret ) {
         AccessToken accessToken = null;
-        String requestUrl = access_token_url.replace("APPID", appid).replace("APPSECRET", appsecret);
+        String requestUrl = access_token_url.replace("APPID", appId).replace("APPSECRET", appSecret);
         JSONObject jsonObject = httpRequest(requestUrl, "GET", null);
         // 如果请求成功
         if (null != jsonObject) {
@@ -128,7 +128,7 @@ public class WeiXinService {
         return accessToken;
     }
 
-    public static String processRequest(HttpServletRequest request) {
+    public  String processRequest(HttpServletRequest request) {
         String respMessage = null;
         try {
             // 默认返回的文本消息内容
@@ -197,5 +197,44 @@ public class WeiXinService {
         }
 
         return respMessage;
+    }
+
+    public  List<String> getUser( String accessToken) {
+        int result = 0;
+        // 拼装创建菜单的url
+        String url = get_user_url.replace("ACCESS_TOKEN", accessToken);
+        // 调用接口创建菜单
+        JSONObject jsonObject = httpRequest(url, "POST", null);
+        if (null != jsonObject) {
+            if (0 != jsonObject.getInt("errcode")) {
+                result = jsonObject.getInt("data");
+                log.error("创建菜单失败 errcode:{} errmsg:{}", jsonObject.getInt("errcode"), jsonObject.getString("errmsg"));
+            }
+        }
+        return null;
+    }
+
+
+    public static void main(String[] args){
+        String json = "{\n" +
+                " \"total\":23000,\n" +
+                " \"count\":10000,\n" +
+                " \"data\":{\"\n" +
+                "    openid\":[\n" +
+                "       \"OPENID1\",\n" +
+                "       \"OPENID2\",\n" +
+                "       ...,\n" +
+                "       \"OPENID10000\"\n" +
+                "    ]\n" +
+                "  },\n" +
+                "  \"next_openid\":\"OPENID10000\"\n" +
+                "}" ;
+        JSONObject jsonObject =   JSONObject.fromObject(json);
+        if (null != jsonObject) {
+            if (0 != jsonObject.getInt("errcode")) {
+                JSONArray jsonArray = jsonObject.getJSONArray("data");
+                log.error("创建菜单失败 errcode:{} errmsg:{}", jsonObject.getInt("errcode"), jsonObject.getString("errmsg"));
+            }
+        }
     }
 }

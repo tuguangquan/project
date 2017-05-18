@@ -13,7 +13,7 @@ public class AgentInfo {
     private String weixinOriginalId;
     private String appID;
     private String appSecret;
-    private String agentId;
+    private long agentId;
     private int fansAddNum;
     private int fansCountNum;
     private float profit;
@@ -58,11 +58,11 @@ public class AgentInfo {
         this.appSecret = appSecret;
     }
 
-    public String getAgentId() {
+    public long getAgentId() {
         return agentId;
     }
 
-    public void setAgentId(String agentId) {
+    public void setAgentId(long agentId) {
         this.agentId = agentId;
     }
 

@@ -48,11 +48,11 @@ public class AgentInfoServiceWeb {
     @Produces( MediaType.APPLICATION_JSON + ";charset=UTF-8")
     @Path("/add")
     @POST
-    public String add(@FormParam("name") String password,@FormParam("password") String name,@FormParam("weiXinId") String weiXinId,@FormParam("weiXinOriginalId") String weiXinOriginalId,@FormParam("appID") String appID,@FormParam("appSecret") String appSecret,@FormParam("agentId") String agentId,@FormParam("profit") String profit){
-        if(weiXinId==null ||weiXinId.trim().equals("")|| weiXinOriginalId==null|| weiXinOriginalId.trim().equals("") ||appID==null|| appID.trim().equals("")||appSecret==null|| appSecret.trim().equals("")||agentId==null||agentId.trim().equals("")||profit==null||profit.trim().equals("")){
+    public String add(@FormParam("name") String password,@FormParam("password") String name,@FormParam("weiXinId") String weiXinId,@FormParam("weiXinOriginalId") String weiXinOriginalId,@FormParam("appID") String appID,@FormParam("appSecret") String appSecret,@FormParam("profit") String profit){
+        if(weiXinId==null ||weiXinId.trim().equals("")|| weiXinOriginalId==null|| weiXinOriginalId.trim().equals("") ||appID==null|| appID.trim().equals("")||appSecret==null|| appSecret.trim().equals("")||profit==null||profit.trim().equals("")){
             return JsonResultUtils.getCodeAndMesByString(JsonResultUtils.Code.ERROR.getCode(), "参数不能为空!");
         }
-        AgentInfo  agentInfoExist = agentInfoService.getIdByAppID(appID);
+        AgentInfo  agentInfoExist = agentInfoService.getAgentInfoByAppID(appID);
         if(null!=agentInfoExist){
             return JsonResultUtils.getCodeAndMesByString(JsonResultUtils.Code.ERROR.getCode(), "该代理商已存在!");
         }
@@ -99,7 +99,7 @@ public class AgentInfoServiceWeb {
         AgentInfo  agentInfo = new AgentInfo();
         agentInfo.setWeixinId(weiXinId);
         agentInfo.setWeixinOriginalId(weiXinOriginalId);
-        agentInfo.setAgentId(agentId);
+        agentInfo.setAgentId(appIdForAgent);
         agentInfo.setAppSecret(appSecret);
         agentInfo.setProfit(Float.parseFloat(profit));
         agentInfoService.add(agentInfo);

@@ -15,5 +15,7 @@ import java.util.Map;
  */
 public interface AgentInfoMapper extends AbstractMapper<AgentInfo> {
     public List<AgentInfo> findByCondition(Map<String,Object> map);
-    public AgentInfo getIdByAppID(String appId);
+    public AgentInfo getAgentInfoByAppID(String appId);
+    public AgentInfo getAgentInfoByAgentId(String agentId);
+
 }

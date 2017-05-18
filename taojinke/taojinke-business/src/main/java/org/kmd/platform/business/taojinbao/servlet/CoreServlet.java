@@ -2,6 +2,7 @@ package org.kmd.platform.business.taojinbao.servlet;
 
 import org.kmd.platform.business.taojinbao.service.WeiXinService;
 import org.kmd.platform.business.taojinbao.util.SignUtil;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -13,7 +14,11 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Created by Administrator on 2017/5/18 0018.
  */
+
 public class CoreServlet {
+
+    @Autowired
+    private WeiXinService weiXinService;
     private static final long serialVersionUID = 4440739483644821986L;
                 /**
      	     * 确认请求来自微信服务器
@@ -44,7 +49,7 @@ public class CoreServlet {
                     request.setCharacterEncoding("UTF-8");
                     response.setCharacterEncoding("UTF-8");
                     	        // 调用核心业务类接收消息、处理消息
-                    String respMessage = WeiXinService.processRequest(request);
+                    String respMessage = weiXinService.processRequest(request);
                            // 响应消息
                     PrintWriter out = response.getWriter();
                     out.print(respMessage);
