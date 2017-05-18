@@ -21,7 +21,11 @@
         <artifactId>business-app</artifactId>
         <version>${project.version}</version>
     </dependency>
-
+        <dependency>
+            <groupId>project</groupId>
+            <artifactId>business-user</artifactId>
+            <version>${project.version}</version>
+        </dependency>
     <dependency>
         <groupId>org.springframework</groupId>
         <artifactId>spring-core</artifactId>
@@ -99,6 +103,24 @@
         <groupId>org.springframework.security</groupId>
         <artifactId>spring-security-web</artifactId>
     </dependency>
+
+        <dependency>
+            <groupId>net.sf.json-lib</groupId>
+            <artifactId>json-lib</artifactId>
+            <version>2.3</version>
+            <classifier>jdk15</classifier>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpclient</artifactId>
+            <version>4.2.5</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpcore</artifactId>
+            <version>4.2.4</version>
+        </dependency>
 
     </dependencies>
 </project>
