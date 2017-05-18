@@ -14,6 +14,7 @@ import com.thoughtworks.xstream.io.xml.PrettyPrintWriter;
 import org.dom4j.Document;
 import org.dom4j.Element;
 import org.dom4j.io.SAXReader;
+import org.kmd.platform.business.taojinbao.weixin.mass.resp.MassTextMessage;
 import org.kmd.platform.business.taojinbao.weixin.resp.Article;
 import org.kmd.platform.business.taojinbao.weixin.resp.MusicMessage;
 import org.kmd.platform.business.taojinbao.weixin.resp.NewsMessage;
@@ -126,7 +127,16 @@ public class MessageUtil {
         xstream.alias("xml", textMessage.getClass());
         return xstream.toXML(textMessage);
     }
-
+    /**
+     * 文本消息对象转换成xml
+     *
+     * @param textMessage 文本消息群发对象
+     * @return xml
+     */
+    public static String textMessageToXml(MassTextMessage textMessage) {
+        xstream.alias("xml", textMessage.getClass());
+        return xstream.toXML(textMessage);
+    }
     /**
      * 音乐消息对象转换成xml
      *

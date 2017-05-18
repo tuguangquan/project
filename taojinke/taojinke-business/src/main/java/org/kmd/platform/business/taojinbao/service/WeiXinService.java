@@ -11,8 +11,8 @@ import javax.net.ssl.SSLContext;
 import javax.net.ssl.SSLSocketFactory;
 import javax.net.ssl.TrustManager;
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
@@ -23,6 +23,8 @@ import net.sf.json.JSONObject;
 import org.kmd.platform.business.taojinbao.util.AccessToken;
 import org.kmd.platform.business.taojinbao.util.MessageUtil;
 import org.kmd.platform.business.taojinbao.util.MyX509TrustManager;
+import org.kmd.platform.business.taojinbao.weixin.mass.resp.MassTextMessage;
+import org.kmd.platform.business.taojinbao.weixin.mass.resp.Text;
 import org.kmd.platform.business.taojinbao.weixin.resp.TextMessage;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -36,6 +38,7 @@ public class WeiXinService {
     public final static String menu_create_url = "https://api.weixin.qq.com/cgi-bin/menu/create?access_token=ACCESS_TOKEN";
     public final static String access_token_url = "https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=APPID&secret=APPSECRET";
     public final static String  get_user_url = "https://api.weixin.qq.com/cgi-bin/user/get?access_token=ACCESS_TOKEN";
+    public final static String  send_msg_url = "https://api.weixin.qq.com/cgi-bin/message/mass/send?access_token=ACCESS_TOKEN";
     /**
      * 发起https请求并获取结果
      * @param requestUrl    请求地址
@@ -143,7 +146,6 @@ public class WeiXinService {
             String toUserName = requestMap.get("ToUserName");
             // 消息类型
             String msgType = requestMap.get("MsgType");
-
             // 回复文本消息
             TextMessage textMessage = new TextMessage();
             textMessage.setToUserName(fromUserName);
@@ -199,42 +201,62 @@ public class WeiXinService {
         return respMessage;
     }
 
-    public  List<String> getUser( String accessToken) {
+    public List getUser(String accessToken) {
         int result = 0;
         // 拼装创建菜单的url
         String url = get_user_url.replace("ACCESS_TOKEN", accessToken);
         // 调用接口创建菜单
         JSONObject jsonObject = httpRequest(url, "POST", null);
         if (null != jsonObject) {
-            if (0 != jsonObject.getInt("errcode")) {
-                result = jsonObject.getInt("data");
-                log.error("创建菜单失败 errcode:{} errmsg:{}", jsonObject.getInt("errcode"), jsonObject.getString("errmsg"));
-            }
+            JSONArray   jsonArray =  jsonObject.getJSONObject("data").getJSONArray("openid");
+            return jsonArray.subList(0, jsonArray.size());
         }
         return null;
+    }
+    public int sendMsgToSomeUser(String msg,JSONArray jsonArray,String accessToken) {
+        int result = 0;
+        // 拼装创建菜单的url
+        String url = send_msg_url.replace("ACCESS_TOKEN", accessToken);
+        // 调用接口创建菜单
+        // 默认返回的文本消息内容
+        List<String> users = new ArrayList<String>();
+        for(int i =0;i<jsonArray.size()-1;i++){
+             users.add(jsonArray.getString(i));
+         }
+        // 回复文本消息
+        MassTextMessage textMessage = new MassTextMessage();
+        textMessage.setTouser(users);
+        Text text = new Text();
+        text.setContent(msg);
+        textMessage.setMsgtype(MessageUtil.RESP_MESSAGE_TYPE_TEXT);
+        textMessage.setText(text);
+        String respMessage = MessageUtil.textMessageToXml(textMessage);
+        JSONObject jsonObject = httpRequest(url, "POST", respMessage);
+        if (null != jsonObject) {
+            if (0 != jsonObject.getInt("errcode")) {
+                result = jsonObject.getInt("errcode");
+                log.error("消息发送失败 errcode:{} errmsg:{}", jsonObject.getInt("errcode"), jsonObject.getString("errmsg"));
+            }
+        }
+        return result;
     }
 
 
     public static void main(String[] args){
-        String json = "{\n" +
-                " \"total\":23000,\n" +
-                " \"count\":10000,\n" +
-                " \"data\":{\"\n" +
-                "    openid\":[\n" +
-                "       \"OPENID1\",\n" +
-                "       \"OPENID2\",\n" +
-                "       ...,\n" +
-                "       \"OPENID10000\"\n" +
-                "    ]\n" +
-                "  },\n" +
-                "  \"next_openid\":\"OPENID10000\"\n" +
-                "}" ;
+        String json = "{\"total\":23000," + " \"count\":10000," + " \"data\":{\"openid\":[" +
+                "\"OPENID1\"," +
+                "\"OPENID2\"," +
+                "\"OPENID10000\"" +
+                "]" +
+                "}," +
+                "\"next_openid\":\"OPENID10000\"" +"}" ;
         JSONObject jsonObject =   JSONObject.fromObject(json);
+
         if (null != jsonObject) {
-            if (0 != jsonObject.getInt("errcode")) {
-                JSONArray jsonArray = jsonObject.getJSONArray("data");
-                log.error("创建菜单失败 errcode:{} errmsg:{}", jsonObject.getInt("errcode"), jsonObject.getString("errmsg"));
-            }
+            JSONArray jsonArray =  jsonObject.getJSONObject("data").getJSONArray("openid");
+            List list =  jsonArray.subList(0, jsonArray.size());
+            System.out.print(23432);
+
         }
     }
 }
