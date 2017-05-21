@@ -96,10 +96,10 @@
         </where>
     </select>
 
-    <select id="getIdByName" parameterType="java.lang.String" resultType="java.lang.Long">
+    <select id="getIdByName" parameterType="map" resultType="java.lang.Long">
          SELECT
          id
-         FROM user WHERE NAME=#{name} and  APPID=#{appId}
+         FROM user WHERE NAME=#{name} AND  APPID=#{appId}
      </select>
 
     <select id="getById" parameterType="java.lang.Long" resultType="User">

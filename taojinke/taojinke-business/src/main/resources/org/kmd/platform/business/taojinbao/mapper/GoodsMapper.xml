@@ -7,7 +7,7 @@
 		ID,UNIACID,DISPIAYORDER,STATUS,CATE_ID,ITEMID,TITLE,ITEMPIC,SHOPTITLE,ITEMFEE,ITEMSELL,ITEMSTATUS,STIME,ETIME,ITEMSURL,ITEMURL,ITEMTKL,ITEMYHJ_ZL,ITEMYHJ_YL,ITEMYHJ_TIT,ITEMYHJ_STIME,ITEMYHJ_ETIME,ITEMYHJ_URL,ITEMYHJ_TKL,ATIME,HIT,SHARE,FAV
 	</sql>
 
-    <resultMap id="goodsResultMap" type="Authority">
+    <resultMap id="goodsResultMap" type="Goods">
         <id property="id" column="ID" />
         <result property="uniacid" column="UNIACID" />
         <result property="displayorder" column="DISPIAYORDER" />

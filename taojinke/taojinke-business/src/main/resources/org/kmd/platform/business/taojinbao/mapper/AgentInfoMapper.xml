@@ -39,24 +39,20 @@
     <select id="findByCondition" parameterType="map" resultMap="AgentInfoResultMap">
         SELECT
         <include refid="agentInfo_fields"/>
-        FROM agent_info
+        FROM agent_info   where 1=1
         <!--<where>-->
             <!--<if test="name!=null">NAME=#{name}</if>-->
             <!--<if test="description!=null">AND DESCRIPTION=#{description}</if>-->
             <!--<if test="status!=null">AND STATUS=#{status}</if>-->
         <!--</where>-->
     </select>
-    <select id="getAgentInfoByAppID" parameterType="java.lang.String" resultMap="AgentInfoResultMap">
-         SELECT
-        <include refid="agentInfo_fields"/>
-         FROM agent_info WHERE appId=#{appId}
-     </select>
+
     <select id="getAgentInfoByAgentName" parameterType="java.lang.String" resultMap="AgentInfoResultMap">
         SELECT
         <include refid="agentInfo_fields"/>
         FROM agent_info WHERE agentName=#{agentName}
     </select>
-    <select id="getAgentInfoByAgentId" parameterType="java.lang.String" resultMap="AgentInfoResultMap">
+    <select id="getAgentInfoByAgentId" parameterType="java.lang.Long" resultMap="AgentInfoResultMap">
         SELECT
         <include refid="agentInfo_fields"/>
         FROM agent_info WHERE agentId=#{agentId}

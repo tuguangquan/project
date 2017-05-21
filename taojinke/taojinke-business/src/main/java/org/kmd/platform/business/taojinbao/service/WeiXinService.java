@@ -25,7 +25,7 @@ import org.kmd.platform.business.taojinbao.util.MessageUtil;
 import org.kmd.platform.business.taojinbao.util.MyX509TrustManager;
 import org.kmd.platform.business.taojinbao.weixin.mass.resp.MassTextMessage;
 import org.kmd.platform.business.taojinbao.weixin.mass.resp.Text;
-import org.kmd.platform.business.taojinbao.weixin.resp.TextMessage;
+import org.kmd.platform.business.taojinbao.weixin.resp.TextMessageResp;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -147,7 +147,7 @@ public class WeiXinService {
             // 消息类型
             String msgType = requestMap.get("MsgType");
             // 回复文本消息
-            TextMessage textMessage = new TextMessage();
+            TextMessageResp textMessage = new TextMessageResp();
             textMessage.setToUserName(fromUserName);
             textMessage.setFromUserName(toUserName);
             textMessage.setCreateTime(new Date().getTime());

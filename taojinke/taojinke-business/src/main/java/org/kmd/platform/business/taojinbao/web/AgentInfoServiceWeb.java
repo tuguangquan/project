@@ -84,7 +84,7 @@ public class AgentInfoServiceWeb {
         user.setAppId(appIdForAgent);
         userService.add(user);
         //为管理员设置角色
-        long userId =  userService.getIdByName(agentName);
+        long userId =  userService.getIdByName(agentName,appIdForAgent);
         long authorityId = authorityService.getIdByName(role);
         UserAuthority userAuthority = new UserAuthority();
         userAuthority.setUserId(userId);

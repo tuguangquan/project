@@ -15,10 +15,9 @@ import org.dom4j.Document;
 import org.dom4j.Element;
 import org.dom4j.io.SAXReader;
 import org.kmd.platform.business.taojinbao.weixin.mass.resp.MassTextMessage;
-import org.kmd.platform.business.taojinbao.weixin.resp.Article;
-import org.kmd.platform.business.taojinbao.weixin.resp.MusicMessage;
-import org.kmd.platform.business.taojinbao.weixin.resp.NewsMessage;
-import org.kmd.platform.business.taojinbao.weixin.resp.TextMessage;
+import org.kmd.platform.business.taojinbao.weixin.resp.*;
+import org.kmd.platform.business.taojinbao.weixin.resp.NewsMessageResp;
+import org.kmd.platform.business.taojinbao.weixin.resp.TextMessageResp;
 
 /**
  * Created by Administrator on 2017/5/18 0018.
@@ -123,7 +122,7 @@ public class MessageUtil {
      * @param textMessage 文本消息对象
      * @return xml
      */
-    public static String textMessageToXml(TextMessage textMessage) {
+    public static String textMessageToXml(TextMessageResp textMessage) {
         xstream.alias("xml", textMessage.getClass());
         return xstream.toXML(textMessage);
     }
@@ -143,7 +142,7 @@ public class MessageUtil {
      * @param musicMessage 音乐消息对象
      * @return xml
      */
-    public static String musicMessageToXml(MusicMessage musicMessage) {
+    public static String musicMessageToXml(MusicMessageResp musicMessage) {
         xstream.alias("xml", musicMessage.getClass());
         return xstream.toXML(musicMessage);
     }
@@ -154,7 +153,7 @@ public class MessageUtil {
      * @param newsMessage 图文消息对象
      * @return xml
      */
-    public static String newsMessageToXml(NewsMessage newsMessage) {
+    public static String newsMessageToXml(NewsMessageResp newsMessage) {
         xstream.alias("xml", newsMessage.getClass());
         xstream.alias("item", new Article().getClass());
         return xstream.toXML(newsMessage);

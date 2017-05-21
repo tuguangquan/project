@@ -28,5 +28,5 @@
      http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.0.xsd">
     <bean id="goodsService" class="org.kmd.platform.business.taojinbao.service.GoodsService" depends-on="mappers"/>
     <bean id="agentInfoService" class="org.kmd.platform.business.taojinbao.service.AgentInfoService" depends-on="mappers"/>
-
+    <bean id="weiXinService" class="org.kmd.platform.business.taojinbao.service.WeiXinService"/>
 </beans>
