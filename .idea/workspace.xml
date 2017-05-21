@@ -536,81 +536,6 @@
       <change type="DELETED" beforePath="D:\project\project\business\business-Web\target\business-Web-1.0-SNAPSHOT\login.html" afterPath="" />
       <change type="DELETED" beforePath="D:\project\project\business\business-Web\target\maven-archiver\pom.properties" afterPath="" />
       <change type="DELETED" beforePath="D:\project\project\business\business-Web\target\test.war" afterPath="" />
-      <change type="DELETED" beforePath="D:\project\project\business\business-business\business-business.iml" afterPath="" />
-      <change type="DELETED" beforePath="D:\project\project\business\business-business\pom.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\project\project\business\business-business\src\main\java\org\whut\seis\business\entity\Authority.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\project\project\business\business-business\src\main\java\org\whut\seis\business\entity\AuthorityPower.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\project\project\business\business-business\src\main\java\org\whut\seis\business\entity\Power.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\project\project\business\business-business\src\main\java\org\whut\seis\business\entity\SubAuthority.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\project\project\business\business-business\src\main\java\org\whut\seis\business\entity\SubUser.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\project\project\business\business-business\src\main\java\org\whut\seis\business\entity\Test.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\project\project\business\business-business\src\main\java\org\whut\seis\business\entity\User.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\project\project\business\business-business\src\main\java\org\whut\seis\business\entity\UserAuthority.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\project\project\business\business-business\src\main\java\org\whut\seis\business\mapper\AbstractMapper.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\project\project\business\business-business\src\main\java\org\whut\seis\business\mapper\AuthorityMapper.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\project\project\business\business-business\src\main\java\org\whut\seis\business\mapper\AuthorityPowerMapper.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\project\project\business\business-business\src\main\java\org\whut\seis\business\mapper\PowerMapper.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\project\project\business\business-business\src\main\java\org\whut\seis\business\mapper\UserAuthorityMapper.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\project\project\business\business-business\src\main\java\org\whut\seis\business\mapper\UserMapper.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\project\project\business\business-business\src\main\java\org\whut\seis\business\security\MD5Encoder.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\project\project\business\business-business\src\main\java\org\whut\seis\business\security\MyAccessDecisionManager.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\project\project\business\business-business\src\main\java\org\whut\seis\business\security\MySecurityInterceptorFilter.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\project\project\business\business-business\src\main\java\org\whut\seis\business\security\MySecurityMetadataSource.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\project\project\business\business-business\src\main\java\org\whut\seis\business\security\MyUserDetail.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\project\project\business\business-business\src\main\java\org\whut\seis\business\security\MyUserDetailsService.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\project\project\business\business-business\src\main\java\org\whut\seis\business\security\UserContext.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\project\project\business\business-business\src\main\java\org\whut\seis\business\service\AuthorityPowerService.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\project\project\business\business-business\src\main\java\org\whut\seis\business\service\AuthorityService.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\project\project\business\business-business\src\main\java\org\whut\seis\business\service\PowerService.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\project\project\business\business-business\src\main\java\org\whut\seis\business\service\UserAuthorityService.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\project\project\business\business-business\src\main\java\org\whut\seis\business\service\UserService.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\project\project\business\business-business\src\main\java\org\whut\seis\business\web\AuthorityServiceWeb.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\project\project\business\business-business\src\main\java\org\whut\seis\business\web\PowerServiceWeb.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\project\project\business\business-business\src\main\java\org\whut\seis\business\web\UserServiceWeb.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\project\project\business\business-business\src\main\resources\META-INF\spring\user-applicationContext.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\project\project\business\business-business\src\main\resources\org\whut\seis\business\mapper\AuthorityMapper.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\project\project\business\business-business\src\main\resources\org\whut\seis\business\mapper\AuthorityPowerMapper.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\project\project\business\business-business\src\main\resources\org\whut\seis\business\mapper\PowerMapper.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\project\project\business\business-business\src\main\resources\org\whut\seis\business\mapper\UserAuthorityMapper.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\project\project\business\business-business\src\main\resources\org\whut\seis\business\mapper\UserMapper.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\project\project\business\business-business\target\MANIFEST.MF" afterPath="" />
-      <change type="DELETED" beforePath="D:\project\project\business\business-business\target\business-business-1.0-SNAPSHOT.jar" afterPath="" />
-      <change type="DELETED" beforePath="D:\project\project\business\business-business\target\classes\META-INF\spring\user-applicationContext.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\project\project\business\business-business\target\classes\org\whut\seis\business\entity\Authority.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\project\project\business\business-business\target\classes\org\whut\seis\business\entity\AuthorityPower.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\project\project\business\business-business\target\classes\org\whut\seis\business\entity\Power.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\project\project\business\business-business\target\classes\org\whut\seis\business\entity\SubAuthority.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\project\project\business\business-business\target\classes\org\whut\seis\business\entity\SubUser.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\project\project\business\business-business\target\classes\org\whut\seis\business\entity\Test.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\project\project\business\business-business\target\classes\org\whut\seis\business\entity\User.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\project\project\business\business-business\target\classes\org\whut\seis\business\entity\UserAuthority.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\project\project\business\business-business\target\classes\org\whut\seis\business\mapper\AbstractMapper.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\project\project\business\business-business\target\classes\org\whut\seis\business\mapper\AuthorityMapper.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\project\project\business\business-business\target\classes\org\whut\seis\business\mapper\AuthorityMapper.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\project\project\business\business-business\target\classes\org\whut\seis\business\mapper\AuthorityPowerMapper.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\project\project\business\business-business\target\classes\org\whut\seis\business\mapper\AuthorityPowerMapper.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\project\project\business\business-business\target\classes\org\whut\seis\business\mapper\PowerMapper.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\project\project\business\business-business\target\classes\org\whut\seis\business\mapper\PowerMapper.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\project\project\business\business-business\target\classes\org\whut\seis\business\mapper\UserAuthorityMapper.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\project\project\business\business-business\target\classes\org\whut\seis\business\mapper\UserAuthorityMapper.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\project\project\business\business-business\target\classes\org\whut\seis\business\mapper\UserMapper.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\project\project\business\business-business\target\classes\org\whut\seis\business\mapper\UserMapper.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\project\project\business\business-business\target\classes\org\whut\seis\business\security\MD5Encoder.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\project\project\business\business-business\target\classes\org\whut\seis\business\security\MyAccessDecisionManager.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\project\project\business\business-business\target\classes\org\whut\seis\business\security\MySecurityInterceptorFilter.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\project\project\business\business-business\target\classes\org\whut\seis\business\security\MySecurityMetadataSource.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\project\project\business\business-business\target\classes\org\whut\seis\business\security\MyUserDetail.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\project\project\business\business-business\target\classes\org\whut\seis\business\security\MyUserDetailsService.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\project\project\business\business-business\target\classes\org\whut\seis\business\security\UserContext.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\project\project\business\business-business\target\classes\org\whut\seis\business\service\AuthorityPowerService.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\project\project\business\business-business\target\classes\org\whut\seis\business\service\AuthorityService.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\project\project\business\business-business\target\classes\org\whut\seis\business\service\PowerService.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\project\project\business\business-business\target\classes\org\whut\seis\business\service\UserAuthorityService.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\project\project\business\business-business\target\classes\org\whut\seis\business\service\UserService.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\project\project\business\business-business\target\classes\org\whut\seis\business\web\AuthorityServiceWeb.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\project\project\business\business-business\target\classes\org\whut\seis\business\web\PowerServiceWeb.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\project\project\business\business-business\target\classes\org\whut\seis\business\web\UserServiceWeb.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\project\project\business\business-business\target\maven-archiver\pom.properties" afterPath="" />
       <change type="DELETED" beforePath="D:\project\project\business\business-menu\target\classes\META-INF\spring\menu-applicationContext.xml" afterPath="" />
       <change type="DELETED" beforePath="D:\project\project\business\business-menu\target\classes\org\kmd\platform\business\menu\entity\AuthorityMenu.class" afterPath="" />
       <change type="DELETED" beforePath="D:\project\project\business\business-menu\target\classes\org\kmd\platform\business\menu\entity\Menu.class" afterPath="" />
@@ -624,34 +549,9 @@
       <change type="DELETED" beforePath="D:\project\project\business\business-menu\target\classes\org\kmd\platform\business\menu\web\MenuServiceWeb.class" afterPath="" />
       <change type="DELETED" beforePath="D:\project\project\business\target\MANIFEST.MF" afterPath="" />
       <change type="DELETED" beforePath="D:\project\project\fundamental\target\MANIFEST.MF" afterPath="" />
-      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-business\src\main\java\org\kmd\platform\business\taojinbao\weixin\mass.resp\Image.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-business\src\main\java\org\kmd\platform\business\taojinbao\weixin\mass.resp\ImageMessage.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-business\src\main\java\org\kmd\platform\business\taojinbao\weixin\mass.resp\MassBaseMessage.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-business\src\main\java\org\kmd\platform\business\taojinbao\weixin\mass.resp\Text.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-business\src\main\java\org\kmd\platform\business\taojinbao\weixin\mass.resp\TextMessage.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-business\src\main\java\org\kmd\platform\business\taojinbao\weixin\mass.resp\Voice.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-business\src\main\java\org\kmd\platform\business\taojinbao\weixin\mass.resp\VoiceMessage.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-business/src/main/resources/org/kmd/platform/business/taojinbao/mapper/AgentInfoMapper.xml" afterPath="$PROJECT_DIR$/taojinke/taojinke-business/src/main/resources/org/kmd/platform/business/taojinbao/mapper/AgentInfoMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/web/AgentInfoServiceWeb.java" afterPath="$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/web/AgentInfoServiceWeb.java" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\WEB-INF\security-applicationContext.xml" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-business/src/main/resources/org/kmd/platform/business/taojinbao/mapper/GoodsMapper.xml" afterPath="$PROJECT_DIR$/taojinke/taojinke-business/src/main/resources/org/kmd/platform/business/taojinbao/mapper/GoodsMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/util/MessageUtil.java" afterPath="$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/util/MessageUtil.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/business/business-user/src/main/resources/org/kmd/platform/business/user/mapper/UserMapper.xml" afterPath="$PROJECT_DIR$/business/business-user/src/main/resources/org/kmd/platform/business/user/mapper/UserMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/service/WeiXinService.java" afterPath="$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/service/WeiXinService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/WEB-INF/applicationContext.xml" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/WEB-INF/applicationContext.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/pom.xml" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-business/src/main/resources/META-INF/spring/taojinke-applicationContext.xml" afterPath="$PROJECT_DIR$/taojinke/taojinke-business/src/main/resources/META-INF/spring/taojinke-applicationContext.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/WEB-INF/web.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MOVED" beforePath="D:\project\project\taojinke\taojinke-business\src\main\java\org\kmd\platform\business\taojinbao\weixin\req\BaseMessage.java" afterPath="$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/weixin/req/ReqBaseMessage.java" />
-      <change type="MOVED" beforePath="D:\project\project\taojinke\taojinke-business\src\main\java\org\kmd\platform\business\taojinbao\weixin\req\ImageMessage.java" afterPath="$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/weixin/req/ImageMessageReq.java" />
-      <change type="MOVED" beforePath="D:\project\project\taojinke\taojinke-business\src\main\java\org\kmd\platform\business\taojinbao\weixin\req\LinkMessage.java" afterPath="$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/weixin/req/LinkMessageReq.java" />
-      <change type="MOVED" beforePath="D:\project\project\taojinke\taojinke-business\src\main\java\org\kmd\platform\business\taojinbao\weixin\req\LocationMessage.java" afterPath="$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/weixin/req/LocationMessageReq.java" />
-      <change type="MOVED" beforePath="D:\project\project\taojinke\taojinke-business\src\main\java\org\kmd\platform\business\taojinbao\weixin\req\TextMessage.java" afterPath="$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/weixin/req/TextMessageReq.java" />
-      <change type="MOVED" beforePath="D:\project\project\taojinke\taojinke-business\src\main\java\org\kmd\platform\business\taojinbao\weixin\req\VoiceMessage.java" afterPath="$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/weixin/req/VoiceMessageReq.java" />
-      <change type="MOVED" beforePath="D:\project\project\taojinke\taojinke-business\src\main\java\org\kmd\platform\business\taojinbao\weixin\resp\BaseMessage.java" afterPath="$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/weixin/resp/RespBaseMessage.java" />
-      <change type="MOVED" beforePath="D:\project\project\taojinke\taojinke-business\src\main\java\org\kmd\platform\business\taojinbao\weixin\resp\MusicMessage.java" afterPath="$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/weixin/resp/MusicMessageResp.java" />
-      <change type="MOVED" beforePath="D:\project\project\taojinke\taojinke-business\src\main\java\org\kmd\platform\business\taojinbao\weixin\resp\NewsMessage.java" afterPath="$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/weixin/resp/NewsMessageResp.java" />
-      <change type="MOVED" beforePath="D:\project\project\taojinke\taojinke-business\src\main\java\org\kmd\platform\business\taojinbao\weixin\resp\TextMessage.java" afterPath="$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/weixin/resp/TextMessageResp.java" />
     </list>
     <ignored path="project.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -690,7 +590,7 @@
     <file path="/MyAccessDecisionManager.java" changelist="6328e16e-7283-4bff-bff6-5e4f32b565da" time="1494940465525" ignored="false" />
     <file path="/AuthorityMenuMapper.java" changelist="6328e16e-7283-4bff-bff6-5e4f32b565da" time="1494940479863" ignored="false" />
     <file path="/MenuMapper.java" changelist="6328e16e-7283-4bff-bff6-5e4f32b565da" time="1494940490242" ignored="false" />
-    <file path="/a.dummy" changelist="6328e16e-7283-4bff-bff6-5e4f32b565da" time="1495371264838" ignored="false" />
+    <file path="/a.dummy" changelist="6328e16e-7283-4bff-bff6-5e4f32b565da" time="1495376598512" ignored="false" />
     <file path="/applicationContext.xml" changelist="6328e16e-7283-4bff-bff6-5e4f32b565da" time="1494941597964" ignored="false" />
     <file path="/fundamental.config.properties" changelist="6328e16e-7283-4bff-bff6-5e4f32b565da" time="1494942616850" ignored="false" />
     <file path="/admin.html" changelist="6328e16e-7283-4bff-bff6-5e4f32b565da" time="1494941829694" ignored="false" />
@@ -699,7 +599,7 @@
     <file path="/title.html" changelist="6328e16e-7283-4bff-bff6-5e4f32b565da" time="1494942080308" ignored="false" />
     <file path="/Authority.java" changelist="6328e16e-7283-4bff-bff6-5e4f32b565da" time="1495022868779" ignored="false" />
     <file path="/Goods.java" changelist="6328e16e-7283-4bff-bff6-5e4f32b565da" time="1495028359960" ignored="false" />
-    <file path="/GoodsMapper.xml" changelist="6328e16e-7283-4bff-bff6-5e4f32b565da" time="1495025343425" ignored="false" />
+    <file path="/GoodsMapper.xml" changelist="6328e16e-7283-4bff-bff6-5e4f32b565da" time="1495377619892" ignored="false" />
     <file path="/goods-applicationContext.xml" changelist="6328e16e-7283-4bff-bff6-5e4f32b565da" time="1495028592923" ignored="false" />
     <file path="/AgentInfoMapper.xml" changelist="6328e16e-7283-4bff-bff6-5e4f32b565da" time="1495371098079" ignored="false" />
     <file path="/AgentInfo.java" changelist="6328e16e-7283-4bff-bff6-5e4f32b565da" time="1495358063885" ignored="false" />
@@ -730,6 +630,7 @@
     <file path="/UserMapper.xml" changelist="6328e16e-7283-4bff-bff6-5e4f32b565da" time="1495370820291" ignored="false" />
     <file path="/index.html" changelist="6328e16e-7283-4bff-bff6-5e4f32b565da" time="1495363946799" ignored="false" />
     <file path="/taojinke-applicationContext.xml" changelist="6328e16e-7283-4bff-bff6-5e4f32b565da" time="1495372322907" ignored="false" />
+    <file path="/GoodsMapper.java" changelist="6328e16e-7283-4bff-bff6-5e4f32b565da" time="1495377304661" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -791,46 +692,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="AgentInfoMapper.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/taojinke/taojinke-business/src/main/resources/org/kmd/platform/business/taojinbao/mapper/AgentInfoMapper.xml">
+      <file leaf-file-name="GoodsMapper.xml" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/taojinke/taojinke-business/src/main/resources/org/kmd/platform/business/taojinbao/mapper/GoodsMapper.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="38" column="51" selection-start="1489" selection-end="1489" vertical-scroll-proportion="-4.48">
+            <state line="40" column="80" selection-start="2579" selection-end="2579" vertical-scroll-proportion="0.50763357">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ReqBaseMessage.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/weixin/req/ReqBaseMessage.java">
+      <file leaf-file-name="GoodsMapper.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/mapper/GoodsMapper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="34" selection-start="147" selection-end="147" vertical-scroll-proportion="-3.56">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="WeixinServiceWeb.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/web/WeixinServiceWeb.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="13" selection-start="1299" selection-end="1299" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="taojinke-applicationContext.xml" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/taojinke/taojinke-business/src/main/resources/META-INF/spring/taojinke-applicationContext.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="16" selection-start="2212" selection-end="2212" vertical-scroll-proportion="0.41666666">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AgentInfoMapper.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/mapper/AgentInfoMapper.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="42" selection-start="480" selection-end="495" vertical-scroll-proportion="0.0">
+            <state line="10" column="3" selection-start="258" selection-end="258" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -854,22 +728,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/business/business-user/src/main/java/org/kmd/platform/business/user/web/UserServiceWeb.java" />
         <option value="$PROJECT_DIR$/business/business-user/src/main/java/org/kmd/platform/business/user/service/UserService.java" />
         <option value="$PROJECT_DIR$/business/business-user/src/main/java/org/kmd/platform/business/user/web/AuthorityServiceWeb.java" />
         <option value="$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/service/AgentInfoService.java" />
         <option value="$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/mapper/AgentInfoMapper.java" />
-        <option value="$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/web/WeixinServiceWeb.java" />
         <option value="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/index.html" />
         <option value="$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/web/AgentInfoServiceWeb.java" />
         <option value="$PROJECT_DIR$/taojinke/taojinke-web/pom.xml" />
         <option value="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/WEB-INF/applicationContext.xml" />
         <option value="$PROJECT_DIR$/business/business-user/src/main/resources/org/kmd/platform/business/user/mapper/UserMapper.xml" />
-        <option value="$PROJECT_DIR$/taojinke/taojinke-business/src/main/resources/org/kmd/platform/business/taojinbao/mapper/GoodsMapper.xml" />
         <option value="$PROJECT_DIR$/taojinke/taojinke-business/src/main/resources/org/kmd/platform/business/taojinbao/mapper/AgentInfoMapper.xml" />
         <option value="$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/weixin/req/ReqBaseMessage.java" />
         <option value="$PROJECT_DIR$/taojinke/taojinke-business/src/main/resources/META-INF/spring/taojinke-applicationContext.xml" />
+        <option value="$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/web/WeixinServiceWeb.java" />
+        <option value="$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/mapper/GoodsMapper.java" />
+        <option value="$PROJECT_DIR$/taojinke/taojinke-business/src/main/resources/org/kmd/platform/business/taojinbao/mapper/GoodsMapper.xml" />
       </list>
     </option>
   </component>
@@ -1071,8 +945,8 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="581" />
-    <option name="y" value="73" />
+    <option name="x" value="6" />
+    <option name="y" value="4" />
     <option name="width" value="1366" />
     <option name="height" value="733" />
   </component>
@@ -1134,114 +1008,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="taojinke" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="taojinke" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="taojinke-web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="taojinke" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="taojinke-web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="taojinke" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="taojinke-web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WEB-INF" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="taojinke" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="taojinke-web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1386,204 +1152,6 @@
               <option name="myItemId" value="taojinbao" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="weixin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="taojinke" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="taojinke-business" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="taojinbao" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="weixin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="req" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="taojinke" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="taojinke-business" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="taojinbao" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="weixin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="taojinke" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="taojinke-business" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="taojinbao" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="taojinke" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="taojinke-business" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="taojinbao" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="taojinke" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="taojinke-business" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="taojinbao" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="service" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -1671,101 +1239,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="fundamental" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fundamental" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fundamental-dataSource" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fundamental" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fundamental-dataSource" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fundamental" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fundamental-config" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="business" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="business" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="business-Web" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1801,7 +1275,101 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="business-app" />
+              <option name="myItemId" value="business-user" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="business" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="business-user" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mapper" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="business" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="business-user" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="business" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="business-user" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -2225,7 +1793,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="581" y="73" width="1366" height="733" extended-state="0" />
+    <frame x="6" y="4" width="1366" height="733" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -2328,55 +1896,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/WEB-INF/applicationContext.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="105" selection-start="2582" selection-end="2582" vertical-scroll-proportion="-4.72">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/business/business-user/src/main/resources/org/kmd/platform/business/user/mapper/UserMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="96" column="67" selection-start="3236" selection-end="3236" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/mapper/GoodsMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="27" selection-start="379" selection-end="379" vertical-scroll-proportion="-3.12">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/taojinke/taojinke-business/src/main/resources/org/kmd/platform/business/taojinbao/mapper/GoodsMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="46" selection-start="561" selection-end="566" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/taojinke/taojinke-web/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="93" column="28" selection-start="3531" selection-end="3531" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/taojinke/taojinke-business/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="46" selection-start="987" selection-end="987" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/business/business-user/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="30" selection-start="490" selection-end="490" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/business/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
@@ -2405,20 +1924,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/mapper/AgentInfoMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="42" selection-start="480" selection-end="495" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/taojinke/taojinke-business/src/main/resources/org/kmd/platform/business/taojinbao/mapper/AgentInfoMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="51" selection-start="1489" selection-end="1489" vertical-scroll-proportion="-4.48">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/weixin/req/ReqBaseMessage.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="6" column="34" selection-start="147" selection-end="147" vertical-scroll-proportion="-3.56">
@@ -2426,16 +1931,79 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/web/WeixinServiceWeb.java">
+    <entry file="file://$PROJECT_DIR$/taojinke/taojinke-business/src/main/resources/META-INF/spring/taojinke-applicationContext.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="13" selection-start="1299" selection-end="1299" vertical-scroll-proportion="0.0">
+        <state line="29" column="22" selection-start="2005" selection-end="2005" vertical-scroll-proportion="0.44660193">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/taojinke/taojinke-business/src/main/resources/META-INF/spring/taojinke-applicationContext.xml">
+    <entry file="file://$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/WEB-INF/applicationContext.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="16" selection-start="2212" selection-end="2212" vertical-scroll-proportion="0.41666666">
+        <state line="37" column="36" selection-start="2128" selection-end="2128" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/web/WeixinServiceWeb.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="55" column="61" selection-start="1897" selection-end="1897" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/mapper/AgentInfoMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="18" selection-start="314" selection-end="314" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/entity/Goods.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="18" selection-start="386" selection-end="400" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/business/business-user/src/main/resources/org/kmd/platform/business/user/mapper/AuthorityMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/taojinke/taojinke-business/src/main/resources/org/kmd/platform/business/taojinbao/mapper/AgentInfoMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="29" selection-start="1432" selection-end="1432" vertical-scroll-proportion="7.6">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/business/business-user/src/main/resources/org/kmd/platform/business/user/mapper/UserMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="105" column="30" selection-start="3507" selection-end="3507" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/business/business-user/src/main/resources/org/kmd/platform/business/user/mapper/UserAuthorityMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/mapper/GoodsMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="3" selection-start="258" selection-end="258" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/taojinke/taojinke-business/src/main/resources/org/kmd/platform/business/taojinbao/mapper/GoodsMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="40" column="80" selection-start="2579" selection-end="2579" vertical-scroll-proportion="0.50763357">
           <folding />
         </state>
       </provider>

@@ -4,38 +4,35 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="org.kmd.platform.business.taojinbao.mapper.GoodsMapper">
     <sql id="goods_fields">
-		ID,UNIACID,DISPIAYORDER,STATUS,CATE_ID,ITEMID,TITLE,ITEMPIC,SHOPTITLE,ITEMFEE,ITEMSELL,ITEMSTATUS,STIME,ETIME,ITEMSURL,ITEMURL,ITEMTKL,ITEMYHJ_ZL,ITEMYHJ_YL,ITEMYHJ_TIT,ITEMYHJ_STIME,ITEMYHJ_ETIME,ITEMYHJ_URL,ITEMYHJ_TKL,ATIME,HIT,SHARE,FAV
+		id,goods_id,goods_name,goods_picture,goods_detail_url,shop_name,goods_price,goods_sells,earn_rate,commission_rate,sellers_WANGWANG,taobaoke_short_url,taobaoke_url,tao_kou_ling,discount_coupon,discount_coupon_account,discount_coupondenomination,discount_coupon_start_time,discount_couponend_time,discount_coupon_url,discount_coupon_tao_kou_ling,discount_coupon_short_url,is_maketing_pla,cate_id
 	</sql>
 
     <resultMap id="goodsResultMap" type="Goods">
-        <id property="id" column="ID" />
-        <result property="uniacid" column="UNIACID" />
-        <result property="displayorder" column="DISPIAYORDER" />
-        <result property="status" column="STATUS" />
-        <result property="cate_id" column="CATE_ID" />
-        <result property="itemid" column="ITEMID" />
-        <result property="title" column="TITLE" />
-        <result property="itempic" column="ITEMPIC" />
-        <result property="shoptitle" column="SHOPTITLE" />
-        <result property="itemfee" column="ITEMFEE" />
-        <result property="itemsell" column="ITEMSELL" />
-        <result property="itemstatus" column="ITEMSTATUS" />
-        <result property="stime" column="STIME" />
-        <result property="etime" column="ETIME" />
-        <result property="itemsurl" column="ITEMSURL" />
-        <result property="itemurl" column="ITEMURL" />
-        <result property="itemtkl" column="ITEMTKL" />
-        <result property="itemyhj_zl" column="ITEMYHJ_ZL" />
-        <result property="itemyhj_yl" column="ITEMYHJ_YL" />
-        <result property="itemyhj_tit`" column="ITEMYHJ_TIT" />
-        <result property="itemyhj_stime" column="ITEMYHJ_STIME" />
-        <result property="itemyhj_etime" column="ITEMYHJ_ETIME" />
-        <result property="itemyhj_url" column="ITEMYHJ_URL" />
-        <result property="itemyhj_tkl" column="ITEMYHJ_TKL" />
-        <result property="atime" column="ATIME" />
-        <result property="hit" column="HIT" />
-        <result property="share" column="SHARE" />
-        <result property="fav" column="FAV" />
+        <id property="id" column="id"/>
+        <result property="goods_id" column="goods_id"/>
+        <result property="goods_name" column="goods_name"/>
+        <result property="goods_picture" column="goods_picture"/>
+        <result property="goods_detail_url" column="goods_detail_url"/>
+        <result property="shop_name" column="shop_name"/>
+        <result property="goods_price" column="goods_price"/>
+        <result property="goods_sells" column="goods_sells"/>
+        <result property="earn_rate" column="earn_rate"/>
+        <result property="commission_rate" column="commission_rate"/>
+        <result property="sellers_WANGWANG" column="sellers_WANGWANG"/>
+        <result property="taobaoke_short_url" column="taobaoke_short_url"/>
+        <result property="taobaoke_url" column="taobaoke_url"/>
+        <result property="tao_kou_ling" column="tao_kou_ling"/>
+        <result property="discount_coupon" column="discount_coupon"/>
+        <result property="discount_coupon_account" column="discount_coupon_account"/>
+        <result property="discount_coupondenomination" column="discount_coupondenomination"/>
+        <result property="discount_coupon_start_time" column="discount_coupon_start_time"/>
+        <result property="discount_couponend_time" column="discount_couponend_time"/>
+        <result property="discount_coupon_url" column="discount_coupon_url"/>
+        <result property="discount_coupon_tao_kou_ling" column="discount_coupon_tao_kou_ling"/>
+        <result property="discount_coupon_short_url" column="discount_coupon_short_url"/>
+        <result property="is_maketing_pla" column="is_maketing_pla"/>
+        <result property="cate_id" column="cate_id"/>
+
     </resultMap>
 
     <insert id="add" parameterType="Goods" keyProperty="id"
@@ -44,26 +41,31 @@
         ims_goods_taobao(
         <include refid="goods_fields" />
         )
-        VALUES (#{id},#{uniacid},#{displayorder},#{status},#{cate_id},#{itemid},
-        #{title},#{itempic},#{shoptitle},#{itemfee},#{itemmsell},#{itemstatus},#{stime},#{etime},#{itemsurl},#{itemurl},#{itemtkl},#{itemyhj_zl},#{itemyhj_yl},#{itemyhj_tit`},#{itemyhj_stime},#{itemyhj_etime},#{itemyhj_url},#{itemyhj_tkl},#{atime},#{hit},#{share},#{fav});
+        VALUES (#{id},#{goods_id},#{goods_name},#{goods_picture},#{goods_detail_url},#{shop_name},
+        #{goods_price},#{goods_sells},#{earn_rate},#{commission_rate},#{sellers_WANGWANG},#{taobaoke_short_url},
+        #{taobaoke_url},#{tao_kou_ling},#{discount_coupon},#{discount_coupon_account},#{discount_coupondenomination},
+        #{discount_coupon_start_time},#{discount_couponend_time},#{discount_coupon_url},#{discount_coupon_tao_kou_ling},
+        #{discount_coupon_short_url},#{is_maketing_pla},#{cate_id});
         <selectKey resultType="long" keyProperty="id">
             select
             LAST_INSERT_ID() as id
         </selectKey>
     </insert>
 
-
-
-
     <select id="findByCondition" parameterType="map" resultMap="goodsResultMap">
         SELECT
         <include refid="goods_fields"/>
         FROM ims_goods_taobao
-        <!--<where>-->
-            <!--<if test="name!=null">NAME=#{name}</if>-->
-            <!--<if test="description!=null">AND DESCRIPTION=#{description}</if>-->
-            <!--<if test="status!=null">AND STATUS=#{status}</if>-->
-        <!--</where>-->
+        WHERE 1=1
+       <![CDATA[
+           <if test="top_rate!=null">commission_rate<=#{top_rate}</if>
+           <if test="lower_rate!=null">AND commission_rate>=#{lower_rate}</if>
+           <if test="top_price!=null">goods_price<=#{top_price}</if>
+           <if test="lower_price!=null">AND goods_price>=#{lower_price}</if>
+           <if test="cate_id!=null">AND cate_id=#{cate_id}</if>
+            <if test="goods_name!=null">AND goods_name like CONCAT('%',#{goods_name},'%') </if>
+         ]]>
+
     </select>
 
 
