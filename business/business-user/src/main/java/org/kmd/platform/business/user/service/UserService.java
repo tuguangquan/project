@@ -1,18 +1,18 @@
 package org.kmd.platform.business.user.service;
 
+import org.kmd.platform.business.user.util.MD5Encoder;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.core.context.SecurityContextHolder;
 import org.kmd.platform.business.user.entity.User;
 import org.kmd.platform.business.user.mapper.UserMapper;
-import org.kmd.platform.business.user.security.MD5Encoder;
-import org.kmd.platform.business.user.security.MyUserDetail;
+
 
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Created with IntelliJ IDEA.
- * User: xiaozhujun
+ * User: tuguangquan
  * Date: 14-1-26
  * Time: 上午11:39
  * To change this template use File | Settings | File Templates.
@@ -28,8 +28,8 @@ public class UserService {
         userMapper.add(user);
     }
 
-    public Long getIdByName(String name){
-        return userMapper.getIdByName(name);
+    public Long getIdByName(String name,long appId){
+        return userMapper.getIdByName(name,appId);
     }
     public int update(User user){
         if(user.getPassword()!=null && !user.getPassword().equals("")){
@@ -42,8 +42,10 @@ public class UserService {
         return userMapper.delete(user);
     }
 
-    public List<User> list(){
-        return userMapper.findByCondition(new HashMap<String, Object>());
+    public List<User> list(long agentId){
+        Map<String, Object> map = new HashMap<String, Object>();
+        map.put("appId",agentId);
+        return userMapper.findByCondition(map);
     }
     public User findByName(String name){
         if(name==null || name.trim().equals("")){
@@ -61,10 +63,6 @@ public class UserService {
         return userMapper.getById(id);
     }
 
-    public MyUserDetail getMyUserDetailFromSession(){
-        MyUserDetail myUserDetail= (MyUserDetail)SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-        return myUserDetail;
-    }
 
     public void updateUserImage(User user){
         userMapper.updateUserImage(user);

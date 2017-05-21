@@ -8,7 +8,7 @@ import java.util.Map;
 
 /**
  * Created with IntelliJ IDEA.
- * User: xiaozhujun
+ * User: tuguangquan
  * Date: 14-1-26
  * Time: 上午11:51
  * To change this template use File | Settings | File Templates.
@@ -16,7 +16,7 @@ import java.util.Map;
 public interface UserMapper extends AbstractMapper<User>{
     public List<User> findByName(String name);
     public List<User> findByCondition(Map<String,Object> map);
-    public Long getIdByName(String name);
+    public Long getIdByName(String name,long appId);
     public User getById(long id);
     public void updateUserImage(User user);
 }

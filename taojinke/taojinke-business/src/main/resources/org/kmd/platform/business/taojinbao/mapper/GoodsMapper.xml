@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.kmd.platform.business.taojinbao.mapper.GoodsMapper">
+    <sql id="goods_fields">
+		ID,UNIACID,DISPIAYORDER,STATUS,CATE_ID,ITEMID,TITLE,ITEMPIC,SHOPTITLE,ITEMFEE,ITEMSELL,ITEMSTATUS,STIME,ETIME,ITEMSURL,ITEMURL,ITEMTKL,ITEMYHJ_ZL,ITEMYHJ_YL,ITEMYHJ_TIT,ITEMYHJ_STIME,ITEMYHJ_ETIME,ITEMYHJ_URL,ITEMYHJ_TKL,ATIME,HIT,SHARE,FAV
+	</sql>
+
+    <resultMap id="goodsResultMap" type="Authority">
+        <id property="id" column="ID" />
+        <result property="uniacid" column="UNIACID" />
+        <result property="displayorder" column="DISPIAYORDER" />
+        <result property="status" column="STATUS" />
+        <result property="cate_id" column="CATE_ID" />
+        <result property="itemid" column="ITEMID" />
+        <result property="title" column="TITLE" />
+        <result property="itempic" column="ITEMPIC" />
+        <result property="shoptitle" column="SHOPTITLE" />
+        <result property="itemfee" column="ITEMFEE" />
+        <result property="itemsell" column="ITEMSELL" />
+        <result property="itemstatus" column="ITEMSTATUS" />
+        <result property="stime" column="STIME" />
+        <result property="etime" column="ETIME" />
+        <result property="itemsurl" column="ITEMSURL" />
+        <result property="itemurl" column="ITEMURL" />
+        <result property="itemtkl" column="ITEMTKL" />
+        <result property="itemyhj_zl" column="ITEMYHJ_ZL" />
+        <result property="itemyhj_yl" column="ITEMYHJ_YL" />
+        <result property="itemyhj_tit`" column="ITEMYHJ_TIT" />
+        <result property="itemyhj_stime" column="ITEMYHJ_STIME" />
+        <result property="itemyhj_etime" column="ITEMYHJ_ETIME" />
+        <result property="itemyhj_url" column="ITEMYHJ_URL" />
+        <result property="itemyhj_tkl" column="ITEMYHJ_TKL" />
+        <result property="atime" column="ATIME" />
+        <result property="hit" column="HIT" />
+        <result property="share" column="SHARE" />
+        <result property="fav" column="FAV" />
+    </resultMap>
+
+    <insert id="add" parameterType="Goods" keyProperty="id"
+            useGeneratedKeys="true">
+        INSERT INTO
+        ims_goods_taobao(
+        <include refid="goods_fields" />
+        )
+        VALUES (#{id},#{uniacid},#{displayorder},#{status},#{cate_id},#{itemid},
+        #{title},#{itempic},#{shoptitle},#{itemfee},#{itemmsell},#{itemstatus},#{stime},#{etime},#{itemsurl},#{itemurl},#{itemtkl},#{itemyhj_zl},#{itemyhj_yl},#{itemyhj_tit`},#{itemyhj_stime},#{itemyhj_etime},#{itemyhj_url},#{itemyhj_tkl},#{atime},#{hit},#{share},#{fav});
+        <selectKey resultType="long" keyProperty="id">
+            select
+            LAST_INSERT_ID() as id
+        </selectKey>
+    </insert>
+
+
+
+
+    <select id="findByCondition" parameterType="map" resultMap="goodsResultMap">
+        SELECT
+        <include refid="goods_fields"/>
+        FROM ims_goods_taobao
+        <!--<where>-->
+            <!--<if test="name!=null">NAME=#{name}</if>-->
+            <!--<if test="description!=null">AND DESCRIPTION=#{description}</if>-->
+            <!--<if test="status!=null">AND STATUS=#{status}</if>-->
+        <!--</where>-->
+    </select>
+
+
+</mapper>

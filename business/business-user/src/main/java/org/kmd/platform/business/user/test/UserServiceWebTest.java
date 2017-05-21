@@ -1,6 +1,6 @@
 package org.kmd.platform.business.user.test;
 
-import org.kmd.platform.business.user.security.MD5Encoder;
+import org.kmd.platform.business.user.util.MD5Encoder;
 
 /**
  * Created with IntelliJ IDEA.

@@ -28,7 +28,5 @@
      http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.0.xsd">
     <bean id="userService" class="org.kmd.platform.business.user.service.UserService" depends-on="mappers"/>
     <bean id="userAuthorityService" class="org.kmd.platform.business.user.service.UserAuthorityService" depends-on="mappers"/>
-    <bean id="authorityPowerService" class="org.kmd.platform.business.user.service.AuthorityPowerService" depends-on="mappers"/>
-    <bean id="powerService" class="org.kmd.platform.business.user.service.PowerService" depends-on="mappers"/>
     <bean id="authorityService" class="org.kmd.platform.business.user.service.AuthorityService" depends-on="mappers"/>
 </beans>
