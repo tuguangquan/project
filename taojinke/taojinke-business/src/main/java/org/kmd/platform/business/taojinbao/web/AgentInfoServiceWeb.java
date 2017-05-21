@@ -48,17 +48,17 @@ public class AgentInfoServiceWeb {
     @Produces( MediaType.APPLICATION_JSON + ";charset=UTF-8")
     @Path("/add")
     @POST
-    public String add(@FormParam("name") String password,@FormParam("password") String name,@FormParam("weiXinId") String weiXinId,@FormParam("weiXinOriginalId") String weiXinOriginalId,@FormParam("appID") String appID,@FormParam("appSecret") String appSecret,@FormParam("profit") String profit){
-        if(weiXinId==null ||weiXinId.trim().equals("")|| weiXinOriginalId==null|| weiXinOriginalId.trim().equals("") ||appID==null|| appID.trim().equals("")||appSecret==null|| appSecret.trim().equals("")||profit==null||profit.trim().equals("")){
+    public String add(@FormParam("name") String name,@FormParam("password") String password,@FormParam("agentName") String agentName){
+        if(name==null ||name.trim().equals("")|| password==null|| password.trim().equals("") ){
             return JsonResultUtils.getCodeAndMesByString(JsonResultUtils.Code.ERROR.getCode(), "参数不能为空!");
         }
-        AgentInfo  agentInfoExist = agentInfoService.getAgentInfoByAppID(appID);
+        AgentInfo  agentInfoExist = agentInfoService.getAgentInfoByAgentName(agentName);
         if(null!=agentInfoExist){
-            return JsonResultUtils.getCodeAndMesByString(JsonResultUtils.Code.ERROR.getCode(), "该代理商已存在!");
+            return JsonResultUtils.getCodeAndMesByString(JsonResultUtils.Code.ERROR.getCode(), "代理商的名称已经存在!");
         }
-        long id;
+        long id = 0;
         try{
-            id = appService.getIdByName(name);
+            id = appService.getIdByName(agentName);
         }
         catch (Exception ex){
             id=0;
@@ -66,15 +66,15 @@ public class AgentInfoServiceWeb {
         if(id==0){ //添加一个代理商
             Date now=new Date();
             App app=new App();
-            app.setName(name);
+            app.setName(agentName);
             app.setDescription("");
             app.setStatus("启用");
             app.setCreatetime(now);
             appService.add(app);
         }else{
-            return JsonResultUtils.getCodeAndMesByString(JsonResultUtils.Code.ERROR.getCode(), "请设置一个独一无二的名字!");
+            return JsonResultUtils.getCodeAndMesByString(JsonResultUtils.Code.ERROR.getCode(), "代理商的名称已经存在!");
         }
-        long appIdForAgent = appService.getIdByName(name);
+        long appIdForAgent = appService.getIdByName(agentName);
         //为管理员添加账户
         User user = new User();
         user.setName(name);
@@ -83,26 +83,16 @@ public class AgentInfoServiceWeb {
         user.setStatus(STATUS);
         user.setAppId(appIdForAgent);
         userService.add(user);
-
         //为管理员设置角色
-        long userId =  userService.getIdByName(name);
+        long userId =  userService.getIdByName(agentName);
         long authorityId = authorityService.getIdByName(role);
         UserAuthority userAuthority = new UserAuthority();
         userAuthority.setUserId(userId);
         userAuthority.setAuthorityId(authorityId);
-        userAuthority.setUserName(name);
+        userAuthority.setUserName(agentName);
         userAuthority.setAuthorityName(role);
         userAuthority.setAppId(appIdForAgent);
         userAuthorityService.add(userAuthority);
-
-        //添加代理商信息
-        AgentInfo  agentInfo = new AgentInfo();
-        agentInfo.setWeixinId(weiXinId);
-        agentInfo.setWeixinOriginalId(weiXinOriginalId);
-        agentInfo.setAgentId(appIdForAgent);
-        agentInfo.setAppSecret(appSecret);
-        agentInfo.setProfit(Float.parseFloat(profit));
-        agentInfoService.add(agentInfo);
         return JsonResultUtils.getCodeAndMesByStringAsDefault(JsonResultUtils.Code.SUCCESS);
     }
 }

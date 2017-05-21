@@ -14,9 +14,9 @@ public class AgentInfo {
     private String appID;
     private String appSecret;
     private long agentId;
+    private long agentName;
     private int fansAddNum;
     private int fansCountNum;
-    private float profit;
 
     public int getId() {
         return id;
@@ -82,11 +82,11 @@ public class AgentInfo {
         this.fansCountNum = fansCountNum;
     }
 
-    public float getProfit() {
-        return profit;
+    public long getAgentName() {
+        return agentName;
     }
 
-    public void setProfit(float profit) {
-        this.profit = profit;
+    public void setAgentName(long agentName) {
+        this.agentName = agentName;
     }
 }

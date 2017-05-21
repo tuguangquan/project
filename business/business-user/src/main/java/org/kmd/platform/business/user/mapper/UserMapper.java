@@ -16,7 +16,7 @@ import java.util.Map;
 public interface UserMapper extends AbstractMapper<User>{
     public List<User> findByName(String name);
     public List<User> findByCondition(Map<String,Object> map);
-    public Long getIdByName(String name);
+    public Long getIdByName(String name,long appId);
     public User getById(long id);
     public void updateUserImage(User user);
 }

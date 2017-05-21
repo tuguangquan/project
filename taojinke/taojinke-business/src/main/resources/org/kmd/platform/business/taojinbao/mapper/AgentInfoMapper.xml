@@ -4,7 +4,7 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="org.kmd.platform.business.taojinbao.mapper.AgentInfoMapper">
     <sql id="agentInfo_fields">
-		ID,WEIXINID,WEIXINORIGINALID,APPID,APPSECERT,AGENTID,FANSADDNUM,FANSCOUNTNUM,PROFIT
+		ID,WEIXINID,WEIXINORIGINALID,APPID,APPSECERT,AGENTID,FANSADDNUM,FANSCOUNTNUM,AGENTNAME
 	</sql>
 
     <resultMap id="AgentInfoResultMap" type="AgentInfo">
@@ -16,7 +16,7 @@
         <result property="agentId" column="AGENTID"/>
         <result property="fansAddNum" column="FANSADDNUM"/>
         <result property="fansCountNum" column="FANSCOUNTNUM"/>
-        <result property="profit" column="PROFIT"/>
+        <result property="agentName" column="AGENTNAME"/>
     </resultMap>
 
     <insert id="add" parameterType="AgentInfo" keyProperty="id"
@@ -25,7 +25,7 @@
         agent_info(
         <include refid="agentInfo_fields" />
         )
-        VALUES (#{id},#{weixinId},#{weixinOriginalId},#{appID},#{appSecret},#{agentId},#{fansAddNum},#{fansCountNum},#{profit});
+        VALUES (#{id},#{weixinId},#{weixinOriginalId},#{appID},#{appSecret},#{agentId},#{fansAddNum},#{fansCountNum},#{agentName});
         <selectKey resultType="long" keyProperty="id">
             select
             LAST_INSERT_ID() as id
@@ -33,32 +33,29 @@
     </insert>
 
 
-    <update id="update" parameterType="AgentInfo">
-        UPDATE agent_info
-        <set>
-            <if test="name != null">NAME=#{name},</if>
-            <if test="description != null">DESCRIPTION=#{description},</if>
-            <if test="status != null">STATUS=#{status}</if>
-        </set>
-        WHERE ID = #{id};
-    </update>
+
 
 
     <select id="findByCondition" parameterType="map" resultMap="AgentInfoResultMap">
         SELECT
         <include refid="agentInfo_fields"/>
         FROM agent_info
-        <where>
-            <if test="name!=null">NAME=#{name}</if>
-            <if test="description!=null">AND DESCRIPTION=#{description}</if>
-            <if test="status!=null">AND STATUS=#{status}</if>
-        </where>
+        <!--<where>-->
+            <!--<if test="name!=null">NAME=#{name}</if>-->
+            <!--<if test="description!=null">AND DESCRIPTION=#{description}</if>-->
+            <!--<if test="status!=null">AND STATUS=#{status}</if>-->
+        <!--</where>-->
     </select>
     <select id="getAgentInfoByAppID" parameterType="java.lang.String" resultMap="AgentInfoResultMap">
          SELECT
         <include refid="agentInfo_fields"/>
          FROM agent_info WHERE appId=#{appId}
      </select>
+    <select id="getAgentInfoByAgentName" parameterType="java.lang.String" resultMap="AgentInfoResultMap">
+        SELECT
+        <include refid="agentInfo_fields"/>
+        FROM agent_info WHERE agentName=#{agentName}
+    </select>
     <select id="getAgentInfoByAgentId" parameterType="java.lang.String" resultMap="AgentInfoResultMap">
         SELECT
         <include refid="agentInfo_fields"/>

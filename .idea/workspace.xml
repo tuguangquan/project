@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6328e16e-7283-4bff-bff6-5e4f32b565da" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/business/business-user/src/main/java/org/kmd/platform/business/user/util/MD5Encoder.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/index.html" />
       <change type="DELETED" beforePath="D:\project\project\business\business-business\business-business.iml" afterPath="" />
       <change type="DELETED" beforePath="D:\project\project\business\business-business\pom.xml" afterPath="" />
       <change type="DELETED" beforePath="D:\project\project\business\business-business\src\main\java\org\whut\seis\business\entity\Authority.java" afterPath="" />
@@ -79,6 +81,22 @@
       <change type="DELETED" beforePath="D:\project\project\business\business-business\target\maven-archiver\pom.properties" afterPath="" />
       <change type="DELETED" beforePath="D:\project\project\business\business-user\src\main\data\cas_user.sql" afterPath="" />
       <change type="DELETED" beforePath="D:\project\project\business\business-user\src\main\data\user_authority_power.sql" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\business\business-user\src\main\java\org\kmd\platform\business\user\entity\AuthorityPower.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\business\business-user\src\main\java\org\kmd\platform\business\user\entity\Power.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\business\business-user\src\main\java\org\kmd\platform\business\user\mapper\AuthorityPowerMapper.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\business\business-user\src\main\java\org\kmd\platform\business\user\mapper\PowerMapper.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\business\business-user\src\main\java\org\kmd\platform\business\user\security\MD5Encoder.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\business\business-user\src\main\java\org\kmd\platform\business\user\security\MyAccessDecisionManager.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\business\business-user\src\main\java\org\kmd\platform\business\user\security\MySecurityInterceptorFilter.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\business\business-user\src\main\java\org\kmd\platform\business\user\security\MySecurityMetadataSource.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\business\business-user\src\main\java\org\kmd\platform\business\user\security\MyUserDetail.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\business\business-user\src\main\java\org\kmd\platform\business\user\security\MyUserDetailsService.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\business\business-user\src\main\java\org\kmd\platform\business\user\security\UserContext.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\business\business-user\src\main\java\org\kmd\platform\business\user\service\AuthorityPowerService.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\business\business-user\src\main\java\org\kmd\platform\business\user\service\PowerService.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\business\business-user\src\main\java\org\kmd\platform\business\user\web\PowerServiceWeb.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\business\business-user\src\main\resources\org\kmd\platform\business\user\mapper\AuthorityPowerMapper.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\business\business-user\src\main\resources\org\kmd\platform\business\user\mapper\PowerMapper.xml" afterPath="" />
       <change type="DELETED" beforePath="D:\project\project\fundamental\fundamental-config\src\main\java\config\ConfigProperties.java" afterPath="" />
       <change type="DELETED" beforePath="D:\project\project\fundamental\fundamental-config\src\main\java\config\Constants.java" afterPath="" />
       <change type="DELETED" beforePath="D:\project\project\fundamental\fundamental-config\src\main\java\config\FundamentalConfigProvider.java" afterPath="" />
@@ -94,12 +112,501 @@
       <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-business\src\main\java\org\kmd\platform\business\taojinbao\weixin\mass.resp\TextMessage.java" afterPath="" />
       <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-business\src\main\java\org\kmd\platform\business\taojinbao\weixin\mass.resp\Voice.java" afterPath="" />
       <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-business\src\main\java\org\kmd\platform\business\taojinbao\weixin\mass.resp\VoiceMessage.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/weixin/mass/resp/Image.java" afterPath="$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/weixin/mass/resp/Image.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/weixin/mass/resp/MassBaseMessage.java" afterPath="$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/weixin/mass/resp/MassBaseMessage.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/weixin/mass/resp/MassImageMessage.java" afterPath="$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/weixin/mass/resp/MassImageMessage.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/weixin/mass/resp/MassTextMessage.java" afterPath="$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/weixin/mass/resp/MassTextMessage.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/weixin/mass/resp/MassVoiceMessage.java" afterPath="$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/weixin/mass/resp/MassVoiceMessage.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/weixin/mass/resp/Voice.java" afterPath="$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/weixin/mass/resp/Voice.java" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\admin.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\dashboard\dataAnalyze.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\dashboard\dayDevice.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\dashboard\dayException.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\dashboard\dayTask.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\dashboard\dayWorker.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\dashboard\geoInfo.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\dashboard\layout.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\index.jsp" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\js\config.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\js\jquery-1.10.2.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\js\jquery-1.11.0.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\js\jquery-1.7.2.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\js\jquery.json-2.4.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ColorPicker\colorpicker.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ColorPicker\jquery.colorpicker.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\images\loading.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\images\top.jpg" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\images\topicon.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\jquery-validation\jquery.metadata.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\jquery-validation\jquery.validate.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\jquery-validation\messages_cn.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\jquery-validation\version.txt" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\jquery.cookie.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\jquery\jquery-1.3.2.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\jquery\jquery-1.4.4.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\jquery\jquery-1.5.2.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\json2.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\js\core\base.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\js\core\inject.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\js\ligerui.all.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\js\ligerui.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\js\plugins\ligerAccordion.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\js\plugins\ligerButton.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\js\plugins\ligerCheckBox.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\js\plugins\ligerCheckBoxList.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\js\plugins\ligerComboBox.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\js\plugins\ligerDateEditor.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\js\plugins\ligerDialog.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\js\plugins\ligerDrag.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\js\plugins\ligerEasyTab.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\js\plugins\ligerFilter.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\js\plugins\ligerForm.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\js\plugins\ligerGrid.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\js\plugins\ligerLayout.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\js\plugins\ligerListBox.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\js\plugins\ligerMenu.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\js\plugins\ligerMenuBar.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\js\plugins\ligerMessageBox.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\js\plugins\ligerPanel.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\js\plugins\ligerPopupEdit.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\js\plugins\ligerPortal.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\js\plugins\ligerRadio.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\js\plugins\ligerRadioList.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\js\plugins\ligerResizable.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\js\plugins\ligerSpinner.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\js\plugins\ligerTab.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\js\plugins\ligerTextBox.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\js\plugins\ligerTip.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\js\plugins\ligerToolBar.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\js\plugins\ligerTree.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\js\plugins\ligerWindow.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Aqua\css\ligerui-all.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Aqua\css\ligerui-common.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Aqua\css\ligerui-dialog.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Aqua\css\ligerui-form.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Aqua\css\ligerui-grid.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Aqua\css\ligerui-layout.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Aqua\css\ligerui-menu.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Aqua\css\ligerui-tab.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Aqua\css\ligerui-tree.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Aqua\images\common\bigloading.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Aqua\images\common\button-disabled.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Aqua\images\common\button-over.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Aqua\images\common\button.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Aqua\images\common\drop-icons.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Aqua\images\common\exclamation.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Aqua\images\common\invalid-line.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Aqua\images\common\loading.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Aqua\images\common\table.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Aqua\images\common\toggle.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Aqua\images\controls\bg-panel-title-over.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Aqua\images\controls\bg-panel-title-pressed.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Aqua\images\controls\bg-panel-title.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Aqua\images\controls\bg-tab-title-over.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Aqua\images\controls\bg-tab-title-pressed.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Aqua\images\controls\bg-tab-title.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Aqua\images\controls\bg-text.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Aqua\images\controls\bg-trigger-over.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Aqua\images\controls\bg-trigger-pressed.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Aqua\images\controls\bg-trigger.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Aqua\images\controls\btn-l.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Aqua\images\controls\btn-r.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Aqua\images\controls\btn.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Aqua\images\controls\button-bg-over.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Aqua\images\controls\button-bg.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Aqua\images\controls\checkbox.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Aqua\images\controls\dateeditor-bar-bg.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Aqua\images\controls\dateeditor-header-bg.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Aqua\images\controls\radio.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Aqua\images\dateeditor\date.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Aqua\images\dateeditor\icon-first.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Aqua\images\dateeditor\icon-last.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Aqua\images\dateeditor\icon-next.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Aqua\images\dateeditor\icon-prev.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Aqua\images\form\verify-corner.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Aqua\images\grid\grid-checkbox-checked.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Aqua\images\grid\grid-checkbox.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Aqua\images\grid\grid-detail-close.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Aqua\images\grid\grid-detail-open.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Aqua\images\grid\grid-tree-close.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Aqua\images\grid\grid-tree-open.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Aqua\images\grid\header-bg-over.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Aqua\images\grid\header-bg.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Aqua\images\grid\header2-bg.jpg" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Aqua\images\grid\popup-line.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Aqua\images\grid\popup-row-over.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Aqua\images\icon\bar-button-over.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Aqua\images\icon\checkbox-checked.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Aqua\images\icon\checkbox.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Aqua\images\icon\cross.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Aqua\images\icon\icon-close-over.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Aqua\images\icon\icon-close.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Aqua\images\icon\icon-down.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Aqua\images\icon\icon-drop.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Aqua\images\icon\icon-edited.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Aqua\images\icon\icon-first.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Aqua\images\icon\icon-last.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Aqua\images\icon\icon-line.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Aqua\images\icon\icon-load.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Aqua\images\icon\icon-next.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Aqua\images\icon\icon-prev.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Aqua\images\icon\icon-select.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Aqua\images\icon\icon-sort-asc.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Aqua\images\icon\icon-sort-desc.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Aqua\images\icon\icon-unselect.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Aqua\images\icon\icon-up.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Aqua\images\icon\spr_icons.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Aqua\images\layout\accordion-content.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Aqua\images\layout\accordion-header-over.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Aqua\images\layout\accordion-header.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Aqua\images\layout\layout-header-over.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Aqua\images\layout\layout-header.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Aqua\images\layout\layout-sidebar-header.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Aqua\images\layout\mini-bottom.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Aqua\images\layout\mini-left.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Aqua\images\layout\mini-right.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Aqua\images\layout\mini-top.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Aqua\images\layout\panel-content.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Aqua\images\layout\panel-header-over.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Aqua\images\layout\panel-header.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Aqua\images\layout\panel-header2.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Aqua\images\layout\tabs-bg.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Aqua\images\layout\tabs-item-bg.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Aqua\images\layout\tabs-item-left-bg.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Aqua\images\layout\tabs-item-over-bg.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Aqua\images\layout\tabs-item-right-bg.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Aqua\images\layout\tabs-tools.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Aqua\images\layout\togglebar.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Aqua\images\menu\menu-item-arrow.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Aqua\images\menu\menu-item-down.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Aqua\images\menu\menu-item-over-l.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Aqua\images\menu\menu-item-over-m.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Aqua\images\menu\menu-item-over-r.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Aqua\images\menu\menu-line-x.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Aqua\images\menu\menu-line-y.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Aqua\images\panel\bar-bg.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Aqua\images\panel\header-bg.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Aqua\images\panel\header-bg.jpg" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Aqua\images\panel\header2-bg.jpg" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Aqua\images\panel\panel-btn-l.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Aqua\images\panel\panel-btn-r.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Aqua\images\panel\panel-btn.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Aqua\images\panel\panel-header.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Aqua\images\panel\panel-menu-item-down.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Aqua\images\panel\panel-menu.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Aqua\images\panel\panel-toolbar.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Aqua\images\panel\panel-tools.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Aqua\images\tree\folder-open.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Aqua\images\tree\folder.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Aqua\images\tree\loading.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Aqua\images\tree\nodeloading.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Aqua\images\tree\nodeloading2.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Aqua\images\tree\nodeloading3.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Aqua\images\tree\nodeloading4.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Aqua\images\tree\tree-leaf.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Aqua\images\tree\tree-level.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Aqua\images\tree\tree-noline.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Aqua\images\tree\tree-status-close.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Aqua\images\tree\tree-status-open.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Aqua\images\tree\tree-status.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Aqua\images\tree\tree.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Aqua\images\win\box-icons.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Aqua\images\win\box.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Aqua\images\win\dialog-bc.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Aqua\images\win\dialog-icons.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Aqua\images\win\dialog-tc.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Aqua\images\win\dialog-winbtns.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Aqua\images\win\dialog.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Aqua\images\win\dialogbtn.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Aqua\images\win\taskbar-task.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Aqua\images\win\taskbar.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Aqua\images\win\taskbar.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Aqua\images\win\taskicon.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Gray2014\css\all.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Gray2014\css\common.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Gray2014\css\dialog.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Gray2014\css\form.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Gray2014\css\grid.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Gray2014\css\layout.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Gray2014\css\tab.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Gray2014\images\gridheader.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Gray2014\images\layout\accordion-header.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Gray2014\images\layout\icon-close-over.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Gray2014\images\layout\icon-close.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Gray2014\images\layout\layout-header.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Gray2014\images\layout\tabs-bg.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Gray2014\images\layout\tabs-item-bg.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Gray2014\images\layout\tabs-item-left-bg.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Gray2014\images\layout\tabs-item-left-selected.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Gray2014\images\layout\tabs-item-right-bg.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Gray2014\images\layout\tabs-item-right-selected.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Gray2014\images\layout\tabs-item-selected.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Gray2014\images\layout\togglebar.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Gray2014\images\tab_arrow_spr.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Gray2014\images\tab_close.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Gray2014\images\ui\btn.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Gray2014\images\ui\button-disabled.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Gray2014\images\ui\button-over.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Gray2014\images\ui\button.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Gray2014\images\ui\button1.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Gray2014\images\ui\button2.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Gray2014\images\ui\date.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Gray2014\images\ui\dateeditor-bar.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Gray2014\images\ui\dateeditor-btn-over.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Gray2014\images\ui\dateeditor-btn.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Gray2014\images\ui\dateeditor-thead.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Gray2014\images\ui\grid-detail-close.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Gray2014\images\ui\grid-detail-open.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Gray2014\images\ui\gridalt.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Gray2014\images\ui\gridbar.jpg" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Gray2014\images\ui\grideditor.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Gray2014\images\ui\icon-down.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Gray2014\images\ui\icon-select.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Gray2014\images\ui\icon-select2.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Gray2014\images\ui\icon-unselect.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Gray2014\images\ui\icon-up.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Gray2014\images\ui\input.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Gray2014\images\ui\inputdisabled.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Gray2014\images\ui\loading.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Gray2014\images\ui\loading2.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Gray2014\images\ui\loading3.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Gray2014\images\ui\loading4.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Gray2014\images\ui\loadingl.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Gray2014\images\ui\spr_icons.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Gray2014\images\ui\trigger.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Gray2014\images\win\dialog-winbtns.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Gray2014\images\win\dialogbtn.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Gray2014\images\win\dialogicon.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Gray\css\all.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Gray\css\common.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Gray\css\dialog.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Gray\css\form.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Gray\css\grid.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Gray\css\layout.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Gray\css\tab.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Gray\images\layout\accordion-header.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Gray\images\layout\icon-close-over.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Gray\images\layout\icon-close.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Gray\images\layout\layout-header.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Gray\images\layout\tabs-bg.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Gray\images\layout\tabs-item-bg.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Gray\images\layout\tabs-item-left-bg.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Gray\images\layout\tabs-item-left-selected.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Gray\images\layout\tabs-item-right-bg.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Gray\images\layout\tabs-item-right-selected.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Gray\images\layout\tabs-item-selected.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Gray\images\layout\togglebar.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Gray\images\ui\btn.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Gray\images\ui\button-disabled.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Gray\images\ui\button-over.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Gray\images\ui\button.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Gray\images\ui\button1.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Gray\images\ui\button2.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Gray\images\ui\dateeditor-bar.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Gray\images\ui\dateeditor-btn-over.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Gray\images\ui\dateeditor-btn.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Gray\images\ui\dateeditor-thead.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Gray\images\ui\grid-detail-close.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Gray\images\ui\grid-detail-open.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Gray\images\ui\gridalt.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Gray\images\ui\gridbar.jpg" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Gray\images\ui\grideditor.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Gray\images\ui\icon-down.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Gray\images\ui\icon-select.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Gray\images\ui\icon-unselect.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Gray\images\ui\icon-up.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Gray\images\ui\input.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Gray\images\ui\inputdisabled.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Gray\images\ui\loading.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Gray\images\ui\loading2.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Gray\images\ui\loading3.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Gray\images\ui\loading4.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Gray\images\ui\trigger.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Gray\images\win\dialog-winbtns.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Gray\images\win\dialogbtn.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Gray\images\win\dialogicon.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Silvery\css\form.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Silvery\css\grid.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Silvery\css\layout.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Silvery\css\style.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Silvery\images\form\checkboxradio.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Silvery\images\form\icon-down-over.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Silvery\images\form\icon-down.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Silvery\images\form\icon-up-over.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Silvery\images\form\icon-up.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Silvery\images\form\invalid_line.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Silvery\images\form\text-date-icon.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Silvery\images\form\text-down-icon.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Silvery\images\form\text-focus.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Silvery\images\form\text-l-focus.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Silvery\images\form\text-l-over.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Silvery\images\form\text-l.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Silvery\images\form\text-over.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Silvery\images\form\text-r-focus.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Silvery\images\form\text-r-over.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Silvery\images\form\text-r.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Silvery\images\form\text.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Silvery\images\grid\gridheaderbg.jpg" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Silvery\images\layout\accordion-header-over.jpg" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Silvery\images\layout\accordion-header.jpg" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Silvery\images\layout\layout-header-over.jpg" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Silvery\images\layout\layout-header.jpg" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Silvery\images\layout\tabs-bg.jpg" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Silvery\images\layout\tabs-item-bg.jpg" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Silvery\images\layout\tabs-item-left-bg.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Silvery\images\layout\tabs-item-over-bg.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Silvery\images\layout\tabs-item-right-bg.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Silvery\images\layout\tabs-tools.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Tab\css\all.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Tab\css\dialog.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Tab\css\form.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Tab\css\grid.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Tab\css\tab.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Tab\images\gridheader.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Tab\images\layout\accordion-header.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Tab\images\layout\icon-close-over.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Tab\images\layout\icon-close.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Tab\images\layout\layout-header.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Tab\images\layout\tabs-bg.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Tab\images\layout\tabs-item-bg.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Tab\images\layout\tabs-item-left-bg.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Tab\images\layout\tabs-item-left-selected.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Tab\images\layout\tabs-item-right-bg.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Tab\images\layout\tabs-item-right-selected.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Tab\images\layout\tabs-item-selected.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Tab\images\layout\togglebar.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Tab\images\tab_arrow_spr.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Tab\images\tab_close.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Tab\images\ui\btn.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Tab\images\ui\button-disabled.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Tab\images\ui\button-over.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Tab\images\ui\button.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Tab\images\ui\button1.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Tab\images\ui\button2.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Tab\images\ui\date.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Tab\images\ui\dateeditor-bar.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Tab\images\ui\dateeditor-btn-over.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Tab\images\ui\dateeditor-btn.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Tab\images\ui\dateeditor-thead.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Tab\images\ui\grid-detail-close.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Tab\images\ui\grid-detail-open.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Tab\images\ui\gridalt.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Tab\images\ui\gridbar.jpg" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Tab\images\ui\grideditor.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Tab\images\ui\icon-down.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Tab\images\ui\icon-select.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Tab\images\ui\icon-select2.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Tab\images\ui\icon-unselect.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Tab\images\ui\icon-up.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Tab\images\ui\input.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Tab\images\ui\inputdisabled.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Tab\images\ui\loading.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Tab\images\ui\loading2.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Tab\images\ui\loading3.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Tab\images\ui\loading4.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Tab\images\ui\loadingl.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Tab\images\ui\spr_icons.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Tab\images\ui\trigger.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Tab\images\win\dialog-winbtns.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Tab\images\win\dialogbtn.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\Tab\images\win\dialogicon.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\icons\add.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\icons\archives.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\icons\attibutes.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\icons\back.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\icons\bluebook.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\icons\bookpen.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\icons\busy.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\icons\calendar.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\icons\candle.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\icons\coffee.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\icons\comment.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\icons\communication.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\icons\config.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\icons\customers.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\icons\cut.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\icons\database.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\icons\delete.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\icons\discuss.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\icons\down.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\icons\edit.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\icons\graywarn.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\icons\greenwarn.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\icons\help.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\icons\home.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\icons\lock.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\icons\logout.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\icons\mailbox.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\icons\memeber.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\icons\modify.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\icons\msn.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\icons\myaccount.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\icons\ok.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\icons\outbox.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\icons\pager.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\icons\photograph.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\icons\plus.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\icons\prev.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\icons\print.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\icons\process.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\icons\qq.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\icons\refresh.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\icons\right.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\icons\role.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\icons\save-disabled.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\icons\save.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\icons\search.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\icons\search2.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\icons\settings.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\icons\true.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\icons\up.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\ligerUI\skins\ligerui-icons.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\syntaxhighlighter\scripts\shAutoloader.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\syntaxhighlighter\scripts\shBrushBash.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\syntaxhighlighter\scripts\shBrushCss.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\syntaxhighlighter\scripts\shBrushJScript.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\syntaxhighlighter\scripts\shBrushXml.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\syntaxhighlighter\scripts\shCore.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\syntaxhighlighter\styles\shCore.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\lib\syntaxhighlighter\styles\shCoreDefault.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\login.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\login\background.jpg" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\login\css\demo.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\login\css\login.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\login\images\banner-shdow.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\login\images\dot-black.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\login\images\dot-def.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\login\images\login-btn.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\login\images\logo.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\login\images\logo.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\login\images\yzm.jpg" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\login\js\Validform_v5.3.2.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\login\js\Validform_v5.3.2_min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\login\js\jquery.SuperSlide.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\login\js\jquery1.42.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\login\login.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\login\logo.jpg" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\login\logo.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\login\themes\Thumbs.db" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\login\themes\theme-pic1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\login\themes\theme-pic2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\login\themes\theme-pic3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\menu.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-web\src\main\webapp\title.html" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/entity/AgentInfo.java" afterPath="$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/entity/AgentInfo.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/mapper/AgentInfoMapper.java" afterPath="$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/mapper/AgentInfoMapper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-business/src/main/resources/org/kmd/platform/business/taojinbao/mapper/AgentInfoMapper.xml" afterPath="$PROJECT_DIR$/taojinke/taojinke-business/src/main/resources/org/kmd/platform/business/taojinbao/mapper/AgentInfoMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/service/AgentInfoService.java" afterPath="$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/service/AgentInfoService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/web/AgentInfoServiceWeb.java" afterPath="$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/web/AgentInfoServiceWeb.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/business/business-user/src/main/java/org/kmd/platform/business/user/web/AuthorityServiceWeb.java" afterPath="$PROJECT_DIR$/business/business-user/src/main/java/org/kmd/platform/business/user/web/AuthorityServiceWeb.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-business/src/main/resources/org/kmd/platform/business/taojinbao/mapper/GoodsMapper.xml" afterPath="$PROJECT_DIR$/taojinke/taojinke-business/src/main/resources/org/kmd/platform/business/taojinbao/mapper/GoodsMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/web/GoodsServiceWeb.java" afterPath="$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/web/GoodsServiceWeb.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/business/business-user/src/main/java/org/kmd/platform/business/user/mapper/UserMapper.java" afterPath="$PROJECT_DIR$/business/business-user/src/main/java/org/kmd/platform/business/user/mapper/UserMapper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/business/business-user/src/main/resources/org/kmd/platform/business/user/mapper/UserMapper.xml" afterPath="$PROJECT_DIR$/business/business-user/src/main/resources/org/kmd/platform/business/user/mapper/UserMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/business/business-user/src/main/java/org/kmd/platform/business/user/service/UserService.java" afterPath="$PROJECT_DIR$/business/business-user/src/main/java/org/kmd/platform/business/user/service/UserService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/business/business-user/src/main/java/org/kmd/platform/business/user/web/UserServiceWeb.java" afterPath="$PROJECT_DIR$/business/business-user/src/main/java/org/kmd/platform/business/user/web/UserServiceWeb.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/business/business-user/src/main/java/org/kmd/platform/business/user/test/UserServiceWebTest.java" afterPath="$PROJECT_DIR$/business/business-user/src/main/java/org/kmd/platform/business/user/test/UserServiceWebTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/web/WeixinServiceWeb.java" afterPath="$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/web/WeixinServiceWeb.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/WEB-INF/applicationContext.xml" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/WEB-INF/applicationContext.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/pom.xml" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/business/business-user/src/main/resources/META-INF/spring/user-applicationContext.xml" afterPath="$PROJECT_DIR$/business/business-user/src/main/resources/META-INF/spring/user-applicationContext.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/business/business-Web/src/main/webapp/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/business/business-Web/src/main/webapp/WEB-INF/web.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/WEB-INF/web.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="project.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -124,9 +631,6 @@
     <file path="$PROJECT_DIR$/business/business-menu/src/main/java/org/kmd/business/menu/mapper/MenuMapper.java" changelist="6328e16e-7283-4bff-bff6-5e4f32b565da" time="1494937783030" ignored="false" />
     <file path="$PROJECT_DIR$/business/business-menu/src/main/java/org/kmd/business/menu/mapper/AuthorityMenuMapper.java" changelist="6328e16e-7283-4bff-bff6-5e4f32b565da" time="1494937783030" ignored="false" />
     <file path="$PROJECT_DIR$/business/business-menu/src/main/java/org/kmd/business/menu/entity/AuthorityMenu.java" changelist="6328e16e-7283-4bff-bff6-5e4f32b565da" time="1494937783030" ignored="false" />
-    <file path="$PROJECT_DIR$/business/business-menu/src/main/java/org/kmd/platform/business/menu/entity/Menu.java" changelist="6328e16e-7283-4bff-bff6-5e4f32b565da" time="1494938049623" ignored="false" />
-    <file path="$PROJECT_DIR$/business/business-menu/src/main/java/org/kmd/platform/business/menu/service/AuthorityMenuService.java" changelist="6328e16e-7283-4bff-bff6-5e4f32b565da" time="1494938049623" ignored="false" />
-    <file path="$PROJECT_DIR$/business/business-menu/src/main/java/org/kmd/platform/business/menu/entity/AuthorityMenu.java" changelist="6328e16e-7283-4bff-bff6-5e4f32b565da" time="1494938049624" ignored="false" />
     <file path="/pom.xml" changelist="6328e16e-7283-4bff-bff6-5e4f32b565da" time="1495023348802" ignored="false" />
     <file path="$PROJECT_DIR$/business/business-app/src/main/java/org/kmd/platform/business/app/mapper/AppMapper.java" changelist="6328e16e-7283-4bff-bff6-5e4f32b565da" time="1494938976557" ignored="false" />
     <file path="/AppServiceWeb.java" changelist="6328e16e-7283-4bff-bff6-5e4f32b565da" time="1494940124446" ignored="false" />
@@ -134,14 +638,14 @@
     <file path="/MenuServiceWeb.java" changelist="6328e16e-7283-4bff-bff6-5e4f32b565da" time="1494940164025" ignored="false" />
     <file path="/AuthorityServiceWeb.java" changelist="6328e16e-7283-4bff-bff6-5e4f32b565da" time="1494940189300" ignored="false" />
     <file path="/PowerServiceWeb.java" changelist="6328e16e-7283-4bff-bff6-5e4f32b565da" time="1494940201239" ignored="false" />
-    <file path="/UserServiceWeb.java" changelist="6328e16e-7283-4bff-bff6-5e4f32b565da" time="1494940221632" ignored="false" />
-    <file path="/web.xml" changelist="6328e16e-7283-4bff-bff6-5e4f32b565da" time="1494941245334" ignored="false" />
+    <file path="/UserServiceWeb.java" changelist="6328e16e-7283-4bff-bff6-5e4f32b565da" time="1495361947862" ignored="false" />
+    <file path="/web.xml" changelist="6328e16e-7283-4bff-bff6-5e4f32b565da" time="1495363872133" ignored="false" />
     <file path="/security-applicationContext.xml" changelist="6328e16e-7283-4bff-bff6-5e4f32b565da" time="1495025746047" ignored="false" />
     <file path="/MyUserDetailsService.java" changelist="6328e16e-7283-4bff-bff6-5e4f32b565da" time="1494940454516" ignored="false" />
     <file path="/MyAccessDecisionManager.java" changelist="6328e16e-7283-4bff-bff6-5e4f32b565da" time="1494940465525" ignored="false" />
     <file path="/AuthorityMenuMapper.java" changelist="6328e16e-7283-4bff-bff6-5e4f32b565da" time="1494940479863" ignored="false" />
     <file path="/MenuMapper.java" changelist="6328e16e-7283-4bff-bff6-5e4f32b565da" time="1494940490242" ignored="false" />
-    <file path="/a.dummy" changelist="6328e16e-7283-4bff-bff6-5e4f32b565da" time="1494942586107" ignored="false" />
+    <file path="/a.dummy" changelist="6328e16e-7283-4bff-bff6-5e4f32b565da" time="1495355194733" ignored="false" />
     <file path="/applicationContext.xml" changelist="6328e16e-7283-4bff-bff6-5e4f32b565da" time="1494941597964" ignored="false" />
     <file path="/fundamental.config.properties" changelist="6328e16e-7283-4bff-bff6-5e4f32b565da" time="1494942616850" ignored="false" />
     <file path="/admin.html" changelist="6328e16e-7283-4bff-bff6-5e4f32b565da" time="1494941829694" ignored="false" />
@@ -152,14 +656,14 @@
     <file path="/Goods.java" changelist="6328e16e-7283-4bff-bff6-5e4f32b565da" time="1495028359960" ignored="false" />
     <file path="/GoodsMapper.xml" changelist="6328e16e-7283-4bff-bff6-5e4f32b565da" time="1495025343425" ignored="false" />
     <file path="/goods-applicationContext.xml" changelist="6328e16e-7283-4bff-bff6-5e4f32b565da" time="1495028592923" ignored="false" />
-    <file path="/AgentInfoMapper.xml" changelist="6328e16e-7283-4bff-bff6-5e4f32b565da" time="1495029854282" ignored="false" />
-    <file path="/AgentInfo.java" changelist="6328e16e-7283-4bff-bff6-5e4f32b565da" time="1495107557355" ignored="false" />
-    <file path="/AgentInfoServiceWeb.java" changelist="6328e16e-7283-4bff-bff6-5e4f32b565da" time="1495030357192" ignored="false" />
-    <file path="/GoodsServiceWeb.java" changelist="6328e16e-7283-4bff-bff6-5e4f32b565da" time="1495030609826" ignored="false" />
-    <file path="/AgentInfoService.java" changelist="6328e16e-7283-4bff-bff6-5e4f32b565da" time="1495107759852" ignored="false" />
+    <file path="/AgentInfoMapper.xml" changelist="6328e16e-7283-4bff-bff6-5e4f32b565da" time="1495358748934" ignored="false" />
+    <file path="/AgentInfo.java" changelist="6328e16e-7283-4bff-bff6-5e4f32b565da" time="1495358063885" ignored="false" />
+    <file path="/AgentInfoServiceWeb.java" changelist="6328e16e-7283-4bff-bff6-5e4f32b565da" time="1495357714178" ignored="false" />
+    <file path="/GoodsServiceWeb.java" changelist="6328e16e-7283-4bff-bff6-5e4f32b565da" time="1495361016174" ignored="false" />
+    <file path="/AgentInfoService.java" changelist="6328e16e-7283-4bff-bff6-5e4f32b565da" time="1495363403979" ignored="false" />
     <file path="/GoodsService.java" changelist="6328e16e-7283-4bff-bff6-5e4f32b565da" time="1495029098565" ignored="false" />
-    <file path="/AgentInfoMapper.java" changelist="6328e16e-7283-4bff-bff6-5e4f32b565da" time="1495029875959" ignored="false" />
-    <file path="/Dummy.txt" changelist="6328e16e-7283-4bff-bff6-5e4f32b565da" time="1495110090872" ignored="false" />
+    <file path="/AgentInfoMapper.java" changelist="6328e16e-7283-4bff-bff6-5e4f32b565da" time="1495363426762" ignored="false" />
+    <file path="/Dummy.txt" changelist="6328e16e-7283-4bff-bff6-5e4f32b565da" time="1495354296486" ignored="false" />
     <file path="/TextMessage.java" changelist="6328e16e-7283-4bff-bff6-5e4f32b565da" time="1495115688695" ignored="false" />
     <file path="/LocationMessage.java" changelist="6328e16e-7283-4bff-bff6-5e4f32b565da" time="1495103728228" ignored="false" />
     <file path="/LinkMessage.java" changelist="6328e16e-7283-4bff-bff6-5e4f32b565da" time="1495103747113" ignored="false" />
@@ -168,7 +672,7 @@
     <file path="/NewsMessage.java" changelist="6328e16e-7283-4bff-bff6-5e4f32b565da" time="1495104006656" ignored="false" />
     <file path="/CoreServlet.java" changelist="6328e16e-7283-4bff-bff6-5e4f32b565da" time="1495109234853" ignored="false" />
     <file path="/WeiXinService.java" changelist="6328e16e-7283-4bff-bff6-5e4f32b565da" time="1495115993467" ignored="false" />
-    <file path="/WeixinServiceWeb.java" changelist="6328e16e-7283-4bff-bff6-5e4f32b565da" time="1495113336538" ignored="false" />
+    <file path="/WeixinServiceWeb.java" changelist="6328e16e-7283-4bff-bff6-5e4f32b565da" time="1495359673174" ignored="false" />
     <file path="/fragment.java" changelist="6328e16e-7283-4bff-bff6-5e4f32b565da" time="1495115272872" ignored="false" />
     <file path="/BaseMessage.java" changelist="6328e16e-7283-4bff-bff6-5e4f32b565da" time="1495112438235" ignored="false" />
     <file path="/Music.java" changelist="6328e16e-7283-4bff-bff6-5e4f32b565da" time="1495113917491" ignored="false" />
@@ -176,6 +680,10 @@
     <file path="/MpNews.java" changelist="6328e16e-7283-4bff-bff6-5e4f32b565da" time="1495114199960" ignored="false" />
     <file path="/MassBaseMessage.java" changelist="6328e16e-7283-4bff-bff6-5e4f32b565da" time="1495114310573" ignored="false" />
     <file path="/MessageUtil.java" changelist="6328e16e-7283-4bff-bff6-5e4f32b565da" time="1495116051252" ignored="false" />
+    <file path="/UserService.java" changelist="6328e16e-7283-4bff-bff6-5e4f32b565da" time="1495362249412" ignored="false" />
+    <file path="/UserMapper.java" changelist="6328e16e-7283-4bff-bff6-5e4f32b565da" time="1495361731950" ignored="false" />
+    <file path="/UserMapper.xml" changelist="6328e16e-7283-4bff-bff6-5e4f32b565da" time="1495361601680" ignored="false" />
+    <file path="/index.html" changelist="6328e16e-7283-4bff-bff6-5e4f32b565da" time="1495363946799" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -240,97 +748,103 @@
       <file leaf-file-name="WeixinServiceWeb.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/web/WeixinServiceWeb.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="71" column="64" selection-start="2964" selection-end="2964" vertical-scroll-proportion="0.0">
+            <state line="170" column="36" selection-start="7238" selection-end="7238" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WeiXinService.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/service/WeiXinService.java">
+      <file leaf-file-name="Goods.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/entity/Goods.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="149" column="32" selection-start="6277" selection-end="6277" vertical-scroll-proportion="0.0">
+            <state line="11" column="29" selection-start="257" selection-end="257" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AgentInfo.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/entity/AgentInfo.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="18" column="28" selection-start="494" selection-end="494" vertical-scroll-proportion="0.62017804">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="web.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/WEB-INF/web.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="71" column="31" selection-start="2821" selection-end="2821" vertical-scroll-proportion="-9.0">
+              <folding />
+            </state>
+          </provider>
+          <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorProvider">
+            <state />
+          </provider>
+          <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleGeneralEditorProvider">
+            <state />
+          </provider>
+          <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorReferencesProvider">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="3" column="26" selection-start="52" selection-end="52" vertical-scroll-proportion="-2.0357144">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AgentInfoService.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/service/AgentInfoService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="42" column="21" selection-start="1188" selection-end="1188" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AgentInfoMapper.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/mapper/AgentInfoMapper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="17" column="63" selection-start="584" selection-end="584" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserServiceWeb.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/business/business-user/src/main/java/org/kmd/platform/business/user/web/UserServiceWeb.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="90" column="62" selection-start="3698" selection-end="3744" vertical-scroll-proportion="-6.44">
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="method#getAccessToken#0;class#WeiXinService#0" expanded="false" />
-                <element signature="e#9041#9049#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MessageUtil.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/util/MessageUtil.java">
+      <file leaf-file-name="AuthorityServiceWeb.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/business/business-user/src/main/java/org/kmd/platform/business/user/web/AuthorityServiceWeb.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="134" column="44" selection-start="3471" selection-end="3471" vertical-scroll-proportion="0.0">
+            <state line="130" column="14" selection-start="4946" selection-end="4946" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserService.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/business/business-user/src/main/java/org/kmd/platform/business/user/service/UserService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="27" column="28" selection-start="801" selection-end="801" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#2335#2365#0" expanded="true" />
-                <element signature="e#4600#4630#0" expanded="true" />
+                <element signature="e#1324#1340#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Image.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/weixin/mass/resp/Image.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="61" selection-start="61" selection-end="61" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MassBaseMessage.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/weixin/mass/resp/MassBaseMessage.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="61" selection-start="61" selection-end="61" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MassImageMessage.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/weixin/mass/resp/MassImageMessage.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="61" selection-start="61" selection-end="61" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Text.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/weixin/mass/resp/Text.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="61" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MassTextMessage.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/weixin/mass/resp/MassTextMessage.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="61" selection-start="61" selection-end="61" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MassVoiceMessage.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/weixin/mass/resp/MassVoiceMessage.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="61" selection-start="61" selection-end="61" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Voice.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/weixin/mass/resp/Voice.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="18" selection-start="137" selection-end="137" vertical-scroll-proportion="0.26685393">
-              <folding />
             </state>
           </provider>
         </entry>
@@ -353,24 +867,31 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/weixin/mass.resp/VoiceMessage.java" />
-        <option value="$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/weixin/mass.resp/MassBaseMessage.java" />
-        <option value="$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/weixin/mass.resp/Text.java" />
-        <option value="$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/weixin/mass.resp/Voice.java" />
-        <option value="$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/weixin/mass.resp/Image.java" />
-        <option value="$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/weixin/mass.resp/ImageMessage.java" />
-        <option value="$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/weixin/mass/resp/TextMessage.java" />
-        <option value="$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/weixin/mass/resp/Text.java" />
-        <option value="$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/util/MessageUtil.java" />
-        <option value="$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/service/WeiXinService.java" />
-        <option value="$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/weixin/mass/resp/Image.java" />
-        <option value="$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/weixin/mass/resp/MassBaseMessage.java" />
-        <option value="$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/weixin/mass/resp/MassImageMessage.java" />
-        <option value="$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/weixin/mass/resp/MassTextMessage.java" />
-        <option value="$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/weixin/mass/resp/MassVoiceMessage.java" />
-        <option value="$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/weixin/mass/resp/Voice.java" />
+        <option value="$PROJECT_DIR$/business/business-user/src/main/java/org/kmd/platform/business/user/test/UserServiceWebTest.java" />
+        <option value="$PROJECT_DIR$/business/business-user/src/main/resources/META-INF/spring/user-applicationContext.xml" />
+        <option value="$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/web/AgentInfoServiceWeb.java" />
+        <option value="$PROJECT_DIR$/taojinke/taojinke-business/src/main/resources/org/kmd/platform/business/taojinbao/mapper/AgentInfoMapper.xml" />
+        <option value="$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/entity/AgentInfo.java" />
+        <option value="$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/web/GoodsServiceWeb.java" />
+        <option value="$PROJECT_DIR$/business/business-user/src/main/resources/org/kmd/platform/business/user/mapper/UserMapper.xml" />
+        <option value="$PROJECT_DIR$/business/business-user/src/main/java/org/kmd/platform/business/user/mapper/UserMapper.java" />
+        <option value="$PROJECT_DIR$/business/business-user/src/main/java/org/kmd/platform/business/user/web/UserServiceWeb.java" />
+        <option value="$PROJECT_DIR$/business/business-user/src/main/java/org/kmd/platform/business/user/service/UserService.java" />
+        <option value="$PROJECT_DIR$/business/business-user/src/main/java/org/kmd/platform/business/user/web/AuthorityServiceWeb.java" />
+        <option value="$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/service/AgentInfoService.java" />
+        <option value="$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/mapper/AgentInfoMapper.java" />
+        <option value="$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/web/WeixinServiceWeb.java" />
+        <option value="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/WEB-INF/web.xml" />
+        <option value="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/index.html" />
       </list>
     </option>
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -515,10 +1036,10 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="6" />
-    <option name="y" value="11" />
+    <option name="x" value="263" />
+    <option name="y" value="6" />
     <option name="width" value="1366" />
-    <option name="height" value="728" />
+    <option name="height" value="733" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -548,8 +1069,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -557,76 +1076,6 @@
               <option name="myItemId" value="project" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Maven: javax.servlet:servlet-api:2.5" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="servlet-api-2.5.jar" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Maven: javax.servlet:servlet-api:2.5" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="servlet-api-2.5.jar" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="servlet" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Maven: javax.servlet:servlet-api:2.5" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="servlet-api-2.5.jar" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="servlet" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="http" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -649,114 +1098,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="taojinke" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="taojinke" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="taojinke-web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="taojinke" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="taojinke-web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="taojinke" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="taojinke-web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WEB-INF" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="taojinke" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="taojinke-web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -797,10 +1138,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -867,10 +1204,6 @@
               <option name="myItemId" value="resources" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="spring" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -903,52 +1236,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="taojinbao" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="weixin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="taojinke" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="taojinke-business" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="taojinbao" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="weixin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resp" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -987,82 +1274,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="taojinke" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="taojinke-business" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="taojinbao" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="util" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="taojinke" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="taojinke-business" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="taojinbao" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="servlet" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1138,44 +1349,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="mapper" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="taojinke" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="taojinke-business" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="taojinbao" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="entity" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -1204,58 +1377,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="fundamental" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fundamental-logger" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fundamental" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fundamental-logger" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="logger" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="business" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -1297,6 +1418,10 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1327,6 +1452,44 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mapper" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="business" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="business-user" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="spring" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1401,6 +1564,162 @@
               <option name="myItemId" value="user" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="util" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="business" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="business-user" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="user" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="business" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="business-user" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="user" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="service" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="business" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="business-user" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="user" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mapper" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="business" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="business-user" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="user" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="entity" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -1442,8 +1761,364 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="business" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="business-menu" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="business" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="business-menu" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="menu" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="business" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="business-menu" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="menu" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="service" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="business" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="business-menu" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="menu" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mapper" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="business" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="business-menu" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="menu" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="entity" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="business" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="business-app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="business" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="business-app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="business" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="business-app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="business" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="business-app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="business" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="business-app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="business" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="business-app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="entity" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1455,18 +2130,19 @@
     <property name="options.lastSelected" value="MavenSettings" />
     <property name="MemberChooser.sorted" value="false" />
     <property name="last_opened_file_path" value="$USER_HOME$/Desktop/amz_02_adp" />
+    <property name="DefaultHtmlFileTemplate" value="Html5" />
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="restartRequiresConfirmation" value="true" />
-    <property name="MemberChooser.showClasses" value="true" />
     <property name="FullScreen" value="false" />
-    <property name="aspect.path.notification.shown" value="true" />
+    <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
-    <property name="options.searchVisible" value="true" />
+    <property name="aspect.path.notification.shown" value="true" />
     <property name="dynamic.classpath" value="false" />
+    <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -1479,7 +2155,7 @@
       <recent name="org.kmd.platform.business.taojinbao.weixin.mass.resp" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.WeiXinService">
+  <component name="RunManager" selected="Tomcat Server.test">
     <configuration default="false" name="WeiXinService" type="Application" factoryName="Application" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -1839,17 +2515,18 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="6" y="11" width="1366" height="728" extended-state="0" />
+    <frame x="263" y="6" width="1366" height="733" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298969" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2844523" sideWeight="0.8757669" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.323993" sideWeight="0.875" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2844523" sideWeight="0.12346626" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.323993" sideWeight="0.125" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1858,22 +2535,21 @@
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.0797546" sideWeight="0.7155477" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.0797546" sideWeight="0.67600703" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32933104" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.297546" sideWeight="0.7155477" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.15757576" sideWeight="0.7233677" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.273773" sideWeight="0.67600703" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30204082" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.15757576" sideWeight="0.7233677" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21639785" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298969" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -1942,108 +2618,128 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/weixin/resp/TextMessage.java">
+    <entry file="file://$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/web/AgentInfoServiceWeb.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="40" selection-start="258" selection-end="258" vertical-scroll-proportion="0.0">
+        <state line="51" column="44" selection-start="1947" selection-end="1947" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/servlet/CoreServlet.java">
+    <entry file="file://$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/web/GoodsServiceWeb.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="28" selection-start="2093" selection-end="2093" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/weixin/resp/Article.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="13" selection-start="126" selection-end="126" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/weixin/resp/BaseMessage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="35" selection-start="605" selection-end="605" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/web/WeixinServiceWeb.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="71" column="64" selection-start="2964" selection-end="2964" vertical-scroll-proportion="0.0">
+        <state line="34" column="123" selection-start="1166" selection-end="1166" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/service/WeiXinService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="149" column="32" selection-start="6277" selection-end="6277" vertical-scroll-proportion="0.0">
+        <state line="42" column="36" selection-start="1791" selection-end="1791" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/business/business-user/src/main/resources/org/kmd/platform/business/user/mapper/UserMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="101" column="43" selection-start="3400" selection-end="3400" vertical-scroll-proportion="-7.36">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/business/business-user/src/main/java/org/kmd/platform/business/user/mapper/UserMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="61" selection-start="588" selection-end="588" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/business/business-user/src/main/java/org/kmd/platform/business/user/test/UserServiceWebTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="26" selection-start="479" selection-end="479" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/business/business-user/src/main/java/org/kmd/platform/business/user/service/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="28" selection-start="801" selection-end="801" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#getAccessToken#0;class#WeiXinService#0" expanded="false" />
-            <element signature="e#9041#9049#0" expanded="true" />
+            <element signature="e#1324#1340#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/util/MessageUtil.java">
+    <entry file="file://$PROJECT_DIR$/business/business-user/src/main/java/org/kmd/platform/business/user/web/AuthorityServiceWeb.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="134" column="44" selection-start="3471" selection-end="3471" vertical-scroll-proportion="0.0">
+        <state line="130" column="14" selection-start="4946" selection-end="4946" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/business/business-user/src/main/java/org/kmd/platform/business/user/web/UserServiceWeb.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="90" column="62" selection-start="3698" selection-end="3744" vertical-scroll-proportion="-6.44">
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2335#2365#0" expanded="true" />
-            <element signature="e#4600#4630#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/weixin/mass/resp/Text.java">
+    <entry file="file://$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/mapper/AgentInfoMapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="61" vertical-scroll-proportion="0.0">
+        <state line="17" column="63" selection-start="584" selection-end="584" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/weixin/mass/resp/Image.java">
+    <entry file="file://$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/service/AgentInfoService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="61" selection-start="61" selection-end="61" vertical-scroll-proportion="0.0">
+        <state line="42" column="21" selection-start="1188" selection-end="1188" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/weixin/mass/resp/MassBaseMessage.java">
+    <entry file="file://$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/web/WeixinServiceWeb.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="61" selection-start="61" selection-end="61" vertical-scroll-proportion="0.0">
+        <state line="170" column="36" selection-start="7238" selection-end="7238" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/weixin/mass/resp/MassImageMessage.java">
+    <entry file="file://$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/entity/Goods.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="61" selection-start="61" selection-end="61" vertical-scroll-proportion="0.0">
+        <state line="11" column="29" selection-start="257" selection-end="257" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/weixin/mass/resp/MassTextMessage.java">
+    <entry file="file://$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/WEB-INF/web.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="61" selection-start="61" selection-end="61" vertical-scroll-proportion="0.0">
+        <state line="71" column="31" selection-start="2821" selection-end="2821" vertical-scroll-proportion="-9.0">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorProvider">
+        <state />
+      </provider>
+      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleGeneralEditorProvider">
+        <state />
+      </provider>
+      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorReferencesProvider">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="26" selection-start="52" selection-end="52" vertical-scroll-proportion="-2.0357144">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/weixin/mass/resp/MassVoiceMessage.java">
+    <entry file="file://$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/entity/AgentInfo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="61" selection-start="61" selection-end="61" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/weixin/mass/resp/Voice.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="18" selection-start="137" selection-end="137" vertical-scroll-proportion="0.26685393">
+        <state line="18" column="28" selection-start="494" selection-end="494" vertical-scroll-proportion="0.62017804">
           <folding />
         </state>
       </provider>

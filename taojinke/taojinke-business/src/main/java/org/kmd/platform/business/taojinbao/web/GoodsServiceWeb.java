@@ -32,10 +32,7 @@ public class GoodsServiceWeb {
     @Produces( MediaType.APPLICATION_JSON + ";charset=UTF-8")
     @Path("/findByCondition")
     @POST
-    public String findByCondition(@FormParam("weiXinId") String weiXinId,@FormParam("weiXinOriginalId") String weiXinOriginalId,@FormParam("appID") String appID,@FormParam("appSecret") String appSecret,@FormParam("agentId") String agentId,@FormParam("profit") String profit){
-        if(weiXinId==null ||weiXinId.trim().equals("")|| weiXinOriginalId==null|| weiXinOriginalId.trim().equals("") ||appID==null|| appID.trim().equals("")||appSecret==null|| appSecret.trim().equals("")||agentId==null||agentId.trim().equals("")||profit==null||profit.trim().equals("")){
-            return JsonResultUtils.getCodeAndMesByString(JsonResultUtils.Code.ERROR.getCode(), "参数不能为空!");
-        }
+    public String findByCondition(@FormParam("cate_id") String cate_id,@FormParam("title") String title,@FormParam("appID") String appID,@FormParam("appSecret") String appSecret,@FormParam("agentId") String agentId,@FormParam("profit") String profit){
         List<Goods> goodsList = goodsService.findByCondition();
         return JsonResultUtils.getObjectResultByStringAsDefault(goodsList, JsonResultUtils.Code.SUCCESS);
     }

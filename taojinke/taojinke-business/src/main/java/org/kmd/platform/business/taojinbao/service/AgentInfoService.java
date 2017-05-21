@@ -33,14 +33,15 @@ public class AgentInfoService {
     public List<AgentInfo> list(){
         return mapper.findByCondition(new HashMap<String, Object>());
     }
-    public AgentInfo getAgentInfoByAppID(String appID){
-        if(appID==null || appID.trim().equals("")){
-            return null;
-        }
-        return mapper.getAgentInfoByAppID(appID);
+    public AgentInfo getAgentInfoByAgentName(String agentName){
+        return mapper.getAgentInfoByAgentName(agentName);
     }
-    public AgentInfo getAgentInfoByAgentId(String agentId){
-        if(agentId==null || agentId.trim().equals("")){
+
+    public AgentInfo getAgentInfoByAppID(String   appId) {
+            return mapper.getAgentInfoByAgentName(appId);
+    }
+    public AgentInfo getAgentInfoByAgentId(long agentId){
+        if(agentId==0 ){
             return null;
         }
         return mapper.getAgentInfoByAgentId(agentId);
