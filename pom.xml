@@ -11,6 +11,7 @@
     <modules>
         <module>business</module>
         <module>fundamental</module>
+        <module>taojinke</module>
     </modules>
 
     <properties>

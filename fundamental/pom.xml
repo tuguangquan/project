@@ -16,6 +16,8 @@
         <module>fundamental-dataSource</module>
         <module>fundamental-logger</module>
         <module>fundamental-util</module>
+        <module>fundamental-orm</module>
+        <module>fundamental-exception</module>
     </modules>
 
 

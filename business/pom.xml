@@ -12,8 +12,10 @@
     <artifactId>business</artifactId>
     <packaging>pom</packaging>
     <modules>
-        <module>business-business</module>
         <module>business-Web</module>
+        <module>business-user</module>
+        <module>business-menu</module>
+        <module>business-app</module>
     </modules>
 
 

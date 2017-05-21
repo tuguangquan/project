@@ -8,8 +8,8 @@
           <element id="module-output" name="business-Web" />
         </element>
         <element id="directory" name="lib">
-          <element id="archive" name="business-business-1.0-SNAPSHOT.jar">
-            <element id="module-output" name="business-business" />
+          <element id="archive" name="business-app-1.0-SNAPSHOT.jar">
+            <element id="module-output" name="business-app" />
           </element>
           <element id="library" level="project" name="Maven: org.springframework:spring-context:4.0.2.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-aop:4.0.2.RELEASE" />
@@ -23,7 +23,12 @@
           <element id="library" level="project" name="Maven: org.springframework:spring-expression:4.0.2.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-jdbc:4.0.2.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-tx:4.0.2.RELEASE" />
+<<<<<<< HEAD
           <element id="library" level="project" name="Maven: org.springframework:spring-web:4.0.2.RELEASE" />
+=======
+          <element id="library" level="project" name="Maven: org.mybatis:mybatis:3.2.3" />
+          <element id="library" level="project" name="Maven: org.mybatis:mybatis-spring:1.2.2" />
+>>>>>>> 0f36566b635863b77a549544c06efddd9ec2a5c0
           <element id="library" level="project" name="Maven: org.glassfish.jersey.containers:jersey-container-servlet:2.5.1" />
           <element id="library" level="project" name="Maven: org.glassfish.jersey.containers:jersey-container-servlet-core:2.5.1" />
           <element id="library" level="project" name="Maven: org.glassfish.hk2.external:javax.inject:2.2.0-b21" />
@@ -40,8 +45,11 @@
           <element id="library" level="project" name="Maven: org.glassfish.hk2:osgi-resource-locator:1.0.1" />
           <element id="library" level="project" name="Maven: org.glassfish.jersey.core:jersey-client:2.5.1" />
           <element id="library" level="project" name="Maven: javax.validation:validation-api:1.1.0.Final" />
+<<<<<<< HEAD
           <element id="library" level="project" name="Maven: org.mybatis:mybatis:3.2.3" />
           <element id="library" level="project" name="Maven: org.mybatis:mybatis-spring:1.2.2" />
+=======
+>>>>>>> 0f36566b635863b77a549544c06efddd9ec2a5c0
           <element id="library" level="project" name="Maven: org.glassfish.jersey.ext:jersey-spring3:2.5.1" />
           <element id="library" level="project" name="Maven: org.glassfish.hk2:hk2:2.2.0-b21" />
           <element id="library" level="project" name="Maven: javax.inject:javax.inject:1" />
@@ -54,7 +62,27 @@
           <element id="library" level="project" name="Maven: org.glassfish.hk2:class-model:2.2.0-b21" />
           <element id="library" level="project" name="Maven: junit:junit:4.3.1" />
           <element id="library" level="project" name="Maven: org.glassfish.hk2:spring-bridge:2.2.0-b21" />
+<<<<<<< HEAD
           <element id="file-copy" path="$MAVEN_REPOSITORY$/project/fundamental-datasource/1.0-SNAPSHOT/fundamental-dataSource-1.0-SNAPSHOT.jar" output-file-name="fundamental-datasource-1.0-SNAPSHOT.jar" />
+=======
+          <element id="library" level="project" name="Maven: org.springframework:spring-web:4.0.2.RELEASE" />
+          <element id="archive" name="fundamental-dataSource-1.0-SNAPSHOT.jar">
+            <element id="module-output" name="fundamental-dataSource" />
+          </element>
+          <element id="archive" name="fundamental-config-1.0-SNAPSHOT.jar">
+            <element id="module-output" name="fundamental-config" />
+          </element>
+          <element id="library" level="project" name="Maven: commons-io:commons-io:2.4" />
+          <element id="library" level="project" name="Maven: commons-pool:commons-pool:1.6" />
+          <element id="library" level="project" name="Maven: commons-dbcp:commons-dbcp:1.4" />
+          <element id="library" level="project" name="Maven: mysql:mysql-connector-java:5.1.18" />
+          <element id="archive" name="fundamental-orm-1.0-SNAPSHOT.jar">
+            <element id="module-output" name="fundamental-orm" />
+          </element>
+          <element id="archive" name="fundamental-util-1.0-SNAPSHOT.jar">
+            <element id="module-output" name="fundamental-util" />
+          </element>
+>>>>>>> 0f36566b635863b77a549544c06efddd9ec2a5c0
           <element id="archive" name="fundamental-logger-1.0-SNAPSHOT.jar">
             <element id="module-output" name="fundamental-logger" />
           </element>
@@ -64,9 +92,6 @@
           <element id="library" level="project" name="Maven: org.slf4j:jul-to-slf4j:1.7.1" />
           <element id="library" level="project" name="Maven: org.slf4j:jcl-over-slf4j:1.7.1" />
           <element id="library" level="project" name="Maven: org.logback-extensions:logback-ext-spring:0.1.1" />
-          <element id="archive" name="fundamental-util-1.0-SNAPSHOT.jar">
-            <element id="module-output" name="fundamental-util" />
-          </element>
           <element id="library" level="project" name="Maven: org.glassfish.jersey.media:jersey-media-json-jackson:2.5.1" />
           <element id="library" level="project" name="Maven: org.codehaus.jackson:jackson-core-asl:1.9.13" />
           <element id="library" level="project" name="Maven: org.codehaus.jackson:jackson-mapper-asl:1.9.13" />
@@ -76,6 +101,18 @@
           <element id="library" level="project" name="Maven: stax:stax-api:1.0.1" />
           <element id="library" level="project" name="Maven: org.springframework.security:spring-security-core:3.2.0.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework.security:spring-security-web:3.2.0.RELEASE" />
+<<<<<<< HEAD
+=======
+          <element id="archive" name="business-menu-1.0-SNAPSHOT.jar">
+            <element id="module-output" name="business-menu" />
+          </element>
+          <element id="archive" name="business-user-1.0-SNAPSHOT.jar">
+            <element id="module-output" name="business-user" />
+          </element>
+          <element id="archive" name="fundamental-exception-1.0-SNAPSHOT.jar">
+            <element id="module-output" name="fundamental-exception" />
+          </element>
+>>>>>>> 0f36566b635863b77a549544c06efddd9ec2a5c0
           <element id="library" level="project" name="Maven: org.springframework.security:spring-security-config:3.2.0.RELEASE" />
         </element>
       </element>

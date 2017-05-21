@@ -24,7 +24,11 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+<<<<<<< HEAD
     <orderEntry type="module" module-name="business-business" />
+=======
+    <orderEntry type="module" module-name="business-app" />
+>>>>>>> 0f36566b635863b77a549544c06efddd9ec2a5c0
     <orderEntry type="library" name="Maven: org.springframework:spring-context:4.0.2.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-aop:4.0.2.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: aopalliance:aopalliance:1.0" level="project" />
@@ -37,7 +41,12 @@
     <orderEntry type="library" name="Maven: org.springframework:spring-expression:4.0.2.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-jdbc:4.0.2.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-tx:4.0.2.RELEASE" level="project" />
+<<<<<<< HEAD
     <orderEntry type="library" name="Maven: org.springframework:spring-web:4.0.2.RELEASE" level="project" />
+=======
+    <orderEntry type="library" name="Maven: org.mybatis:mybatis:3.2.3" level="project" />
+    <orderEntry type="library" name="Maven: org.mybatis:mybatis-spring:1.2.2" level="project" />
+>>>>>>> 0f36566b635863b77a549544c06efddd9ec2a5c0
     <orderEntry type="library" name="Maven: org.glassfish.jersey.containers:jersey-container-servlet:2.5.1" level="project" />
     <orderEntry type="library" name="Maven: org.glassfish.jersey.containers:jersey-container-servlet-core:2.5.1" level="project" />
     <orderEntry type="library" name="Maven: org.glassfish.hk2.external:javax.inject:2.2.0-b21" level="project" />
@@ -54,8 +63,11 @@
     <orderEntry type="library" name="Maven: org.glassfish.hk2:osgi-resource-locator:1.0.1" level="project" />
     <orderEntry type="library" name="Maven: org.glassfish.jersey.core:jersey-client:2.5.1" level="project" />
     <orderEntry type="library" name="Maven: javax.validation:validation-api:1.1.0.Final" level="project" />
+<<<<<<< HEAD
     <orderEntry type="library" name="Maven: org.mybatis:mybatis:3.2.3" level="project" />
     <orderEntry type="library" name="Maven: org.mybatis:mybatis-spring:1.2.2" level="project" />
+=======
+>>>>>>> 0f36566b635863b77a549544c06efddd9ec2a5c0
     <orderEntry type="library" name="Maven: org.glassfish.jersey.ext:jersey-spring3:2.5.1" level="project" />
     <orderEntry type="library" name="Maven: org.glassfish.hk2:hk2:2.2.0-b21" level="project" />
     <orderEntry type="library" name="Maven: javax.inject:javax.inject:1" level="project" />
@@ -68,7 +80,19 @@
     <orderEntry type="library" name="Maven: org.glassfish.hk2:class-model:2.2.0-b21" level="project" />
     <orderEntry type="library" name="Maven: junit:junit:4.3.1" level="project" />
     <orderEntry type="library" name="Maven: org.glassfish.hk2:spring-bridge:2.2.0-b21" level="project" />
+<<<<<<< HEAD
     <orderEntry type="library" name="Maven: project:fundamental-datasource:1.0-SNAPSHOT" level="project" />
+=======
+    <orderEntry type="library" name="Maven: org.springframework:spring-web:4.0.2.RELEASE" level="project" />
+    <orderEntry type="module" module-name="fundamental-dataSource" />
+    <orderEntry type="module" module-name="fundamental-config" />
+    <orderEntry type="library" name="Maven: commons-io:commons-io:2.4" level="project" />
+    <orderEntry type="library" name="Maven: commons-pool:commons-pool:1.6" level="project" />
+    <orderEntry type="library" name="Maven: commons-dbcp:commons-dbcp:1.4" level="project" />
+    <orderEntry type="library" name="Maven: mysql:mysql-connector-java:5.1.18" level="project" />
+    <orderEntry type="module" module-name="fundamental-orm" />
+    <orderEntry type="module" module-name="fundamental-util" />
+>>>>>>> 0f36566b635863b77a549544c06efddd9ec2a5c0
     <orderEntry type="module" module-name="fundamental-logger" />
     <orderEntry type="library" name="Maven: ch.qos.logback:logback-core:1.0.7" level="project" />
     <orderEntry type="library" name="Maven: ch.qos.logback:logback-classic:1.0.7" level="project" />
@@ -76,7 +100,6 @@
     <orderEntry type="library" name="Maven: org.slf4j:jul-to-slf4j:1.7.1" level="project" />
     <orderEntry type="library" name="Maven: org.slf4j:jcl-over-slf4j:1.7.1" level="project" />
     <orderEntry type="library" name="Maven: org.logback-extensions:logback-ext-spring:0.1.1" level="project" />
-    <orderEntry type="module" module-name="fundamental-util" />
     <orderEntry type="library" name="Maven: org.glassfish.jersey.media:jersey-media-json-jackson:2.5.1" level="project" />
     <orderEntry type="library" name="Maven: org.codehaus.jackson:jackson-core-asl:1.9.13" level="project" />
     <orderEntry type="library" name="Maven: org.codehaus.jackson:jackson-mapper-asl:1.9.13" level="project" />
@@ -86,6 +109,12 @@
     <orderEntry type="library" name="Maven: stax:stax-api:1.0.1" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.security:spring-security-core:3.2.0.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.security:spring-security-web:3.2.0.RELEASE" level="project" />
+<<<<<<< HEAD
+=======
+    <orderEntry type="module" module-name="business-menu" />
+    <orderEntry type="module" module-name="business-user" />
+    <orderEntry type="module" module-name="fundamental-exception" />
+>>>>>>> 0f36566b635863b77a549544c06efddd9ec2a5c0
     <orderEntry type="library" scope="PROVIDED" name="Maven: javax.servlet:servlet-api:2.5" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.security:spring-security-config:3.2.0.RELEASE" level="project" />
   </component>

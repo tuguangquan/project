@@ -83,9 +83,6 @@
         } ,
         "report":{
             "query":"rs/report/query/"
-        } ,
-        "websocket":{
-            "register":"ws://localhost:8080/realtimeMonitor/websocket/hello"
         }
     }
 })(jQuery);
