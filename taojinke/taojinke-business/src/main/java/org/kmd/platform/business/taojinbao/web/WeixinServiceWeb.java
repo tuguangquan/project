@@ -18,10 +18,12 @@ import org.kmd.platform.fundamental.util.json.JsonResultUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.ws.rs.FormParam;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
+import javax.ws.rs.core.Context;
 import javax.ws.rs.core.MediaType;
 import java.util.Date;
 import java.util.List;
@@ -185,5 +187,35 @@ public class WeixinServiceWeb {
         }
         return JsonResultUtils.getCodeAndMesByString(JsonResultUtils.Code.ERROR.getCode(), "凭证获取失败");
     }
-
+    @Path("/getQRCodeTicket")
+    @POST
+    public String getQRCodeTicket(@Context HttpServletRequest request,@FormParam("sceneStr") String sceneStr) {
+        if (sceneStr == null || sceneStr.trim().equals("")) {
+            return JsonResultUtils.getCodeAndMesByString(JsonResultUtils.Code.ERROR.getCode(), "scene_str不能为空!");
+        }
+        long agentId;
+        try {
+            agentId = Long.parseLong(request.getSession().getAttribute("agentId").toString());
+        }catch (Exception e){
+            agentId=0;
+        }
+        if(agentId==0){
+            return JsonResultUtils.getCodeAndMesByString(JsonResultUtils.Code.ERROR.getCode(), "请重新登录!");
+        }
+        AgentInfo agentInfo = agentInfoService.getAgentInfoByAgentId(agentId);
+        if (null == agentInfo){
+            return JsonResultUtils.getCodeAndMesByString(JsonResultUtils.Code.ERROR.getCode(), "还没有绑定公众号，请先绑定微信公众号");
+        }
+        AccessToken at = weiXinService.getAccessToken(agentInfo.getAppID(),agentInfo.getAppSecret());
+        if (null != at) {
+            // 调用接口得到ticket
+            String result = weiXinService.getQRCodeTicket(at.getToken(),sceneStr);
+            if (null == result){
+                return JsonResultUtils.getCodeAndMesByString(JsonResultUtils.Code.ERROR.getCode(), "获得ticket失败");
+            }  else{
+                return JsonResultUtils.getObjectResultByStringAsDefault(result, JsonResultUtils.Code.SUCCESS);
+            }
+        }
+        return JsonResultUtils.getCodeAndMesByString(JsonResultUtils.Code.ERROR.getCode(), "凭证获取失败");
+    }
 }

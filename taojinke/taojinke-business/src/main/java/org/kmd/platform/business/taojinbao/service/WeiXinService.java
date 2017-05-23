@@ -25,6 +25,10 @@ import org.kmd.platform.business.taojinbao.servlet.process.impl.TextRespProcess;
 import org.kmd.platform.business.taojinbao.util.AccessToken;
 import org.kmd.platform.business.taojinbao.util.MessageUtil;
 import org.kmd.platform.business.taojinbao.util.MyX509TrustManager;
+import org.kmd.platform.business.taojinbao.weixin.QRCode.ActionInfo;
+import org.kmd.platform.business.taojinbao.weixin.QRCode.Constant;
+import org.kmd.platform.business.taojinbao.weixin.QRCode.QRCode;
+import org.kmd.platform.business.taojinbao.weixin.QRCode.Scene;
 import org.kmd.platform.business.taojinbao.weixin.mass.resp.MassTextMessage;
 import org.kmd.platform.business.taojinbao.weixin.mass.resp.Text;
 
@@ -48,6 +52,8 @@ public class WeiXinService {
     public final static String access_token_url = "https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=APPID&secret=APPSECRET";
     public final static String  get_user_url = "https://api.weixin.qq.com/cgi-bin/user/get?access_token=ACCESS_TOKEN";
     public final static String  send_msg_url = "https://api.weixin.qq.com/cgi-bin/message/mass/send?access_token=ACCESS_TOKEN";
+    public final static String  get_qrCode_ticket_url = "https://api.weixin.qq.com/cgi-bin/qrcode/create?access_token=ACCESS_TOKEN";
+    public final static String  get_qrCode_url = "https://mp.weixin.qq.com/cgi-bin/showqrcode?ticket=TICKET";
     /**
      * 发起https请求并获取结果
      * @param requestUrl    请求地址
@@ -186,7 +192,6 @@ public class WeiXinService {
     }
 
     public List getUser(String accessToken) {
-        int result = 0;
         // 拼装创建菜单的url
         String url = get_user_url.replace("ACCESS_TOKEN", accessToken);
         // 调用接口创建菜单
@@ -197,6 +202,34 @@ public class WeiXinService {
         }
         return null;
     }
+    public String getQRCode(String ticket) {
+        String url = get_qrCode_url.replace("TICKET", ticket);
+        // 调用接口ticket
+        JSONObject json = httpRequest(url, "POST", null);
+        if (null != json) {
+            return json.getString("ticket");
+        }
+        return null;
+    }
+    public String getQRCodeTicket(String accessToken,String scene_str) {
+        Scene scene = new Scene();
+        scene.setScene_str(scene_str);
+        ActionInfo actionInfo = new ActionInfo();
+        actionInfo.setScene(scene);
+        QRCode qrCode = new QRCode();
+        qrCode.setAction_info(actionInfo);
+        qrCode.setAction_name(Constant.qr_limit_scene);
+        JSONObject jsonObject = JSONObject.fromObject(qrCode);
+        // 拼装创建菜单的url
+        String url = get_qrCode_ticket_url.replace("ACCESS_TOKEN", accessToken);
+        // 调用接口ticket
+        JSONObject json = httpRequest(url, "POST", jsonObject.toString());
+        if (null != json) {
+            return json.getString("ticket");
+        }
+        return null;
+    }
+
     public int sendMsgToSomeUser(String msg,JSONArray jsonArray,String accessToken) {
         int result = 0;
         // 拼装创建菜单的url
@@ -227,6 +260,14 @@ public class WeiXinService {
 
 
     public static void main(String[] args){
+        Scene scene = new Scene();
+        scene.setScene_str("2343253");
+        ActionInfo actionInfo = new ActionInfo();
+        actionInfo.setScene(scene);
+        QRCode qrCode = new QRCode();
+        qrCode.setAction_info(actionInfo);
+        qrCode.setAction_name(Constant.qr_limit_scene);
+        JSONObject jsonObject = JSONObject.fromObject(qrCode);
         String json = "{\"total\":23000," + " \"count\":10000," + " \"data\":{\"openid\":[" +
                 "\"OPENID1\"," +
                 "\"OPENID2\"," +
@@ -234,10 +275,10 @@ public class WeiXinService {
                 "]" +
                 "}," +
                 "\"next_openid\":\"OPENID10000\"" +"}" ;
-        JSONObject jsonObject =   JSONObject.fromObject(json);
+        JSONObject jsonResult =   JSONObject.fromObject(json);
 
-        if (null != jsonObject) {
-            JSONArray jsonArray =  jsonObject.getJSONObject("data").getJSONArray("openid");
+        if (null != jsonResult) {
+            JSONArray jsonArray =  jsonResult.getJSONObject("data").getJSONArray("openid");
             List list =  jsonArray.subList(0, jsonArray.size());
             System.out.print(23432);
 
