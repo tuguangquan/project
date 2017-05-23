@@ -20,21 +20,30 @@ import java.util.Map;
 import net.sf.json.JSONArray;
 import net.sf.json.JSONException;
 import net.sf.json.JSONObject;
+import org.kmd.platform.business.taojinbao.servlet.process.impl.NewsRespProcess;
+import org.kmd.platform.business.taojinbao.servlet.process.impl.TextRespProcess;
 import org.kmd.platform.business.taojinbao.util.AccessToken;
 import org.kmd.platform.business.taojinbao.util.MessageUtil;
 import org.kmd.platform.business.taojinbao.util.MyX509TrustManager;
 import org.kmd.platform.business.taojinbao.weixin.mass.resp.MassTextMessage;
 import org.kmd.platform.business.taojinbao.weixin.mass.resp.Text;
-import org.kmd.platform.business.taojinbao.weixin.resp.TextMessageResp;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+
+import org.kmd.platform.fundamental.logger.PlatformLogger;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 /**
  * Created by Administrator on 2017/5/18 0018.
  */
+@Service
 public class WeiXinService {
 
-    private static Logger log = LoggerFactory.getLogger(WeiXinService.class);
+    @Autowired
+    public TextRespProcess textRespProcess;
+    @Autowired
+    public NewsRespProcess newsRespProcess;
+    private static PlatformLogger log = PlatformLogger.getLogger(WeiXinService.class);
+
     public final static String menu_create_url = "https://api.weixin.qq.com/cgi-bin/menu/create?access_token=ACCESS_TOKEN";
     public final static String access_token_url = "https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=APPID&secret=APPSECRET";
     public final static String  get_user_url = "https://api.weixin.qq.com/cgi-bin/user/get?access_token=ACCESS_TOKEN";
@@ -131,48 +140,24 @@ public class WeiXinService {
         return accessToken;
     }
 
+
+
     public  String processRequest(HttpServletRequest request) {
         String respMessage = null;
         try {
             // 默认返回的文本消息内容
             String respContent = "请求处理异常，请稍候尝试！";
-
             // xml请求解析
             Map<String, String> requestMap = MessageUtil.parseXml(request);
-
-            // 发送方帐号（open_id）
-            String fromUserName = requestMap.get("FromUserName");
-            // 公众帐号
-            String toUserName = requestMap.get("ToUserName");
             // 消息类型
             String msgType = requestMap.get("MsgType");
-            // 回复文本消息
-            TextMessageResp textMessage = new TextMessageResp();
-            textMessage.setToUserName(fromUserName);
-            textMessage.setFromUserName(toUserName);
-            textMessage.setCreateTime(new Date().getTime());
-            textMessage.setMsgType(MessageUtil.RESP_MESSAGE_TYPE_TEXT);
-            textMessage.setFuncFlag(0);
-
             // 文本消息
             if (msgType.equals(MessageUtil.REQ_MESSAGE_TYPE_TEXT)) {
-                respContent = "您发送的是文本消息！";
+                return textRespProcess.getRespMessage(requestMap);
             }
-            // 图片消息
-            else if (msgType.equals(MessageUtil.REQ_MESSAGE_TYPE_IMAGE)) {
-                respContent = "您发送的是图片消息！";
-            }
-            // 地理位置消息
-            else if (msgType.equals(MessageUtil.REQ_MESSAGE_TYPE_LOCATION)) {
-                respContent = "您发送的是地理位置消息！";
-            }
-            // 链接消息
-            else if (msgType.equals(MessageUtil.REQ_MESSAGE_TYPE_LINK)) {
-                respContent = "您发送的是链接消息！";
-            }
-            // 音频消息
-            else if (msgType.equals(MessageUtil.REQ_MESSAGE_TYPE_VOICE)) {
-                respContent = "您发送的是音频消息！";
+            // 图文消息
+            else if (msgType.equals(MessageUtil.RESP_MESSAGE_TYPE_NEWS)) {
+                return newsRespProcess.getRespMessage(requestMap);
             }
             // 事件推送
             else if (msgType.equals(MessageUtil.REQ_MESSAGE_TYPE_EVENT)) {
@@ -192,8 +177,7 @@ public class WeiXinService {
                 }
             }
 
-            textMessage.setContent(respContent);
-            respMessage = MessageUtil.textMessageToXml(textMessage);
+
         } catch (Exception e) {
             e.printStackTrace();
         }

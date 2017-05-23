@@ -24,6 +24,7 @@ import java.util.List;
 @Component
 @Path("/goods")
 public class GoodsServiceWeb {
+    
     private static PlatformLogger logger = PlatformLogger.getLogger(GoodsServiceWeb.class);
 
     @Autowired

@@ -1,0 +1,16 @@
+org\kmd\platform\business\user\web\UserServiceWeb.class
+org\kmd\platform\business\user\entity\SubUser.class
+org\kmd\platform\business\user\service\UserAuthorityService.class
+org\kmd\platform\business\user\util\MD5Encoder.class
+org\kmd\platform\business\user\entity\SubAuthority.class
+org\kmd\platform\business\user\entity\UserAuthority.class
+org\kmd\platform\business\user\mapper\UserMapper.class
+org\kmd\platform\business\user\entity\User.class
+org\kmd\platform\business\user\service\UserService.class
+org\kmd\platform\business\user\mapper\AuthorityMapper.class
+org\kmd\platform\business\user\test\UserServiceWebTest.class
+org\kmd\platform\business\user\mapper\UserAuthorityMapper.class
+org\kmd\platform\business\user\web\AuthorityServiceWeb.class
+org\kmd\platform\business\user\entity\Authority.class
+org\kmd\platform\business\user\entity\Test.class
+org\kmd\platform\business\user\service\AuthorityService.class

@@ -9,13 +9,14 @@ import java.io.PrintWriter;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpServlet;
 
 
 /**
  * Created by Administrator on 2017/5/18 0018.
  */
 
-public class CoreServlet {
+public class CoreServlet extends HttpServlet{
 
     @Autowired
     private WeiXinService weiXinService;
