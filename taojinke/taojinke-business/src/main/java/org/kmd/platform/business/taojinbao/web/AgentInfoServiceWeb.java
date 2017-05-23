@@ -56,7 +56,7 @@ public class AgentInfoServiceWeb {
         if(null!=agentInfoExist){
             return JsonResultUtils.getCodeAndMesByString(JsonResultUtils.Code.ERROR.getCode(), "代理商的名称已经存在!");
         }
-        long id = 0;
+        long id;
         try{
             id = appService.getIdByName(agentName);
         }

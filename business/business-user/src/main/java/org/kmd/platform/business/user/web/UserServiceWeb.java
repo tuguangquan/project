@@ -1,5 +1,6 @@
 package org.kmd.platform.business.user.web;
 
+import org.kmd.platform.business.user.util.MD5Encoder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.kmd.platform.business.app.service.AppService;
@@ -13,7 +14,10 @@ import org.kmd.platform.fundamental.logger.PlatformLogger;
 import org.kmd.platform.fundamental.util.json.JsonMapper;
 import org.kmd.platform.fundamental.util.json.JsonResultUtils;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 import javax.ws.rs.*;
+import javax.ws.rs.core.Context;
 import javax.ws.rs.core.MediaType;
 import java.util.List;
 
@@ -61,27 +65,6 @@ public class UserServiceWeb {
     }
 
     @Produces( MediaType.APPLICATION_JSON + ";charset=UTF-8")
-    @Path("findByName/{name}")
-    @GET
-    public String findByName(@PathParam("name") String name){
-        if (name == null) {
-            return JsonResultUtils
-                    .getCodeAndMesByStringAsDefault(JsonResultUtils.Code.ERROR);
-        }
-        User user;
-        try {
-            user = userService.findByName(name);
-        } catch (Exception e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-            logger.error(e.getMessage());
-            return JsonResultUtils.getCodeAndMesByStringAsDefault(JsonResultUtils.Code.ERROR);
-        }
-        // 新增操作时，返回操作状态和状态码给客户端，数据区是为空的
-        return JsonResultUtils.getObjectResultByStringAsDefault(user,JsonResultUtils.Code.SUCCESS);
-    }
-
-    @Produces( MediaType.APPLICATION_JSON + ";charset=UTF-8")
     @Path("/add")
     @POST
     public String add(@FormParam("name") String name,@FormParam("password") String password,@FormParam("sex") String sex,@FormParam("role") String role,/*@FormParam("status") String status,*/@FormParam("agentName") String agentName){
@@ -91,7 +74,6 @@ public class UserServiceWeb {
         long appId=appService.getIdByName(agentName);
         long id;
         try{
-
             id = userService.getIdByName(name,appId);
         }
         catch (Exception ex){
@@ -119,8 +101,6 @@ public class UserServiceWeb {
                 userAuthority.setAppId(appId);
                 userAuthorityService.add(userAuthority);
             }
-
-
             return JsonResultUtils.getCodeAndMesByStringAsDefault(JsonResultUtils.Code.SUCCESS);
         }
         else{
@@ -130,27 +110,29 @@ public class UserServiceWeb {
 
     @Produces( MediaType.APPLICATION_JSON + ";charset=UTF-8")
     @Path("/list")
-    @GET
-    public String list(@FormParam("agentName") String agentName){
-        if(agentName==null ||agentName.trim().equals("")){
-            return JsonResultUtils.getCodeAndMesByString(JsonResultUtils.Code.ERROR.getCode(), "参数不能为空!");
+    @POST
+    public String list(@Context HttpServletRequest request){
+        long agentId;
+        try {
+             agentId = Long.parseLong(request.getSession().getAttribute("agentId").toString());
+        }catch (Exception e){
+            agentId=0;
         }
-        long appId=appService.getIdByName(agentName);
-        List<User> list=userService.list(appId);
-
-
+        if(agentId==0){
+            return JsonResultUtils.getCodeAndMesByString(JsonResultUtils.Code.ERROR.getCode(), "请重新登录!");
+        }
+        List<User> list=userService.list(agentId);
         return JsonResultUtils.getObjectResultByStringAsDefault(list, JsonResultUtils.Code.SUCCESS);
     }
 
     @Produces( MediaType.APPLICATION_JSON + ";charset=UTF-8")
     @Path("/delete")
     @POST
-    public String delete(@FormParam("jsonString") String jsonString){
-        User user = JsonMapper.buildNonDefaultMapper().fromJson(jsonString,User.class);
-        String userName = user.getName();
+    public String delete(@FormParam("userName") String userName){
+        User user = new User();
+        user.setName(userName);
         //删除用户角色表数据
         int userAuthorityDeleted = userAuthorityService.deleteByUserName(userName);
-
         //删除用户表数据
         int userDeleted = userService.delete(user);
         if((userAuthorityDeleted>0)&&(userDeleted>=0)){
@@ -170,7 +152,6 @@ public class UserServiceWeb {
         long appId=appService.getIdByName(user.getAppName());
         user.setAppId(appId);
         subUser.setAppId(appId);
-
         String userName = user.getName();
         int userAuthorityDeleted = userAuthorityService.deleteByUserName(userName);
 
@@ -206,9 +187,22 @@ public class UserServiceWeb {
     }
 
     @Produces( MediaType.APPLICATION_JSON + ";charset=UTF-8")
-    @Path("/keepAlive")
-    @POST
-    public String keepAlive(){
-        return JsonResultUtils.getCodeAndMesByStringAsDefault(JsonResultUtils.Code.SUCCESS);
+    @Path("/login")
+    @GET
+    public String login(@Context HttpServletRequest request,@PathParam("name") String name,@PathParam("password") String password){
+        if(name==null ||name.trim().equals("")||password==null ||password.trim().equals("")){
+            return JsonResultUtils.getCodeAndMesByString(JsonResultUtils.Code.ERROR.getCode(), "登录用户名和密码不能为空!");
+        }
+        String pw=MD5Encoder.GetMD5Code(password);
+        User user = userService.getUserByNameAndPassword(name,pw);
+        if(user!=null){
+            //写入session
+            HttpSession session = request.getSession();
+            session.setAttribute("userName", user.getName());
+            session.setAttribute("agentName",user.getAppName());
+            session.setAttribute("agentId",user.getAppId());
+            return JsonResultUtils.getCodeAndMesByString(JsonResultUtils.Code.SUCCESS.getCode(), "登录成功!");
+        }
+        return JsonResultUtils.getCodeAndMesByString(JsonResultUtils.Code.ERROR.getCode(), "登录用户名或密码不正确!");
     }
 }

@@ -19,4 +19,5 @@ public interface UserMapper extends AbstractMapper<User>{
     public Long getIdByName(String name,long appId);
     public User getById(long id);
     public void updateUserImage(User user);
+    public User getUserByNameAndPassword(Map<String,Object> map);
 }

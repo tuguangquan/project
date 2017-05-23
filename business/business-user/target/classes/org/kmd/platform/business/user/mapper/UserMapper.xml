@@ -108,5 +108,10 @@
         from user
         where ID=#{id}
     </select>
-
+    <select id="getUserByNameAndPassword" parameterType="map" resultType="User">
+        SELECT
+        <include refid="user_fields"/>
+        from user
+        where NAME=#{name} AND  PASSWORD=#{password}
+    </select>
 </mapper>

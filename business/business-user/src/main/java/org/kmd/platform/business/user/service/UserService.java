@@ -27,7 +27,12 @@ public class UserService {
         }
         userMapper.add(user);
     }
-
+    public User getUserByNameAndPassword(String name,String password){
+        Map<String, Object> map = new HashMap<String, Object>();
+        map.put("name",name);
+        map.put("password",password);
+        return userMapper.getUserByNameAndPassword(map);
+    }
     public Long getIdByName(String name,long appId){
         return userMapper.getIdByName(name,appId);
     }
