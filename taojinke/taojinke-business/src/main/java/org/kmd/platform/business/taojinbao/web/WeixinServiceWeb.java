@@ -68,7 +68,7 @@ public class WeixinServiceWeb {
         }
         AgentInfo  agentInfoExist = agentInfoService.getAgentInfoByAppID(appId);
         if(null!=agentInfoExist){
-            return JsonResultUtils.getCodeAndMesByString(JsonResultUtils.Code.ERROR.getCode(), "该代理商已存在!");
+            return JsonResultUtils.getCodeAndMesByString(JsonResultUtils.Code.ERROR.getCode(), "该公众号已绑定!");
         }
         long id;
         try{
@@ -88,32 +88,29 @@ public class WeixinServiceWeb {
         }else{
             return JsonResultUtils.getCodeAndMesByString(JsonResultUtils.Code.ERROR.getCode(), "请设置一个独一无二的名字!");
         }
-        long appIdForAgent = appService.getIdByName(name);
-        //为管理员添加账户
+        long agentId = appService.getIdByName(name);
+        //为代理商添加一个管理员账户
         User user = new User();
         user.setName(name);
-
         user.setRole(role);
         user.setStatus(STATUS);
-        user.setAppId(appIdForAgent);
+        user.setAppId(agentId);
         userService.add(user);
-
-        //为管理员设置角色
-        long userId =  userService.getIdByName(name,appIdForAgent);
+        //为管理员账户设置管理角色
+        long userId =  userService.getIdByName(name,agentId);
         long authorityId = authorityService.getIdByName(role);
         UserAuthority userAuthority = new UserAuthority();
         userAuthority.setUserId(userId);
         userAuthority.setAuthorityId(authorityId);
         userAuthority.setUserName(name);
         userAuthority.setAuthorityName(role);
-        userAuthority.setAppId(appIdForAgent);
+        userAuthority.setAppId(agentId);
         userAuthorityService.add(userAuthority);
-
         //添加代理商信息
         AgentInfo  agentInfo = new AgentInfo();
         agentInfo.setWeixinId(weiXinId);
         agentInfo.setWeixinOriginalId(weiXinOriginalId);
-        agentInfo.setAgentId(appIdForAgent);
+        agentInfo.setAgentId(agentId);
         agentInfo.setAppSecret(appSecret);
         agentInfoService.add(agentInfo);
         return JsonResultUtils.getCodeAndMesByStringAsDefault(JsonResultUtils.Code.SUCCESS);

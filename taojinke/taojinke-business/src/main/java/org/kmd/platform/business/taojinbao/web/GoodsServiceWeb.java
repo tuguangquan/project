@@ -7,10 +7,12 @@ import org.kmd.platform.fundamental.util.json.JsonResultUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.ws.rs.FormParam;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
+import javax.ws.rs.core.Context;
 import javax.ws.rs.core.MediaType;
 import java.util.List;
 
@@ -33,7 +35,7 @@ public class GoodsServiceWeb {
     @Produces( MediaType.APPLICATION_JSON + ";charset=UTF-8")
     @Path("/findByCondition")
     @POST
-    public String findByCondition(@FormParam("cate_id") String cate_id,@FormParam("title") String title,@FormParam("appID") String appID,@FormParam("appSecret") String appSecret,@FormParam("agentId") String agentId,@FormParam("profit") String profit){
+    public String findByCondition(@Context HttpServletRequest request,@FormParam("cate_id") String cate_id,@FormParam("title") String title,@FormParam("appID") String appID,@FormParam("appSecret") String appSecret,@FormParam("profit") String profit){
         List<Goods> goodsList = goodsService.findByCondition();
         return JsonResultUtils.getObjectResultByStringAsDefault(goodsList, JsonResultUtils.Code.SUCCESS);
     }
