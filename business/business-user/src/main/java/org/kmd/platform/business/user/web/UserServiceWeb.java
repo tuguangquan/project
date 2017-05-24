@@ -33,7 +33,7 @@ import java.util.List;
 public class UserServiceWeb {
 
     private static PlatformLogger logger = PlatformLogger.getLogger(UserServiceWeb.class);
-
+    final String role="ROLE_USER";
     final String STATUS="启用";
     @Autowired
     private UserService userService;
@@ -47,13 +47,17 @@ public class UserServiceWeb {
     @Produces( MediaType.APPLICATION_JSON + ";charset=UTF-8")
     @Path("/getIdByName")
     @POST
-    public String getIdByName(@FormParam("name") String name,@FormParam("appId") long appId){
-        if (name == null||appId==0) {
+    public String getIdByName(@Context HttpServletRequest request,@FormParam("name") String name){
+        if (name == null) {
             return JsonResultUtils.getCodeAndMesByStringAsDefault(JsonResultUtils.Code.ERROR);
         }
         long id;
         try {
-            id  = userService.getIdByName(name,appId);
+            long agentId = userService.getCurrentAgentId(request);
+            if(agentId==0){
+                return JsonResultUtils.getCodeAndMesByString(JsonResultUtils.Code.ERROR.getCode(), "请重新登录!");
+            }
+            id  = userService.getIdByName(name,agentId);
         } catch (Exception e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
@@ -67,14 +71,17 @@ public class UserServiceWeb {
     @Produces( MediaType.APPLICATION_JSON + ";charset=UTF-8")
     @Path("/add")
     @POST
-    public String add(@FormParam("name") String name,@FormParam("password") String password,@FormParam("sex") String sex,@FormParam("role") String role,@FormParam("agentName") String agentName){
-        if(name==null ||name.trim().equals("")|| password==null|| password.trim().equals("") ||sex==null|| sex.trim().equals("")||role==null|| role.trim().equals("")||agentName==null||agentName.trim().equals("")){
+    public String add(@Context HttpServletRequest request,@FormParam("name") String name,@FormParam("password") String password,@FormParam("sex") String sex){
+        if(name==null ||name.trim().equals("")|| password==null|| password.trim().equals("") ||sex==null|| sex.trim().equals("")){
             return JsonResultUtils.getCodeAndMesByString(JsonResultUtils.Code.ERROR.getCode(), "参数不能为空!");
         }
-        long appId=appService.getIdByName(agentName);
+        long agentId = userService.getCurrentAgentId(request);
+        if(agentId==0){
+            return JsonResultUtils.getCodeAndMesByString(JsonResultUtils.Code.ERROR.getCode(), "请重新登录!");
+        }
         long id;
         try{
-            id = userService.getIdByName(name,appId);
+            id = userService.getIdByName(name,agentId);
         }
         catch (Exception ex){
             id=0;
@@ -86,24 +93,19 @@ public class UserServiceWeb {
             user.setSex(sex);
             user.setRole(role);
             user.setStatus(STATUS);
-            user.setAppId(appId);
+            user.setAppId(agentId);
             userService.add(user);
-            long userId =  userService.getIdByName(name,appId);
-            String[] roleArray = role.split(";");
-
-            for(int i = 0;i<roleArray.length; i++){
-                long authorityId = authorityService.getIdByName(roleArray[i]);
-                UserAuthority userAuthority = new UserAuthority();
-                userAuthority.setUserId(userId);
-                userAuthority.setAuthorityId(authorityId);
-                userAuthority.setUserName(name);
-                userAuthority.setAuthorityName(roleArray[i]);
-                userAuthority.setAppId(appId);
-                userAuthorityService.add(userAuthority);
-            }
+            long userId =  userService.getIdByName(name,agentId);
+            long authorityId = authorityService.getIdByName(role);
+            UserAuthority userAuthority = new UserAuthority();
+            userAuthority.setUserId(userId);
+            userAuthority.setAuthorityId(authorityId);
+            userAuthority.setUserName(name);
+            userAuthority.setAuthorityName(role);
+            userAuthority.setAppId(agentId);
+            userAuthorityService.add(userAuthority);
             return JsonResultUtils.getCodeAndMesByStringAsDefault(JsonResultUtils.Code.SUCCESS);
-        }
-        else{
+        } else{
             return JsonResultUtils.getCodeAndMesByString(JsonResultUtils.Code.ERROR.getCode(), "用户名已存在!");
         }
     }

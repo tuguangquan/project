@@ -43,8 +43,9 @@ public class GoodsServiceWeb {
     @Produces( MediaType.APPLICATION_JSON + ";charset=UTF-8")
     @Path("/findByCondition")
     @POST
-    public String findByCondition(@Context HttpServletRequest request,@FormParam("cate_id") String cate_id,@FormParam("title") String title,@FormParam("appID") String appID,@FormParam("appSecret") String appSecret,@FormParam("profit") String profit){
-        List<Goods> goodsList = goodsService.findByCondition();
+    public String findByCondition(@Context HttpServletRequest request,@FormParam("cateId") String cateId,@FormParam("topRate") String topRate,@FormParam("lowerRate") String lowerRate,
+                                  @FormParam("topPrice") String topPrice,@FormParam("lowerPrice") String lowerPrice,@FormParam("goodsName") String goodsName){
+        List<Goods> goodsList = goodsService.findByCondition(topRate,lowerRate,topPrice,lowerPrice,goodsName);
         return JsonResultUtils.getObjectResultByStringAsDefault(goodsList, JsonResultUtils.Code.SUCCESS);
     }
 

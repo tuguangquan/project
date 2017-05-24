@@ -95,6 +95,7 @@ public class WeixinServiceWeb {
         user.setRole(role);
         user.setStatus(STATUS);
         user.setAppId(agentId);
+        user.setPassword(weiXinId);
         userService.add(user);
         //为管理员账户设置管理角色
         long userId =  userService.getIdByName(name,agentId);
