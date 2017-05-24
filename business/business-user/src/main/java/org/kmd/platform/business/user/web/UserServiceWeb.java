@@ -195,7 +195,6 @@ public class UserServiceWeb {
             HttpSession session = request.getSession();
             session.setAttribute("userName", user.getName());
             session.setAttribute("userId", user.getId());
-            session.setAttribute("agentName",user.getAppName());
             session.setAttribute("agentId",user.getAppId());
             return JsonResultUtils.getCodeAndMesByString(JsonResultUtils.Code.SUCCESS.getCode(), "登录成功!");
         }
