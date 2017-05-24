@@ -184,7 +184,7 @@ public class UserServiceWeb {
     @Produces( MediaType.APPLICATION_JSON + ";charset=UTF-8")
     @Path("/login")
     @POST
-    public String login(@Context HttpServletRequest request,@PathParam("name") String name,@PathParam("password") String password){
+    public String login(@Context HttpServletRequest request,@FormParam("name") String name,@FormParam("password") String password){
         if(name==null ||name.trim().equals("")||password==null ||password.trim().equals("")){
             return JsonResultUtils.getCodeAndMesByString(JsonResultUtils.Code.ERROR.getCode(), "登录用户名和密码不能为空!");
         }
