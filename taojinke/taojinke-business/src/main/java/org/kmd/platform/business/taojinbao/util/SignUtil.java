@@ -8,7 +8,7 @@ import java.util.Arrays;
  * Created by Administrator on 2017/5/18 0018.
  */
 public class SignUtil {
-    private static String token = "weixinCourse";
+    private static String token = "kmdToken";
 
     /**
      * 验证签名

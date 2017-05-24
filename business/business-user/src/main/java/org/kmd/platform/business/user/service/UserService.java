@@ -1,11 +1,13 @@
 package org.kmd.platform.business.user.service;
 
+import org.kmd.platform.business.user.entity.CurrentUser;
 import org.kmd.platform.business.user.util.MD5Encoder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.kmd.platform.business.user.entity.User;
 import org.kmd.platform.business.user.mapper.UserMapper;
 
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -71,5 +73,34 @@ public class UserService {
 
     public void updateUserImage(User user){
         userMapper.updateUserImage(user);
+    }
+
+    public long getCurrentUserId(HttpServletRequest request){
+        if (request.getSession().getAttribute("userId")==null){
+            return 0;
+        }else{
+            return Integer.parseInt(request.getSession().getAttribute("userId").toString());
+        }
+    }
+    public String getCurrentUserName(HttpServletRequest request){
+        if (request.getSession().getAttribute("userName")==null){
+            return null;
+        }else{
+            return request.getSession().getAttribute("userName").toString();
+        }
+    }
+    public String getCurrentAgentName(HttpServletRequest request){
+        if (request.getSession().getAttribute("agentName")==null){
+            return null;
+        }else{
+            return request.getSession().getAttribute("agentName").toString();
+        }
+    }
+    public long getCurrentAgentId(HttpServletRequest request){
+        if (request.getSession().getAttribute("agentId")==null){
+            return 0;
+        }else{
+            return Integer.parseInt(request.getSession().getAttribute("agentId").toString());
+        }
     }
 }

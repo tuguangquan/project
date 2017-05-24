@@ -67,7 +67,7 @@ public class UserServiceWeb {
     @Produces( MediaType.APPLICATION_JSON + ";charset=UTF-8")
     @Path("/add")
     @POST
-    public String add(@FormParam("name") String name,@FormParam("password") String password,@FormParam("sex") String sex,@FormParam("role") String role,/*@FormParam("status") String status,*/@FormParam("agentName") String agentName){
+    public String add(@FormParam("name") String name,@FormParam("password") String password,@FormParam("sex") String sex,@FormParam("role") String role,@FormParam("agentName") String agentName){
         if(name==null ||name.trim().equals("")|| password==null|| password.trim().equals("") ||sex==null|| sex.trim().equals("")||role==null|| role.trim().equals("")||agentName==null||agentName.trim().equals("")){
             return JsonResultUtils.getCodeAndMesByString(JsonResultUtils.Code.ERROR.getCode(), "参数不能为空!");
         }
@@ -112,12 +112,7 @@ public class UserServiceWeb {
     @Path("/list")
     @POST
     public String list(@Context HttpServletRequest request){
-        long agentId;
-        try {
-             agentId = Long.parseLong(request.getSession().getAttribute("agentId").toString());
-        }catch (Exception e){
-            agentId=0;
-        }
+        long agentId = userService.getCurrentAgentId(request);
         if(agentId==0){
             return JsonResultUtils.getCodeAndMesByString(JsonResultUtils.Code.ERROR.getCode(), "请重新登录!");
         }
@@ -188,7 +183,7 @@ public class UserServiceWeb {
 
     @Produces( MediaType.APPLICATION_JSON + ";charset=UTF-8")
     @Path("/login")
-    @GET
+    @POST
     public String login(@Context HttpServletRequest request,@PathParam("name") String name,@PathParam("password") String password){
         if(name==null ||name.trim().equals("")||password==null ||password.trim().equals("")){
             return JsonResultUtils.getCodeAndMesByString(JsonResultUtils.Code.ERROR.getCode(), "登录用户名和密码不能为空!");
@@ -199,6 +194,7 @@ public class UserServiceWeb {
             //写入session
             HttpSession session = request.getSession();
             session.setAttribute("userName", user.getName());
+            session.setAttribute("userId", user.getId());
             session.setAttribute("agentName",user.getAppName());
             session.setAttribute("agentId",user.getAppId());
             return JsonResultUtils.getCodeAndMesByString(JsonResultUtils.Code.SUCCESS.getCode(), "登录成功!");

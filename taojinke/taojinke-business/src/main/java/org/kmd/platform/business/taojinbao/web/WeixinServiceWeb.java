@@ -37,8 +37,6 @@ import java.util.List;
 public class WeixinServiceWeb {
 
     private static PlatformLogger logger = PlatformLogger.getLogger(WeixinServiceWeb.class);
-
-
     final String STATUS="启用";
     final String role = "ROLE_ADMIN";
     @Autowired
@@ -122,12 +120,15 @@ public class WeixinServiceWeb {
     @Produces(MediaType.APPLICATION_JSON + ";charset=UTF-8")
     @Path("/defineMenu")
     @POST
-    public String defineMenu(@FormParam("jsonMenu") String jsonMenu,@FormParam("agentName") String agentName) {
+    public String defineMenu(@Context HttpServletRequest request,@FormParam("jsonMenu") String jsonMenu) {
         if (jsonMenu == null || jsonMenu.trim().equals("")) {
             return JsonResultUtils.getCodeAndMesByString(JsonResultUtils.Code.ERROR.getCode(), "参数不能为空!");
         }
         try {
-            long agentId=appService.getIdByName(agentName);
+            long agentId = userService.getCurrentAgentId(request);
+            if(agentId==0){
+                return JsonResultUtils.getCodeAndMesByString(JsonResultUtils.Code.ERROR.getCode(), "请重新登录!");
+            }
             AgentInfo agentInfo = agentInfoService.getAgentInfoByAgentId(agentId);
             if (agentInfo == null){
                 return JsonResultUtils.getCodeAndMesByString(JsonResultUtils.Code.ERROR.getCode(), "还没有绑定公众号，请先绑定微信公众号");
@@ -151,16 +152,19 @@ public class WeixinServiceWeb {
     }
     @Path("/searchAllUser")
     @POST
-    public String searchAllUser(@FormParam("agentName") String agentName) {
+    public String searchAllUser(@Context HttpServletRequest request) {
         //从微信获取所有关注者
-        long agentId=appService.getIdByName(agentName);
+        long agentId = userService.getCurrentAgentId(request);
+        if(agentId==0){
+            return JsonResultUtils.getCodeAndMesByString(JsonResultUtils.Code.ERROR.getCode(), "请重新登录!");
+        }
         AgentInfo agentInfo = agentInfoService.getAgentInfoByAgentId(agentId);
         if (agentInfo == null){
             return JsonResultUtils.getCodeAndMesByString(JsonResultUtils.Code.ERROR.getCode(), "还没有绑定公众号，请先绑定微信公众号");
         }
         AccessToken at = weiXinService.getAccessToken(agentInfo.getAppID(),agentInfo.getAppSecret());
         if (null != at) {
-            // 调用接口创建菜单
+            // 调用接口所有关注着
             List openIdList = weiXinService.getUser(at.getToken());
             return JsonResultUtils.getObjectResultByStringAsDefault(openIdList, JsonResultUtils.Code.SUCCESS);
         }
@@ -169,9 +173,12 @@ public class WeixinServiceWeb {
 
     @Path("/sendMsgToSomeUser")
     @POST
-    public String sendMsgToSomeUser(@FormParam("agentName") String agentName,@FormParam("openIds") String openIds,@FormParam("msg") String msg) {
+    public String sendMsgToSomeUser(@Context HttpServletRequest request,@FormParam("openIds") String openIds,@FormParam("msg") String msg) {
         JSONArray jsonArray = JSONArray.fromObject(openIds);
-        long agentId=appService.getIdByName(agentName);
+        long agentId = userService.getCurrentAgentId(request);
+        if(agentId==0){
+            return JsonResultUtils.getCodeAndMesByString(JsonResultUtils.Code.ERROR.getCode(), "请重新登录!");
+        }
         AgentInfo agentInfo = agentInfoService.getAgentInfoByAgentId(agentId);
         if (agentInfo == null){
             return JsonResultUtils.getCodeAndMesByString(JsonResultUtils.Code.ERROR.getCode(), "还没有绑定公众号，请先绑定微信公众号");
@@ -193,12 +200,7 @@ public class WeixinServiceWeb {
         if (sceneStr == null || sceneStr.trim().equals("")) {
             return JsonResultUtils.getCodeAndMesByString(JsonResultUtils.Code.ERROR.getCode(), "scene_str不能为空!");
         }
-        long agentId;
-        try {
-            agentId = Long.parseLong(request.getSession().getAttribute("agentId").toString());
-        }catch (Exception e){
-            agentId=0;
-        }
+        long agentId = userService.getCurrentAgentId(request);
         if(agentId==0){
             return JsonResultUtils.getCodeAndMesByString(JsonResultUtils.Code.ERROR.getCode(), "请重新登录!");
         }
