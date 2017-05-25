@@ -34,18 +34,20 @@ import org.kmd.platform.business.taojinbao.weixin.mass.resp.Text;
 
 import org.kmd.platform.fundamental.logger.PlatformLogger;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 /**
  * Created by Administrator on 2017/5/18 0018.
  */
-@Service
+
 public class WeiXinService {
 
     @Autowired
     public TextRespProcess textRespProcess;
     @Autowired
     public NewsRespProcess newsRespProcess;
+
     private static PlatformLogger log = PlatformLogger.getLogger(WeiXinService.class);
 
     public final static String menu_create_url = "https://api.weixin.qq.com/cgi-bin/menu/create?access_token=ACCESS_TOKEN";
@@ -159,6 +161,7 @@ public class WeiXinService {
             String msgType = requestMap.get("MsgType");
             // 文本消息
             if (msgType.equals(MessageUtil.REQ_MESSAGE_TYPE_TEXT)) {
+                requestMap.put("Content","默认消息");
                 return textRespProcess.getRespMessage(requestMap);
             }
             // 图文消息
@@ -171,7 +174,8 @@ public class WeiXinService {
                 String eventType = requestMap.get("Event");
                 // 订阅
                 if (eventType.equals(MessageUtil.EVENT_TYPE_SUBSCRIBE)) {
-                    respContent = "谢谢您的关注！";
+                    requestMap.put("Content","kmd 谢谢您的关注！");
+                    return textRespProcess.getRespMessage(requestMap);
                 }
                 // 取消订阅
                 else if (eventType.equals(MessageUtil.EVENT_TYPE_UNSUBSCRIBE)) {
