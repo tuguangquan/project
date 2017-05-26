@@ -42,21 +42,14 @@ public class WeixinServiceWeb {
     @Autowired
     private AgentInfoService agentInfoService;
     @Autowired
-    private AppService appService;
-    @Autowired
     private UserService userService;
-    @Autowired
-    private AuthorityService authorityService;
-    @Autowired
-    private UserAuthorityService userAuthorityService;
-
     @Autowired
     private WeiXinService weiXinService;
 
     @Produces(MediaType.APPLICATION_JSON + ";charset=UTF-8")
     @Path("/add")
     @POST
-    public String add(@FormParam("name") String name,@FormParam("description") String description,
+    public String add(@Context HttpServletRequest request,@FormParam("name") String name,@FormParam("description") String description,
                       @FormParam("weiXinId") String weiXinId,@FormParam("weiXinOriginalId") String weiXinOriginalId,
                       @FormParam("appID") String appId,@FormParam("appSecret") String appSecret,@FormParam("token") String token,
                       @FormParam("encodingAESKey") String encodingAESKey){
@@ -70,43 +63,10 @@ public class WeixinServiceWeb {
         if(null!=agentInfoExist){
             return JsonResultUtils.getCodeAndMesByString(JsonResultUtils.Code.ERROR.getCode(), "该公众号已绑定!");
         }
-        long id;
-        try{
-            id = appService.getIdByName(name);
+        long agentId = userService.getCurrentAgentId(request);
+        if(agentId==0){
+            return JsonResultUtils.getCodeAndMesByString(JsonResultUtils.Code.ERROR.getCode(), "请重新登录!");
         }
-        catch (Exception ex){
-            id=0;
-        }
-        if(id==0){ //添加一个代理商
-            Date now=new Date();
-            App app=new App();
-            app.setName(name);
-            app.setDescription("");
-            app.setStatus("启用");
-            app.setCreatetime(now);
-            appService.add(app);
-        }else{
-            return JsonResultUtils.getCodeAndMesByString(JsonResultUtils.Code.ERROR.getCode(), "请设置一个独一无二的名字!");
-        }
-        long agentId = appService.getIdByName(name);
-        //为代理商添加一个管理员账户
-        User user = new User();
-        user.setName(weiXinId);
-        user.setRole(role);
-        user.setStatus(STATUS);
-        user.setAppId(agentId);
-        user.setPassword(weiXinId);
-        userService.add(user);
-        //为管理员账户设置管理角色
-        long userId =  userService.getIdByName(weiXinId,agentId);
-        long authorityId = authorityService.getIdByName(role);
-        UserAuthority userAuthority = new UserAuthority();
-        userAuthority.setUserId(userId);
-        userAuthority.setAuthorityId(authorityId);
-        userAuthority.setUserName(weiXinId);
-        userAuthority.setAuthorityName(role);
-        userAuthority.setAppId(agentId);
-        userAuthorityService.add(userAuthority);
         //添加代理商信息
         AgentInfo  agentInfo = new AgentInfo();
         agentInfo.setWeixinId(weiXinId);

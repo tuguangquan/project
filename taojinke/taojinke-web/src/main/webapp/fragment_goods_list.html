@@ -1,0 +1,204 @@
+<div class="row animated fadeInDown">
+    <!-- Start .row -->
+    <!-- Start .page-header -->
+    <div class="col-lg-12 heading">
+        <h1 class="page-header">
+        	<i class="fa-link" style="opacity: 1;"></i> 全部商品列表
+        </h1>        
+    </div>
+    <!-- End .page-header -->
+</div>
+<!-- End .row -->
+<div class="outlet animated fadeInUp">
+    <!-- Start .outlet -->
+    <!-- Page start here ( usual with .row ) -->
+    <div class="row">
+        <!-- Start .row -->
+        <!-- Start col-lg-12 -->
+        <div class="col-lg-12">
+        	<div class="panel panel-default panelMove toggle panelRefresh panelClose" id="spr_0">
+                <!-- Start .panel -->
+                <div class="panel-heading">
+                <h4 class="panel-title">商品查询</h4>
+                <div class="panel-controls panel-controls-hide" style="display: none;"><a href="#" class="panel-refresh"><i class="im-spinner6"></i></a><a href="#" class="toggle panel-minimize"><i class="im-minus"></i></a><a href="#" class="panel-close"><i class="im-close"></i></a></div></div>
+                <div class="panel-body">
+	            	<div class="col-lg-3">
+	            		<input type="text" class="form-control" placeholder="商品名称" autofocus="autofocus">
+	            		<br />
+	            		<input type="text" class="form-control" placeholder="售价下限" autofocus="autofocus">
+	            		<br />
+	            		<input type="text" class="form-control" placeholder="售价上限" autofocus="autofocus">
+	            	</div>
+	            	<div class="col-lg-3">
+	            		<input type="text" class="form-control" placeholder="佣金上限" autofocus="autofocus">
+	            		<br />
+	            		<input type="text" class="form-control" placeholder="佣金下限" autofocus="autofocus">
+	            		<br />        		
+	            		<span>类别</span>
+	            		&nbsp;
+	            		<select size="1" name="datatable_length" aria-controls="datatable" class="form-control input-small" style="display: inline;">
+	            			<option value="10" selected="selected">不限</option>
+	            			<option value="50">女装</option>
+	            			<option value="25">男装</option>
+	            			<option value="50">夏装</option>
+	            			<option value="100">秋装</option>
+	            		</select>
+	            		&nbsp;
+	            		<span>来源</span>
+	            		&nbsp;
+	            		<select size="1" name="datatable_length" aria-controls="datatable" class="form-control input-small" style="display: inline;">
+	            			<option value="10" selected="selected">所有</option>
+	            			<option value="50">淘宝</option>
+	            			<option value="25">京东</option>
+	            			<option value="50">微信</option>
+	            			<option value="100">考拉</option>
+	            		</select>
+	            		&nbsp;
+	            		<input type="text" class="form-control input-small" style="display: inline;vertical-align: bottom;" placeholder="显示条数"/>
+	            	</div>
+	            	<div class="clearfix">            		
+	            	</div>
+	            	<p></p>
+	            	<p style="margin-left:15px;">输入任意字段都可以搜索！</p>
+	            	<p></p>
+	                <button class="btn btn-success" style="margin-left:15px;"><i class="br-search" style=" vertical-align: middle;"></i> 搜索商品</button>
+                </div>
+            </div>
+            <!--
+            	作者：666@1234560.net
+            	时间：2017-05-21
+            	描述：商品展示层
+            -->
+            <style type="text/css">
+            	td {					    
+					vertical-align: middle!important;
+					}
+            </style>
+            <div class="panel panel-default panelMove toggle panelRefresh panelClose" id="spr_0">
+                <!-- Start .panel -->
+                <div class="panel-heading">
+                    <h4 class="panel-title">商品列表</h4>
+                <div class="panel-controls panel-controls-hide" style="display: none;"><a href="#" class="panel-refresh"><i class="im-spinner6"></i></a><a href="#" class="toggle panel-minimize"><i class="im-minus"></i></a><a href="#" class="panel-close"><i class="im-close"></i></a></div></div>
+                <div class="panel-body">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th class="per5">选取</th>
+                                <th class="per5">编号</th>
+                                <th class="per5">图片</th>
+                                <th class="per10">条码</th>
+                                <th class="per5">价格</th>
+                                <th class="per7">佣金</th>
+                                <th class="per5">类别</th>
+                                <th class="per5">来源</th>
+                                <th class="per15">热度</th>
+                                <th class="per15">销量</th>
+                                <th class="per5">状态</th>
+                                <th class="per15">手动操作</th>
+                                
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <label class="checkbox">
+                                        <input class="check" type="checkbox" value="option2" style="margin-left: 0;">
+                                    </label>
+                                </td>
+                                <td>1</td>
+                                <td><img src="assets/css/sprflat-theme/images/animated-overlay.gif" height="50px"/> </td>
+                                <td>57694B668422</td>
+                                <td>￥ 56.0</td>
+                                <td>￥ 23.6 (21%)</td>
+                                <td>女装</td>
+                                <td>淘宝</td>                                
+                                <td>
+                                    <div class="progress">
+                                        <div class="progress-bar progress-bar-danger animated-bar" role="progressbar" aria-valuenow="90" style="width: 90%;" title="1560次点击">
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="progress">
+                                        <div class="progress-bar progress-bar-success animated-bar" role="progressbar" aria-valuenow="70" style="width: 70%;" title="70个订单">
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>上架</td>
+                                <td><button class="btn btn-warning">下架</button>&nbsp; &nbsp; <button class="btn btn-danger">删除</button> </td> 
+                            </tr>                            
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <label class="checkbox">
+                                        <input class="check" type="checkbox" value="option2" style="margin-left: 0;">
+                                    </label>
+                                </td>
+                                <td>2</td>
+                                <td><img src="assets/img/avatars/131.jpg" height="50px"/> </td>
+                                <td>57694B668622</td>
+                                <td>￥ 56.0</td>
+                                <td>￥ 23.6 (21%)</td>
+                                <td>女装</td>
+                                <td>淘宝</td>                                
+                                <td>
+                                    <div class="progress">
+                                        <div class="progress-bar progress-bar-danger animated-bar" role="progressbar" aria-valuenow="70" style="width: 70%;" title="1560次点击">
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="progress">
+                                        <div class="progress-bar progress-bar-success animated-bar" role="progressbar" aria-valuenow="50" style="width: 50%;" title="70个订单">
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>上架</td>
+                                <td><button class="btn btn-warning">下架</button>&nbsp; &nbsp; <button class="btn btn-danger">删除</button> </td> 
+                            </tr>                            
+                        </tbody>
+                        <!----->
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <label class="checkbox">
+                                        <input class="check" type="checkbox" value="option2" style="margin-left: 0;">
+                                    </label>
+                                </td>
+                                <td>3</td>
+                                <td><img src="assets/img/avatars/131.jpg" height="50px"/> </td>
+                                <td>57694B668622</td>
+                                <td>￥ 56.0</td>
+                                <td>￥ 23.6 (21%)</td>
+                                <td>女装</td>
+                                <td>淘宝</td>                                
+                                <td>
+                                    <div class="progress">
+                                        <div class="progress-bar progress-bar-danger animated-bar" role="progressbar" aria-valuenow="70" style="width: 97%;" title="1560次点击">
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="progress">
+                                        <div class="progress-bar progress-bar-success animated-bar" role="progressbar" aria-valuenow="50" style="width: 30%;" title="70个订单">
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>上架</td>
+                                <td><button class="btn btn-warning">下架</button>&nbsp; &nbsp; <button class="btn btn-danger">删除</button> </td> 
+                            </tr>                            
+                        </tbody>
+                        
+                    </table>
+                    <!--option buttons-->
+                    <button class="btn btn-danger">删除</button>
+                </div>
+            </div>
+            
+        </div>
+        <!-- End col-lg-12 -->
+    </div>
+    <!-- End .row -->
+    <!-- Page End here -->
+</div>
