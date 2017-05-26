@@ -10,256 +10,220 @@ import java.util.Date;
  * To change this template use File | Settings | File Templates.
  */
 public class Goods {
-    private Long id;
-    private int uniacid;
-    private int displayorder;
-    private int status;
-    private int cate_id;
-    private String itemid;
-    private String title;
-    private String itempic;
-    private String shoptitle;
-    private int itemfee;
-    private int itemsell;
-    private String itemstatus;
-    private String stime;
-    private String etime;
-    private String itemsurl;
-    private String itemurl;
-    private String itemtkl;
-    private int itemyhj_zl;
-    private int itemyhj_yl;
-    private String itemyhj_tit;
-    private String itemyhj_stime;
-    private String itemyhj_etime;
-    private String itemyhj_url;
-    private String itemyhj_tkl;
-    private String atime;
-    private int hit;
-    private int share;
-    private int fav;
+    private int id;
+    private String goods_id;
+    private String goods_name;
+    private String goods_picture;
+    private String goods_detail_url;
+    private String shop_name;
+    private String goods_price;
+    private String goods_sells;
+    private String earn_rate;
+    private String commission_rate;
+    private String sellers_WANGWANG;
+    private String taobaoke_short_url;
+    private String taobaoke_url;
+    private String tao_kou_ling;
+    private String discount_coupon;
+    private String discount_coupon_account;
+    private String discount_coupondenomination;
+    private String discount_coupon_start_time;
+    private String discount_couponend_time;
+    private String discount_coupon_url;
+    private String discount_coupon_tao_kou_ling;
+    private String discount_coupon_short_url;
+    private String is_maketing_plan;
+    private String cate_id;
 
-    public Long getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(int id) {
         this.id = id;
     }
 
-    public int getUniacid() {
-        return uniacid;
+    public String getGoods_id() {
+        return goods_id;
     }
 
-    public void setUniacid(int uniacid) {
-        this.uniacid = uniacid;
+    public void setGoods_id(String goods_id) {
+        this.goods_id = goods_id;
     }
 
-    public int getDisplayorder() {
-        return displayorder;
+    public String getGoods_name() {
+        return goods_name;
     }
 
-    public void setDisplayorder(int displayorder) {
-        this.displayorder = displayorder;
+    public void setGoods_name(String goods_name) {
+        this.goods_name = goods_name;
     }
 
-    public int getStatus() {
-        return status;
+    public String getGoods_picture() {
+        return goods_picture;
     }
 
-    public void setStatus(int status) {
-        this.status = status;
+    public void setGoods_picture(String goods_picture) {
+        this.goods_picture = goods_picture;
     }
 
-    public int getCate_id() {
+    public String getGoods_detail_url() {
+        return goods_detail_url;
+    }
+
+    public void setGoods_detail_url(String goods_detail_url) {
+        this.goods_detail_url = goods_detail_url;
+    }
+
+    public String getShop_name() {
+        return shop_name;
+    }
+
+    public void setShop_name(String shop_name) {
+        this.shop_name = shop_name;
+    }
+
+    public String getGoods_price() {
+        return goods_price;
+    }
+
+    public void setGoods_price(String goods_price) {
+        this.goods_price = goods_price;
+    }
+
+    public String getGoods_sells() {
+        return goods_sells;
+    }
+
+    public void setGoods_sells(String goods_sells) {
+        this.goods_sells = goods_sells;
+    }
+
+    public String getEarn_rate() {
+        return earn_rate;
+    }
+
+    public void setEarn_rate(String earn_rate) {
+        this.earn_rate = earn_rate;
+    }
+
+    public String getCommission_rate() {
+        return commission_rate;
+    }
+
+    public void setCommission_rate(String commission_rate) {
+        this.commission_rate = commission_rate;
+    }
+
+    public String getSellers_WANGWANG() {
+        return sellers_WANGWANG;
+    }
+
+    public void setSellers_WANGWANG(String sellers_WANGWANG) {
+        this.sellers_WANGWANG = sellers_WANGWANG;
+    }
+
+    public String getTaobaoke_short_url() {
+        return taobaoke_short_url;
+    }
+
+    public void setTaobaoke_short_url(String taobaoke_short_url) {
+        this.taobaoke_short_url = taobaoke_short_url;
+    }
+
+    public String getTaobaoke_url() {
+        return taobaoke_url;
+    }
+
+    public void setTaobaoke_url(String taobaoke_url) {
+        this.taobaoke_url = taobaoke_url;
+    }
+
+    public String getTao_kou_ling() {
+        return tao_kou_ling;
+    }
+
+    public void setTao_kou_ling(String tao_kou_ling) {
+        this.tao_kou_ling = tao_kou_ling;
+    }
+
+    public String getDiscount_coupon() {
+        return discount_coupon;
+    }
+
+    public void setDiscount_coupon(String discount_coupon) {
+        this.discount_coupon = discount_coupon;
+    }
+
+    public String getDiscount_coupon_account() {
+        return discount_coupon_account;
+    }
+
+    public void setDiscount_coupon_account(String discount_coupon_account) {
+        this.discount_coupon_account = discount_coupon_account;
+    }
+
+    public String getDiscount_coupondenomination() {
+        return discount_coupondenomination;
+    }
+
+    public void setDiscount_coupondenomination(String discount_coupondenomination) {
+        this.discount_coupondenomination = discount_coupondenomination;
+    }
+
+    public String getDiscount_coupon_start_time() {
+        return discount_coupon_start_time;
+    }
+
+    public void setDiscount_coupon_start_time(String discount_coupon_start_time) {
+        this.discount_coupon_start_time = discount_coupon_start_time;
+    }
+
+    public String getDiscount_couponend_time() {
+        return discount_couponend_time;
+    }
+
+    public void setDiscount_couponend_time(String discount_couponend_time) {
+        this.discount_couponend_time = discount_couponend_time;
+    }
+
+    public String getDiscount_coupon_url() {
+        return discount_coupon_url;
+    }
+
+    public void setDiscount_coupon_url(String discount_coupon_url) {
+        this.discount_coupon_url = discount_coupon_url;
+    }
+
+    public String getDiscount_coupon_tao_kou_ling() {
+        return discount_coupon_tao_kou_ling;
+    }
+
+    public void setDiscount_coupon_tao_kou_ling(String discount_coupon_tao_kou_ling) {
+        this.discount_coupon_tao_kou_ling = discount_coupon_tao_kou_ling;
+    }
+
+    public String getDiscount_coupon_short_url() {
+        return discount_coupon_short_url;
+    }
+
+    public void setDiscount_coupon_short_url(String discount_coupon_short_url) {
+        this.discount_coupon_short_url = discount_coupon_short_url;
+    }
+
+    public String getIs_maketing_plan() {
+        return is_maketing_plan;
+    }
+
+    public void setIs_maketing_plan(String is_maketing_plan) {
+        this.is_maketing_plan = is_maketing_plan;
+    }
+
+    public String getCate_id() {
         return cate_id;
     }
 
-    public void setCate_id(int cate_id) {
+    public void setCate_id(String cate_id) {
         this.cate_id = cate_id;
-    }
-
-    public String getItemid() {
-        return itemid;
-    }
-
-    public void setItemid(String itemid) {
-        this.itemid = itemid;
-    }
-
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-    public String getItempic() {
-        return itempic;
-    }
-
-    public void setItempic(String itempic) {
-        this.itempic = itempic;
-    }
-
-    public String getShoptitle() {
-        return shoptitle;
-    }
-
-    public void setShoptitle(String shoptitle) {
-        this.shoptitle = shoptitle;
-    }
-
-    public int getItemfee() {
-        return itemfee;
-    }
-
-    public void setItemfee(int itemfee) {
-        this.itemfee = itemfee;
-    }
-
-    public int getItemsell() {
-        return itemsell;
-    }
-
-    public void setItemsell(int itemsell) {
-        this.itemsell = itemsell;
-    }
-
-    public String getItemstatus() {
-        return itemstatus;
-    }
-
-    public void setItemstatus(String itemstatus) {
-        this.itemstatus = itemstatus;
-    }
-
-    public String getStime() {
-        return stime;
-    }
-
-    public void setStime(String stime) {
-        this.stime = stime;
-    }
-
-    public String getEtime() {
-        return etime;
-    }
-
-    public void setEtime(String etime) {
-        this.etime = etime;
-    }
-
-    public String getItemsurl() {
-        return itemsurl;
-    }
-
-    public void setItemsurl(String itemsurl) {
-        this.itemsurl = itemsurl;
-    }
-
-    public String getItemurl() {
-        return itemurl;
-    }
-
-    public void setItemurl(String itemurl) {
-        this.itemurl = itemurl;
-    }
-
-    public String getItemtkl() {
-        return itemtkl;
-    }
-
-    public void setItemtkl(String itemtkl) {
-        this.itemtkl = itemtkl;
-    }
-
-    public int getItemyhj_zl() {
-        return itemyhj_zl;
-    }
-
-    public void setItemyhj_zl(int itemyhj_zl) {
-        this.itemyhj_zl = itemyhj_zl;
-    }
-
-    public int getItemyhj_yl() {
-        return itemyhj_yl;
-    }
-
-    public void setItemyhj_yl(int itemyhj_yl) {
-        this.itemyhj_yl = itemyhj_yl;
-    }
-
-    public String getItemyhj_tit() {
-        return itemyhj_tit;
-    }
-
-    public void setItemyhj_tit(String itemyhj_tit) {
-        this.itemyhj_tit = itemyhj_tit;
-    }
-
-    public String getItemyhj_stime() {
-        return itemyhj_stime;
-    }
-
-    public void setItemyhj_stime(String itemyhj_stime) {
-        this.itemyhj_stime = itemyhj_stime;
-    }
-
-    public String getItemyhj_etime() {
-        return itemyhj_etime;
-    }
-
-    public void setItemyhj_etime(String itemyhj_etime) {
-        this.itemyhj_etime = itemyhj_etime;
-    }
-
-    public String getItemyhj_url() {
-        return itemyhj_url;
-    }
-
-    public void setItemyhj_url(String itemyhj_url) {
-        this.itemyhj_url = itemyhj_url;
-    }
-
-    public String getItemyhj_tkl() {
-        return itemyhj_tkl;
-    }
-
-    public void setItemyhj_tkl(String itemyhj_tkl) {
-        this.itemyhj_tkl = itemyhj_tkl;
-    }
-
-    public String getAtime() {
-        return atime;
-    }
-
-    public void setAtime(String atime) {
-        this.atime = atime;
-    }
-
-    public int getHit() {
-        return hit;
-    }
-
-    public void setHit(int hit) {
-        this.hit = hit;
-    }
-
-    public int getShare() {
-        return share;
-    }
-
-    public void setShare(int share) {
-        this.share = share;
-    }
-
-    public int getFav() {
-        return fav;
-    }
-
-    public void setFav(int fav) {
-        this.fav = fav;
     }
 }

@@ -32,4 +32,6 @@
     <bean id="weiXinService" class="org.kmd.platform.business.taojinbao.service.WeiXinService" depends-on="mappers"/>
     <bean id="newsRespProcess" class="org.kmd.platform.business.taojinbao.servlet.process.impl.NewsRespProcess" depends-on="mappers"/>
     <bean id="textRespProcess" class="org.kmd.platform.business.taojinbao.servlet.process.impl.TextRespProcess" depends-on="mappers"/>
+    <bean id="msgSubService" class="org.kmd.platform.business.taojinbao.service.MsgSubService" depends-on="mappers"/>
+    <bean id="msgTempService" class="org.kmd.platform.business.taojinbao.service.MsgTempService" depends-on="mappers"/>
 </beans>

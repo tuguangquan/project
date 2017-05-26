@@ -39,16 +39,10 @@
 
     function userInfoCallback(data){
         if(data!=null){
-            $.post("rs/weiXin/add",{
-                name:123,
-                description:123,
-                weiXinId:12,
-                weiXinOriginalId:"12wewe3",
-                appID:123,
-                appSecret:321,
-                token:12312,
-                encodingAESKey:2131
-            },function(data,status){
+            $.post("rs/goods/findByCondition",
+                    {"cateId": 1, "topRate": 0.9, "lowerRate": 0.01,
+                        "topPrice":90, "lowerPrice":12, "goodsName":"12312rt"},
+                    function(data,status){
                 alert("return str: "+data + status);
             },"JSON");
         }

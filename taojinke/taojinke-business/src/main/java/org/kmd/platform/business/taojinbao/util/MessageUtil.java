@@ -82,7 +82,18 @@ public class MessageUtil {
      * 事件类型：CLICK(自定义菜单点击事件)
      */
     public static final String EVENT_TYPE_CLICK = "CLICK";
-
+    /**
+     * 事件类型：订阅
+     */
+    public static final int  MSG_ACTION_SUBSCRIBE = 1;
+    /**
+     * 事件类型：自动回复
+     */
+    public static final int  MSG_ACTION_AUTO_REP = 2;
+    /**
+     * 事件类型：CLICK(自定义菜单点击事件)
+     */
+    public static final String TEXT_PUSH_MODE = "{\"touser\":\"<operId>\",\"msgtype\":\"text\",\"text\":{\"content\":\"<content_1>\"}}";
     /**
      * 解析微信发来的请求（XML）
      *

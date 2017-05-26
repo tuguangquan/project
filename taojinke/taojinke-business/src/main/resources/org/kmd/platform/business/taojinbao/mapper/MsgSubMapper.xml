@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.kmd.platform.business.taojinbao.mapper.MsgSubMapper">
+    <sql id="msgSub_fields">
+        ID,CONTENT,AGENTID,WEIXINORIGINID
+    </sql>
+
+    <resultMap id="MsgSubResultMap" type="MsgSub">
+        <id property="id" column="ID"/>
+        <result property="content" column="CONTENT"/>
+        <result property="agentId" column="AGENTID"/>
+        <result property="weiXinOriginId" column="WEIXINORIGINID"/>
+    </resultMap>
+
+    <insert id="add" parameterType="MsgSub" keyProperty="id"
+            useGeneratedKeys="true">
+        INSERT INTO
+        ims_msg_sub(
+           CONTENT,AGENTID,WEIXINORIGINID
+        )
+        VALUES (#{content},#{agentId},#{weiXinOriginId});
+        <selectKey resultType="long" keyProperty="id">
+            select
+            LAST_INSERT_ID() as id
+        </selectKey>
+    </insert>
+
+    <select id="getMsgSubByWeiXinOriginId" parameterType="java.lang.Long" resultMap="MsgSubResultMap">
+        SELECT
+        <include refid="msgSub_fields"/>
+        FROM ims_msg_sub WHERE WEIXINORIGINID=#{weiXinOriginId}
+    </select>
+
+
+</mapper>

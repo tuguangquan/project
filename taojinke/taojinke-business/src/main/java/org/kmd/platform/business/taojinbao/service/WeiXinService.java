@@ -13,29 +13,31 @@ import javax.net.ssl.TrustManager;
 import javax.servlet.http.HttpServletRequest;
 
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
 import net.sf.json.JSONArray;
 import net.sf.json.JSONException;
 import net.sf.json.JSONObject;
+import org.kmd.platform.business.taojinbao.entity.MsgSub;
+import org.kmd.platform.business.taojinbao.entity.MsgTemp;
+import org.kmd.platform.business.taojinbao.mapper.MsgTempMapper;
 import org.kmd.platform.business.taojinbao.servlet.process.impl.NewsRespProcess;
 import org.kmd.platform.business.taojinbao.servlet.process.impl.TextRespProcess;
 import org.kmd.platform.business.taojinbao.util.AccessToken;
 import org.kmd.platform.business.taojinbao.util.MessageUtil;
 import org.kmd.platform.business.taojinbao.util.MyX509TrustManager;
 import org.kmd.platform.business.taojinbao.weixin.QRCode.ActionInfo;
-import org.kmd.platform.business.taojinbao.weixin.QRCode.Constant;
+import org.kmd.platform.business.taojinbao.weixin.Constant;
 import org.kmd.platform.business.taojinbao.weixin.QRCode.QRCode;
 import org.kmd.platform.business.taojinbao.weixin.QRCode.Scene;
 import org.kmd.platform.business.taojinbao.weixin.mass.resp.MassTextMessage;
 import org.kmd.platform.business.taojinbao.weixin.mass.resp.Text;
 
+import org.kmd.platform.business.taojinbao.weixin.test.Template;
+import org.kmd.platform.business.taojinbao.weixin.test.TemplateParam;
 import org.kmd.platform.fundamental.logger.PlatformLogger;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Service;
 
 /**
  * Created by Administrator on 2017/5/18 0018.
@@ -47,6 +49,12 @@ public class WeiXinService {
     public TextRespProcess textRespProcess;
     @Autowired
     public NewsRespProcess newsRespProcess;
+    @Autowired
+    public MsgTempService msgTempService;
+    @Autowired
+    public MsgTempMapper msgTempMapper;
+    @Autowired
+    private MsgSubService msgSubService;
 
     private static PlatformLogger log = PlatformLogger.getLogger(WeiXinService.class);
 
@@ -56,6 +64,7 @@ public class WeiXinService {
     public final static String  send_msg_url = "https://api.weixin.qq.com/cgi-bin/message/mass/send?access_token=ACCESS_TOKEN";
     public final static String  get_qrCode_ticket_url = "https://api.weixin.qq.com/cgi-bin/qrcode/create?access_token=ACCESS_TOKEN";
     public final static String  get_qrCode_url = "https://mp.weixin.qq.com/cgi-bin/showqrcode?ticket=TICKET";
+    public final static String  send_temp_msg_url = "https://api.weixin.qq.com/cgi-bin/message/template/send?access_token=ACCESS_TOKEN";
     /**
      * 发起https请求并获取结果
      * @param requestUrl    请求地址
@@ -63,7 +72,7 @@ public class WeiXinService {
      * @param outputStr     提交的数据
      * @return JSONObject(通过JSONObject.get(key)的方式获取json对象的属性值)
      */
-    public  JSONObject httpRequest(String requestUrl, String requestMethod, String outputStr) {
+    public static   JSONObject httpRequest(String requestUrl, String requestMethod, String outputStr) {
         JSONObject jsonObject = null;
         StringBuffer buffer = new StringBuffer();
         try {
@@ -129,7 +138,7 @@ public class WeiXinService {
         return result;
     }
 
-    public  AccessToken getAccessToken(String appId,String appSecret ) {
+    public static   AccessToken getAccessToken(String appId,String appSecret ) {
         AccessToken accessToken = null;
         String requestUrl = access_token_url.replace("APPID", appId).replace("APPSECRET", appSecret);
         JSONObject jsonObject = httpRequest(requestUrl, "GET", null);
@@ -158,24 +167,60 @@ public class WeiXinService {
             // xml请求解析
             Map<String, String> requestMap = MessageUtil.parseXml(request);
             // 消息类型
-            String msgType = requestMap.get("MsgType");
+            String msgTypeReq = requestMap.get("MsgType");
+            String weiXinOriginId = requestMap.get("FromUserName");
+            List<MsgTemp> msgTempList = msgTempService.getMsgTempByOriginId(weiXinOriginId);
             // 文本消息
-            if (msgType.equals(MessageUtil.REQ_MESSAGE_TYPE_TEXT)) {
-                requestMap.put("Content","默认消息");
-                return textRespProcess.getRespMessage(requestMap);
-            }
-            // 图文消息
-            else if (msgType.equals(MessageUtil.RESP_MESSAGE_TYPE_NEWS)) {
-                return newsRespProcess.getRespMessage(requestMap);
+            if (msgTypeReq.equals(MessageUtil.REQ_MESSAGE_TYPE_TEXT)) {
+                if(msgTempList.size()==0){//没有设置，发送系统默认消息
+                    requestMap.put("Content","默认消息");
+                    return textRespProcess.getRespMessage(requestMap);
+                }else {//设置了，发送设置消息，
+                    //首先查看是否有规则和优先级
+                    String msg = requestMap.get("Content");
+                    List<MsgTemp> msgTempMatchList = msgTempService.getMsgTempByOriginIdAndModeMatch(weiXinOriginId,msg);
+                    if (msgTempMatchList.size()==0){//没有设置规则，发送代理商设置的默认消息
+                        String content = msgTempList.get(0).getModeContent();
+                        requestMap.put("Content",content);
+                        String msgType = msgTempList.get(0).getMsgType();
+                        if (msgType.equals(MessageUtil.REQ_MESSAGE_TYPE_TEXT)){//如果设置的是文本消息
+                            return textRespProcess.getRespMessage(requestMap);
+                        }
+                    }else{ //设置了规则，发送优先级最高的消息
+                        int priority = msgTempMatchList.get(0).getPriority();
+                        String content = msgTempMatchList.get(0).getModeContent();
+                        String msgType = msgTempMatchList.get(0).getMsgType();
+                        if (msgTempMatchList.size()>1){
+                            for (int i=1;i<msgTempMatchList.size()-1;i++){
+                                if (priority>msgTempMatchList.get(i).getPriority()){
+                                    priority=msgTempMatchList.get(i).getPriority();
+                                    content = msgTempMatchList.get(i).getModeContent();
+                                    msgType = msgTempMatchList.get(i).getMsgType();
+                                }
+                            }
+                        }
+                        requestMap.put("Content",content);
+                        if (msgType.equals(MessageUtil.REQ_MESSAGE_TYPE_TEXT)){//如果设置的是文本消息
+                            return textRespProcess.getRespMessage(requestMap);
+                        }
+                    }
+                }
             }
             // 事件推送
-            else if (msgType.equals(MessageUtil.REQ_MESSAGE_TYPE_EVENT)) {
+            else if (msgTypeReq.equals(MessageUtil.REQ_MESSAGE_TYPE_EVENT)) {
                 // 事件类型
                 String eventType = requestMap.get("Event");
                 // 订阅
                 if (eventType.equals(MessageUtil.EVENT_TYPE_SUBSCRIBE)) {
-                    requestMap.put("Content","kmd 谢谢您的关注！");
-                    return textRespProcess.getRespMessage(requestMap);
+                    MsgSub msgSub = msgSubService.getMsgSubByWeiXinOriginId(weiXinOriginId) ;
+                    if (null == msgSub){   //没有设置关注回复
+                        requestMap.put("Content","kmd 谢谢您的关注！");
+                        return textRespProcess.getRespMessage(requestMap);
+                    }else{
+                        String contentSub =  msgSub.getContent();
+                        requestMap.put("Content",contentSub);
+                        return textRespProcess.getRespMessage(requestMap);
+                    }
                 }
                 // 取消订阅
                 else if (eventType.equals(MessageUtil.EVENT_TYPE_UNSUBSCRIBE)) {
@@ -195,7 +240,7 @@ public class WeiXinService {
         return respMessage;
     }
 
-    public List getUser(String accessToken) {
+    public static List getUser(String accessToken) {
         // 拼装创建菜单的url
         String url = get_user_url.replace("ACCESS_TOKEN", accessToken);
         // 调用接口创建菜单
@@ -261,31 +306,55 @@ public class WeiXinService {
         }
         return result;
     }
-
+    public int sendTempMsg(String accessToken,String msgJson) {
+        int result = 0;
+        // 拼装创建菜单的url
+        String url = send_temp_msg_url.replace("ACCESS_TOKEN", accessToken);
+        JSONObject jsonObject = httpRequest(url, "POST", msgJson);
+        if (null != jsonObject) {
+            if (0 != jsonObject.getInt("errcode")) {
+                result = jsonObject.getInt("errcode");
+                log.error("消息发送失败 errcode:{} errmsg:{}", jsonObject.getInt("errcode"), jsonObject.getString("errmsg"));
+            }
+        }
+        return result;
+    }
 
     public static void main(String[] args){
-        Scene scene = new Scene();
-        scene.setScene_str("2343253");
-        ActionInfo actionInfo = new ActionInfo();
-        actionInfo.setScene(scene);
-        QRCode qrCode = new QRCode();
-        qrCode.setAction_info(actionInfo);
-        qrCode.setAction_name(Constant.qr_limit_scene);
-        JSONObject jsonObject = JSONObject.fromObject(qrCode);
-        String json = "{\"total\":23000," + " \"count\":10000," + " \"data\":{\"openid\":[" +
-                "\"OPENID1\"," +
-                "\"OPENID2\"," +
-                "\"OPENID10000\"" +
-                "]" +
-                "}," +
-                "\"next_openid\":\"OPENID10000\"" +"}" ;
-        JSONObject jsonResult =   JSONObject.fromObject(json);
+           String appId= "wx3920e6874f8f44ba";
+           String appSecret="56043821d2d4ac42174fc76facfa2ccd";
+           AccessToken accessToken = getAccessToken(appId,appSecret);
 
-        if (null != jsonResult) {
-            JSONArray jsonArray =  jsonResult.getJSONObject("data").getJSONArray("openid");
-            List list =  jsonArray.subList(0, jsonArray.size());
-            System.out.print(23432);
-
+        //   List list = getUser(accessToken.getToken());
+           Template tem=new Template();
+            tem.setTemplateId("LhEDNAdkTcax7gzPetV1hnAmbSoXuo22OEJ8eix1iAw");
+            tem.setTopColor("#00DD00");
+            tem.setToUser("ofngQ01oLNp3AoQsHnqs67ryUg3Q");//ofngQ06Y2kCInWUpesHeVNA-YpNM,ofngQ091JdK3uHZCPpZCQaTcSllM,ofngQ06p2jZfiTdd9q7jtGYLACmM
+            tem.setUrl("");
+            List<TemplateParam> paras=new ArrayList<TemplateParam>();
+            paras.add(new TemplateParam("first","我们已收到您的货款，开始为您打包商品，请耐心等待: )","#FF3333"));
+            paras.add(new TemplateParam("orderMoneySum","¥20.00","#0044BB"));
+            paras.add(new TemplateParam("orderProductName","火烧牛干巴","#0044BB"));
+            paras.add(new TemplateParam("Remark","感谢你对我们商城的支持!!!!","#AAAAAA"));
+            tem.setTemplateParamList(paras);
+            boolean result=sendTemplateMsg(accessToken.getToken(),tem);
         }
+
+    public static boolean sendTemplateMsg(String token,Template template){
+        boolean flag=false;
+        String requestUrl="https://api.weixin.qq.com/cgi-bin/message/template/send?access_token=ACCESS_TOKEN";
+        requestUrl=requestUrl.replace("ACCESS_TOKEN", token);
+        JSONObject jsonResult = httpRequest(requestUrl, "POST", template.toJSON());
+        if(jsonResult!=null){
+            int errorCode=jsonResult.getInt("errcode");
+            String errorMessage=jsonResult.getString("errmsg");
+            if(errorCode==0){
+                flag=true;
+            }else{
+                System.out.println("模板消息发送失败:"+errorCode+","+errorMessage);
+                flag=false;
+            }
+        }
+        return flag;
     }
 }
