@@ -36,7 +36,10 @@ public class UserService {
         return userMapper.getUserByNameAndPassword(map);
     }
     public Long getIdByName(String name,long appId){
-        return userMapper.getIdByName(name,appId);
+        Map<String, Object> map = new HashMap<String, Object>();
+        map.put("name",name);
+        map.put("appId",appId);
+        return userMapper.getIdByName(map);
     }
     public int update(User user){
         if(user.getPassword()!=null && !user.getPassword().equals("")){

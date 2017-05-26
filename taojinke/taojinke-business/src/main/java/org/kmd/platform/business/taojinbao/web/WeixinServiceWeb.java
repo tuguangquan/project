@@ -72,7 +72,7 @@ public class WeixinServiceWeb {
         }
         long id;
         try{
-            id = appService.getIdByName(weiXinId);
+            id = appService.getIdByName(name);
         }
         catch (Exception ex){
             id=0;
@@ -91,19 +91,19 @@ public class WeixinServiceWeb {
         long agentId = appService.getIdByName(name);
         //为代理商添加一个管理员账户
         User user = new User();
-        user.setName(name);
+        user.setName(weiXinId);
         user.setRole(role);
         user.setStatus(STATUS);
         user.setAppId(agentId);
         user.setPassword(weiXinId);
         userService.add(user);
         //为管理员账户设置管理角色
-        long userId =  userService.getIdByName(name,agentId);
+        long userId =  userService.getIdByName(weiXinId,agentId);
         long authorityId = authorityService.getIdByName(role);
         UserAuthority userAuthority = new UserAuthority();
         userAuthority.setUserId(userId);
         userAuthority.setAuthorityId(authorityId);
-        userAuthority.setUserName(name);
+        userAuthority.setUserName(weiXinId);
         userAuthority.setAuthorityName(role);
         userAuthority.setAppId(agentId);
         userAuthorityService.add(userAuthority);
@@ -112,7 +112,9 @@ public class WeixinServiceWeb {
         agentInfo.setWeixinId(weiXinId);
         agentInfo.setWeixinOriginalId(weiXinOriginalId);
         agentInfo.setAgentId(agentId);
+        agentInfo.setAppID(appId);
         agentInfo.setAppSecret(appSecret);
+        agentInfo.setAgentName(name);
         agentInfoService.add(agentInfo);
         return JsonResultUtils.getCodeAndMesByStringAsDefault(JsonResultUtils.Code.SUCCESS);
     }

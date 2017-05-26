@@ -14,7 +14,7 @@ public class AgentInfo {
     private String appID;
     private String appSecret;
     private long agentId;
-    private long agentName;
+    private String agentName;
     private int fansAddNum;
     private int fansCountNum;
 
@@ -82,11 +82,11 @@ public class AgentInfo {
         this.fansCountNum = fansCountNum;
     }
 
-    public long getAgentName() {
+    public String getAgentName() {
         return agentName;
     }
 
-    public void setAgentName(long agentName) {
+    public void setAgentName(String agentName) {
         this.agentName = agentName;
     }
 }

@@ -4,7 +4,7 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="org.kmd.platform.business.taojinbao.mapper.AgentInfoMapper">
     <sql id="agentInfo_fields">
-		ID,WEIXINID,WEIXINORIGINALID,APPID,APPSECERT,AGENTID,FANSADDNUM,FANSCOUNTNUM,AGENTNAME
+		ID,WEIXINID,WEIXINORIGINALID,APPID,APPSECRET,AGENTID,FANSADDNUM,FANSCOUNTNUM,AGENTNAME
 	</sql>
 
     <resultMap id="AgentInfoResultMap" type="AgentInfo">
@@ -12,7 +12,7 @@
         <result property="weixinId" column="WEIXINID"/>
         <result property="weixinOriginalId" column="WEIXINORIGINALID"/>
         <result property="appID" column="APPID"/>
-        <result property="appSecret" column="APPSECERT"/>
+        <result property="appSecret" column="APPSECRET"/>
         <result property="agentId" column="AGENTID"/>
         <result property="fansAddNum" column="FANSADDNUM"/>
         <result property="fansCountNum" column="FANSCOUNTNUM"/>
@@ -58,4 +58,9 @@
         FROM agent_info WHERE agentId=#{agentId}
     </select>
 
+    <select id="getAgentInfoByAppID"  parameterType="java.lang.String" resultMap="AgentInfoResultMap">
+        SELECT
+        <include refid="agentInfo_fields"/>
+        FROM agent_info WHERE appID=#{appId}
+    </select>
 </mapper>

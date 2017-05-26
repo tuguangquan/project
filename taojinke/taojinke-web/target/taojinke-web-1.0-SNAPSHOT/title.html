@@ -32,7 +32,20 @@
 <script>
     var currentUser = null;
     $(document).ready(function(){
-        $.post($.URL.user.login,{"name": "tuguangquan", "password": 123456},userInfoCallback,"json");
+        $.post("rs/weiXin/add",{
+            name:123,
+            description:123,
+            weiXinId:12,
+            weiXinOriginalId:123,
+            appID:123,
+            appSecret:321,
+            token:12312,
+            encodingAESKey:2131
+        },function(data,status){
+            alert("return str: "+data + status);
+        },"JSON");
+
+        //$.post($.URL.user.login,{"name": "tuguangquan", "password": 123456},userInfoCallback,"json");
     });
 
     function userInfoCallback(data){

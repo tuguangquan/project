@@ -17,5 +17,6 @@ public interface AgentInfoMapper extends AbstractMapper<AgentInfo> {
     public List<AgentInfo> findByCondition(Map<String,Object> map);
     public AgentInfo getAgentInfoByAgentName(String agentName);
     public AgentInfo getAgentInfoByAgentId(long agentId);
+    public AgentInfo getAgentInfoByAppID(String  appId) ;
 
 }
