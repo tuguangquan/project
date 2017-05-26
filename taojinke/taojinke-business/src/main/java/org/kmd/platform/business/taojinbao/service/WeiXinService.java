@@ -19,6 +19,8 @@ import java.util.Map;
 import net.sf.json.JSONArray;
 import net.sf.json.JSONException;
 import net.sf.json.JSONObject;
+import org.kmd.platform.business.taojinbao.entity.MsgTemp;
+import org.kmd.platform.business.taojinbao.mapper.MsgTempMapper;
 import org.kmd.platform.business.taojinbao.servlet.process.impl.NewsRespProcess;
 import org.kmd.platform.business.taojinbao.servlet.process.impl.TextRespProcess;
 import org.kmd.platform.business.taojinbao.util.AccessToken;
@@ -35,18 +37,22 @@ import org.kmd.platform.business.taojinbao.weixin.test.Template;
 import org.kmd.platform.business.taojinbao.weixin.test.TemplateParam;
 import org.kmd.platform.fundamental.logger.PlatformLogger;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 
 /**
  * Created by Administrator on 2017/5/18 0018.
  */
-@Service
+
 public class WeiXinService {
 
     @Autowired
     public TextRespProcess textRespProcess;
     @Autowired
     public NewsRespProcess newsRespProcess;
+    @Autowired
+    public MsgTempService msgTempService;
+    @Autowired
+    public MsgTempMapper msgTempMapper;
+
     private static PlatformLogger log = PlatformLogger.getLogger(WeiXinService.class);
 
     public final static String menu_create_url = "https://api.weixin.qq.com/cgi-bin/menu/create?access_token=ACCESS_TOKEN";
@@ -158,22 +164,54 @@ public class WeiXinService {
             // xml请求解析
             Map<String, String> requestMap = MessageUtil.parseXml(request);
             // 消息类型
-            String msgType = requestMap.get("MsgType");
+            String msgTypeReq = requestMap.get("MsgType");
+            String weiXinOriginId = requestMap.get("FromUserName");
+            List<MsgTemp> msgTempList = msgTempService.getMsgTempByOriginId(weiXinOriginId);
             // 文本消息
-            if (msgType.equals(MessageUtil.REQ_MESSAGE_TYPE_TEXT)) {
+            if (msgTypeReq.equals(MessageUtil.REQ_MESSAGE_TYPE_TEXT)) {
+                if(msgTempList.size()==0){//没有设置，发送系统默认消息
+                    requestMap.put("Content","默认消息");
+                }else {//设置了，发送设置消息，
+                    //首先查看是否有规则和优先级
+                    String msg = requestMap.get("Content");
+                    List<MsgTemp> msgTempMatchList = msgTempService.getMsgTempByOriginIdAndModeMatch(weiXinOriginId,msg);
+                    if (msgTempMatchList.size()==0){//没有设置规则，发送代理商设置的默认消息
+                        String content = msgTempList.get(0).getModeContent();
+                        requestMap.put("Content",content);
+                    }else{ //设置了规则
+                        int priority = msgTempMatchList.get(0).getPriority();
+                        String content = msgTempMatchList.get(0).getModeContent();
+                        if (msgTempMatchList.size()>1){
+                            for (int i=1;i<msgTempMatchList.size()-1;i++){
+                                if (priority>msgTempMatchList.get(i).getPriority()){
+                                    priority=msgTempMatchList.get(i).getPriority();
+                                    content = msgTempMatchList.get(i).getModeContent();
+                                }
+                            }
+                        }
+                        requestMap.put("Content",content);
+                    }
+
+                    String msgType = msgTemp.getMsgType();
+                    if (msgType.equals(MessageUtil.REQ_MESSAGE_TYPE_TEXT)){//如果设置的是文本消息
+
+                    }
+                }
+
                 return textRespProcess.getRespMessage(requestMap);
             }
             // 图文消息
-            else if (msgType.equals(MessageUtil.RESP_MESSAGE_TYPE_NEWS)) {
+            else if (msgTypeReq.equals(MessageUtil.RESP_MESSAGE_TYPE_NEWS)) {
                 return newsRespProcess.getRespMessage(requestMap);
             }
             // 事件推送
-            else if (msgType.equals(MessageUtil.REQ_MESSAGE_TYPE_EVENT)) {
+            else if (msgTypeReq.equals(MessageUtil.REQ_MESSAGE_TYPE_EVENT)) {
                 // 事件类型
                 String eventType = requestMap.get("Event");
                 // 订阅
                 if (eventType.equals(MessageUtil.EVENT_TYPE_SUBSCRIBE)) {
-                    respContent = "谢谢您的关注！";
+                    requestMap.put("Content","kmd 谢谢您的关注！");
+                    return textRespProcess.getRespMessage(requestMap);
                 }
                 // 取消订阅
                 else if (eventType.equals(MessageUtil.EVENT_TYPE_UNSUBSCRIBE)) {

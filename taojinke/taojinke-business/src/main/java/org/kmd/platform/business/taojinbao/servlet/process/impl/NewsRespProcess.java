@@ -4,6 +4,7 @@ import org.kmd.platform.business.taojinbao.servlet.process.RespProcess;
 import org.kmd.platform.business.taojinbao.util.MessageUtil;
 import org.kmd.platform.business.taojinbao.weixin.resp.Article;
 import org.kmd.platform.business.taojinbao.weixin.resp.NewsMessageResp;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -14,7 +15,6 @@ import java.util.Map;
 /**
  * Created by Administrator on 2017/5/23 0023.
  */
-@Service
 public class NewsRespProcess implements RespProcess {
 
     @Override

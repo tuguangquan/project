@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.kmd.platform.business.taojinbao.mapper.MsgTempMapper">
+    <sql id="msgTemp_fields">
+        ID,AGENTID,MSGTYPE,ACTIONTYPE,MODECONTENT,MODEMATCH,WEIXINORIGINID,PRIORITY
+    </sql>
+
+    <resultMap id="MsgTempResultMap" type="MsgTemp">
+        <id property="id" column="ID"/>
+        <result property="agentId" column="AGENTID"/>
+        <result property="msgType" column="MSGTYPE"/>
+        <result property="actionType" column="ACTIONTYPE"/>
+        <result property="modeContent" column="MODECONTENT"/>
+        <result property="modeMatch" column="MODEMATCH"/>
+        <result property="weiXinOriginId" column="WEIXINORIGINID"/>
+        <result property="priority" column="PRIORITY"/>
+    </resultMap>
+
+    <insert id="add" parameterType="MsgTemp" keyProperty="id"
+            useGeneratedKeys="true">
+        INSERT INTO
+        ims_msg_temp(
+        <include refid="msgTemp_fields" />
+        )
+        VALUES (#{id},#{agentId},#{msgType},#{actionType},#{modeContent},#{modeMatch},#{weiXinOriginId},#{priority});
+        <selectKey resultType="long" keyProperty="id">
+            select
+            LAST_INSERT_ID() as id
+        </selectKey>
+    </insert>
+
+    <select id="getMsgTempByOriginId" parameterType="java.lang.String" resultMap="MsgTempResultMap">
+        SELECT
+        <include refid="msgTemp_fields"/>
+        FROM ims_msg_temp WHERE weiXinOriginId=#{originId}
+    </select>
+
+    <select id="getMsgTempByOriginIdAndModeMatch" parameterType="map" resultMap="MsgTempResultMap">
+        SELECT
+        <include refid="msgTemp_fields"/>
+        FROM ims_msg_temp WHERE weiXinOriginId=#{originId} AND MODEMATCH =#{modeMatch}
+    </select>
+</mapper>

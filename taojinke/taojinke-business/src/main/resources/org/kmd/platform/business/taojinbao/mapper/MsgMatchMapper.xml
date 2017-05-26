@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.kmd.platform.business.taojinbao.mapper.MsgMatchMapper">
+    <sql id="msgMatch_fields">
+        ID,MODECONTENT,MODEMATCH,PRIORITY
+    </sql>
+
+    <resultMap id="MsgMatchResultMap" type="MsgMatch">
+        <id property="id" column="ID"/>
+        <result property="modeContent" column="MODECONTENT"/>
+        <result property="modeMatch" column="MODEMATCH"/>
+        <result property="priority" column="PRIORITY"/>
+    </resultMap>
+
+    <insert id="add" parameterType="MsgMatch" keyProperty="id"
+            useGeneratedKeys="true">
+        INSERT INTO
+        ims_msg_match(
+        <include refid="msgMatch_fields" />
+        )
+        VALUES (#{id},#{modeContent},#{modeMatch},#{priority});
+        <selectKey resultType="long" keyProperty="id">
+            select
+            LAST_INSERT_ID() as id
+        </selectKey>
+    </insert>
+
+    <select id="getMsgTempByOriginId" parameterType="java.lang.String" resultMap="MsgMatchResultMap">
+        SELECT
+        <include refid="msgMatch_fields"/>
+        FROM ims_msg_match WHERE weiXinOriginId=#{originId}
+    </select>
+
+
+</mapper>

@@ -6,11 +6,12 @@ package org.kmd.platform.business.taojinbao.entity;
 public class MsgTemp {
     private long id;
     private long agentId;
-    private String msgType;
-    private int actionType;
+    private String msgType;//文本、图片、声音...
+    private int actionType;//关注自动回复、关键字回复（默认回复）
     private String modeContent;
-    private String pushMode;
+    private String msgMatch;
     private String weiXinOriginId;
+    private int priority;
 
     public long getId() {
         return id;
@@ -52,19 +53,27 @@ public class MsgTemp {
         this.modeContent = modeContent;
     }
 
-    public String getPushMode() {
-        return pushMode;
-    }
-
-    public void setPushMode(String pushMode) {
-        this.pushMode = pushMode;
-    }
-
     public String getWeiXinOriginId() {
         return weiXinOriginId;
     }
 
     public void setWeiXinOriginId(String weiXinOriginId) {
         this.weiXinOriginId = weiXinOriginId;
+    }
+
+    public String getMsgMatch() {
+        return msgMatch;
+    }
+
+    public void setMsgMatch(String msgMatch) {
+        this.msgMatch = msgMatch;
+    }
+
+    public int getPriority() {
+        return priority;
+    }
+
+    public void setPriority(int priority) {
+        this.priority = priority;
     }
 }

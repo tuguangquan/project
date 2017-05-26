@@ -2,10 +2,12 @@ package org.kmd.platform.business.taojinbao.servlet;
 
 import org.kmd.platform.business.taojinbao.service.WeiXinService;
 import org.kmd.platform.business.taojinbao.util.SignUtil;
-import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.ApplicationContext;
+import org.springframework.web.context.ContextLoader;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -18,8 +20,10 @@ import javax.servlet.http.HttpServlet;
 
 public class CoreServlet extends HttpServlet{
 
-    @Autowired
-    private WeiXinService weiXinService;
+    ApplicationContext act = ContextLoader.getCurrentWebApplicationContext();
+    WeiXinService weiXinService = (WeiXinService) act.getBean("weiXinService");
+
+
     private static final long serialVersionUID = 4440739483644821986L;
                 /**
      	     * 确认请求来自微信服务器

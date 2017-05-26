@@ -1,11 +1,12 @@
 package org.kmd.platform.business.taojinbao.web;
 
 import net.sf.json.JSONArray;
-import net.sf.json.JSONObject;
 import org.kmd.platform.business.app.entity.App;
 import org.kmd.platform.business.app.service.AppService;
 import org.kmd.platform.business.taojinbao.entity.AgentInfo;
+import org.kmd.platform.business.taojinbao.entity.MsgTemp;
 import org.kmd.platform.business.taojinbao.service.AgentInfoService;
+import org.kmd.platform.business.taojinbao.service.MsgTempService;
 import org.kmd.platform.business.taojinbao.service.WeiXinService;
 import org.kmd.platform.business.taojinbao.util.AccessToken;
 import org.kmd.platform.business.user.entity.User;
@@ -52,6 +53,8 @@ public class WeixinServiceWeb {
 
     @Autowired
     private WeiXinService weiXinService;
+    @Autowired
+    private MsgTempService msgTempService;
 
     @Produces(MediaType.APPLICATION_JSON + ";charset=UTF-8")
     @Path("/add")
@@ -225,14 +228,33 @@ public class WeixinServiceWeb {
     @Produces(MediaType.APPLICATION_JSON + ";charset=UTF-8")
     @Path("/addMsgTemp")
     @POST
-    public String addMsgTemp(@Context HttpServletRequest request,@FormParam("msgType") String msgType,@FormParam("actionType") String actionType){
-        if(msgType==null ||msgType.trim().equals("")){
+    public String addMsgTemp(@Context HttpServletRequest request,@FormParam("msgType") String msgType,@FormParam("actionType") String actionType,@FormParam("modeContent") String modeContent,@FormParam("msgMatch") String msgMatch,@FormParam("priority") String priority){
+        if(msgType==null ||msgType.trim().equals("")||actionType==null ||actionType.trim().equals("")||modeContent==null ||modeContent.trim().equals("")){
             return JsonResultUtils.getCodeAndMesByString(JsonResultUtils.Code.ERROR.getCode(), "参数不能为空!");
         }
         long agentId = userService.getCurrentAgentId(request);
         if(agentId==0){
             return JsonResultUtils.getCodeAndMesByString(JsonResultUtils.Code.ERROR.getCode(), "请重新登录!");
         }
+        AgentInfo agentInfo = agentInfoService.getAgentInfoByAgentId(agentId);
+        if (agentInfo==null){
+            return JsonResultUtils.getCodeAndMesByString(JsonResultUtils.Code.ERROR.getCode(), "信息绑定不全，请联系管理员补全信息!");
+        }
+        String weiXinOriginId = agentInfo.getWeixinOriginalId();
+        MsgTemp msgTemp =new MsgTemp();
+        msgTemp.setAgentId(agentId);
+        msgTemp.setActionType(Integer.parseInt(actionType));
+        msgTemp.setModeContent(modeContent);
+        msgTemp.setWeiXinOriginId(weiXinOriginId);
+        msgTemp.setMsgType(msgType);
+        if (msgMatch!=null){
+            msgTemp.setMsgMatch(msgMatch);
+        }
+        if (priority!=null){
+            msgTemp.setPriority(Integer.parseInt(priority));
+        }
+        msgTempService.add(msgTemp);
+
         return JsonResultUtils.getCodeAndMesByStringAsDefault(JsonResultUtils.Code.SUCCESS);
     }
 
