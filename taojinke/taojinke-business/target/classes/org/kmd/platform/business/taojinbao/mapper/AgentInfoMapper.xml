@@ -19,7 +19,7 @@
         <result property="agentName" column="AGENTNAME"/>
     </resultMap>
 
-    <insert id="add" parameterType="AgentInfo" keyProperty="id"
+    <insert id="add" parameterType="AgentInfo"  keyProperty="id"
             useGeneratedKeys="true">
         INSERT INTO
         agent_info(

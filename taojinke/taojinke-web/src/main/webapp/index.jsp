@@ -2,7 +2,7 @@
 <%@ page language="java" pageEncoding="UTF-8"%>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <title>淘金客平台-首页</title>
+
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <link href="lib/ligerUI/skins/Aqua/css/ligerui-all.css" rel="stylesheet" type="text/css" />
     <script src="js/jquery-1.10.2.js" type="text/javascript"></script>

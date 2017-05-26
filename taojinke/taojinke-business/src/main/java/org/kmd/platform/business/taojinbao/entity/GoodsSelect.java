@@ -4,17 +4,17 @@ package org.kmd.platform.business.taojinbao.entity;
  * Created by Administrator on 2017/5/24 0024.
  */
 public class GoodsSelect {
-    private int id;
+    private Long id;
     private String goods_id;
     private long userId;
     private long agentId;
     private int cate_id;
 
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

@@ -59,13 +59,13 @@ public class WeixinServiceWeb {
                 ||description==null|| description.trim().equals("") ||encodingAESKey==null|| encodingAESKey.trim().equals("")){
             return JsonResultUtils.getCodeAndMesByString(JsonResultUtils.Code.ERROR.getCode(), "参数不能为空!");
         }
-        AgentInfo  agentInfoExist = agentInfoService.getAgentInfoByAppID(appId);
-        if(null!=agentInfoExist){
-            return JsonResultUtils.getCodeAndMesByString(JsonResultUtils.Code.ERROR.getCode(), "该公众号已绑定!");
-        }
         long agentId = userService.getCurrentAgentId(request);
         if(agentId==0){
             return JsonResultUtils.getCodeAndMesByString(JsonResultUtils.Code.ERROR.getCode(), "请重新登录!");
+        }
+        AgentInfo  agentInfoExist = agentInfoService.getAgentInfoByAppID(appId);
+        if(null!=agentInfoExist){
+            return JsonResultUtils.getCodeAndMesByString(JsonResultUtils.Code.ERROR.getCode(), "该公众号已绑定!");
         }
         //添加代理商信息
         AgentInfo  agentInfo = new AgentInfo();

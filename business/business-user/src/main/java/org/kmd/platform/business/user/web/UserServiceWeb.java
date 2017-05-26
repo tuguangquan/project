@@ -187,6 +187,7 @@ public class UserServiceWeb {
     @Path("/login")
     @POST
     public String login(@Context HttpServletRequest request,@FormParam("name") String name,@FormParam("password") String password){
+        HttpSession session = request.getSession();
         if(name==null ||name.trim().equals("")||password==null ||password.trim().equals("")){
             return JsonResultUtils.getCodeAndMesByString(JsonResultUtils.Code.ERROR.getCode(), "登录用户名和密码不能为空!");
         }
@@ -194,7 +195,6 @@ public class UserServiceWeb {
         User user = userService.getUserByNameAndPassword(name,pw);
         if(user!=null){
             //写入session
-            HttpSession session = request.getSession();
             session.setAttribute("userName", user.getName());
             session.setAttribute("userId", user.getId());
             session.setAttribute("agentId",user.getAppId());
@@ -202,4 +202,5 @@ public class UserServiceWeb {
         }
         return JsonResultUtils.getCodeAndMesByString(JsonResultUtils.Code.ERROR.getCode(), "登录用户名或密码不正确!");
     }
+
 }
