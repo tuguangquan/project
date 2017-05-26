@@ -10,7 +10,7 @@ import java.util.Date;
  * To change this template use File | Settings | File Templates.
  */
 public class Goods {
-    private int id;
+    private Long id;
     private int uniacid;
     private int displayorder;
     private int status;
@@ -39,11 +39,11 @@ public class Goods {
     private int share;
     private int fav;
 
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

@@ -32,25 +32,25 @@
 <script>
     var currentUser = null;
     $(document).ready(function(){
-        $.post("rs/weiXin/add",{
-            name:123,
-            description:123,
-            weiXinId:12,
-            weiXinOriginalId:123,
-            appID:123,
-            appSecret:321,
-            token:12312,
-            encodingAESKey:2131
-        },function(data,status){
-            alert("return str: "+data + status);
-        },"JSON");
 
-        //$.post($.URL.user.login,{"name": "tuguangquan", "password": 123456},userInfoCallback,"json");
+
+        $.post($.URL.user.login,{"name": "tuguangquan", "password": 123456},userInfoCallback,"json");
     });
 
     function userInfoCallback(data){
         if(data!=null){
-            $.post($.URL.user.list,null,listCallback,"json");
+            $.post("rs/weiXin/add",{
+                name:123,
+                description:123,
+                weiXinId:12,
+                weiXinOriginalId:123,
+                appID:123,
+                appSecret:321,
+                token:12312,
+                encodingAESKey:2131
+            },function(data,status){
+                alert("return str: "+data + status);
+            },"JSON");
         }
     }
     function listCallback(data){
@@ -59,7 +59,7 @@
         }
     }
 </script>
-<div id="title"><a href="index.jsp" id="titleLink">淘金客</a></div>
+<div id="title"><a href="index.jsp" id="titleLink"></a></div>
 <div id="userInfo">
     <div>欢迎您，</div>
     <div id="userNameDiv"></div>

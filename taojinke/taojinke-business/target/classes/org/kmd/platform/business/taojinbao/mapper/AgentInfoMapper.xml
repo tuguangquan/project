@@ -19,13 +19,13 @@
         <result property="agentName" column="AGENTNAME"/>
     </resultMap>
 
-    <insert id="add" parameterType="AgentInfo" keyProperty="id"
+    <insert id="add" parameterType="AgentInfo"  keyProperty="id"
             useGeneratedKeys="true">
         INSERT INTO
         agent_info(
-        <include refid="agentInfo_fields" />
+         WEIXINID,WEIXINORIGINALID,APPID,APPSECRET,AGENTID,FANSADDNUM,FANSCOUNTNUM,AGENTNAME
         )
-        VALUES (#{id},#{weixinId},#{weixinOriginalId},#{appID},#{appSecret},#{agentId},#{fansAddNum},#{fansCountNum},#{agentName});
+        VALUES (#{weixinId},#{weixinOriginalId},#{appID},#{appSecret},#{agentId},#{fansAddNum},#{fansCountNum},#{agentName});
         <selectKey resultType="long" keyProperty="id">
             select
             LAST_INSERT_ID() as id
