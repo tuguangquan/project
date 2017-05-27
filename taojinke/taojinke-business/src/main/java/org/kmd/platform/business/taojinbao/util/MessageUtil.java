@@ -15,7 +15,6 @@ import com.thoughtworks.xstream.io.xml.PrettyPrintWriter;
 import org.dom4j.Document;
 import org.dom4j.Element;
 import org.dom4j.io.SAXReader;
-import org.kmd.platform.business.taojinbao.entity.Media;
 import org.kmd.platform.business.taojinbao.weixin.mass.resp.MassTextMessage;
 import org.kmd.platform.business.taojinbao.weixin.resp.*;
 import org.kmd.platform.business.taojinbao.weixin.resp.NewsMessageResp;
@@ -172,16 +171,6 @@ public class MessageUtil {
         return xstream.toXML(newsMessage);
     }
 
-    /**
-     * 文件对象转换成xml
-     *
-     * @param media 文件消息对象
-     * @return xml
-     */
-    public static String mediaToXml(Media media) {
-        xstream.alias("xml", media.getClass());
-        return xstream.toXML(media);
-    }
     /**
      * 扩展xstream，使其支持CDATA块
      *
