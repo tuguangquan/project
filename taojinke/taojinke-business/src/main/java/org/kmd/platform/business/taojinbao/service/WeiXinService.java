@@ -1,10 +1,8 @@
 package org.kmd.platform.business.taojinbao.service;
 
-import java.io.BufferedReader;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.io.OutputStream;
+import java.io.*;
 import java.net.ConnectException;
+import java.net.HttpURLConnection;
 import java.net.URL;
 import javax.net.ssl.HttpsURLConnection;
 import javax.net.ssl.SSLContext;
@@ -12,6 +10,9 @@ import javax.net.ssl.SSLSocketFactory;
 import javax.net.ssl.TrustManager;
 import javax.servlet.http.HttpServletRequest;
 
+import java.security.KeyManagementException;
+import java.security.NoSuchAlgorithmException;
+import java.security.NoSuchProviderException;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -20,6 +21,7 @@ import java.util.Map;
 import net.sf.json.JSONArray;
 import net.sf.json.JSONException;
 import net.sf.json.JSONObject;
+import org.kmd.platform.business.taojinbao.entity.Media;
 import org.kmd.platform.business.taojinbao.servlet.process.impl.NewsRespProcess;
 import org.kmd.platform.business.taojinbao.servlet.process.impl.TextRespProcess;
 import org.kmd.platform.business.taojinbao.util.AccessToken;
@@ -261,31 +263,148 @@ public class WeiXinService {
         }
         return result;
     }
+    /**
+     * 上传其他永久素材(图片素材的上限为5000，其他类型为1000)
+     * @param accessToken
+     * @param fileurl
+     * @param type
+     * @return
+     * @throws Exception
+     */
+    public  JSONObject addMaterialEver(String fileurl, String type, String accessToken) throws Exception {
+        try {
+            File file = new File(fileurl);
+            //上传素材
+            String path = "https://api.weixin.qq.com/cgi-bin/material/add_material?access_token=" + accessToken + "&type=" + type;
+            String result = connectHttpsByPost(path,file);
+            result = result.replaceAll("[\\\\]", "");
+            System.out.println("result:" + result);
+            JSONObject resultJSON = JSONObject.fromObject(result);
+            if (resultJSON != null) {
+                if (resultJSON.get("media_id") != null) {
+                    System.out.println("上传" + type + "永久素材成功");
+                    return resultJSON;
+                } else {
+                    System.out.println("上传" + type + "永久素材失败");
+                }
+            }
+            return null;
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (NoSuchAlgorithmException e) {
+            e.printStackTrace();
+        } catch (NoSuchProviderException e) {
+            e.printStackTrace();
+        } catch (KeyManagementException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
 
+    /**
+     * 上传图片到微信服务器(本接口所上传的图片不占用公众号的素材库中图片数量的5000个的限制。图片仅支持jpg/png格式，大小必须在1MB以下)
+     * @param accessToken
+     * @param fileurl
+     * @return
+     * @throws Exception
+     */
+    public  JSONObject addMaterialEver(String fileurl,String accessToken) throws Exception {
+        try {
+            System.out.println("开始上传图文消息内的图片---------------------");
+            //上传图片素材
+            String path="https://api.weixin.qq.com/cgi-bin/media/uploadimg?access_token="+accessToken;
+            File file = new File(fileurl);
+            String result = connectHttpsByPost(path,file);
+            result = result.replaceAll("[\\\\]", "");
+            System.out.println("result:" + result);
+            JSONObject resultJSON = JSONObject.fromObject(result);
+            if (resultJSON != null) {
 
+            }
+            return null;
+        } catch (Exception e) {
+            System.out.println("程序异常："+ e);
+            throw e;
+        }finally{
+            System.out.println("结束上传图文消息内的图片---------------------");
+        }
+    }
+    //上传媒体文件到微信服务器
+    public  String connectHttpsByPost(String path, File file) throws IOException, NoSuchAlgorithmException, NoSuchProviderException, KeyManagementException {
+        URL urlObj = new URL(path);
+        //连接
+        HttpURLConnection con = (HttpURLConnection) urlObj.openConnection();
+        String result = null;
+        con.setDoInput(true);
+        con.setDoOutput(true);
+        con.setUseCaches(false); // post方式不能使用缓存
+        // 设置请求头信息
+        con.setRequestProperty("Connection", "Keep-Alive");
+        con.setRequestProperty("Charset", "UTF-8");
+        // 设置边界
+        String BOUNDARY = "----------" + System.currentTimeMillis();
+        con.setRequestProperty("Content-Type",
+                "multipart/form-data; boundary="
+                        + BOUNDARY);
+        // 请求正文信息
+        // 第一部分：
+        StringBuilder sb = new StringBuilder();
+        sb.append("--"); // 必须多两道线
+        sb.append(BOUNDARY);
+        sb.append("\r\n");
+        sb.append("Content-Disposition: form-data;name=\"media\";filelength=\"" + file.length() + "\";filename=\""
+                + file.getName() + "\"\r\n");
+        sb.append("Content-Type:application/octet-stream\r\n\r\n");
+        byte[] head = sb.toString().getBytes("utf-8");
+        // 获得输出流
+        OutputStream out = new DataOutputStream(con.getOutputStream());
+        // 输出表头
+        out.write(head);
+        // 文件正文部分
+        // 把文件已流文件的方式 推入到url中
+        DataInputStream in = new DataInputStream(new FileInputStream(file));
+        int bytes = 0;
+        byte[] bufferOut = new byte[1024];
+        while ((bytes = in.read(bufferOut)) != -1) {
+            out.write(bufferOut, 0, bytes);
+        }
+        in.close();
+        // 结尾部分
+        byte[] foot = ("\r\n--" + BOUNDARY + "--\r\n").getBytes("utf-8");// 定义最后数据分隔线
+        out.write(foot);
+        out.flush();
+        out.close();
+        StringBuffer buffer = new StringBuffer();
+        BufferedReader reader = null;
+        try {
+            // 定义BufferedReader输入流来读取URL的响应
+            reader = new BufferedReader(new InputStreamReader(con.getInputStream()));
+            String line = null;
+            while ((line = reader.readLine()) != null) {
+                buffer.append(line);
+            }
+            if (result == null) {
+                result = buffer.toString();
+            }
+        } catch (IOException e) {
+            System.out.println("发送POST请求出现异常！" + e);
+            e.printStackTrace();
+        } finally {
+            if (reader != null) {
+                reader.close();
+            }
+        }
+        return result;
+    }
     public static void main(String[] args){
-        Scene scene = new Scene();
-        scene.setScene_str("2343253");
-        ActionInfo actionInfo = new ActionInfo();
-        actionInfo.setScene(scene);
-        QRCode qrCode = new QRCode();
-        qrCode.setAction_info(actionInfo);
-        qrCode.setAction_name(Constant.qr_limit_scene);
-        JSONObject jsonObject = JSONObject.fromObject(qrCode);
-        String json = "{\"total\":23000," + " \"count\":10000," + " \"data\":{\"openid\":[" +
-                "\"OPENID1\"," +
-                "\"OPENID2\"," +
-                "\"OPENID10000\"" +
-                "]" +
-                "}," +
-                "\"next_openid\":\"OPENID10000\"" +"}" ;
-        JSONObject jsonResult =   JSONObject.fromObject(json);
 
-        if (null != jsonResult) {
-            JSONArray jsonArray =  jsonResult.getJSONObject("data").getJSONArray("openid");
-            List list =  jsonArray.subList(0, jsonArray.size());
-            System.out.print(23432);
-
+        try {
+            String appId = "wx3920e6874f8f44ba";
+            String appSecret ="56043821d2d4ac42174fc76facfa2ccd";
+            AccessToken accessToken = null;
+            String filePath = "E:/emp/yczxyy.jpg";
+        } catch (Exception e) {
+            System.out.println("---");
         }
     }
 }
