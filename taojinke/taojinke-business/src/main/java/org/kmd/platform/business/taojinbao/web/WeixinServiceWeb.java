@@ -1,11 +1,14 @@
 package org.kmd.platform.business.taojinbao.web;
 
 import net.sf.json.JSONArray;
-import net.sf.json.JSONObject;
 import org.kmd.platform.business.app.entity.App;
 import org.kmd.platform.business.app.service.AppService;
 import org.kmd.platform.business.taojinbao.entity.AgentInfo;
+import org.kmd.platform.business.taojinbao.entity.MsgSub;
+import org.kmd.platform.business.taojinbao.entity.MsgTemp;
 import org.kmd.platform.business.taojinbao.service.AgentInfoService;
+import org.kmd.platform.business.taojinbao.service.MsgSubService;
+import org.kmd.platform.business.taojinbao.service.MsgTempService;
 import org.kmd.platform.business.taojinbao.service.WeiXinService;
 import org.kmd.platform.business.taojinbao.util.AccessToken;
 import org.kmd.platform.business.user.entity.User;
@@ -42,16 +45,13 @@ public class WeixinServiceWeb {
     @Autowired
     private AgentInfoService agentInfoService;
     @Autowired
-    private AppService appService;
-    @Autowired
     private UserService userService;
     @Autowired
-    private AuthorityService authorityService;
-    @Autowired
-    private UserAuthorityService userAuthorityService;
-
-    @Autowired
     private WeiXinService weiXinService;
+    @Autowired
+    private MsgTempService msgTempService;
+    @Autowired
+    private MsgSubService msgSubService;
 
     @Produces(MediaType.APPLICATION_JSON + ";charset=UTF-8")
     @Path("/add")
@@ -156,7 +156,7 @@ public class WeixinServiceWeb {
         AccessToken at = weiXinService.getAccessToken(agentInfo.getAppID(),agentInfo.getAppSecret());
         if (null != at) {
             // 调用接口创建菜单
-            int result = weiXinService.sendMsgToSomeUser(msg,jsonArray,at.getToken());
+            int result = weiXinService.sendMsgToSomeUser(msg, jsonArray, at.getToken());
             if (result==0){
                 return JsonResultUtils.getCodeAndMesByString(JsonResultUtils.Code.SUCCESS.getCode(), "发送成功");
             }else
@@ -189,5 +189,77 @@ public class WeixinServiceWeb {
             }
         }
         return JsonResultUtils.getCodeAndMesByString(JsonResultUtils.Code.ERROR.getCode(), "凭证获取失败");
+    }
+
+    @Produces(MediaType.APPLICATION_JSON + ";charset=UTF-8")
+    @Path("/addMsgTemp")
+    @POST
+    public String addMsgTemp(@Context HttpServletRequest request,@FormParam("msgType") String msgType,@FormParam("modeContent") String modeContent,@FormParam("msgMatch") String msgMatch,@FormParam("priority") String priority){
+        if(msgType==null ||msgType.trim().equals("")||modeContent==null ||modeContent.trim().equals("")){
+            return JsonResultUtils.getCodeAndMesByString(JsonResultUtils.Code.ERROR.getCode(), "参数不能为空!");
+        }
+        long agentId = userService.getCurrentAgentId(request);
+        if(agentId==0){
+            return JsonResultUtils.getCodeAndMesByString(JsonResultUtils.Code.ERROR.getCode(), "请重新登录!");
+        }
+        AgentInfo agentInfo = agentInfoService.getAgentInfoByAgentId(agentId);
+        if (agentInfo==null){
+            return JsonResultUtils.getCodeAndMesByString(JsonResultUtils.Code.ERROR.getCode(), "信息绑定不全，请联系管理员补全信息!");
+        }
+        String weiXinOriginId = agentInfo.getWeixinOriginalId();
+        MsgTemp msgTemp =new MsgTemp();
+        msgTemp.setAgentId(agentId);
+        msgTemp.setModeContent(modeContent);
+        msgTemp.setWeiXinOriginId(weiXinOriginId);
+        msgTemp.setMsgType(msgType);
+        if (msgMatch!=null){
+            msgTemp.setMsgMatch(msgMatch);
+        }
+        if (priority!=null){
+            msgTemp.setPriority(Integer.parseInt(priority));
+        }
+        msgTempService.add(msgTemp);
+        return JsonResultUtils.getCodeAndMesByStringAsDefault(JsonResultUtils.Code.SUCCESS);
+    }
+
+    @Produces(MediaType.APPLICATION_JSON + ";charset=UTF-8")
+    @Path("/addSubMsg")
+    @POST
+    public String addSubMsg(@Context HttpServletRequest request,@FormParam("content") String content){
+        if(content==null ||content.trim().equals("")){
+            return JsonResultUtils.getCodeAndMesByString(JsonResultUtils.Code.ERROR.getCode(), "添加关注回复不能为空!");
+        }
+        long agentId = userService.getCurrentAgentId(request);
+        if(agentId==0){
+            return JsonResultUtils.getCodeAndMesByString(JsonResultUtils.Code.ERROR.getCode(), "请重新登录!");
+        }
+        AgentInfo agentInfo = agentInfoService.getAgentInfoByAgentId(agentId);
+        if (agentInfo==null){
+            return JsonResultUtils.getCodeAndMesByString(JsonResultUtils.Code.ERROR.getCode(), "信息绑定不全，请联系管理员补全信息!");
+        }
+        String weiXinOriginId = agentInfo.getWeixinOriginalId();
+        MsgSub msgSub = new MsgSub();
+        msgSub.setContent(content);
+        msgSub.setAgentId(agentId);
+        msgSub.setWeiXinOriginId(weiXinOriginId);
+        msgSubService.add(msgSub);
+        return JsonResultUtils.getCodeAndMesByStringAsDefault(JsonResultUtils.Code.SUCCESS);
+    }
+
+    @Produces(MediaType.APPLICATION_JSON + ";charset=UTF-8")
+    @Path("/msgTempList")
+    @POST
+    public String msgTempList(@Context HttpServletRequest request){
+        long agentId = userService.getCurrentAgentId(request);
+        if(agentId==0){
+            return JsonResultUtils.getCodeAndMesByString(JsonResultUtils.Code.ERROR.getCode(), "请重新登录!");
+        }
+        AgentInfo agentInfo = agentInfoService.getAgentInfoByAgentId(agentId);
+        if (agentInfo==null){
+            return JsonResultUtils.getCodeAndMesByString(JsonResultUtils.Code.ERROR.getCode(), "信息绑定不全，请联系管理员补全信息!");
+        }
+        String weiXinOriginId = agentInfo.getWeixinOriginalId();
+        List<MsgTemp> msgTempList = msgTempService.list(weiXinOriginId,agentId);
+        return JsonResultUtils.getObjectResultByStringAsDefault(msgTempList, JsonResultUtils.Code.SUCCESS);
     }
 }

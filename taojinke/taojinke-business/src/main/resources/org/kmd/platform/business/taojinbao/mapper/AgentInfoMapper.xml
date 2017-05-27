@@ -23,7 +23,7 @@
             useGeneratedKeys="true">
         INSERT INTO
         agent_info(
-         WEIXINID,WEIXINORIGINALID,APPID,APPSECRET,AGENTID,FANSADDNUM,FANSCOUNTNUM,AGENTNAME
+            WEIXINID,WEIXINORIGINALID,APPID,APPSECRET,AGENTID,FANSADDNUM,FANSCOUNTNUM,AGENTNAME
         )
         VALUES (#{weixinId},#{weixinOriginalId},#{appID},#{appSecret},#{agentId},#{fansAddNum},#{fansCountNum},#{agentName});
         <selectKey resultType="long" keyProperty="id">
@@ -31,10 +31,6 @@
             LAST_INSERT_ID() as id
         </selectKey>
     </insert>
-
-
-
-
 
     <select id="findByCondition" parameterType="map" resultMap="AgentInfoResultMap">
         SELECT

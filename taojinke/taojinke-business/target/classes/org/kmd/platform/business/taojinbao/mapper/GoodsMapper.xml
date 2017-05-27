@@ -4,7 +4,7 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="org.kmd.platform.business.taojinbao.mapper.GoodsMapper">
     <sql id="goods_fields">
-		id,goods_id,goods_name,goods_picture,goods_detail_url,shop_name,goods_price,goods_sells,earn_rate,commission_rate,sellers_WANGWANG,taobaoke_short_url,taobaoke_url,tao_kou_ling,discount_coupon,discount_coupon_account,discount_coupondenomination,discount_coupon_start_time,discount_couponend_time,discount_coupon_url,discount_coupon_tao_kou_ling,discount_coupon_short_url,is_maketing_pla,cate_id
+		id,goods_id,goods_name,goods_picture,goods_detail_url,shop_name,goods_price,goods_sells,earn_rate,commission_rate,sellers_WANGWANG,taobaoke_short_url,taobaoke_url,tao_kou_ling,discount_coupon,discount_coupon_account,discount_coupondenomination,discount_coupon_start_time,discount_couponend_time,discount_coupon_url,discount_coupon_tao_kou_ling,discount_coupon_short_url,is_maketing_plan,cate_id
 	</sql>
 
     <resultMap id="goodsResultMap" type="Goods">
@@ -30,7 +30,7 @@
         <result property="discount_coupon_url" column="discount_coupon_url"/>
         <result property="discount_coupon_tao_kou_ling" column="discount_coupon_tao_kou_ling"/>
         <result property="discount_coupon_short_url" column="discount_coupon_short_url"/>
-        <result property="is_maketing_pla" column="is_maketing_pla"/>
+        <result property="is_maketing_plan" column="is_maketing_plan"/>
         <result property="cate_id" column="cate_id"/>
 
     </resultMap>
@@ -45,7 +45,7 @@
         #{goods_price},#{goods_sells},#{earn_rate},#{commission_rate},#{sellers_WANGWANG},#{taobaoke_short_url},
         #{taobaoke_url},#{tao_kou_ling},#{discount_coupon},#{discount_coupon_account},#{discount_coupondenomination},
         #{discount_coupon_start_time},#{discount_couponend_time},#{discount_coupon_url},#{discount_coupon_tao_kou_ling},
-        #{discount_coupon_short_url},#{is_maketing_pla},#{cate_id});
+        #{discount_coupon_short_url},#{is_maketing_plan},#{cate_id});
         <selectKey resultType="long" keyProperty="id">
             select
             LAST_INSERT_ID() as id
@@ -56,15 +56,26 @@
         SELECT
         <include refid="goods_fields"/>
         FROM ims_goods_taobao
-        WHERE 1=1
-       <![CDATA[
-           <if test="top_rate!=null">commission_rate<=#{top_rate}</if>
-           <if test="lower_rate!=null">AND commission_rate>=#{lower_rate}</if>
-           <if test="top_price!=null">goods_price<=#{top_price}</if>
-           <if test="lower_price!=null">AND goods_price>=#{lower_price}</if>
-           <if test="cate_id!=null">AND cate_id=#{cate_id}</if>
-            <if test="goods_name!=null">AND goods_name like CONCAT('%',#{goods_name},'%') </if>
-         ]]>
+        where 1 = 1
+        <if test="top_rate!=null">
+            AND commission_rate <![CDATA[<=]]> #{top_rate}
+        </if>
+        <if test="lower_rate!=null">
+            AND commission_rate  <![CDATA[>=]]> #{lower_rate}
+        </if>
+        <if test="top_price!=null">
+            AND goods_price <![CDATA[<=]]> #{top_price}
+        </if>
+        <if test="lower_price!=null">
+              AND goods_price <![CDATA[>=]]> #{lower_price}
+         </if>
+         <if test="cate_id!=null">
+             AND cate_id=#{cate_id}
+         </if>
+         <if test="goods_name!=null">
+             AND goods_name like CONCAT('%',#{goods_name},'%')
+         </if>
+
 
     </select>
 

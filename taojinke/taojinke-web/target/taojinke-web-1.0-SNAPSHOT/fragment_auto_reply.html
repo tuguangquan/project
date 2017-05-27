@@ -1,0 +1,214 @@
+<div class="row animated fadeInDown">
+    <!-- Start .row -->
+    <!-- Start .page-header -->
+    <div class="col-lg-12 heading">
+        <h1 class="page-header">
+        	<i class="im-loop" style="opacity: 1;"></i> 图文自动回复
+        </h1>
+    </div>
+    <!-- End .page-header -->
+</div>
+<!-- End .row -->
+<div class="outlet animated fadeInUp">
+    <!-- Start .outlet -->
+    <!-- Page start here ( usual with .row ) -->
+    <div class="row">
+        <!-- Start .row -->
+        <div class="col-lg-12">
+            <!-- Start col-lg-12 -->
+            <div class="tabs">
+                <ul id="myTab2" class="nav nav-tabs nav-justified">
+                    <li class="active">
+                        <a href="#home2" data-toggle="tab">所有回复规则</a>
+                    </li>
+                    <li class="">
+                        <a href="#profile2" data-toggle="tab"><i class="en-text"></i> 添加文本回复</a>
+                    </li>
+                    <li class="">
+                        <a href="#settings2" data-toggle="tab"><i class="st-box"></i> 添加图文回复</a>
+                    </li>
+                    <li class="">
+                        <a href="#users2" data-toggle="tab"><i class="im-volume-high"></i> 添加语音回复</a>
+                    </li>
+                    <li class="">
+                        <a href="#shipment2" data-toggle="tab">添加图片回复</a>
+                    </li>
+                    <li class="">
+                        <a href="#shipment2" data-toggle="tab">添加视频回复</a>
+                    </li>
+                </ul>
+                <div id="myTabContent2" class="tab-content">
+                    <div class="tab-pane fade active in" id="home2">
+                        <div class="panel-body">
+                            <div class="slimScrollDiv" style="position: relative; overflow: hidden; width: 100%; height: auto;">
+                            	<div class="table-responsive" style="overflow: hidden; width: 100%; height: auto;">
+                            		<table class="table">
+		                                <thead>
+		                                    <tr>
+		                                        <th class="per10">选择</th>
+		                                        <th class="per10">触发字词</th>
+		                                        <th class="per10">规则类型</th>
+		                                        <th class="per10">优先级别</th>
+		                                        <th class="per10">添加日期</th>
+		                                        <th class="per15">命中频率</th>
+		                                        <th class="per10">操作</th>
+		                                    </tr>
+		                                </thead>
+		                                <tbody>
+		                                    <tr class="">
+		                                        <td><input type="checkbox" /></td>
+		                                        <td>你好</td>
+		                                        <td>文本</td>
+		                                        <td>1</td>
+		                                        <td>2017-5-19</td>
+		                                        <td>
+		                                            <div class="progress">
+		                                                <div class="progress-bar progress-bar-success animated-bar" role="progressbar" aria-valuenow="40" style="width: 40%;">
+		                                                </div>
+		                                            </div>
+		                                        </td>
+		                                        <td><button class="btn btn-success">编辑</button>&nbsp;&nbsp;<button class="btn btn-danger">删除</button> </td>
+		                                    </tr>
+		                                    <tr class="">
+		                                        <td><input type="checkbox" /></td>
+		                                        <td>帮助</td>
+		                                        <td>图文</td>
+		                                        <td>2</td>
+		                                        <td>2017-5-14</td>
+		                                        <td>
+		                                            <div class="progress">
+		                                                <div class="progress-bar progress-bar-danger animated-bar" role="progressbar" aria-valuenow="89" style="width: 89%;">
+		                                                </div>
+		                                            </div>
+		                                        </td>
+		                                        <td><button class="btn btn-success">编辑</button>&nbsp;&nbsp;<button class="btn btn-danger">删除</button> </td>
+		                                    </tr>
+		                                    <tr class="">
+		                                        <td><input type="checkbox" /></td>
+		                                        <td>问候</td>
+		                                        <td>语音</td>
+		                                        <td>1</td>
+		                                        <td>2017-5-8</td>
+		                                        <td>
+		                                            <div class="progress">
+		                                                <div class="progress-bar progress-bar-warning animated-bar" role="progressbar" aria-valuenow="67" style="width: 67%;">
+		                                                </div>
+		                                            </div>
+		                                        </td>
+		                                        <td><button class="btn btn-success">编辑</button>&nbsp;&nbsp;<button class="btn btn-danger">删除</button> </td>
+		                                    </tr>
+		                                    <tr class="">
+		                                        <td><input type="checkbox" /></td>
+		                                        <td>风景</td>
+		                                        <td>图片</td>
+		                                        <td>3</td>
+		                                        <td>2017-5-26</td>
+		                                        <td>
+		                                            <div class="progress">
+		                                                <div class="progress-bar progress-bar-info animated-bar" role="progressbar" aria-valuenow="7" style="width: 7%;">
+		                                                </div>
+		                                            </div>
+		                                        </td>
+		                                        <td><button class="btn btn-success">编辑</button>&nbsp;&nbsp;<button class="btn btn-danger">删除</button> </td>
+		                                    </tr>
+		                                </tbody>
+		                            </table>
+		                            
+		                            <button class="btn btn-danger">删除</button>
+                            	</div>
+                            	<div class="slimScrollBar ui-draggable" style="background: rgb(153, 153, 153); height: 5px; position: absolute; bottom: 3px; opacity: 0.4; display: none; border-radius: 5px; z-index: 99; width: 1060px; left: 0px;"></div>
+                            	<div class="slimScrollRail" style="width: 100%; height: 5px; position: absolute; bottom: 3px; display: none; border-radius: 5px; background: rgb(51, 51, 51); opacity: 0.5; z-index: 90;"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="profile2">
+                    	<!--添加文本回复--->
+                        <input type="text" class="form-control" placeholder="触发关键字" autofocus="autofocus">
+                        <p></p>
+                        <p>当用户的对话内容符合以上的关键字定义时，会触发这个回复定义。多个关键字请使用逗号隔开。</p>
+                    	<p></p>
+                    	<br />
+                    	<input type="text" class="form-control" placeholder="触发优先级(数字越小优先级越高，相同优先级则随机发送)" autofocus="autofocus">
+                        <p></p>
+                        <p>当用户发送的关键字匹配了多个已经定义的触发关键字时，优先发送哪个触发关键字对应的内容。</p>
+                    	<p></p>
+                    	<br />
+                    	<textarea class="form-control" rows="5" placeholder="在这里编辑您的内容！"></textarea>
+	                	<br />
+	                	<p>当用户向您的微信公众号发送消息时，系统会自动匹配此自动回复规则并发送对应的消息。</p>
+	                	<p>您还可以在内容中添加小表情，采用斜杠/ 加 名称的形式 <a href="http://www.fuhaodq.com/biaoqingfuhao/1531.html" target="_blank">表情包名称查询</a></p>
+	                	<p></p>
+	                    <div class="form-group" style="text-align: left;">
+	                    	<button id="success-notice" type="button" class="btn btn-success mr15 mb15" style="padding: 10px 30px;">添加</button>
+	                    </div>
+                    </div>
+                    <div class="tab-pane fade" id="settings2">
+                    	<!--图文回复-->
+                    	<!--添加文本回复--->
+                        <input type="text" class="form-control" placeholder="触发关键字" autofocus="autofocus">
+                        <p></p>
+                        <p>当用户的对话内容符合以上的关键字定义时，会触发这个回复定义。多个关键字请使用逗号隔开。</p>
+                    	<p></p>
+                    	<br />
+                    	<input type="text" class="form-control" placeholder="触发优先级(数字越小优先级越高，相同优先级则随机发送)" autofocus="autofocus">
+                        <p></p>
+                        <p>当用户发送的关键字匹配了多个已经定义的触发关键字时，优先发送哪个触发关键字对应的内容。</p>
+                    	<p></p>
+                    	<br />
+                        <p></p>
+                    	<!--<textarea class="form-control" rows="5" placeholder="在这里编辑您的内容！"></textarea>-->
+                    	<!--引入wangEditor.css-->
+						<!--<link rel="stylesheet" type="text/css" href="dist/css/wangEditor.min.css">-->							
+					    <!--<script type="text/javascript" src="dist/js/lib/jquery-1.10.2.min.js"></script>-->
+					    <script>
+					    	window["wangEditor.min.js"] || (function ()
+							{
+								window["wangEditor.min.js"] = true;
+								//alert("引入");
+								$.getScript("dist/js/wangEditor.min.js",function(){
+									//alert("回调")
+									var editor = new wangEditor('div1');
+						            editor.create();
+								});
+							})();
+					    </script>
+						<div id="editor" style="width: 100%;">
+							<div id="div1" style="min-height: 400px;">
+							    <p>请输入内容...</p>
+							</div>
+						</div>                  	
+                    	
+                    	<!--引入jquery和wangEditor.js-->   <!--注意：javascript必须放在body最后，否则可能会出现问题-->
+						
+						<!--<script type="text/javascript" src="dist/js/wangEditor.min.js"></script>-->
+						
+						<!--这里引用jquery和wangEditor.js-->
+						<script type="text/javascript">
+						    var editor = new wangEditor('div1');
+						    editor.create();
+						</script>
+						<!------>
+	                	<br />
+	                	<p>当用户向您的微信公众号发送消息时，系统会自动匹配此自动回复规则并发送对应的消息。</p>
+	                	<p>您还可以在内容中添加小表情，采用斜杠/ 加 名称的形式 <a href="http://www.fuhaodq.com/biaoqingfuhao/1531.html" target="_blank">表情包名称查询</a></p>
+	                	<p></p>
+	                    <div class="form-group" style="text-align: left;">
+	                    	<button id="success-notice" type="button" class="btn btn-success mr15 mb15" style="padding: 10px 30px;">添加</button>
+	                    </div>
+                    </div>
+                    <div class="tab-pane fade" id="users2">
+                        <p>此功能尚未开放，后续更新会自动免费开放！</p>
+                    </div>
+                    <div class="tab-pane fade" id="shipment2">
+                        <p>此功能尚未开放，后续更新会自动免费开放！</p>
+                    </div>
+                </div>
+            </div>
+            <!-- End .panel -->
+        </div>
+        <!-- End col-lg-12 -->
+    </div>
+    <!-- End .row -->
+    <!-- Page End here -->
+</div>
+<!--special table js--->

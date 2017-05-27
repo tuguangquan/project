@@ -1,0 +1,129 @@
+<div class="row animated fadeInRight">
+    <!-- Start .row -->
+    <!-- Start .page-header -->
+    <div class="col-lg-12 heading">
+        <h1 class="page-header">
+        	<i class="ec-users" style="opacity: 1;"></i> 业务员列表
+        </h1>        
+    </div>
+    <!-- End .page-header -->
+</div>
+<!-- End .row -->
+<div class="outlet animated fadeInRight">
+    <!-- Start .outlet -->
+    <!-- Page start here ( usual with .row ) -->
+    <div class="row">
+        <!-- Start .row -->
+        <style type="text/css">
+        	.ipt_yellow{
+    		    outline: none;
+			    border-radius: 2px;
+			    border: 1px solid #f4b163;
+			    padding: 5px;
+			    margin: 10px;
+        	}
+        </style>
+        <!-- Start col-lg-12 -->
+        <div class="col-lg-12">
+        	<div class="panel panel-warning panelMove toggle panelRefresh panelClose" id="spr_4">
+                <!-- Start .panel -->
+                <div class="panel-heading" style="min-height: 1px;">
+                    <!--<h4 class="panel-title">所有业务员</h4>-->
+                <div class="panel-controls panel-controls-hide" style="display: none;"><a href="#" class="panel-refresh"><i class="im-spinner6"></i></a><a href="#" class="toggle panel-minimize"><i class="im-minus"></i></a><a href="#" class="panel-close"><i class="im-close"></i></a></div></div>
+                <div class="panel-body">                    
+                    <div class="page-header" style="border-bottom-color: #f4b163;padding: 5px;padding-bottom: 25px;">
+                        <span>姓名：</span> <input type="text" id="name" value=""  class="ipt_yellow" placeholder="王茹"/>&nbsp;
+                        <span>性别：</span> <input type="text" id="name" value=""  class="ipt_yellow" placeholder="例如：女"/>&nbsp;
+                        <p></p>
+                        <span>年龄：</span> <input type="text" id="name" value=""  class="ipt_yellow" placeholder="例如:24"/>&nbsp;
+                        <span>PID：</span> <input type="text" id="name" value=""  class="ipt_yellow"  placeholder="例如：mm123_256_886"/>&nbsp;
+                        <span>备注：</span> <input type="text" id="name" value=""  class="ipt_yellow" placeholder="其它信息"/>&nbsp;
+                        <br />
+	                    <p>通过相关字段可以添加或者搜索业务员！</p>
+	                    <br />
+	                    <button class="btn btn-success">添加</button>
+	                    &nbsp;
+	                    <button class="btn btn-info"><i class="fa-search" style="color: white;vertical-align: top!important;margin-top: 2px;"></i> 搜索</button>
+                    </div>
+                    <!--即时内联样式--->
+                    <style type="text/css">
+		            	td {					    
+							vertical-align: middle!important;
+							}
+		            </style>
+                    <!---table show area--->
+                    <div class="panel-body">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th class="per5">选择</th>
+                                    <th class="per5">编号</th>
+                                    <th class="per5">姓名</th>
+                                    <th class="per5">性别</th>
+                                    <th class="per5">年龄</th>
+                                    <th class="per5">PID</th>
+                                    <th class="per5">业绩</th>
+                                    <th class="per5">备注</th>
+                                    <th class="per5">操作</th>
+                                </tr>
+                            </thead>
+                            <!--表体部分-->
+                            <tbody>
+                            	<!--行-->
+                                <tr>
+                                    <td>
+                                        <label class="checkbox">
+                                            <input class="check" type="checkbox" value="option2" style="margin-left: 0px;">
+                                        </label>
+                                    </td>
+                                    <td>0001</td>
+                                    <td>兰玉</td>
+                                    <td>女</td>
+                                    <td>23</td>
+                                    <td>MM367_CQ862_27985</td>
+                                    <td>
+                                        <div class="progress">
+                                            <div class="progress-bar progress-bar-success animated-bar" role="progressbar" aria-valuenow="40" style="width: 40%;">
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>德智体美育兼备</td>
+                                    <td><button class="btn btn-brown">编辑</button> &nbsp;<button class="btn btn-danger">删除</button> </td>
+                                </tr>
+                                <!--行-->
+                                <tr>
+                                    <td>
+                                        <label class="checkbox">
+                                            <input class="check" type="checkbox" value="option2" style="margin-left: 0px;">
+                                        </label>
+                                    </td>
+                                    <td>0002</td>
+                                    <td>陈妍</td>
+                                    <td>女</td>
+                                    <td>22</td>
+                                    <td>MM367_CQ862_27987</td>
+                                    <td>
+                                        <div class="progress">
+                                            <div class="progress-bar progress-bar-success animated-bar" role="progressbar" aria-valuenow="50" style="width: 50%;">
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>德智体美育兼备</td>
+                                    <td><button class="btn btn-brown">编辑</button> &nbsp;<button class="btn btn-danger">删除</button> </td>
+                                </tr>
+                                
+                            </tbody>                         
+                            
+                        </table>
+                        <!--底部操作按钮-->
+                        <button class="btn btn-danger">删除</button>
+                    </div>
+                    <!--list end-->
+                </div>
+            </div>
+        </div>
+        <!-- End col-lg-12 -->
+    </div>
+    <!-- End .row -->
+    <!-- Page End here -->
+</div>
