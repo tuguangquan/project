@@ -175,7 +175,7 @@ public class MessageUtil {
     /**
      * 文件对象转换成xml
      *
-     * @param file 文件消息对象
+     * @param media 文件消息对象
      * @return xml
      */
     public static String mediaToXml(Media media) {

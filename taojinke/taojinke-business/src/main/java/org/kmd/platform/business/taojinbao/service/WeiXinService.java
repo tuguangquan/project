@@ -374,7 +374,7 @@ public class WeiXinService {
             System.out.println("结束上传图文消息内的图片---------------------");
         }
     }
-    
+
     public static boolean sendTemplateMsg(String token,Template template){
         boolean flag=false;
         String requestUrl="https://api.weixin.qq.com/cgi-bin/message/template/send?access_token=ACCESS_TOKEN";
