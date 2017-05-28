@@ -163,7 +163,6 @@ public class WeiXinService {
         String respMessage = null;
         try {
             // 默认返回的文本消息内容
-            String respContent = "请求处理异常，请稍候尝试！";
             // xml请求解析
             Map<String, String> requestMap = MessageUtil.parseXml(request);
             // 消息类型
@@ -214,11 +213,11 @@ public class WeiXinService {
                 if (eventType.equals(MessageUtil.EVENT_TYPE_SUBSCRIBE)) {
                     MsgSub msgSub = msgSubService.getMsgSubByWeiXinOriginId(weiXinOriginId) ;
                     if (null == msgSub){   //没有设置关注回复
-                        requestMap.put("Content","kmd 谢谢您的关注！");
+                        requestMap.put("Content","感谢您的关注！");
                         return textRespProcess.getRespMessage(requestMap);
                     }else{
                         String contentSub =  msgSub.getContent();
-                        requestMap.put("Content",contentSub);
+                        requestMap.put("Content",contentSub);    //关注回复一定是文本类型
                         return textRespProcess.getRespMessage(requestMap);
                     }
                 }
