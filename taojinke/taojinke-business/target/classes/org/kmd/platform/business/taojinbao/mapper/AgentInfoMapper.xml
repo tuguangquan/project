@@ -44,8 +44,8 @@
             <if test="appSecret != null">APPSECRET=#{appSecret},</if>
             <if test="agentId !=null">AGENTID=#{agentId},</if>
             <if test="fansAddNum !=null">FANSADDNUM=#{fansAddNum},</if>
-            <if test="fansCountNum !=null">FANSCOUNTNUM=#{fansCountNum}</if>
-            <if test="agentName !=null">AGENTNAME=#{agentName}</if>
+            <if test="fansCountNum !=null">FANSCOUNTNUM=#{fansCountNum},</if>
+            <if test="agentName!=null">AGENTNAME=#{agentName},</if>
             <if test="token !=null">TOKEN=#{token}</if>
         </set>
         WHERE ID = #{id};

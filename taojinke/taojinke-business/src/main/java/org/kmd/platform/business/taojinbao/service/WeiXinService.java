@@ -61,6 +61,7 @@ public class WeiXinService {
     private static PlatformLogger log = PlatformLogger.getLogger(WeiXinService.class);
 
     public final static String menu_create_url = "https://api.weixin.qq.com/cgi-bin/menu/create?access_token=ACCESS_TOKEN";
+    public final static String menu_get_url = "https://api.weixin.qq.com/cgi-bin/menu/get?access_token=ACCESS_TOKEN";
     public final static String access_token_url = "https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=APPID&secret=APPSECRET";
     public final static String  get_user_url = "https://api.weixin.qq.com/cgi-bin/user/get?access_token=ACCESS_TOKEN";
     public final static String  send_msg_url = "https://api.weixin.qq.com/cgi-bin/message/mass/send?access_token=ACCESS_TOKEN";
@@ -125,7 +126,7 @@ public class WeiXinService {
         return jsonObject;
     }
 
-    public static  int createMenu(String jsonMenu, String accessToken) {
+    public  int createMenu(String jsonMenu, String accessToken) {
         int result = 0;
         // 拼装创建菜单的url
         String url = menu_create_url.replace("ACCESS_TOKEN", accessToken);
@@ -139,6 +140,19 @@ public class WeiXinService {
         }
         return result;
     }
+
+    public  String getMenu(String accessToken) {
+        // 拼装获取菜单的url
+        String url = menu_get_url.replace("ACCESS_TOKEN", accessToken);
+        // 调用接口创建菜单
+        JSONObject jsonObject = httpRequest(url, "POST", null);
+        if (null != jsonObject) {
+            return jsonObject.get("menu").toString();
+        }else{
+            return null;
+        }
+    }
+
 
     public AccessToken getAccessToken(String appId,String appSecret ) {
         AccessToken accessToken = null;
@@ -479,10 +493,10 @@ public class WeiXinService {
     }
 
     public static void main(String[] args) throws Exception {
-            String appId = "wx3920e6874f8f44a";
+            String appId = "wx3920e6874f8f44ba";
             String appSecret ="56043821d2d4ac42174fc76facfa2ccd";
            // AccessToken accessToken = getAccessToken(appId,appSecret);
-            //List list =getUser(accessToken.getToken());
+            //getMenu(accessToken.getToken());
             //JSONArray jsonArray = JSONArray.fromObject(list);
             //sendMsgToSomeUser("你好,你真的不好吗？",jsonArray,accessToken.getToken());//String msg,JSONArray jsonArray
         }

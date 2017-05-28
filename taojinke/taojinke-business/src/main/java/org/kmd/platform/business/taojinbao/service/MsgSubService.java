@@ -14,6 +14,9 @@ public class MsgSubService {
     public void add(MsgSub msgSub){
         mapper.add(msgSub);
     }
+    public void update(MsgSub msgSub){
+        mapper.update(msgSub);
+    }
     public MsgSub getMsgSubByWeiXinOriginId(String weiXinOriginId){
        return mapper.getMsgSubByWeiXinOriginId(weiXinOriginId);
     }

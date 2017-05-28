@@ -33,5 +33,13 @@
         FROM ims_msg_sub WHERE WEIXINORIGINID=#{weiXinOriginId}
     </select>
 
+    <update id="update" parameterType="MsgSub">
+        UPDATE ims_msg_sub
+        <set>
+            <if test="content != null">CONTENT=#{content},</if>
+            <if test="weixinOriginalId != null">WEIXINORIGINALID=#{weixinOriginalId}</if>
+        </set>
+        WHERE AGENTID = #{agentId};
+    </update>
 
 </mapper>

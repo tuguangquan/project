@@ -198,6 +198,37 @@ public class WeixinServiceWeb {
         return JsonResultUtils.getCodeAndMesByString(JsonResultUtils.Code.SUCCESS.getCode(), "菜单创建成功!");
     }
 
+    @Produces(MediaType.APPLICATION_JSON + ";charset=UTF-8")
+    @Path("/getMenu")
+    @POST
+    public String getMenu(@Context HttpServletRequest request) {
+        try {
+            long agentId = userService.getCurrentAgentId(request);
+            if(agentId==0){
+                return JsonResultUtils.getCodeAndMesByString(JsonResultUtils.Code.ERROR.getCode(), "请重新登录!");
+            }
+            AgentInfo agentInfo = agentInfoService.getAgentInfoByAgentId(agentId);
+            if (agentInfo == null){
+                return JsonResultUtils.getCodeAndMesByString(JsonResultUtils.Code.ERROR.getCode(), "还没有绑定公众号，请先绑定微信公众号");
+            }
+            AccessToken at = weiXinService.getAccessToken(agentInfo.getAppID(),agentInfo.getAppSecret());
+            if (null != at) {
+                // 调用接口创建菜单
+                String result = weiXinService.getMenu(at.getToken());
+                // 判断菜单创建结果
+                if (null != result){
+                    logger.info("菜单查询成功！");
+                    return JsonResultUtils.getObjectResultByStringAsDefault(result, JsonResultUtils.Code.SUCCESS);
+                }else{
+                    logger.info("菜单查询失败");
+                    return JsonResultUtils.getCodeAndMesByString(JsonResultUtils.Code.ERROR.getCode(), "菜单查询失败");
+                }
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return JsonResultUtils.getCodeAndMesByString(JsonResultUtils.Code.ERROR.getCode(), "菜单查询失败");
+    }
     //上传微信素材
     @Produces( MediaType.APPLICATION_JSON + ";charset=UTF-8")
     @Path("/addMaterial")
@@ -293,6 +324,7 @@ public class WeixinServiceWeb {
         }
         return JsonResultUtils.getCodeAndMesByString(JsonResultUtils.Code.ERROR.getCode(), "凭证获取失败");
     }
+
     @Path("/getQRCodeTicket")
     @POST
     public String getQRCodeTicket(@Context HttpServletRequest request,@FormParam("sceneStr") String sceneStr) {
@@ -367,12 +399,18 @@ public class WeixinServiceWeb {
             return JsonResultUtils.getCodeAndMesByString(JsonResultUtils.Code.ERROR.getCode(), "信息绑定不全，请联系管理员补全信息!");
         }
         String weiXinOriginId = agentInfo.getWeixinOriginalId();
-        MsgSub msgSub = new MsgSub();
-        msgSub.setContent(content);
-        msgSub.setAgentId(agentId);
-        msgSub.setWeiXinOriginId(weiXinOriginId);
-        msgSubService.add(msgSub);
-        return JsonResultUtils.getCodeAndMesByStringAsDefault(JsonResultUtils.Code.SUCCESS);
+        MsgSub msgSub = msgSubService.getMsgSubByWeiXinOriginId(weiXinOriginId);
+        MsgSub msgUpdate = new MsgSub();
+        msgUpdate.setContent(content);
+        msgUpdate.setAgentId(agentId);
+        msgUpdate.setWeiXinOriginId(weiXinOriginId);
+        if (msgSub == null){
+            msgSubService.add(msgUpdate);
+            return JsonResultUtils.getCodeAndMesByString(JsonResultUtils.Code.ERROR.getCode(), "添加成功!");
+        }else{
+            msgSubService.update(msgUpdate);
+            return JsonResultUtils.getCodeAndMesByStringAsDefault(JsonResultUtils.Code.SUCCESS);
+        }
     }
 
     @Produces(MediaType.APPLICATION_JSON + ";charset=UTF-8")
