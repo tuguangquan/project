@@ -11,6 +11,7 @@ public class User {
     private long id;
     private String name;
     private String password;
+    private String selfCode;
     private String sex;
     private String role;
 
@@ -19,6 +20,14 @@ public class User {
     private String appName;
 
     private String image;
+
+    public String getSelfCode() {
+        return selfCode;
+    }
+
+    public void setSelfCode(String selfCode) {
+        this.selfCode = selfCode;
+    }
 
     public String getAppName() {
         return appName;

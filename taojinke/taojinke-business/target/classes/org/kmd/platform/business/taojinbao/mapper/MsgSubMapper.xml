@@ -27,7 +27,7 @@
         </selectKey>
     </insert>
 
-    <select id="getMsgSubByWeiXinOriginId" parameterType="java.lang.Long" resultMap="MsgSubResultMap">
+    <select id="getMsgSubByWeiXinOriginId" parameterType="java.lang.String" resultMap="MsgSubResultMap">
         SELECT
         <include refid="msgSub_fields"/>
         FROM ims_msg_sub WHERE WEIXINORIGINID=#{weiXinOriginId}

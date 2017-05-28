@@ -11,6 +11,7 @@ public class GoodsSelectService {
 
     @Autowired
     private GoodsSelectMapper mapper;
+
     public void add(GoodsSelect goodsSelect){
         mapper.add(goodsSelect);
     }

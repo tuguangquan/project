@@ -8,30 +8,30 @@
 	</sql>
 
     <resultMap id="goodsResultMap" type="Goods">
-        <id property="id" column="id"/>
-        <result property="goods_id" column="goods_id"/>
-        <result property="goods_name" column="goods_name"/>
-        <result property="goods_picture" column="goods_picture"/>
-        <result property="goods_detail_url" column="goods_detail_url"/>
-        <result property="shop_name" column="shop_name"/>
-        <result property="goods_price" column="goods_price"/>
-        <result property="goods_sells" column="goods_sells"/>
-        <result property="earn_rate" column="earn_rate"/>
-        <result property="commission_rate" column="commission_rate"/>
-        <result property="sellers_WANGWANG" column="sellers_WANGWANG"/>
-        <result property="taobaoke_short_url" column="taobaoke_short_url"/>
-        <result property="taobaoke_url" column="taobaoke_url"/>
-        <result property="tao_kou_ling" column="tao_kou_ling"/>
-        <result property="discount_coupon" column="discount_coupon"/>
-        <result property="discount_coupon_account" column="discount_coupon_account"/>
-        <result property="discount_coupondenomination" column="discount_coupondenomination"/>
-        <result property="discount_coupon_start_time" column="discount_coupon_start_time"/>
-        <result property="discount_couponend_time" column="discount_couponend_time"/>
-        <result property="discount_coupon_url" column="discount_coupon_url"/>
-        <result property="discount_coupon_tao_kou_ling" column="discount_coupon_tao_kou_ling"/>
-        <result property="discount_coupon_short_url" column="discount_coupon_short_url"/>
-        <result property="is_maketing_plan" column="is_maketing_plan"/>
-        <result property="cate_id" column="cate_id"/>
+        <id property="id" column="ID"/>
+        <result property="goods_id" column="GOODS_ID"/>
+        <result property="goods_name" column="GOODS_NAME"/>
+        <result property="goods_picture" column="GOODS_PICTURE"/>
+        <result property="goods_detail_url" column="GOODS_DETAIL_URL"/>
+        <result property="shop_name" column="SHOP_NAME"/>
+        <result property="goods_price" column="GOODS_PRICE"/>
+        <result property="goods_sells" column="GOODS_SELLS"/>
+        <result property="earn_rate" column="EARN_RATE"/>
+        <result property="commission_rate" column="COMMISSION_RATE"/>
+        <result property="sellers_WANGWANG" column="SELLERS_WANGWANG"/>
+        <result property="taobaoke_short_url" column="TAOBAOKE_SHORT_URL"/>
+        <result property="taobaoke_url" column="TAOBAOKE_URL"/>
+        <result property="tao_kou_ling" column="TAO_KOU_LING"/>
+        <result property="discount_coupon" column="DISCOUNT_COUPON"/>
+        <result property="discount_coupon_account" column="DISCOUNT_COUPON_ACCOUNT"/>
+        <result property="discount_coupondenomination" column="DISCOUNT_COUPONDENOMINATION"/>
+        <result property="discount_coupon_start_time" column="DISCOUNT_COUPON_START_TIME"/>
+        <result property="discount_couponend_time" column="DISCOUNT_COUPONEND_TIME"/>
+        <result property="discount_coupon_url" column="DISCOUNT_COUPON_URL"/>
+        <result property="discount_coupon_tao_kou_ling" column="DISCOUNT_COUPON_TAO_KOU_LING"/>
+        <result property="discount_coupon_short_url" column="DISCOUNT_COUPON_SHORT_URL"/>
+        <result property="is_maketing_plan" column="IS_MACKETING_PLAN"/>
+        <result property="cate_id" column="CATE_ID"/>
 
     </resultMap>
 

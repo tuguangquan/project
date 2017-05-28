@@ -1,10 +1,8 @@
 package org.kmd.platform.business.taojinbao.service;
 
-import java.io.BufferedReader;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.io.OutputStream;
+import java.io.*;
 import java.net.ConnectException;
+import java.net.HttpURLConnection;
 import java.net.URL;
 import javax.net.ssl.HttpsURLConnection;
 import javax.net.ssl.SSLContext;
@@ -12,6 +10,9 @@ import javax.net.ssl.SSLSocketFactory;
 import javax.net.ssl.TrustManager;
 import javax.servlet.http.HttpServletRequest;
 
+import java.security.KeyManagementException;
+import java.security.NoSuchAlgorithmException;
+import java.security.NoSuchProviderException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -19,6 +20,7 @@ import java.util.Map;
 import net.sf.json.JSONArray;
 import net.sf.json.JSONException;
 import net.sf.json.JSONObject;
+import org.kmd.platform.business.taojinbao.dto.Material;
 import org.kmd.platform.business.taojinbao.entity.MsgSub;
 import org.kmd.platform.business.taojinbao.entity.MsgTemp;
 import org.kmd.platform.business.taojinbao.mapper.MsgTempMapper;
@@ -123,7 +125,7 @@ public class WeiXinService {
         return jsonObject;
     }
 
-    public  int createMenu(String jsonMenu, String accessToken) {
+    public static  int createMenu(String jsonMenu, String accessToken) {
         int result = 0;
         // 拼装创建菜单的url
         String url = menu_create_url.replace("ACCESS_TOKEN", accessToken);
@@ -138,7 +140,7 @@ public class WeiXinService {
         return result;
     }
 
-    public static   AccessToken getAccessToken(String appId,String appSecret ) {
+    public AccessToken getAccessToken(String appId,String appSecret ) {
         AccessToken accessToken = null;
         String requestUrl = access_token_url.replace("APPID", appId).replace("APPSECRET", appSecret);
         JSONObject jsonObject = httpRequest(requestUrl, "GET", null);
@@ -185,6 +187,9 @@ public class WeiXinService {
                         if (msgType.equals(MessageUtil.REQ_MESSAGE_TYPE_TEXT)){//如果设置的是文本消息
                             return textRespProcess.getRespMessage(requestMap);
                         }
+                        if (msgType.equals(MessageUtil.RESP_MESSAGE_TYPE_NEWS)){//如果设置的是图文消息
+                            return newsRespProcess.getRespMessage(requestMap);
+                        }
                     }else{ //设置了规则，发送优先级最高的消息
                         int priority = msgTempMatchList.get(0).getPriority();
                         String content = msgTempMatchList.get(0).getModeContent();
@@ -201,6 +206,9 @@ public class WeiXinService {
                         requestMap.put("Content",content);
                         if (msgType.equals(MessageUtil.REQ_MESSAGE_TYPE_TEXT)){//如果设置的是文本消息
                             return textRespProcess.getRespMessage(requestMap);
+                        }
+                        if (msgType.equals(MessageUtil.RESP_MESSAGE_TYPE_NEWS)){//如果设置的是图文消息
+                            return newsRespProcess.getRespMessage(requestMap);
                         }
                     }
                 }
@@ -238,27 +246,20 @@ public class WeiXinService {
 
         return respMessage;
     }
-
+   //得到所有关注用户
     public static List getUser(String accessToken) {
         // 拼装创建菜单的url
         String url = get_user_url.replace("ACCESS_TOKEN", accessToken);
         // 调用接口创建菜单
         JSONObject jsonObject = httpRequest(url, "POST", null);
         if (null != jsonObject) {
-            JSONArray   jsonArray =  jsonObject.getJSONObject("data").getJSONArray("openid");
+            JSONArray jsonArray = jsonObject.getJSONObject("data").getJSONArray("openid");
             return jsonArray.subList(0, jsonArray.size());
         }
         return null;
     }
-    public String getQRCode(String ticket) {
-        String url = get_qrCode_url.replace("TICKET", ticket);
-        // 调用接口ticket
-        JSONObject json = httpRequest(url, "POST", null);
-        if (null != json) {
-            return json.getString("ticket");
-        }
-        return null;
-    }
+
+    //得到二维码的ticket
     public String getQRCodeTicket(String accessToken,String scene_str) {
         Scene scene = new Scene();
         scene.setScene_str(scene_str);
@@ -277,25 +278,22 @@ public class WeiXinService {
         }
         return null;
     }
-
-    public int sendMsgToSomeUser(String msg,JSONArray jsonArray,String accessToken) {
+    //给用户群发文本消息
+    public static int sendMsgToSomeUser(String msg,JSONArray jsonArray,String accessToken) {
         int result = 0;
-        // 拼装创建菜单的url
+        // 拼装发消息的url
         String url = send_msg_url.replace("ACCESS_TOKEN", accessToken);
-        // 调用接口创建菜单
         // 默认返回的文本消息内容
         List<String> users = new ArrayList<String>();
-        for(int i =0;i<jsonArray.size()-1;i++){
+        for(int i =0;i<jsonArray.size();i++){
              users.add(jsonArray.getString(i));
          }
         // 回复文本消息
         MassTextMessage textMessage = new MassTextMessage();
         textMessage.setTouser(users);
-        Text text = new Text();
-        text.setContent(msg);
         textMessage.setMsgtype(MessageUtil.RESP_MESSAGE_TYPE_TEXT);
-        textMessage.setText(text);
-        String respMessage = MessageUtil.textMessageToXml(textMessage);
+        textMessage.setContent(msg);
+        String respMessage = textMessage.toJSON();
         JSONObject jsonObject = httpRequest(url, "POST", respMessage);
         if (null != jsonObject) {
             if (0 != jsonObject.getInt("errcode")) {
@@ -305,55 +303,188 @@ public class WeiXinService {
         }
         return result;
     }
-    public int sendTempMsg(String accessToken,String msgJson) {
-        int result = 0;
-        // 拼装创建菜单的url
-        String url = send_temp_msg_url.replace("ACCESS_TOKEN", accessToken);
-        JSONObject jsonObject = httpRequest(url, "POST", msgJson);
-        if (null != jsonObject) {
-            if (0 != jsonObject.getInt("errcode")) {
-                result = jsonObject.getInt("errcode");
-                log.error("消息发送失败 errcode:{} errmsg:{}", jsonObject.getInt("errcode"), jsonObject.getString("errmsg"));
+    /**
+     * 上传其他永久素材(图片素材的上限为5000，其他类型为1000)
+     * @param accessToken
+     * @param fileurl
+     * @param type
+     * @return
+     * @throws Exception
+     */
+    public  JSONObject addMaterialEver(String fileurl, String type, String accessToken) throws Exception {
+        try {
+            File file = new File(fileurl);
+            //上传素材
+            String path = "https://api.weixin.qq.com/cgi-bin/material/add_material?access_token=" + accessToken + "&type=" + type;
+            String result = connectHttpsByPost(path,file);
+            result = result.replaceAll("[\\\\]", "");
+            System.out.println("result:" + result);
+            JSONObject resultJSON = JSONObject.fromObject(result);
+            if (resultJSON != null) {
+                if (resultJSON.get("media_id") != null) {
+                    log.info("上传" + type + "永久素材成功");
+                    return resultJSON;
+                } else {
+                    log.error("上传" + type + "永久素材失败");
+                }
+            }
+            return null;
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (NoSuchAlgorithmException e) {
+            e.printStackTrace();
+        } catch (NoSuchProviderException e) {
+            e.printStackTrace();
+        } catch (KeyManagementException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    /**
+     * 上传图片到微信服务器(本接口所上传的图片不占用公众号的素材库中图片数量的5000个的限制。图片仅支持jpg/png格式，大小必须在1MB以下)
+     * @param accessToken
+     * @param fileurl
+     * @return
+     * @throws Exception
+     */
+    public  JSONObject addMaterialEver(String fileurl,String accessToken) throws Exception {
+        try {
+            log.info("开始上传图文消息内的图片---------------------");
+            //上传图片素材
+            String path="https://api.weixin.qq.com/cgi-bin/media/uploadimg?access_token="+accessToken;
+            File file = new File(fileurl);
+            String result = connectHttpsByPost(path,file);
+            result = result.replaceAll("[\\\\]", "");
+            System.out.println("result:" + result);
+            JSONObject resultJSON = JSONObject.fromObject(result);
+            if (resultJSON != null) {
+                return resultJSON;
+            }
+            return null;
+        } catch (Exception e) {
+            log.error("程序异常", e);
+            throw e;
+        }finally{
+            log.info("结束上传图文消息内的图片---------------------");
+        }
+    }
+
+//    public static boolean sendTemplateMsg(String token,Template template){
+//        boolean flag=false;
+//        String requestUrl="https://api.weixin.qq.com/cgi-bin/message/template/send?access_token=ACCESS_TOKEN";
+//        requestUrl=requestUrl.replace("ACCESS_TOKEN", token);
+//        JSONObject jsonResult = httpRequest(requestUrl, "POST", template.toJSON());
+//        if(jsonResult!=null){
+//            int errorCode=jsonResult.getInt("errcode");
+//            String errorMessage=jsonResult.getString("errmsg");
+//            if(errorCode==0){
+//                flag=true;
+//            }else{
+//                System.out.println("模板消息发送失败:"+errorCode+","+errorMessage);
+//                flag=false;
+//            }
+//        }
+//        return flag;
+//    }
+    //上传媒体文件到微信服务器
+    public  String connectHttpsByPost(String path, File file) throws IOException, NoSuchAlgorithmException, NoSuchProviderException, KeyManagementException {
+        URL urlObj = new URL(path);
+        //连接
+        HttpURLConnection con = (HttpURLConnection) urlObj.openConnection();
+        String result = null;
+        con.setDoInput(true);
+        con.setDoOutput(true);
+        con.setUseCaches(false); // post方式不能使用缓存
+        // 设置请求头信息
+        con.setRequestProperty("Connection", "Keep-Alive");
+        con.setRequestProperty("Charset", "UTF-8");
+        // 设置边界
+        String BOUNDARY = "----------" + System.currentTimeMillis();
+        con.setRequestProperty("Content-Type",
+                "multipart/form-data; boundary="
+                        + BOUNDARY);
+        // 请求正文信息
+        // 第一部分：
+        StringBuilder sb = new StringBuilder();
+        sb.append("--"); // 必须多两道线
+        sb.append(BOUNDARY);
+        sb.append("\r\n");
+        sb.append("Content-Disposition: form-data;name=\"media\";filelength=\"" + file.length() + "\";filename=\""
+                + file.getName() + "\"\r\n");
+        sb.append("Content-Type:application/octet-stream\r\n\r\n");
+        byte[] head = sb.toString().getBytes("utf-8");
+        // 获得输出流
+        OutputStream out = new DataOutputStream(con.getOutputStream());
+        // 输出表头
+        out.write(head);
+        // 文件正文部分
+        // 把文件已流文件的方式 推入到url中
+        DataInputStream in = new DataInputStream(new FileInputStream(file));
+        int bytes = 0;
+        byte[] bufferOut = new byte[1024];
+        while ((bytes = in.read(bufferOut)) != -1) {
+            out.write(bufferOut, 0, bytes);
+        }
+        in.close();
+        // 结尾部分
+        byte[] foot = ("\r\n--" + BOUNDARY + "--\r\n").getBytes("utf-8");// 定义最后数据分隔线
+        out.write(foot);
+        out.flush();
+        out.close();
+        StringBuffer buffer = new StringBuffer();
+        BufferedReader reader = null;
+        try {
+            // 定义BufferedReader输入流来读取URL的响应
+            reader = new BufferedReader(new InputStreamReader(con.getInputStream()));
+            String line = null;
+            while ((line = reader.readLine()) != null) {
+                buffer.append(line);
+            }
+            if (result == null) {
+                result = buffer.toString();
+            }
+        } catch (IOException e) {
+            System.out.println("发送POST请求出现异常！" + e);
+            e.printStackTrace();
+        } finally {
+            if (reader != null) {
+                reader.close();
             }
         }
         return result;
     }
-
-    public static void main(String[] args){
-           String appId= "wx3920e6874f8f44ba";
-           String appSecret="56043821d2d4ac42174fc76facfa2ccd";
-           AccessToken accessToken = getAccessToken(appId,appSecret);
-
-        //   List list = getUser(accessToken.getToken());
-           Template tem=new Template();
-            tem.setTemplateId("LhEDNAdkTcax7gzPetV1hnAmbSoXuo22OEJ8eix1iAw");
-            tem.setTopColor("#00DD00");
-            tem.setToUser("ofngQ01oLNp3AoQsHnqs67ryUg3Q");//ofngQ06Y2kCInWUpesHeVNA-YpNM,ofngQ091JdK3uHZCPpZCQaTcSllM,ofngQ06p2jZfiTdd9q7jtGYLACmM
-            tem.setUrl("");
-            List<TemplateParam> paras=new ArrayList<TemplateParam>();
-            paras.add(new TemplateParam("first","我们已收到您的货款，开始为您打包商品，请耐心等待: )","#FF3333"));
-            paras.add(new TemplateParam("orderMoneySum","¥20.00","#0044BB"));
-            paras.add(new TemplateParam("orderProductName","火烧牛干巴","#0044BB"));
-            paras.add(new TemplateParam("Remark","感谢你对我们商城的支持!!!!","#AAAAAA"));
-            tem.setTemplateParamList(paras);
-            boolean result=sendTemplateMsg(accessToken.getToken(),tem);
-        }
-
-    public static boolean sendTemplateMsg(String token,Template template){
-        boolean flag=false;
-        String requestUrl="https://api.weixin.qq.com/cgi-bin/message/template/send?access_token=ACCESS_TOKEN";
-        requestUrl=requestUrl.replace("ACCESS_TOKEN", token);
-        JSONObject jsonResult = httpRequest(requestUrl, "POST", template.toJSON());
-        if(jsonResult!=null){
-            int errorCode=jsonResult.getInt("errcode");
-            String errorMessage=jsonResult.getString("errmsg");
-            if(errorCode==0){
-                flag=true;
-            }else{
-                System.out.println("模板消息发送失败:"+errorCode+","+errorMessage);
-                flag=false;
+    //获取公众号下指定类型的素材
+    public static JSONObject get_material(String token,String type,int offset,int count) throws Exception{
+        try {
+            log.info("开始上传图文消息内的图片---------------------");
+            //上传图片素材
+            String requestUrl = "https://api.weixin.qq.com/cgi-bin/material/batchget_material?access_token=ACCESS_TOKEN";
+            requestUrl=requestUrl.replace("ACCESS_TOKEN", token);
+            Material material = new Material();
+            material.setType(type);
+            material.setOffset(offset);
+            material.setCount(count);
+            JSONObject jsonResult = httpRequest(requestUrl, "POST", material.toJSON());
+            if (jsonResult != null) {
+                return jsonResult;
             }
+            return null;
+        } catch (Exception e) {
+            log.error("程序异常", e);
+            throw e;
+        }finally{
+            log.info("结束上传图文消息内的图片---------------------");
         }
-        return flag;
     }
+
+    public static void main(String[] args) throws Exception {
+            String appId = "wx3920e6874f8f44ba";
+            String appSecret ="56043821d2d4ac42174fc76facfa2ccd";
+           WeiXinService weiXinService = new WeiXinService();
+            AccessToken accessToken = weiXinService.getAccessToken(appId,appSecret);
+            List list =getUser(accessToken.getToken());
+            JSONArray jsonArray = JSONArray.fromObject(list);
+            sendMsgToSomeUser("你好,你真的不好吗？",jsonArray,accessToken.getToken());//String msg,JSONArray jsonArray
+        }
 }

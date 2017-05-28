@@ -4,24 +4,24 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="org.kmd.platform.business.taojinbao.mapper.GoodsSelectMapper">
     <sql id="goodsSelect_fields">
-        id,goods_id,userId,agentId,cate_id
+        ID,GOODS_ID,USERID,AGENTID,CATE_ID
     </sql>
 
     <resultMap id="goodsSelectResultMap" type="GoodsSelect">
-        <id property="id" column="id"/>
-        <result property="goods_id" column="goods_id"/>
-        <result property="userId" column="userId"/>
-        <result property="agentId" column="agentId"/>
-        <result property="cate_id" column="cate_id"/>
+        <id property="id" column="ID"/>
+        <result property="goods_id" column="GOODS_ID"/>
+        <result property="userId" column="USERID"/>
+        <result property="agentId" column="AGENTID"/>
+        <result property="cate_id" column="CATE_ID"/>
     </resultMap>
 
     <insert id="add" parameterType="GoodsSelect" keyProperty="id"
             useGeneratedKeys="true">
         INSERT INTO
         ims_goods_select(
-        <include refid="goodsSelect_fields" />
+          GOODS_ID,USERID,AGENTID,CATE_ID
         )
-        VALUES (#{id},#{goods_id},#{userId},#{agentId},#{cate_id});
+        VALUES (#{goods_id},#{userId},#{agentId},#{cate_id});
         <selectKey resultType="long" keyProperty="id">
             select
             LAST_INSERT_ID() as id

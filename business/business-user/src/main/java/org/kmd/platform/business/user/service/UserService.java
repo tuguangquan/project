@@ -29,10 +29,11 @@ public class UserService {
         }
         userMapper.add(user);
     }
-    public User getUserByNameAndPassword(String name,String password){
+    public User getUserByNameAndPassword(String name,String password,String selfCode){
         Map<String, Object> map = new HashMap<String, Object>();
         map.put("name",name);
         map.put("password",password);
+        map.put("selfCode",selfCode);
         return userMapper.getUserByNameAndPassword(map);
     }
     public Long getIdByName(String name,long appId){
@@ -74,36 +75,36 @@ public class UserService {
     }
 
 
-    public void updateUserImage(User user){
-        userMapper.updateUserImage(user);
-    }
-
     public long getCurrentUserId(HttpServletRequest request){
-        if (request.getSession().getAttribute("userId")==null){
-            return 0;
-        }else{
-            return Integer.parseInt(request.getSession().getAttribute("userId").toString());
-        }
+        return 18;
+//        if (request.getSession().getAttribute("userId")==null){
+//            return 0;
+//        }else{
+//            return Integer.parseInt(request.getSession().getAttribute("userId").toString());
+//        }
     }
     public String getCurrentUserName(HttpServletRequest request){
-        if (request.getSession().getAttribute("userName")==null){
-            return null;
-        }else{
-            return request.getSession().getAttribute("userName").toString();
-        }
+        return "tuguangquan";
+//        if (request.getSession().getAttribute("userName")==null){
+//            return null;
+//        }else{
+//            return request.getSession().getAttribute("userName").toString();
+//        }
     }
     public String getCurrentAgentName(HttpServletRequest request){
-        if (request.getSession().getAttribute("agentName")==null){
-            return null;
-        }else{
-            return request.getSession().getAttribute("agentName").toString();
-        }
+        return "kmd";
+//        if (request.getSession().getAttribute("agentName")==null){
+//            return null;
+//        }else{
+//            return request.getSession().getAttribute("agentName").toString();
+//        }
     }
     public long getCurrentAgentId(HttpServletRequest request){
-        if (request.getSession().getAttribute("agentId")==null){
-            return 0;
-        }else{
-            return Integer.parseInt(request.getSession().getAttribute("agentId").toString());
-        }
+        return 22;
+//        if (request.getSession().getAttribute("agentId")==null){
+//            return 0;
+//        }else{
+//            return Integer.parseInt(request.getSession().getAttribute("agentId").toString());
+//        }
     }
 }

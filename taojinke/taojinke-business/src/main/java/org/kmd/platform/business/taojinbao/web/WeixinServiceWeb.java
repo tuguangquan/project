@@ -1,8 +1,7 @@
 package org.kmd.platform.business.taojinbao.web;
 
 import net.sf.json.JSONArray;
-import org.kmd.platform.business.app.entity.App;
-import org.kmd.platform.business.app.service.AppService;
+import net.sf.json.JSONObject;
 import org.kmd.platform.business.taojinbao.entity.AgentInfo;
 import org.kmd.platform.business.taojinbao.entity.MsgSub;
 import org.kmd.platform.business.taojinbao.entity.MsgTemp;
@@ -11,15 +10,16 @@ import org.kmd.platform.business.taojinbao.service.MsgSubService;
 import org.kmd.platform.business.taojinbao.service.MsgTempService;
 import org.kmd.platform.business.taojinbao.service.WeiXinService;
 import org.kmd.platform.business.taojinbao.util.AccessToken;
-import org.kmd.platform.business.user.entity.User;
-import org.kmd.platform.business.user.entity.UserAuthority;
-import org.kmd.platform.business.user.service.AuthorityService;
-import org.kmd.platform.business.user.service.UserAuthorityService;
 import org.kmd.platform.business.user.service.UserService;
+import org.kmd.platform.fundamental.config.FundamentalConfigProvider;
 import org.kmd.platform.fundamental.logger.PlatformLogger;
 import org.kmd.platform.fundamental.util.json.JsonResultUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.multipart.MultipartHttpServletRequest;
+import org.springframework.web.multipart.MultipartResolver;
+import org.springframework.web.multipart.commons.CommonsMultipartResolver;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.ws.rs.FormParam;
@@ -28,6 +28,7 @@ import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.MediaType;
+import java.io.File;
 import java.util.Date;
 import java.util.List;
 
@@ -73,6 +74,10 @@ public class WeixinServiceWeb {
         AgentInfo  agentInfoExist = agentInfoService.getAgentInfoByAppID(appId);
         if(null!=agentInfoExist){
             return JsonResultUtils.getCodeAndMesByString(JsonResultUtils.Code.ERROR.getCode(), "该公众号已绑定!");
+        }
+        AgentInfo  agentInfoByAgentId = agentInfoService.getAgentInfoByAgentId(agentId);
+        if(agentInfoByAgentId!=null){
+            return JsonResultUtils.getCodeAndMesByString(JsonResultUtils.Code.ERROR.getCode(), "您已绑定了一个公众号，目前只支持绑定一个微信公众号!");
         }
         //添加代理商信息
         AgentInfo  agentInfo = new AgentInfo();
@@ -120,6 +125,58 @@ public class WeixinServiceWeb {
         }
         return JsonResultUtils.getCodeAndMesByString(JsonResultUtils.Code.SUCCESS.getCode(), "菜单创建成功!");
     }
+
+    //上传微信素材
+    @Produces( MediaType.APPLICATION_JSON + ";charset=UTF-8")
+    @Path("/addMaterial")
+    @POST
+    public String addMaterial(@Context HttpServletRequest request,@FormParam("type") String type){
+        if(request==null){
+            return JsonResultUtils.getCodeAndMesByStringAsDefault(JsonResultUtils.Code.ERROR);
+        }
+        try {
+        long agentId = userService.getCurrentAgentId(request);
+        if(agentId==0){
+            return JsonResultUtils.getCodeAndMesByString(JsonResultUtils.Code.ERROR.getCode(), "请重新登录!");
+        }
+        AgentInfo agentInfo = agentInfoService.getAgentInfoByAgentId(agentId);
+        if (agentInfo == null){
+             return JsonResultUtils.getCodeAndMesByString(JsonResultUtils.Code.ERROR.getCode(), "还没有绑定公众号，请先绑定微信公众号");
+        }
+        MultipartResolver resolver = new CommonsMultipartResolver(request.getSession().getServletContext());
+        MultipartHttpServletRequest multipartRequest = resolver.resolveMultipart(request);
+        MultipartFile file = multipartRequest.getFile("filename");
+        String filename = file.getOriginalFilename();
+        String[] temp = filename.split("\\.");
+        String suffix = temp[temp.length-1];
+        //获得用户图片路径
+        String userImgRootPath =  FundamentalConfigProvider.get("uploadImage.img.relative.path") ;
+        String userImgRelativePath =  FundamentalConfigProvider.get("uploadImage.img.relative.path") ;
+        String userImagePath =  userImgRootPath + userImgRelativePath+"/"+agentId+"."+suffix;
+            AccessToken at = weiXinService.getAccessToken(agentInfo.getAppID(), agentInfo.getAppSecret());
+            if (null != at) {
+                JSONObject jsonObject = null;
+                if (type == null || type.trim().equals(""))     {
+                    jsonObject = weiXinService.addMaterialEver(userImagePath, at.getToken());
+                }else {
+                    jsonObject = weiXinService.addMaterialEver(userImagePath,type,at.getToken());
+                }
+                // 判断菜单创建结果
+                if (jsonObject != null){
+                    logger.info("上传永久素材成功");
+                    return JsonResultUtils.getCodeAndMesByString(JsonResultUtils.Code.SUCCESS.getCode(), "上传永久素材成功");
+                }else{
+                    logger.info("上传永久素材失败");
+                    return JsonResultUtils.getCodeAndMesByString(JsonResultUtils.Code.ERROR.getCode(), "上传永久素材失败");
+                }
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        // 新增操作时，返回操作状态和状态码给客户端，数据区是为空的
+        return JsonResultUtils.getObjectResultByStringAsDefault("upload success",JsonResultUtils.Code.SUCCESS);
+    }
+
     @Path("/searchAllUser")
     @POST
     public String searchAllUser(@Context HttpServletRequest request) {
