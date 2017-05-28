@@ -352,6 +352,8 @@ public class WeixinServiceWeb {
         return JsonResultUtils.getCodeAndMesByString(JsonResultUtils.Code.ERROR.getCode(), "凭证获取失败");
     }
 
+
+
     @Produces(MediaType.APPLICATION_JSON + ";charset=UTF-8")
     @Path("/addMsgTemp")
     @POST

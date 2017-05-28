@@ -10,6 +10,7 @@ import javax.net.ssl.SSLSocketFactory;
 import javax.net.ssl.TrustManager;
 import javax.servlet.http.HttpServletRequest;
 
+import java.net.URLConnection;
 import java.security.KeyManagementException;
 import java.security.NoSuchAlgorithmException;
 import java.security.NoSuchProviderException;
@@ -27,6 +28,7 @@ import org.kmd.platform.business.taojinbao.mapper.MsgTempMapper;
 import org.kmd.platform.business.taojinbao.servlet.process.impl.NewsRespProcess;
 import org.kmd.platform.business.taojinbao.servlet.process.impl.TextRespProcess;
 import org.kmd.platform.business.taojinbao.util.AccessToken;
+import org.kmd.platform.business.taojinbao.util.ImageRemarkUtil;
 import org.kmd.platform.business.taojinbao.util.MessageUtil;
 import org.kmd.platform.business.taojinbao.util.MyX509TrustManager;
 import org.kmd.platform.business.taojinbao.weixin.QRCode.ActionInfo;
@@ -75,6 +77,67 @@ public class WeiXinService {
      * @param outputStr     提交的数据
      * @return JSONObject(通过JSONObject.get(key)的方式获取json对象的属性值)
      */
+
+
+    public static   JSONObject httpRequestForImage(String requestUrl, String requestMethod, String outputStr) {
+        JSONObject jsonObject = null;
+        StringBuffer buffer = new StringBuffer();
+        try {
+            // 创建SSLContext对象，并使用我们指定的信任管理器初始化
+            TrustManager[] tm = {new MyX509TrustManager()};
+            SSLContext sslContext = SSLContext.getInstance("SSL", "SunJSSE");
+            sslContext.init(null, tm, new java.security.SecureRandom());
+            // 从上述SSLContext对象中得到SSLSocketFactory对象
+            SSLSocketFactory ssf = sslContext.getSocketFactory();
+            URL url = new URL(requestUrl);
+            HttpsURLConnection httpUrlConn = (HttpsURLConnection) url.openConnection();
+            httpUrlConn.setSSLSocketFactory(ssf);
+            httpUrlConn.setDoOutput(true);
+            httpUrlConn.setDoInput(true);
+            httpUrlConn.setUseCaches(false);
+
+            httpUrlConn.setRequestProperty("Accept-Ranges","bytes");
+            httpUrlConn.setRequestProperty("Cache-control","max-age=604800");
+            httpUrlConn.setRequestProperty("Content-Type","image/jpg");
+            httpUrlConn.setRequestProperty("Cache-control","max-age=604800");
+
+            // 设置请求方式（GET/POST）
+            httpUrlConn.setRequestMethod(requestMethod);
+            if ("GET".equalsIgnoreCase(requestMethod))
+                httpUrlConn.connect();
+
+            // 当有数据需要提交时
+            if (null != outputStr) {
+                OutputStream outputStream = httpUrlConn.getOutputStream();
+                // 注意编码格式，防止中文乱码
+                outputStream.write(outputStr.getBytes("UTF-8"));
+                outputStream.close();
+            }
+            // 将返回的输入流转换成字符串
+            InputStream inputStream = httpUrlConn.getInputStream();
+            InputStreamReader inputStreamReader = new InputStreamReader(inputStream, "utf-8");
+            BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
+            String str = null;
+            while ((str = bufferedReader.readLine()) != null) {
+                buffer.append(str);
+            }
+            bufferedReader.close();
+            inputStreamReader.close();
+            // 释放资源
+            inputStream.close();
+            inputStream = null;
+            httpUrlConn.disconnect();
+            jsonObject = JSONObject.fromObject(buffer.toString());
+        } catch (ConnectException ce) {
+            log.error("Weixin server connection timed out.");
+        } catch (Exception e) {
+            log.error("https request error:{}", e);
+        }
+        return jsonObject;
+    }
+
+
+
     public static   JSONObject httpRequest(String requestUrl, String requestMethod, String outputStr) {
         JSONObject jsonObject = null;
         StringBuffer buffer = new StringBuffer();
@@ -154,7 +217,7 @@ public class WeiXinService {
     }
 
 
-    public AccessToken getAccessToken(String appId,String appSecret ) {
+    public static AccessToken getAccessToken(String appId,String appSecret ) {
         AccessToken accessToken = null;
         String requestUrl = access_token_url.replace("APPID", appId).replace("APPSECRET", appSecret);
         JSONObject jsonObject = httpRequest(requestUrl, "GET", null);
@@ -273,8 +336,38 @@ public class WeiXinService {
         return null;
     }
 
+    //得到二维码
+    public static void  get_QR( String filename,String savePath,String ticket) throws IOException {
+       String urlString = "https://mp.weixin.qq.com/cgi-bin/showqrcode?ticket="+ticket;
+       URL url = new URL(urlString);
+            // 打开连接
+       URLConnection con = url.openConnection();
+            //设置请求超时为5s
+            con.setConnectTimeout(5*1000);
+            // 输入流
+            InputStream is = con.getInputStream();
+
+            // 1K的数据缓冲
+            byte[] bs = new byte[1024];
+            // 读取到的数据长度
+            int len;
+            // 输出的文件流
+            File sf=new File(savePath);
+            if(!sf.exists()){
+                sf.mkdirs();
+            }
+            OutputStream os = new FileOutputStream(sf.getPath()+"\\"+filename);
+            // 开始读取
+            while ((len = is.read(bs)) != -1) {
+                os.write(bs, 0, len);
+            }
+            // 完毕，关闭所有链接
+            os.close();
+            is.close();
+        }
+
     //得到二维码的ticket
-    public String getQRCodeTicket(String accessToken,String scene_str) {
+    public static String getQRCodeTicket(String accessToken,String scene_str) {
         Scene scene = new Scene();
         scene.setScene_str(scene_str);
         ActionInfo actionInfo = new ActionInfo();
@@ -384,23 +477,6 @@ public class WeiXinService {
         }
     }
 
-//    public static boolean sendTemplateMsg(String token,Template template){
-//        boolean flag=false;
-//        String requestUrl="https://api.weixin.qq.com/cgi-bin/message/template/send?access_token=ACCESS_TOKEN";
-//        requestUrl=requestUrl.replace("ACCESS_TOKEN", token);
-//        JSONObject jsonResult = httpRequest(requestUrl, "POST", template.toJSON());
-//        if(jsonResult!=null){
-//            int errorCode=jsonResult.getInt("errcode");
-//            String errorMessage=jsonResult.getString("errmsg");
-//            if(errorCode==0){
-//                flag=true;
-//            }else{
-//                System.out.println("模板消息发送失败:"+errorCode+","+errorMessage);
-//                flag=false;
-//            }
-//        }
-//        return flag;
-//    }
     //上传媒体文件到微信服务器
     public  String connectHttpsByPost(String path, File file) throws IOException, NoSuchAlgorithmException, NoSuchProviderException, KeyManagementException {
         URL urlObj = new URL(path);
@@ -493,11 +569,18 @@ public class WeiXinService {
     }
 
     public static void main(String[] args) throws Exception {
-            String appId = "wx3920e6874f8f44ba";
-            String appSecret ="56043821d2d4ac42174fc76facfa2ccd";
+           // String appId = "wx3920e6874f8f44ba";
+           // String appSecret ="56043821d2d4ac42174fc76facfa2ccd";
            // AccessToken accessToken = getAccessToken(appId,appSecret);
-            //getMenu(accessToken.getToken());
-            //JSONArray jsonArray = JSONArray.fromObject(list);
-            //sendMsgToSomeUser("你好,你真的不好吗？",jsonArray,accessToken.getToken());//String msg,JSONArray jsonArray
+           // String ticket = getQRCodeTicket(accessToken.getToken(),"18ertryrtdefgr");
+           // get_QR("9.jpg","D:/",ticket);
+            String srcImgPath = "d:/123.jpg";     //原图
+            String iconPath = "d:/9.jpg";         //二维码
+            String targerIconPath = "d:/4.jpg";   //生成的海报
+            System.out.println("给图片添加水印图片开始...");
+           ImageRemarkUtil.setImageMarkOptions(1.0f, 115, 400, null, null);
+           // 给图片添加水印图片
+           ImageRemarkUtil.markImageByIcon(iconPath, srcImgPath, targerIconPath);
+          System.out.println("给图片添加水印图片结束...");
         }
 }
