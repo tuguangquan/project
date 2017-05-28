@@ -17,7 +17,9 @@ public class AgentInfo {
     private String agentName;
     private int fansAddNum;
     private int fansCountNum;
-
+    private String token;
+    private String description;
+    private String encodingAESKey;
     public long getId() {
         return id;
     }
@@ -88,5 +90,33 @@ public class AgentInfo {
 
     public void setAgentName(String agentName) {
         this.agentName = agentName;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getToken() {
+        return token;
+    }
+
+    public void setToken(String token) {
+        this.token = token;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public String getEncodingAESKey() {
+        return encodingAESKey;
+    }
+
+    public void setEncodingAESKey(String encodingAESKey) {
+        this.encodingAESKey = encodingAESKey;
     }
 }

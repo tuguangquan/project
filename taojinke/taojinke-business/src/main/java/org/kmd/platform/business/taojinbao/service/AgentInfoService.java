@@ -40,6 +40,7 @@ public class AgentInfoService {
     public AgentInfo getAgentInfoByAppID(String   appId) {
             return mapper.getAgentInfoByAppID(appId);
     }
+
     public  AgentInfo getAgentInfoByAgentId(long agentId){
         if(agentId==0 ){
             return null;

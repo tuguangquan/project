@@ -479,12 +479,11 @@ public class WeiXinService {
     }
 
     public static void main(String[] args) throws Exception {
-            String appId = "wx3920e6874f8f44ba";
+            String appId = "wx3920e6874f8f44a";
             String appSecret ="56043821d2d4ac42174fc76facfa2ccd";
-           WeiXinService weiXinService = new WeiXinService();
-            AccessToken accessToken = weiXinService.getAccessToken(appId,appSecret);
-            List list =getUser(accessToken.getToken());
-            JSONArray jsonArray = JSONArray.fromObject(list);
-            sendMsgToSomeUser("你好,你真的不好吗？",jsonArray,accessToken.getToken());//String msg,JSONArray jsonArray
+           // AccessToken accessToken = getAccessToken(appId,appSecret);
+            //List list =getUser(accessToken.getToken());
+            //JSONArray jsonArray = JSONArray.fromObject(list);
+            //sendMsgToSomeUser("你好,你真的不好吗？",jsonArray,accessToken.getToken());//String msg,JSONArray jsonArray
         }
 }

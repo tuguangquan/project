@@ -55,7 +55,7 @@ public class WeixinServiceWeb {
     private MsgSubService msgSubService;
 
     @Produces(MediaType.APPLICATION_JSON + ";charset=UTF-8")
-    @Path("/add")
+    @Path("/submit")
     @POST
     public String add(@Context HttpServletRequest request,@FormParam("name") String name,@FormParam("description") String description,
                       @FormParam("weiXinId") String weiXinId,@FormParam("weiXinOriginalId") String weiXinOriginalId,
@@ -66,6 +66,11 @@ public class WeixinServiceWeb {
                 token==null||token.trim().equals("")||name==null|| name.trim().equals("")
                 ||description==null|| description.trim().equals("") ||encodingAESKey==null|| encodingAESKey.trim().equals("")){
             return JsonResultUtils.getCodeAndMesByString(JsonResultUtils.Code.ERROR.getCode(), "参数不能为空!");
+        }
+        //校验appId appSecret
+        AccessToken accessToken = weiXinService.getAccessToken(appId,appSecret);
+        if (accessToken == null){
+            return JsonResultUtils.getCodeAndMesByString(JsonResultUtils.Code.ERROR.getCode(), "设置的appId，appSecret有误!");
         }
         long agentId = userService.getCurrentAgentId(request);
         if(agentId==0){
@@ -87,8 +92,75 @@ public class WeixinServiceWeb {
         agentInfo.setAppID(appId);
         agentInfo.setAppSecret(appSecret);
         agentInfo.setAgentName(name);
+        agentInfo.setToken(token);
+        agentInfo.setDescription(description);
+        agentInfo.setEncodingAESKey(encodingAESKey);
         agentInfoService.add(agentInfo);
         return JsonResultUtils.getCodeAndMesByStringAsDefault(JsonResultUtils.Code.SUCCESS);
+    }
+
+    @Produces(MediaType.APPLICATION_JSON + ";charset=UTF-8")
+    @Path("/update")
+    @POST
+    public String reset(@Context HttpServletRequest request,@FormParam("name") String name,@FormParam("description") String description,
+                      @FormParam("weiXinId") String weiXinId,@FormParam("weiXinOriginalId") String weiXinOriginalId,
+                      @FormParam("appID") String appId,@FormParam("appSecret") String appSecret,@FormParam("token") String token,
+                      @FormParam("encodingAESKey") String encodingAESKey){
+        if(weiXinId==null ||weiXinId.trim().equals("")|| weiXinOriginalId==null|| weiXinOriginalId.trim().equals("")
+                ||appId==null|| appId.trim().equals("")||appSecret==null|| appSecret.trim().equals("")||
+                token==null||token.trim().equals("")||name==null|| name.trim().equals("")
+                ||description==null|| description.trim().equals("") ||encodingAESKey==null|| encodingAESKey.trim().equals("")){
+            return JsonResultUtils.getCodeAndMesByString(JsonResultUtils.Code.ERROR.getCode(), "参数不能为空!");
+        }
+        //校验appId appSecret
+        AccessToken accessToken = weiXinService.getAccessToken(appId,appSecret);
+        if (accessToken == null){
+            return JsonResultUtils.getCodeAndMesByString(JsonResultUtils.Code.ERROR.getCode(), "设置的appId，appSecret有误!");
+        }
+        long agentId = userService.getCurrentAgentId(request);
+        if(agentId==0){
+            return JsonResultUtils.getCodeAndMesByString(JsonResultUtils.Code.ERROR.getCode(), "请重新登录!");
+        }
+        AgentInfo  agentInfoExist = agentInfoService.getAgentInfoByAppID(appId);
+        if(null==agentInfoExist){
+            return JsonResultUtils.getCodeAndMesByString(JsonResultUtils.Code.ERROR.getCode(), "该公众号还没有绑定!");
+        }
+        //添加代理商信息
+        AgentInfo  agentInfo = new AgentInfo();
+        agentInfo.setId(agentInfoExist.getId());
+        agentInfo.setWeixinId(weiXinId);
+        agentInfo.setWeixinOriginalId(weiXinOriginalId);
+        agentInfo.setAgentId(agentId);
+        agentInfo.setAppID(appId);
+        agentInfo.setAppSecret(appSecret);
+        agentInfo.setAgentName(name);
+        agentInfo.setDescription(description);
+        agentInfo.setEncodingAESKey(encodingAESKey);
+        agentInfoService.update(agentInfo);
+        return JsonResultUtils.getCodeAndMesByStringAsDefault(JsonResultUtils.Code.SUCCESS);
+    }
+
+    @Produces(MediaType.APPLICATION_JSON + ";charset=UTF-8")
+    @Path("/get")
+    @POST
+    public String get(@Context HttpServletRequest request,@FormParam("appId") String appId){
+        if( appId==null|| appId.trim().equals("")){
+            return JsonResultUtils.getCodeAndMesByString(JsonResultUtils.Code.ERROR.getCode(), "weiXinOriginalId参数不能为空!");
+        }
+        AgentInfo  agentInfo = agentInfoService.getAgentInfoByAppID(appId);
+        return JsonResultUtils.getObjectResultByStringAsDefault(agentInfo, JsonResultUtils.Code.SUCCESS);
+    }
+
+    @Produces(MediaType.APPLICATION_JSON + ";charset=UTF-8")
+    @Path("/delete")
+    @POST
+    public String delete(@Context HttpServletRequest request,@FormParam("appId") String appId){
+        if( appId==null|| appId.trim().equals("")){
+            return JsonResultUtils.getCodeAndMesByString(JsonResultUtils.Code.ERROR.getCode(), "weiXinOriginalId参数不能为空!");
+        }
+        AgentInfo  agentInfo =  new AgentInfo();
+        agentInfoService.delete(agentInfo);
+        return JsonResultUtils.getObjectResultByStringAsDefault(agentInfo, JsonResultUtils.Code.SUCCESS);
     }
 
 

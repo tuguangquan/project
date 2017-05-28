@@ -4,7 +4,7 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="org.kmd.platform.business.taojinbao.mapper.AgentInfoMapper">
     <sql id="agentInfo_fields">
-		ID,WEIXINID,WEIXINORIGINALID,APPID,APPSECRET,AGENTID,FANSADDNUM,FANSCOUNTNUM,AGENTNAME
+		ID,WEIXINID,WEIXINORIGINALID,APPID,APPSECRET,AGENTID,FANSADDNUM,FANSCOUNTNUM,AGENTNAME,TOKEN,DESCRIPTION,ENCODINGAESKEY
 	</sql>
 
     <resultMap id="AgentInfoResultMap" type="AgentInfo">
@@ -17,20 +17,40 @@
         <result property="fansAddNum" column="FANSADDNUM"/>
         <result property="fansCountNum" column="FANSCOUNTNUM"/>
         <result property="agentName" column="AGENTNAME"/>
+        <result property="token" column="TOKEN"/>
+        <result property="description" column="DESCRIPTION"/>
+        <result property="encodingAESKey" column="ENCODINGAESKEY"/>
     </resultMap>
 
     <insert id="add" parameterType="AgentInfo"  keyProperty="id"
             useGeneratedKeys="true">
         INSERT INTO
         agent_info(
-            WEIXINID,WEIXINORIGINALID,APPID,APPSECRET,AGENTID,FANSADDNUM,FANSCOUNTNUM,AGENTNAME
+            WEIXINID,WEIXINORIGINALID,APPID,APPSECRET,AGENTID,FANSADDNUM,FANSCOUNTNUM,AGENTNAME,TOKEN,DESCRIPTION,ENCODINGAESKEY
         )
-        VALUES (#{weixinId},#{weixinOriginalId},#{appID},#{appSecret},#{agentId},#{fansAddNum},#{fansCountNum},#{agentName});
+        VALUES (#{weixinId},#{weixinOriginalId},#{appID},#{appSecret},#{agentId},#{fansAddNum},#{fansCountNum},#{agentName},#{token},#{description},#{encodingAESKey});
         <selectKey resultType="long" keyProperty="id">
             select
             LAST_INSERT_ID() as id
         </selectKey>
     </insert>
+
+    <update id="update" parameterType="AgentInfo">
+        UPDATE agent_info
+        <set>
+            <if test="weixinId != null">WEIXINID=#{weixinId},</if>
+            <if test="weixinOriginalId != null">WEIXINORIGINALID=#{weixinOriginalId},</if>
+            <if test="appID != null">APPID=#{appID},</if>
+            <if test="appSecret != null">APPSECRET=#{appSecret},</if>
+            <if test="agentId !=null">AGENTID=#{agentId},</if>
+            <if test="fansAddNum !=null">FANSADDNUM=#{fansAddNum},</if>
+            <if test="fansCountNum !=null">FANSCOUNTNUM=#{fansCountNum}</if>
+            <if test="agentName !=null">AGENTNAME=#{agentName}</if>
+            <if test="token !=null">TOKEN=#{token}</if>
+        </set>
+        WHERE ID = #{id};
+    </update>
+
 
     <select id="findByCondition" parameterType="map" resultMap="AgentInfoResultMap">
         SELECT
@@ -59,4 +79,10 @@
         <include refid="agentInfo_fields"/>
         FROM agent_info WHERE appID=#{appId}
     </select>
+
+    <delete id="delete" parameterType="AgentInfo">
+        DELETE FROM agent_info
+        WHERE appID=#{appId}
+    </delete>
+
 </mapper>

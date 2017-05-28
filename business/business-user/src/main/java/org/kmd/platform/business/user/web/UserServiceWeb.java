@@ -186,13 +186,13 @@ public class UserServiceWeb {
     @Produces( MediaType.APPLICATION_JSON + ";charset=UTF-8")
     @Path("/login")
     @POST
-    public String login(@Context HttpServletRequest request,@FormParam("name") String name,@FormParam("password") String password,@FormParam("selfCode") String selfCode){
+    public String login(@Context HttpServletRequest request,@FormParam("name") String name,@FormParam("password") String password,@FormParam("safeCode") String safeCode){
         HttpSession session = request.getSession();
         if(name==null ||name.trim().equals("")||password==null ||password.trim().equals("")){
             return JsonResultUtils.getCodeAndMesByString(JsonResultUtils.Code.ERROR.getCode(), "登录用户名和密码不能为空!");
         }
         String pw=MD5Encoder.GetMD5Code(password);
-        User user = userService.getUserByNameAndPassword(name,pw,selfCode);
+        User user = userService.getUserByNameAndPassword(name,pw,safeCode);
         if(user!=null){
             //写入session
             session.setAttribute("userName", user.getName());
@@ -206,7 +206,7 @@ public class UserServiceWeb {
     @Produces( MediaType.APPLICATION_JSON + ";charset=UTF-8")
     @Path("resetPassword")
     @POST
-    public String resetPassword(@Context HttpServletRequest request,@FormParam("password") String password,@FormParam("selfCode") String selfCode){
+    public String resetPassword(@Context HttpServletRequest request,@FormParam("password") String password,@FormParam("safeCode") String safeCode){
         if(password==null ||password.trim().equals("")){
             return JsonResultUtils.getCodeAndMesByString(JsonResultUtils.Code.ERROR.getCode(), "修改的密码不能为空!");
         }
@@ -216,8 +216,8 @@ public class UserServiceWeb {
         }
         User user = new User();
         user.setId(userId);
-        if(selfCode!=null && !selfCode.trim().equals("")){
-            user.setSelfCode(selfCode);
+        if(safeCode!=null && !safeCode.trim().equals("")){
+            user.setSelfCode(safeCode);
         }
         user.setPassword(password);
         userService.update(user);
