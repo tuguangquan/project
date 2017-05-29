@@ -25,23 +25,23 @@
 
 
     <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
-        <property name="dataSource" ref="realtimemonitor" />
+        <property name="dataSource" ref="kmd" />
     </bean>
     <!-- 使用annotation定义事务 -->
     <tx:annotation-driven transaction-manager="transactionManager"
                           proxy-target-class="false" />
 
-    <context:component-scan base-package="org.whut.seis.business"></context:component-scan>
+    <context:component-scan base-package="org.kmd.platform.business"></context:component-scan>
     <context:annotation-config />
     <!-- <tx:annotation-driven /> <context:annotation-config /> -->
 
     <!-- define the SqlSessionFactory -->
     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
-        <property name="dataSource" ref="realtimemonitor" />
-        <property name="typeAliasesPackage" value="org.whut.seis.business" />
+        <property name="dataSource" ref="kmd" />
+        <property name="typeAliasesPackage" value="org.kmd.platform.business" />
     </bean>
     <bean id="mappers" class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-        <property name="basePackage" value="org.whut.seis.business" />
+        <property name="basePackage" value="org.kmd.platform.business" />
     </bean>
 
     <import resource="security-applicationContext.xml"/>

@@ -8,7 +8,7 @@ public class MsgTemp {
     private long agentId;
     private String msgType;//文本、图片、声音...
     private String modeContent;
-    private String msgMatch;
+    private String modeMatch;
     private String weiXinOriginId;
     private int priority;
 
@@ -52,12 +52,12 @@ public class MsgTemp {
         this.weiXinOriginId = weiXinOriginId;
     }
 
-    public String getMsgMatch() {
-        return msgMatch;
+    public String getModeMatch() {
+        return modeMatch;
     }
 
-    public void setMsgMatch(String msgMatch) {
-        this.msgMatch = msgMatch;
+    public void setModeMatch(String modeMatch) {
+        this.modeMatch = modeMatch;
     }
 
     public int getPriority() {

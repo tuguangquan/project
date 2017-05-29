@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.kmd.platform.business.taojinbao.mapper.PosterMapper">
+    <sql id="msgPoster_fields">
+        ID,MEDIA_ID,AGENTID,WEIXINORIGINID,TYPE
+    </sql>
+
+    <resultMap id="PosterResultMap" type="Poster">
+        <id property="id" column="ID"/>
+        <result property="media_id" column="MEDIA_ID"/>
+        <result property="agentId" column="AGENTID"/>
+        <result property="weiXinOriginId" column="WEIXINORIGINID"/>
+        <result property="type" column="TYPE"/>
+    </resultMap>
+
+    <insert id="add" parameterType="Poster" keyProperty="id"
+            useGeneratedKeys="true">
+        INSERT INTO
+        ims_msg_poster(
+        MEDIA_ID,AGENTID,WEIXINORIGINID,TYPE
+        )
+        VALUES (#{media_id},#{agentId},#{weiXinOriginId},#{type});
+        <selectKey resultType="long" keyProperty="id">
+            select
+            LAST_INSERT_ID() as id
+        </selectKey>
+    </insert>
+
+    <select id="getPosterByWeiXinOriginId" parameterType="java.lang.String" resultMap="PosterResultMap">
+        SELECT
+        <include refid="msgPoster_fields"/>
+        FROM ims_msg_poster WHERE weiXinOriginId=#{originId}
+    </select>
+
+</mapper>

@@ -85,4 +85,11 @@
         WHERE appID=#{appId}
     </delete>
 
+    <select id="getAgentInfoByWeiXinOriginId"  parameterType="java.lang.String" resultMap="AgentInfoResultMap">
+        SELECT
+        <include refid="agentInfo_fields"/>
+        FROM agent_info WHERE WEIXINORIGINALID=#{weixinOriginalId}
+    </select>
+
+
 </mapper>

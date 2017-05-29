@@ -21,7 +21,7 @@
         </session-management>
     </http>
     <beans:bean id="myFilter"
-                class="org.whut.seis.business.security.MySecurityInterceptorFilter">
+                class="org.kmd.platform.business.user.security.MySecurityInterceptorFilter">
         <!-- 用户拥有的权限 -->
         <beans:property name="authenticationManager" ref="authenticationManager" />
         <!-- 用户是否拥有所请求资源的权限 -->
@@ -36,10 +36,10 @@
         </authentication-provider>
     </authentication-manager>
 
-    <beans:bean id="myUserDetailsService" class="org.whut.seis.business.security.MyUserDetailsService"/>
+    <beans:bean id="myUserDetailsService" class="org.kmd.platform.business.user.security.MyUserDetailsService"/>
 
-    <beans:bean id="myAccessDecisionManager" class="org.whut.seis.business.security.MyAccessDecisionManager"/>
+    <beans:bean id="myAccessDecisionManager" class="org.kmd.platform.business.user.security.MyAccessDecisionManager"/>
 
-    <beans:bean  id="mySecurityMetadataSource" class="org.whut.seis.business.security.MySecurityMetadataSource"/>
+    <beans:bean  id="mySecurityMetadataSource" class="org.kmd.platform.business.user.security.MySecurityMetadataSource"/>
 
 </beans:beans>

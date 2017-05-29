@@ -75,6 +75,10 @@ public class MessageUtil {
     public static final String EVENT_TYPE_SUBSCRIBE = "subscribe";
 
     /**
+     * 事件类型：SCAN(浏览，订阅后重新扫码)
+     */
+    public static final String EVENT_TYPE_SCAN = "SCAN";
+    /**
      * 事件类型：unsubscribe(取消订阅)
      */
     public static final String EVENT_TYPE_UNSUBSCRIBE = "unsubscribe";
@@ -171,6 +175,17 @@ public class MessageUtil {
         return xstream.toXML(newsMessage);
     }
 
+    /**
+     * 图片消息对象转换成xml
+     *
+     * @param imageMessageResp 图片消息对象
+     * @return xml
+     */
+    public static String imageMessageToXml(ImageMessageResp imageMessageResp) {
+        xstream.alias("xml", imageMessageResp.getClass());
+        xstream.alias("item", new Article().getClass());
+        return xstream.toXML(imageMessageResp);
+    }
     /**
      * 扩展xstream，使其支持CDATA块
      *

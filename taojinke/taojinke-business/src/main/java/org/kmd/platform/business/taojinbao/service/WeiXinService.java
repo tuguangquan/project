@@ -22,15 +22,12 @@ import net.sf.json.JSONArray;
 import net.sf.json.JSONException;
 import net.sf.json.JSONObject;
 import org.kmd.platform.business.taojinbao.dto.Material;
-import org.kmd.platform.business.taojinbao.entity.MsgSub;
-import org.kmd.platform.business.taojinbao.entity.MsgTemp;
+import org.kmd.platform.business.taojinbao.entity.*;
 import org.kmd.platform.business.taojinbao.mapper.MsgTempMapper;
+import org.kmd.platform.business.taojinbao.servlet.process.impl.ImageRespProcess;
 import org.kmd.platform.business.taojinbao.servlet.process.impl.NewsRespProcess;
 import org.kmd.platform.business.taojinbao.servlet.process.impl.TextRespProcess;
-import org.kmd.platform.business.taojinbao.util.AccessToken;
-import org.kmd.platform.business.taojinbao.util.ImageRemarkUtil;
-import org.kmd.platform.business.taojinbao.util.MessageUtil;
-import org.kmd.platform.business.taojinbao.util.MyX509TrustManager;
+import org.kmd.platform.business.taojinbao.util.*;
 import org.kmd.platform.business.taojinbao.weixin.QRCode.ActionInfo;
 import org.kmd.platform.business.taojinbao.weixin.Constant;
 import org.kmd.platform.business.taojinbao.weixin.QRCode.QRCode;
@@ -49,18 +46,28 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 public class WeiXinService {
 
+    private static PlatformLogger log = PlatformLogger.getLogger(WeiXinService.class);
     @Autowired
     public TextRespProcess textRespProcess;
     @Autowired
     public NewsRespProcess newsRespProcess;
+    @Autowired
+    public ImageRespProcess imageRespProcess;
+
     @Autowired
     public MsgTempService msgTempService;
     @Autowired
     public MsgTempMapper msgTempMapper;
     @Autowired
     private MsgSubService msgSubService;
+    @Autowired
+    private PosterService posterService;
+    @Autowired
+    private AgentInfoService agentInfoService;
+    @Autowired
+    private ShopService shopService;
 
-    private static PlatformLogger log = PlatformLogger.getLogger(WeiXinService.class);
+
 
     public final static String menu_create_url = "https://api.weixin.qq.com/cgi-bin/menu/create?access_token=ACCESS_TOKEN";
     public final static String menu_get_url = "https://api.weixin.qq.com/cgi-bin/menu/get?access_token=ACCESS_TOKEN";
@@ -79,7 +86,7 @@ public class WeiXinService {
      */
 
 
-    public static   JSONObject httpRequestForImage(String requestUrl, String requestMethod, String outputStr) {
+    public   JSONObject httpRequestForImage(String requestUrl, String requestMethod, String outputStr) {
         JSONObject jsonObject = null;
         StringBuffer buffer = new StringBuffer();
         try {
@@ -138,7 +145,7 @@ public class WeiXinService {
 
 
 
-    public static   JSONObject httpRequest(String requestUrl, String requestMethod, String outputStr) {
+    public    JSONObject httpRequest(String requestUrl, String requestMethod, String outputStr) {
         JSONObject jsonObject = null;
         StringBuffer buffer = new StringBuffer();
         try {
@@ -189,7 +196,7 @@ public class WeiXinService {
         return jsonObject;
     }
 
-    public  int createMenu(String jsonMenu, String accessToken) {
+    public    int createMenu(String jsonMenu, String accessToken) {
         int result = 0;
         // 拼装创建菜单的url
         String url = menu_create_url.replace("ACCESS_TOKEN", accessToken);
@@ -217,7 +224,7 @@ public class WeiXinService {
     }
 
 
-    public static AccessToken getAccessToken(String appId,String appSecret ) {
+    public  AccessToken getAccessToken(String appId,String appSecret ) {
         AccessToken accessToken = null;
         String requestUrl = access_token_url.replace("APPID", appId).replace("APPSECRET", appSecret);
         JSONObject jsonObject = httpRequest(requestUrl, "GET", null);
@@ -246,7 +253,7 @@ public class WeiXinService {
             Map<String, String> requestMap = MessageUtil.parseXml(request);
             // 消息类型
             String msgTypeReq = requestMap.get("MsgType");
-            String weiXinOriginId = requestMap.get("FromUserName");
+            String weiXinOriginId = requestMap.get("ToUserName");
             List<MsgTemp> msgTempList = msgTempService.getMsgTempByOriginId(weiXinOriginId);
             // 文本消息
             if (msgTypeReq.equals(MessageUtil.REQ_MESSAGE_TYPE_TEXT)) {
@@ -294,8 +301,38 @@ public class WeiXinService {
             else if (msgTypeReq.equals(MessageUtil.REQ_MESSAGE_TYPE_EVENT)) {
                 // 事件类型
                 String eventType = requestMap.get("Event");
+                String eventKey = requestMap.get("EventKey");
                 // 订阅
                 if (eventType.equals(MessageUtil.EVENT_TYPE_SUBSCRIBE)) {
+                    String [] split = eventKey.split("_");
+                    long parentId = Long.parseLong(split[1]);
+                    MsgSub msgSub = msgSubService.getMsgSubByWeiXinOriginId(weiXinOriginId) ;
+                    AgentInfo agentInfo = agentInfoService.getAgentInfoByWeiXinOriginId(weiXinOriginId);
+                    //关注者openid
+                    String fromUserName = requestMap.get("FromUserName");
+                    Shop shop = shopService.getByAgentIdWithOutStatue(agentInfo.getAgentId());
+                    if (shop == null){
+                        Shop add = new Shop();
+                        add.setAgentId(agentInfo.getAgentId());
+                        add.setOpenId(fromUserName);
+                        add.setStatus(ShopEunm.RESP_STATUS_SUB);//粉丝
+                        add.setParentId(parentId);
+                        shopService.add(add);
+                    }
+
+                    log.info("添加粉丝成功！");
+
+                    if (null == msgSub){   //没有设置关注回复
+                        requestMap.put("Content","感谢您的关注！");
+                        return textRespProcess.getRespMessage(requestMap);
+                    }else{
+                        String contentSub =  msgSub.getContent();
+                        requestMap.put("Content",contentSub);    //关注回复一定是文本类型
+                        return textRespProcess.getRespMessage(requestMap);
+                    }
+                }
+                // 浏览
+                if (eventType.equals(MessageUtil.EVENT_TYPE_SCAN)) {
                     MsgSub msgSub = msgSubService.getMsgSubByWeiXinOriginId(weiXinOriginId) ;
                     if (null == msgSub){   //没有设置关注回复
                         requestMap.put("Content","感谢您的关注！");
@@ -312,11 +349,18 @@ public class WeiXinService {
                 }
                 // 自定义菜单点击事件
                 else if (eventType.equals(MessageUtil.EVENT_TYPE_CLICK)) {
-                    // TODO 自定义菜单权没有开放，暂不处理该类消息
+                    if (eventKey.equals("V1001_TODAY_MUSIC")){
+                        Poster poster =  posterService.getPosterByWeiXinOriginId(weiXinOriginId) ;
+                        if (poster== null){
+                            requestMap.put("Content","海报获取失败，请稍后再试！"+weiXinOriginId);
+                            return textRespProcess.getRespMessage(requestMap);
+                        }else{
+                            requestMap.put("Media_id",poster.getMedia_id());
+                            return imageRespProcess.getRespMessage(requestMap);
+                        }
+                    }
                 }
             }
-
-
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -324,7 +368,7 @@ public class WeiXinService {
         return respMessage;
     }
    //得到所有关注用户
-    public static List getUser(String accessToken) {
+    public List getUser(String accessToken) {
         // 拼装创建菜单的url
         String url = get_user_url.replace("ACCESS_TOKEN", accessToken);
         // 调用接口创建菜单
@@ -337,7 +381,7 @@ public class WeiXinService {
     }
 
     //得到二维码
-    public static void  get_QR( String filename,String savePath,String ticket) throws IOException {
+    public  void  get_QR( String filename,String savePath,String ticket) throws IOException {
        String urlString = "https://mp.weixin.qq.com/cgi-bin/showqrcode?ticket="+ticket;
        URL url = new URL(urlString);
             // 打开连接
@@ -367,9 +411,9 @@ public class WeiXinService {
         }
 
     //得到二维码的ticket
-    public static String getQRCodeTicket(String accessToken,String scene_str) {
+    public  String getQRCodeTicket(String accessToken,long scene_id) {
         Scene scene = new Scene();
-        scene.setScene_str(scene_str);
+        scene.setScene_id(scene_id);
         ActionInfo actionInfo = new ActionInfo();
         actionInfo.setScene(scene);
         QRCode qrCode = new QRCode();
@@ -386,7 +430,7 @@ public class WeiXinService {
         return null;
     }
     //给用户群发文本消息
-    public static int sendMsgToSomeUser(String msg,JSONArray jsonArray,String accessToken) {
+    public  int sendMsgToSomeUser(String msg,JSONArray jsonArray,String accessToken) {
         int result = 0;
         // 拼装发消息的url
         String url = send_msg_url.replace("ACCESS_TOKEN", accessToken);
@@ -447,6 +491,7 @@ public class WeiXinService {
         }
         return null;
     }
+
 
     /**
      * 上传图片到微信服务器(本接口所上传的图片不占用公众号的素材库中图片数量的5000个的限制。图片仅支持jpg/png格式，大小必须在1MB以下)
@@ -545,7 +590,7 @@ public class WeiXinService {
         return result;
     }
     //获取公众号下指定类型的素材
-    public static JSONObject get_material(String token,String type,int offset,int count) throws Exception{
+    public  JSONObject get_material(String token,String type,int offset,int count) throws Exception{
         try {
             log.info("开始上传图文消息内的图片---------------------");
             //上传图片素材
@@ -569,18 +614,57 @@ public class WeiXinService {
     }
 
     public static void main(String[] args) throws Exception {
-           // String appId = "wx3920e6874f8f44ba";
-           // String appSecret ="56043821d2d4ac42174fc76facfa2ccd";
-           // AccessToken accessToken = getAccessToken(appId,appSecret);
-           // String ticket = getQRCodeTicket(accessToken.getToken(),"18ertryrtdefgr");
-           // get_QR("9.jpg","D:/",ticket);
-            String srcImgPath = "d:/123.jpg";     //原图
-            String iconPath = "d:/9.jpg";         //二维码
-            String targerIconPath = "d:/4.jpg";   //生成的海报
-            System.out.println("给图片添加水印图片开始...");
-           ImageRemarkUtil.setImageMarkOptions(1.0f, 115, 400, null, null);
-           // 给图片添加水印图片
-           ImageRemarkUtil.markImageByIcon(iconPath, srcImgPath, targerIconPath);
-          System.out.println("给图片添加水印图片结束...");
+
+
+            String appId = "wx3920e6874f8f44ba";
+            String appSecret ="56043821d2d4ac42174fc76facfa2ccd";
+            WeiXinService weiXinService = new WeiXinService();
+            AccessToken accessToken = weiXinService.getAccessToken(appId, appSecret);
+
+
+        //生成二维码
+        String ticket = weiXinService.getQRCodeTicket(accessToken.getToken(), 123);
+
+        weiXinService.get_QR("10.jpg", "D:/", ticket);
+//        String json = " {\n" +
+//                "        \"button\": [\n" +
+//                "            {\n" +
+//                "                \"type\": \"click\", \n" +
+//                "                \"name\": \"今日歌曲\", \n" +
+//                "                \"key\": \"V1001_TODAY_MUSIC\", \n" +
+//                "                \"sub_button\": [ ]\n" +
+//                "            }, \n" +
+//                "            {\n" +
+//                "                \"type\": \"click\", \n" +
+//                "                \"name\": \"歌手简介\", \n" +
+//                "                \"key\": \"V1001_TODAY_SINGER\", \n" +
+//                "                \"sub_button\": [ ]\n" +
+//                "            }, \n" +
+//                "            {\n" +
+//                "                \"name\": \"菜单\", \n" +
+//                "                \"sub_button\": [\n" +
+//                "                    {\n" +
+//                "                        \"type\": \"view\", \n" +
+//                "                        \"name\": \"搜索\", \n" +
+//                "                        \"url\": \"http://www.soso.com/\", \n" +
+//                "                        \"sub_button\": [ ]\n" +
+//                "                    }, \n" +
+//                "                    {\n" +
+//                "                        \"type\": \"view\", \n" +
+//                "                        \"name\": \"视频\", \n" +
+//                "                        \"url\": \"http://v.qq.com/\", \n" +
+//                "                        \"sub_button\": [ ]\n" +
+//                "                    }, \n" +
+//                "                    {\n" +
+//                "                        \"type\": \"click\", \n" +
+//                "                        \"name\": \"赞一下我们\", \n" +
+//                "                        \"key\": \"V1001_GOOD\", \n" +
+//                "                        \"sub_button\": [ ]\n" +
+//                "                    }\n" +
+//                "                ]\n" +
+//                "            }\n" +
+//                "        ]\n" +
+//                "    }";
+        //createMenu(json,accessToken.getToken()) ;
         }
 }

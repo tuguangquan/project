@@ -8,13 +8,13 @@ package org.kmd.platform.business.taojinbao.weixin.QRCode;
  * To change this template use File | Settings | File Templates.
  */
 public class Scene {
-     private String scene_str;
+     private long scene_id;
 
-    public String getScene_str() {
-        return scene_str;
+    public long getScene_id() {
+        return scene_id;
     }
 
-    public void setScene_str(String scene_str) {
-        this.scene_str = scene_str;
+    public void setScene_id(long scene_id) {
+        this.scene_id = scene_id;
     }
 }

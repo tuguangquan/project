@@ -47,5 +47,12 @@ public class AgentInfoService {
         }
         return mapper.getAgentInfoByAgentId(agentId);
     }
+    public  AgentInfo getAgentInfoByWeiXinOriginId(String weiXinOriginId){
+        if(weiXinOriginId==null ){
+            return null;
+        }
+        return mapper.getAgentInfoByWeiXinOriginId(weiXinOriginId);
+    }
+
 
 }

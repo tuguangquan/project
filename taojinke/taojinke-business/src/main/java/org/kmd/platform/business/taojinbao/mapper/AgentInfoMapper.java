@@ -18,5 +18,7 @@ public interface AgentInfoMapper extends AbstractMapper<AgentInfo> {
     public AgentInfo getAgentInfoByAgentName(String agentName);
     public AgentInfo getAgentInfoByAgentId(long agentId);
     public AgentInfo getAgentInfoByAppID(String  appId) ;
+    public AgentInfo getAgentInfoByWeiXinOriginId(String weiXinOriginId);
+
 
 }

@@ -8,7 +8,7 @@ package org.kmd.platform.business.taojinbao.entity;
  * To change this template use File | Settings | File Templates.
  */
 public class AgentInfo {
-    private Long id    ;
+    private Long id;
     private String weixinId;
     private String weixinOriginalId;
     private String appID;

@@ -32,15 +32,28 @@
 <script>
     var currentUser = null;
     $(document).ready(function(){
-        $.post($.URL.user.login,{"name": "tuguangquan", "password": 123,"selfCode":123},userInfoCallback,"json");
+       // $.post($.URL.user.login,{"type": "tuguangquan", "password": 123,"selfCode":123},userInfoCallback,"json");
+        $.post("rs/shop/add",
+                {"openId":"ofngQ06p2jZfiTdd9q7jtGYLACmM", "qq": "540275450","zfb":"18986157760","name":"tgq","phone":"18986157760"},  createPosterCallback
+                ,"JSON");
     });
-    function userInfoCallback(data){
+
+
+
+    function createPosterCallback(data){
+        $.post("rs/shop/audit",
+                {"pid":"tGYLACmM"},  auditCallback
+                ,"JSON");
+    }
+    function auditCallback(data){
         if(data!=null){
-            $.post("rs/user/resetPassword",
-                    {"password": 1234,"selfCode":1234},  listCallback
+            $.post("rs/poster/createPoster",
+                    {"openId": "ofngQ06p2jZfiTdd9q7jtGYLACmM"},  listCallback
                     ,"JSON");
         }
     }
+
+
     function listCallback(data){
         if(data!=null){
           alert(123)

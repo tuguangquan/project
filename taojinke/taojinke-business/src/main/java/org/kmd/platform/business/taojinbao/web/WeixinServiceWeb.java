@@ -22,10 +22,7 @@ import org.springframework.web.multipart.MultipartResolver;
 import org.springframework.web.multipart.commons.CommonsMultipartResolver;
 
 import javax.servlet.http.HttpServletRequest;
-import javax.ws.rs.FormParam;
-import javax.ws.rs.POST;
-import javax.ws.rs.Path;
-import javax.ws.rs.Produces;
+import javax.ws.rs.*;
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.MediaType;
 import java.io.File;
@@ -301,6 +298,8 @@ public class WeixinServiceWeb {
         return JsonResultUtils.getCodeAndMesByString(JsonResultUtils.Code.ERROR.getCode(), "凭证获取失败");
     }
 
+
+
     @Path("/sendMsgToSomeUser")
     @POST
     public String sendMsgToSomeUser(@Context HttpServletRequest request,@FormParam("openIds") String openIds,@FormParam("msg") String msg) {
@@ -325,35 +324,6 @@ public class WeixinServiceWeb {
         return JsonResultUtils.getCodeAndMesByString(JsonResultUtils.Code.ERROR.getCode(), "凭证获取失败");
     }
 
-    @Path("/getQRCodeTicket")
-    @POST
-    public String getQRCodeTicket(@Context HttpServletRequest request,@FormParam("sceneStr") String sceneStr) {
-        if (sceneStr == null || sceneStr.trim().equals("")) {
-            return JsonResultUtils.getCodeAndMesByString(JsonResultUtils.Code.ERROR.getCode(), "scene_str不能为空!");
-        }
-        long agentId = userService.getCurrentAgentId(request);
-        if(agentId==0){
-            return JsonResultUtils.getCodeAndMesByString(JsonResultUtils.Code.ERROR.getCode(), "请重新登录!");
-        }
-        AgentInfo agentInfo = agentInfoService.getAgentInfoByAgentId(agentId);
-        if (null == agentInfo){
-            return JsonResultUtils.getCodeAndMesByString(JsonResultUtils.Code.ERROR.getCode(), "还没有绑定公众号，请先绑定微信公众号");
-        }
-        AccessToken at = weiXinService.getAccessToken(agentInfo.getAppID(),agentInfo.getAppSecret());
-        if (null != at) {
-            // 调用接口得到ticket
-            String result = weiXinService.getQRCodeTicket(at.getToken(),sceneStr);
-            if (null == result){
-                return JsonResultUtils.getCodeAndMesByString(JsonResultUtils.Code.ERROR.getCode(), "获得ticket失败");
-            }  else{
-                return JsonResultUtils.getObjectResultByStringAsDefault(result, JsonResultUtils.Code.SUCCESS);
-            }
-        }
-        return JsonResultUtils.getCodeAndMesByString(JsonResultUtils.Code.ERROR.getCode(), "凭证获取失败");
-    }
-
-
-
     @Produces(MediaType.APPLICATION_JSON + ";charset=UTF-8")
     @Path("/addMsgTemp")
     @POST
@@ -376,7 +346,7 @@ public class WeixinServiceWeb {
         msgTemp.setWeiXinOriginId(weiXinOriginId);
         msgTemp.setMsgType(msgType);
         if (msgMatch!=null){
-            msgTemp.setMsgMatch(msgMatch);
+            msgTemp.setModeMatch(msgMatch);
         }
         if (priority!=null){
             msgTemp.setPriority(Integer.parseInt(priority));
@@ -431,4 +401,14 @@ public class WeixinServiceWeb {
         List<MsgTemp> msgTempList = msgTempService.list(weiXinOriginId,agentId);
         return JsonResultUtils.getObjectResultByStringAsDefault(msgTempList, JsonResultUtils.Code.SUCCESS);
     }
+
+    @Produces(MediaType.APPLICATION_JSON + ";charset=UTF-8")
+    @Path("/test")
+    @GET
+    public String test(@Context HttpServletRequest request){
+        request.getSession().getServletContext().getRealPath(File.separator);
+        return JsonResultUtils.getObjectResultByStringAsDefault( "", JsonResultUtils.Code.SUCCESS);
+    }
+
+
 }

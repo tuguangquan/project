@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.kmd.platform.business.taojinbao.mapper.ShopMapper">
+    <sql id="shop_fields">
+        ID,AGENTID,OPENID,QQ,ZFB,NAME,PHONE,STATUS,PID,PARENTID
+    </sql>
+
+    <resultMap id="ShopResultMap" type="Shop">
+        <id property="id" column="ID"/>
+        <result property="agentId" column="AGENTID"/>
+        <result property="openId" column="OPENID"/>
+        <result property="qq" column="QQ"/>
+        <result property="zfb" column="ZFB"/>
+        <result property="name" column="NAME"/>
+        <result property="phone" column="PHONE"/>
+        <result property="status" column="STATUS"/>
+        <result property="pid" column="PID"/>
+        <result property="parentId" column="PARENTID"/>
+    </resultMap>
+
+    <insert id="add" parameterType="Shop">
+        INSERT INTO
+        ims_agent_shop(
+           AGENTID,OPENID,QQ,ZFB,NAME,PHONE,STATUS,PID,PARENTID
+        )
+        VALUES (#{agentId},#{openId},#{qq},#{zfb},#{name},#{phone},#{status},#{pid},#{parentId});
+    </insert>
+
+    <select id="getByAgentId" parameterType="java.lang.Long" resultMap="ShopResultMap">
+        SELECT
+        <include refid="shop_fields"/>
+        FROM ims_agent_shop WHERE AGENTID=#{agentId} and STATUS =2
+    </select>
+
+    <select id="getByAgentIdWithOutStatue" parameterType="java.lang.Long" resultMap="ShopResultMap">
+        SELECT
+        <include refid="shop_fields"/>
+        FROM ims_agent_shop WHERE AGENTID=#{agentId}
+    </select>
+
+    <select id="getByOpenId" parameterType="java.lang.String" resultMap="ShopResultMap">
+        SELECT
+        <include refid="shop_fields"/>
+        FROM ims_agent_shop WHERE OPENID=#{openId}
+    </select>
+
+    <update id="update" parameterType="Shop">
+        UPDATE ims_agent_shop
+        <set>
+            <if test="qq != null">QQ=#{qq},</if>
+            <if test="zfb != null">ZFB=#{zfb},</if>
+            <if test="name != null">NAME=#{name},</if>
+            <if test="phone != null">PHONE=#{phone},</if>
+            <if test="status !=null">STATUS=#{status},</if>
+            <if test="pid !=null">PID=#{pid},</if>
+            <if test="pid !=null">PARENTID=#{parentId}</if>
+        </set>
+        WHERE OPENID = #{openId};
+    </update>
+</mapper>
