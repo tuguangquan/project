@@ -2,40 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6328e16e-7283-4bff-bff6-5e4f32b565da" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/posterImage/1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/weixin/resp/ImageMessageResp.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/servlet/process/impl/ImageRespProcess.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/entity/Poster.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/mapper/PosterMapper.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/taojinke/taojinke-business/src/main/resources/org/kmd/platform/business/taojinbao/mapper/PosterMapper.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/service/PosterService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/web/PosterServiceWeb.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/entity/Shop.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/util/ShopEunm.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/mapper/ShopMapper.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/taojinke/taojinke-business/src/main/resources/org/kmd/platform/business/taojinbao/mapper/ShopMapper.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/service/ShopService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/web/ShopServiceWeb.java" />
       <change type="DELETED" beforePath="D:\project\project\business\target\MANIFEST.MF" afterPath="" />
       <change type="DELETED" beforePath="D:\project\project\fundamental\target\MANIFEST.MF" afterPath="" />
       <change type="DELETED" beforePath="D:\project\project\taojinke\taojinke-business\src\main\java\org\kmd\platform\business\taojinbao\weixin\mass\resp\MassImage.java" afterPath="" />
       <change type="DELETED" beforePath="D:\project\project\taojinke\target\MANIFEST.MF" afterPath="" />
       <change type="DELETED" beforePath="D:\project\project\target\MANIFEST.MF" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/entity/AgentInfo.java" afterPath="$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/entity/AgentInfo.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/mapper/AgentInfoMapper.java" afterPath="$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/mapper/AgentInfoMapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-business/src/main/resources/org/kmd/platform/business/taojinbao/mapper/AgentInfoMapper.xml" afterPath="$PROJECT_DIR$/taojinke/taojinke-business/src/main/resources/org/kmd/platform/business/taojinbao/mapper/AgentInfoMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/service/AgentInfoService.java" afterPath="$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/service/AgentInfoService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/weixin/mass/resp/MassImageMessage.java" afterPath="$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/weixin/mass/resp/MassImageMessage.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/util/MessageUtil.java" afterPath="$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/util/MessageUtil.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/entity/MsgTemp.java" afterPath="$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/entity/MsgTemp.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/weixin/QRCode/Scene.java" afterPath="$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/weixin/QRCode/Scene.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/web/PosterServiceWeb.java" afterPath="$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/web/PosterServiceWeb.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/service/WeiXinService.java" afterPath="$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/service/WeiXinService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/web/WeixinServiceWeb.java" afterPath="$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/web/WeixinServiceWeb.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-business/src/main/resources/META-INF/spring/taojinke-applicationContext.xml" afterPath="$PROJECT_DIR$/taojinke/taojinke-business/src/main/resources/META-INF/spring/taojinke-applicationContext.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/title.html" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/title.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/WEB-INF/web.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MOVED" beforePath="D:\project\project\taojinke\taojinke-business\src\main\java\org\kmd\platform\business\taojinbao\weixin\mass\resp\Image.java" afterPath="$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/weixin/resp/Image.java" />
     </list>
     <ignored path="project.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -57,10 +32,10 @@
     <ignored path="$PROJECT_DIR$/taojinke/target/" />
     <ignored path="$PROJECT_DIR$/taojinke/taojinke-business/target/" />
     <ignored path="$PROJECT_DIR$/taojinke/taojinke-web/target/" />
-    <file path="/Dummy.txt" changelist="6328e16e-7283-4bff-bff6-5e4f32b565da" time="1496022386903" ignored="false" />
+    <file path="/Dummy.txt" changelist="6328e16e-7283-4bff-bff6-5e4f32b565da" time="1496122019378" ignored="false" />
     <file path="/taojinke-applicationContext.xml" changelist="6328e16e-7283-4bff-bff6-5e4f32b565da" time="1496046232735" ignored="false" />
     <file path="/TextRespProcess.java" changelist="6328e16e-7283-4bff-bff6-5e4f32b565da" time="1495633077795" ignored="false" />
-    <file path="/WeiXinService.java" changelist="6328e16e-7283-4bff-bff6-5e4f32b565da" time="1496058210874" ignored="false" />
+    <file path="/WeiXinService.java" changelist="6328e16e-7283-4bff-bff6-5e4f32b565da" time="1496115338081" ignored="false" />
     <file path="/fragment.java" changelist="6328e16e-7283-4bff-bff6-5e4f32b565da" time="1496042067920" ignored="false" />
     <file path="/UserService.java" changelist="6328e16e-7283-4bff-bff6-5e4f32b565da" time="1495953484743" ignored="false" />
     <file path="/WeixinServiceWeb.java" changelist="6328e16e-7283-4bff-bff6-5e4f32b565da" time="1496039881838" ignored="false" />
@@ -108,7 +83,7 @@
     <file path="/Shop.java" changelist="6328e16e-7283-4bff-bff6-5e4f32b565da" time="1496058066768" ignored="false" />
     <file path="/ShopMapper.java" changelist="6328e16e-7283-4bff-bff6-5e4f32b565da" time="1496048019161" ignored="false" />
     <file path="/ShopMapper.xml" changelist="6328e16e-7283-4bff-bff6-5e4f32b565da" time="1496059166644" ignored="false" />
-    <file path="/PosterServiceWeb.java" changelist="6328e16e-7283-4bff-bff6-5e4f32b565da" time="1496060228066" ignored="false" />
+    <file path="/PosterServiceWeb.java" changelist="6328e16e-7283-4bff-bff6-5e4f32b565da" time="1496111969030" ignored="false" />
     <file path="/ShopServiceWeb.java" changelist="6328e16e-7283-4bff-bff6-5e4f32b565da" time="1496060722805" ignored="false" />
     <file path="/ShopService.java" changelist="6328e16e-7283-4bff-bff6-5e4f32b565da" time="1496059126487" ignored="false" />
     <file path="/ShopEunm.java" changelist="6328e16e-7283-4bff-bff6-5e4f32b565da" time="1496050150003" ignored="false" />
@@ -126,42 +101,7 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
-    <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
-      <breakpoint>
-        <option name="NOTIFY_CAUGHT" value="true" />
-        <option name="NOTIFY_UNCAUGHT" value="true" />
-        <option name="ENABLED" value="false" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint>
-        <option name="NOTIFY_CAUGHT" value="true" />
-        <option name="NOTIFY_UNCAUGHT" value="true" />
-        <option name="ENABLED" value="false" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-    </breakpoint_any>
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint url="file://$PROJECT_DIR$/taojinke/taojinke-business/src/test/java/Main.java" line="252" class="Main" package="">
         <option name="ENABLED" value="true" />
@@ -178,7 +118,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/service/WeiXinService.java" line="625" class="org.kmd.platform.business.taojinbao.service.WeiXinService" package="org.kmd.platform.business.taojinbao.service">
+      <breakpoint url="file://$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/service/WeiXinService.java" line="631" class="org.kmd.platform.business.taojinbao.service.WeiXinService" package="org.kmd.platform.business.taojinbao.service">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -193,7 +133,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/service/WeiXinService.java" line="618" class="org.kmd.platform.business.taojinbao.service.WeiXinService" package="org.kmd.platform.business.taojinbao.service">
+      <breakpoint url="file://$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/service/WeiXinService.java" line="624" class="org.kmd.platform.business.taojinbao.service.WeiXinService" package="org.kmd.platform.business.taojinbao.service">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -238,21 +178,6 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/web/ShopServiceWeb.java" line="47" class="org.kmd.platform.business.taojinbao.web.ShopServiceWeb" package="org.kmd.platform.business.taojinbao.web">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
       <breakpoint url="file://$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/web/ShopServiceWeb.java" line="60" class="org.kmd.platform.business.taojinbao.web.ShopServiceWeb" package="org.kmd.platform.business.taojinbao.web">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
@@ -283,7 +208,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/service/WeiXinService.java" line="248" class="org.kmd.platform.business.taojinbao.service.WeiXinService" package="org.kmd.platform.business.taojinbao.service">
+      <breakpoint url="file://$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/web/PosterServiceWeb.java" line="82" class="org.kmd.platform.business.taojinbao.web.PosterServiceWeb" package="org.kmd.platform.business.taojinbao.web">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -298,7 +223,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/service/WeiXinService.java" line="256" class="org.kmd.platform.business.taojinbao.service.WeiXinService" package="org.kmd.platform.business.taojinbao.service">
+      <breakpoint url="file://$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/web/ShopServiceWeb.java" line="47" class="org.kmd.platform.business.taojinbao.web.ShopServiceWeb" package="org.kmd.platform.business.taojinbao.web">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -313,7 +238,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/service/WeiXinService.java" line="300" class="org.kmd.platform.business.taojinbao.service.WeiXinService" package="org.kmd.platform.business.taojinbao.service">
+      <breakpoint url="file://$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/web/PosterServiceWeb.java" line="95" class="org.kmd.platform.business.taojinbao.web.PosterServiceWeb" package="org.kmd.platform.business.taojinbao.web">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -328,7 +253,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/service/WeiXinService.java" line="305" class="org.kmd.platform.business.taojinbao.service.WeiXinService" package="org.kmd.platform.business.taojinbao.service">
+      <breakpoint url="file://$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/web/PosterServiceWeb.java" line="111" class="org.kmd.platform.business.taojinbao.web.PosterServiceWeb" package="org.kmd.platform.business.taojinbao.web">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -343,22 +268,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/service/WeiXinService.java" line="303" class="org.kmd.platform.business.taojinbao.service.WeiXinService" package="org.kmd.platform.business.taojinbao.service">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/service/WeiXinService.java" line="307" class="org.kmd.platform.business.taojinbao.service.WeiXinService" package="org.kmd.platform.business.taojinbao.service">
+      <breakpoint url="file://$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/web/PosterServiceWeb.java" line="112" class="org.kmd.platform.business.taojinbao.web.PosterServiceWeb" package="org.kmd.platform.business.taojinbao.web">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -374,7 +284,42 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </line_breakpoints>
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
+    <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
+      <breakpoint>
+        <option name="NOTIFY_CAUGHT" value="true" />
+        <option name="NOTIFY_UNCAUGHT" value="true" />
+        <option name="ENABLED" value="false" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint>
+        <option name="NOTIFY_CAUGHT" value="true" />
+        <option name="NOTIFY_UNCAUGHT" value="true" />
+        <option name="ENABLED" value="false" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+    </breakpoint_any>
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -387,10 +332,8 @@
       <file leaf-file-name="ShopServiceWeb.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/web/ShopServiceWeb.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="57" column="41" selection-start="2381" selection-end="2381" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state line="52" column="58" selection-start="2115" selection-end="2121" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -398,10 +341,8 @@
       <file leaf-file-name="PosterServiceWeb.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/web/PosterServiceWeb.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="110" column="45" selection-start="4801" selection-end="4801" vertical-scroll-proportion="-15.8">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state line="112" column="0" selection-start="4824" selection-end="4824" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -418,11 +359,20 @@
       <file leaf-file-name="WeiXinService.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/service/WeiXinService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="305" column="0" selection-start="13726" selection-end="13726" vertical-scroll-proportion="0.33206108">
+            <state line="325" column="11" selection-start="14953" selection-end="14953" vertical-scroll-proportion="0.5480769">
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#19396#19404#0" expanded="true" />
+                <element signature="e#19723#19731#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Shop.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/entity/Shop.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="12" column="26" selection-start="301" selection-end="307" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -431,9 +381,7 @@
         <entry file="file://$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/service/ShopService.java">
           <provider selected="true" editor-type-id="text-editor">
             <state line="28" column="37" selection-start="851" selection-end="851" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -442,9 +390,7 @@
         <entry file="file://$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/mapper/ShopMapper.java">
           <provider selected="true" editor-type-id="text-editor">
             <state line="15" column="27" selection-start="510" selection-end="521" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -452,7 +398,7 @@
       <file leaf-file-name="ShopMapper.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/taojinke/taojinke-business/src/main/resources/org/kmd/platform/business/taojinbao/mapper/ShopMapper.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="42" column="27" selection-start="1632" selection-end="1643" vertical-scroll-proportion="0.0">
+            <state line="45" column="53" selection-start="1809" selection-end="1809" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -461,7 +407,7 @@
       <file leaf-file-name="title.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/title.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="60" selection-start="664" selection-end="664" vertical-scroll-proportion="1.6785715">
+            <state line="44" column="72" selection-start="1079" selection-end="1087" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -497,9 +443,9 @@
         <option value="$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/service/ShopService.java" />
         <option value="$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/mapper/ShopMapper.java" />
         <option value="$PROJECT_DIR$/taojinke/taojinke-business/src/main/resources/org/kmd/platform/business/taojinbao/mapper/ShopMapper.xml" />
+        <option value="$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/web/ShopServiceWeb.java" />
         <option value="$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/web/PosterServiceWeb.java" />
         <option value="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/title.html" />
-        <option value="$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/web/ShopServiceWeb.java" />
         <option value="$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/service/WeiXinService.java" />
       </list>
     </option>
@@ -585,10 +531,10 @@
     <option name="vmOptions" value="-Dmaven.multiModuleProjectDirectory=$M2_HOME" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1382" />
-    <option name="height" value="744" />
+    <option name="x" value="157" />
+    <option name="y" value="27" />
+    <option name="width" value="1366" />
+    <option name="height" value="728" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -637,6 +583,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -1331,7 +1278,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -1716,7 +1662,7 @@
     </configuration>
     <configuration default="true" type="JavascriptDebugSession" factoryName="Local" singleton="true">
       <JSDebuggerConfigurationSettings>
-        <option name="engineId" />
+        <option name="engineId" value="embedded" />
         <option name="fileUrl" />
       </JSDebuggerConfigurationSettings>
       <method />
@@ -1816,12 +1762,12 @@
       </method>
     </configuration>
     <list size="6">
-      <item index="0" class="java.lang.String" itemvalue="Application.WeiXinService" />
-      <item index="1" class="java.lang.String" itemvalue="Application.GoodsServiceWeb" />
-      <item index="2" class="java.lang.String" itemvalue="Application.HttpRequest" />
-      <item index="3" class="java.lang.String" itemvalue="Application.Main" />
-      <item index="4" class="java.lang.String" itemvalue="Application.ImageRemarkUtil" />
-      <item index="5" class="java.lang.String" itemvalue="Tomcat Server.Tomcat 7.0" />
+      <item index="0" class="java.lang.String" itemvalue="Tomcat Server.Tomcat 7.0" />
+      <item index="1" class="java.lang.String" itemvalue="Application.WeiXinService" />
+      <item index="2" class="java.lang.String" itemvalue="Application.GoodsServiceWeb" />
+      <item index="3" class="java.lang.String" itemvalue="Application.HttpRequest" />
+      <item index="4" class="java.lang.String" itemvalue="Application.Main" />
+      <item index="5" class="java.lang.String" itemvalue="Application.ImageRemarkUtil" />
     </list>
     <recent_temporary>
       <list size="5">
@@ -1852,21 +1798,20 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
-    <editor active="false" />
+    <frame x="157" y="27" width="1366" height="728" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.40034366" sideWeight="0.8098485" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2720848" sideWeight="0.80981594" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.40034366" sideWeight="0.19015151" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25984848" sideWeight="0.12714776" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15547703" sideWeight="0.19018404" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18941718" sideWeight="0.22438163" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.38831615" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32924694" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1874,19 +1819,20 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.11666667" sideWeight="0.5979381" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32933104" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25984848" sideWeight="0.47250858" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.0" sideWeight="0.59965634" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18941718" sideWeight="0.6201413" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.35910654" sideWeight="0.7689394" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.0" sideWeight="0.59965634" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21639785" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.35738832" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.38831615" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -1962,9 +1908,7 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/servlet/process/impl/TextRespProcess.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="70" selection-start="404" selection-end="404" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="10" column="70" selection-start="404" selection-end="404" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/entity/AgentInfo.java">
@@ -2004,13 +1948,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/entity/Shop.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="41" selection-start="381" selection-end="381" vertical-scroll-proportion="-11.4">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/weixin/QRCode/Scene.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="12" column="45" selection-start="301" selection-end="301" vertical-scroll-proportion="0.0">
@@ -2021,50 +1958,14 @@
     <entry file="file://$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/service/ShopService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="28" column="37" selection-start="851" selection-end="851" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/mapper/ShopMapper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="15" column="27" selection-start="510" selection-end="521" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/taojinke/taojinke-business/src/main/resources/org/kmd/platform/business/taojinbao/mapper/ShopMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="27" selection-start="1632" selection-end="1643" vertical-scroll-proportion="0.0">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/title.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="60" selection-start="664" selection-end="664" vertical-scroll-proportion="1.6785715">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/web/ShopServiceWeb.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="57" column="41" selection-start="2381" selection-end="2381" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/web/PosterServiceWeb.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="110" column="45" selection-start="4801" selection-end="4801" vertical-scroll-proportion="-15.8">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2075,12 +1976,47 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/title.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="44" column="72" selection-start="1079" selection-end="1087" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/web/PosterServiceWeb.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="112" column="0" selection-start="4824" selection-end="4824" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/entity/Shop.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="26" selection-start="301" selection-end="307" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/web/ShopServiceWeb.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="52" column="58" selection-start="2115" selection-end="2121" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/taojinke/taojinke-business/src/main/resources/org/kmd/platform/business/taojinbao/mapper/ShopMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="45" column="53" selection-start="1809" selection-end="1809" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/service/WeiXinService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="305" column="0" selection-start="13726" selection-end="13726" vertical-scroll-proportion="0.33206108">
+        <state line="325" column="11" selection-start="14953" selection-end="14953" vertical-scroll-proportion="0.5480769">
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#19396#19404#0" expanded="true" />
+            <element signature="e#19723#19731#0" expanded="true" />
           </folding>
         </state>
       </provider>

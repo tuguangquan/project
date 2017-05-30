@@ -67,7 +67,7 @@ public class PosterServiceWeb {
         AccessToken at = weiXinService.getAccessToken(agentInfo.getAppID(),agentInfo.getAppSecret());
         if (null != at) {
             // 调用接口所有关注着
-            boolean b = createPoster(at.getToken(),agentInfo, sense_id, absolutePath);
+            boolean b = createPoster(at.getToken(),agentInfo, sense_id, absolutePath,openId);
             if (b){
                 return JsonResultUtils.getCodeAndMesByString(JsonResultUtils.Code.SUCCESS.getCode(), "success!");
             } else{
@@ -78,21 +78,21 @@ public class PosterServiceWeb {
     }
 
     //生成海报
-    public boolean createPoster(String accessToken,AgentInfo agentInfo,long sense_id, String absolutePath) throws Exception {
+    public boolean createPoster(String accessToken,AgentInfo agentInfo,long sense_id, String absolutePath,String openId) throws Exception {
         //生成二维码
         String ticket = weiXinService.getQRCodeTicket(accessToken,sense_id);
         if (agentInfo == null)  {
             return false;
         }
-        weiXinService.get_QR(agentInfo.getWeixinOriginalId()+".jpg", absolutePath+"posterImage\\", ticket);
+        weiXinService.get_QR(agentInfo.getAgentId()+"_"+openId+".jpg", absolutePath+"posterImage\\", ticket);
         //将二维码水印到海报上
         log.info("给图片添加水印图片开始...");
         ImageRemarkUtil.setImageMarkOptions(1.0f, 115, 400, null, null);
         // 给图片添加水印图片
-        ImageRemarkUtil.markImageByIcon(absolutePath+"posterImage\\"+agentInfo.getWeixinOriginalId()+".jpg", absolutePath+"posterImage\\"+1+".jpg", absolutePath+"posterImage\\"+agentInfo.getAgentId()+1+".jpg");
+        ImageRemarkUtil.markImageByIcon(absolutePath+"posterImage\\"+agentInfo.getAgentId()+"_"+openId+".jpg", absolutePath+"posterImage\\"+1+".jpg", absolutePath+"posterImage\\"+openId+".jpg");
         System.out.println("给图片添加水印图片结束...");
         //上传图片到微信服务器，得到media_id，并存到数据库中
-        JSONObject resultJSON = weiXinService.addMaterialEver(absolutePath + "posterImage\\" + agentInfo.getAgentId() + 1 + ".jpg", "image", accessToken) ;
+        JSONObject resultJSON = weiXinService.addMaterialEver(absolutePath + "posterImage\\" + openId + ".jpg", "image", accessToken) ;
         if (resultJSON == null){
             return false;
         }else{

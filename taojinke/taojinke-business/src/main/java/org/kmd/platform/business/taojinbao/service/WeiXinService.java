@@ -304,23 +304,29 @@ public class WeiXinService {
                 String eventKey = requestMap.get("EventKey");
                 // 订阅
                 if (eventType.equals(MessageUtil.EVENT_TYPE_SUBSCRIBE)) {
-                    String [] split = eventKey.split("_");
-                    long parentId = Long.parseLong(split[1]);
+                    long parentId = 0;
+                    if (eventKey.equals("")){    //非扫码关注公众号
+                         parentId = 0;
+                    } else{                 //扫码关注公众号
+                        String [] split = eventKey.split("_");
+                        parentId = Long.parseLong(split[1]);
+                    }
                     MsgSub msgSub = msgSubService.getMsgSubByWeiXinOriginId(weiXinOriginId) ;
                     AgentInfo agentInfo = agentInfoService.getAgentInfoByWeiXinOriginId(weiXinOriginId);
                     //关注者openid
                     String fromUserName = requestMap.get("FromUserName");
-                    Shop shop = shopService.getByAgentIdWithOutStatue(agentInfo.getAgentId());
-                    if (shop == null){
-                        Shop add = new Shop();
-                        add.setAgentId(agentInfo.getAgentId());
-                        add.setOpenId(fromUserName);
-                        add.setStatus(ShopEunm.RESP_STATUS_SUB);//粉丝
-                        add.setParentId(parentId);
-                        shopService.add(add);
+                    synchronized (this){                 //微信发多次消息时，可能添加多条信息
+                        Shop shop = shopService.getByOpenId(fromUserName);
+                        if (shop == null){
+                            Shop add = new Shop();
+                            add.setAgentId(agentInfo.getAgentId());
+                            add.setOpenId(fromUserName);
+                            add.setStatus(ShopEunm.RESP_STATUS_SUB);//粉丝
+                            add.setParentId(parentId);
+                            shopService.add(add);
+                        }
                     }
-
-                    log.info("添加粉丝成功！");
+                    log.info("粉丝添加成功！");
 
                     if (null == msgSub){   //没有设置关注回复
                         requestMap.put("Content","感谢您的关注！");
