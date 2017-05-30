@@ -36,4 +36,7 @@ public class AppService {
     public String getNameById(long id){
         return appMapper.getNameById(id);
     }
+    public App getById(long id){
+        return appMapper.getById(id);
+    }
 }

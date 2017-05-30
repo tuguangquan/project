@@ -5,6 +5,8 @@ import org.kmd.platform.business.taojinbao.entity.Shop;
 import org.kmd.platform.business.taojinbao.mapper.ShopMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import java.util.List;
+
 /**
  * Created with IntelliJ IDEA.
  * User: Administrator
@@ -22,11 +24,14 @@ public class ShopService {
     public void update(Shop shop){
         mapper.update(shop);
     }
-    public Shop getByAgentId(long agentId){
+    public int delete(Shop shop){
+      return   mapper.delete(shop);
+    }
+    public List<Shop> getByAgentId(long agentId){
         return mapper.getByAgentId(agentId);
     }
-    public Shop getByAgentIdWithOutStatue(long agentId){
-        return mapper.getByAgentIdWithOutStatue(agentId);
+    public List<Shop> shopList(long agentId){
+        return mapper.shopList(agentId);
     }
     public Shop getByOpenId(String openId){
         return mapper.getByOpenId(openId);

@@ -11,5 +11,6 @@ import org.kmd.platform.fundamental.orm.mapper.AbstractMapper;
  * To change this template use File | Settings | File Templates.
  */
 public interface PosterMapper extends AbstractMapper<Poster> {
-    public Poster getPosterByWeiXinOriginId(String weiXinOriginId);
+    public Poster getPosterByOpenId(String openId);
+    public int deleteByOpenId(String openId);
 }

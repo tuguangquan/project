@@ -13,7 +13,7 @@ public class Poster {
     private long id;
     private String  media_id;
     private long   agentId;
-    private String  weiXinOriginId;
+    private String  openId;
     private int type;
 
 
@@ -41,12 +41,12 @@ public class Poster {
         this.agentId = agentId;
     }
 
-    public String getWeiXinOriginId() {
-        return weiXinOriginId;
+    public String getOpenId() {
+        return openId;
     }
 
-    public void setWeiXinOriginId(String weiXinOriginId) {
-        this.weiXinOriginId = weiXinOriginId;
+    public void setOpenId(String openId) {
+        this.openId = openId;
     }
 
     public int getType() {

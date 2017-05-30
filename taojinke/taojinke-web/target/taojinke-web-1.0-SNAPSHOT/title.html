@@ -32,17 +32,19 @@
 <script>
     var currentUser = null;
     $(document).ready(function(){
-       // $.post($.URL.user.login,{"type": "tuguangquan", "password": 123,"selfCode":123},userInfoCallback,"json");
-        $.post("rs/shop/add",
-                {"openId":"ofngQ06p2jZfiTdd9q7jtGYLACmM", "qq": "540275450","zfb":"18986157760","name":"tgq","phone":"18986157760"},  createPosterCallback
-                ,"JSON");
+
+
+        $.post("rs/shop/batchDelete",{"openIds":"ofngQ06p2jZfiTdd9q7jtGYLACmM,a,b"},batchDeleteCallback ,"JSON");
+//        $.post("rs/shop/add",
+//                {"openId":"ofngQ06p2jZfiTdd9q7jtGYLACmM", "qq": "540275450","zfb":"18986157760","name":"tgq","phone":"18986157760"},  createPosterCallback
+//                ,"JSON");
     });
 
 
 
     function createPosterCallback(data){
         $.post("rs/shop/audit",
-                {"openId":"ofngQ06p2jZfiTdd9q7jtGYLACmM","pid":"tGYLACmM"},  auditCallback
+                {"openId":"ofngQ06p2jZfiTdd9q7jtGYLACmM","pid":"tGYLACmM","shopName":"涂光权","description":"涂光权的分店"},  auditCallback
                 ,"JSON");
     }
     function auditCallback(data){
@@ -56,12 +58,24 @@
 
     function listCallback(data){
         if(data!=null){
-          alert(123)
+            $.post($.URL.user.login,{"name": "tuguangquan", "password": 1234,"safeCode":1234},userInfoCallback,"json");
         }
     }
-    function addCallback (data){
-        alert("success");
+    function userInfoCallback (data){
+        $.post("rs/shop/shopList",null,shopListCallback
+                ,"JSON");
     }
+    function shopListCallback (data){
+        $.post("rs/shop/delete",{"openId":"ofngQ06p2jZfiTdd9q7jtGYLACmM"},deleteCallback
+                ,"JSON");
+    }
+    function deleteCallback (data){
+
+    }
+    function batchDeleteCallback (data){
+       alert("success!");
+    }
+
 </script>
 <div id="title"><a href="index.jsp" id="titleLink"></a></div>
 <div id="userInfo">

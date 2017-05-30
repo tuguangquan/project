@@ -4,14 +4,14 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="org.kmd.platform.business.taojinbao.mapper.PosterMapper">
     <sql id="msgPoster_fields">
-        ID,MEDIA_ID,AGENTID,WEIXINORIGINID,TYPE
+        ID,MEDIA_ID,AGENTID,OPENID,TYPE
     </sql>
 
     <resultMap id="PosterResultMap" type="Poster">
         <id property="id" column="ID"/>
         <result property="media_id" column="MEDIA_ID"/>
         <result property="agentId" column="AGENTID"/>
-        <result property="weiXinOriginId" column="WEIXINORIGINID"/>
+        <result property="openId" column="OPENID"/>
         <result property="type" column="TYPE"/>
     </resultMap>
 
@@ -19,19 +19,22 @@
             useGeneratedKeys="true">
         INSERT INTO
         ims_msg_poster(
-        MEDIA_ID,AGENTID,WEIXINORIGINID,TYPE
+        MEDIA_ID,AGENTID,OPENID,TYPE
         )
-        VALUES (#{media_id},#{agentId},#{weiXinOriginId},#{type});
+        VALUES (#{media_id},#{agentId},#{openId},#{type});
         <selectKey resultType="long" keyProperty="id">
             select
             LAST_INSERT_ID() as id
         </selectKey>
     </insert>
 
-    <select id="getPosterByWeiXinOriginId" parameterType="java.lang.String" resultMap="PosterResultMap">
+    <select id="getPosterByOpenId" parameterType="java.lang.String" resultMap="PosterResultMap">
         SELECT
         <include refid="msgPoster_fields"/>
-        FROM ims_msg_poster WHERE weiXinOriginId=#{originId}
+        FROM ims_msg_poster WHERE OPENID=#{openId}
     </select>
 
+    <delete id="deleteByOpenId" parameterType="java.lang.String">
+        DELETE FROM ims_msg_poster where OPENID=#{openId}
+    </delete>
 </mapper>

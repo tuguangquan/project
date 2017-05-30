@@ -14,10 +14,12 @@ import org.kmd.platform.fundamental.util.json.JsonResultUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.ws.rs.FormParam;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
+import javax.ws.rs.core.Context;
 import javax.ws.rs.core.MediaType;
 import java.util.Date;
 
@@ -95,4 +97,44 @@ public class AgentInfoServiceWeb {
         userAuthorityService.add(userAuthority);
         return JsonResultUtils.getCodeAndMesByStringAsDefault(JsonResultUtils.Code.SUCCESS);
     }
+
+    @Produces( MediaType.APPLICATION_JSON + ";charset=UTF-8")
+    @Path("/basicSet")
+    @POST
+    public String basicSet(@Context HttpServletRequest request,@FormParam("audit") String audit,
+                           @FormParam("agentMode") String agentMode,@FormParam("levelOne") String levelOne,
+                           @FormParam("levelTwo") String levelTwo,@FormParam("levelThree") String levelThree){
+        long agentId = userService.getCurrentAgentId(request);
+        if(agentId==0){
+            return JsonResultUtils.getCodeAndMesByString(JsonResultUtils.Code.ERROR.getCode(), "请重新登录!");
+        }
+        App app = appService.getById(agentId);
+        try{
+            if(audit!=null &&!audit.trim().equals("") ){
+                int aud = Integer.parseInt(audit);
+                app.setAudit(aud);
+            }
+            if(audit!=null &&!audit.trim().equals("") ){
+                int mode = Integer.parseInt(agentMode);
+                app.setAgentMode(mode);
+            }
+            if(audit!=null &&!audit.trim().equals("") ){
+                int one = Integer.parseInt(levelOne);
+                app.setLevelOne(one);
+            }
+            if(audit!=null &&!audit.trim().equals("") ){
+                int two = Integer.parseInt(levelTwo);
+                app.setLevelTwo(two);
+            }
+            if(audit!=null &&!audit.trim().equals("") ){
+                int three = Integer.parseInt(levelThree);
+                app.setLevelThree(three);
+            }
+            appService.update(app);
+        }catch (Exception e){
+            return JsonResultUtils.getCodeAndMesByString(JsonResultUtils.Code.ERROR.getCode(), "参数不合法!");
+        }
+        return JsonResultUtils.getCodeAndMesByStringAsDefault(JsonResultUtils.Code.SUCCESS);
+    }
+
 }

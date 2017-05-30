@@ -25,7 +25,7 @@
     <insert id="add" parameterType="AgentInfo"  keyProperty="id"
             useGeneratedKeys="true">
         INSERT INTO
-        agent_info(
+        ims_agent_wx(
             WEIXINID,WEIXINORIGINALID,APPID,APPSECRET,AGENTID,FANSADDNUM,FANSCOUNTNUM,AGENTNAME,TOKEN,DESCRIPTION,ENCODINGAESKEY
         )
         VALUES (#{weixinId},#{weixinOriginalId},#{appID},#{appSecret},#{agentId},#{fansAddNum},#{fansCountNum},#{agentName},#{token},#{description},#{encodingAESKey});
@@ -36,7 +36,7 @@
     </insert>
 
     <update id="update" parameterType="AgentInfo">
-        UPDATE agent_info
+        UPDATE ims_agent_wx
         <set>
             <if test="weixinId != null">WEIXINID=#{weixinId},</if>
             <if test="weixinOriginalId != null">WEIXINORIGINALID=#{weixinOriginalId},</if>
@@ -55,7 +55,7 @@
     <select id="findByCondition" parameterType="map" resultMap="AgentInfoResultMap">
         SELECT
         <include refid="agentInfo_fields"/>
-        FROM agent_info   where 1=1
+        FROM ims_agent_wx   where 1=1
         <!--<where>-->
             <!--<if test="name!=null">NAME=#{name}</if>-->
             <!--<if test="description!=null">AND DESCRIPTION=#{description}</if>-->
@@ -66,29 +66,29 @@
     <select id="getAgentInfoByAgentName" parameterType="java.lang.String" resultMap="AgentInfoResultMap">
         SELECT
         <include refid="agentInfo_fields"/>
-        FROM agent_info WHERE agentName=#{agentName}
+        FROM ims_agent_wx WHERE agentName=#{agentName}
     </select>
     <select id="getAgentInfoByAgentId" parameterType="java.lang.Long" resultMap="AgentInfoResultMap">
         SELECT
         <include refid="agentInfo_fields"/>
-        FROM agent_info WHERE agentId=#{agentId}
+        FROM ims_agent_wx WHERE agentId=#{agentId}
     </select>
 
     <select id="getAgentInfoByAppID"  parameterType="java.lang.String" resultMap="AgentInfoResultMap">
         SELECT
         <include refid="agentInfo_fields"/>
-        FROM agent_info WHERE appID=#{appId}
+        FROM ims_agent_wx WHERE appID=#{appId}
     </select>
 
     <delete id="delete" parameterType="AgentInfo">
-        DELETE FROM agent_info
+        DELETE FROM ims_agent_wx
         WHERE appID=#{appId}
     </delete>
 
     <select id="getAgentInfoByWeiXinOriginId"  parameterType="java.lang.String" resultMap="AgentInfoResultMap">
         SELECT
         <include refid="agentInfo_fields"/>
-        FROM agent_info WHERE WEIXINORIGINALID=#{weixinOriginalId}
+        FROM ims_agent_wx WHERE WEIXINORIGINALID=#{weixinOriginalId}
     </select>
 
 

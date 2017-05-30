@@ -29,7 +29,7 @@
     <insert id="add" parameterType="Authority" keyProperty="id"
             useGeneratedKeys="true">
         INSERT INTO
-        authority(
+        ims_authority(
         <include refid="authority_fields" />
         )
         VALUES (#{id}, #{name}, #{description},#{status});
@@ -41,7 +41,7 @@
 
     <select id="totalCount" parameterType="map" resultType="java.lang.Long">
         SELECT count(*)
-        FROM authority
+        FROM ims_authority
         <where>
             <if test="name != null">NAME=#{name}</if>
         </where>
@@ -49,7 +49,7 @@
 
 
     <update id="update" parameterType="Authority">
-        UPDATE authority
+        UPDATE ims_authority
         <set>
             <if test="name != null">NAME=#{name},</if>
             <if test="description != null">DESCRIPTION=#{description},</if>
@@ -59,7 +59,7 @@
     </update>
 
     <delete id="delete" parameterType="Authority">
-        DELETE FROM authority
+        DELETE FROM ims_authority
         <where>
             <if test="id != null">ID=#{id}</if>
             <if test="name != null">AND NAME=#{name}</if>
@@ -69,19 +69,19 @@
     <select id="get" parameterType="Authority" resultMap="authorityResultMap">
         SELECT
         <include refid="authority_fields" />
-        FROM authority WHERE ID=#{id}
+        FROM ims_authority WHERE ID=#{id}
     </select>
 
     <select id="findByName" parameterType="java.lang.String" resultMap="authorityResultMap">
         SELECT
         <include refid="authority_fields" />
-        FROM authority where name=#{name}
+        FROM ims_authority where name=#{name}
     </select>
 
     <select id="findByCondition" parameterType="map" resultMap="authorityResultMap">
         SELECT
         <include refid="authority_fields"/>
-        FROM authority
+        FROM ims_authority
         <where>
             <if test="name!=null">NAME=#{name}</if>
             <if test="description!=null">AND DESCRIPTION=#{description}</if>
@@ -91,13 +91,13 @@
 
     <select id="getNameById" parameterType="java.lang.Long" resultType="java.lang.String">
         SELECT name
-        FROM authority WHERE ID=#{id}
+        FROM ims_authority WHERE ID=#{id}
     </select>
 
     <select id="getIdByName" parameterType="java.lang.String" resultType="java.lang.Long">
          SELECT
          id
-         FROM authority WHERE NAME=#{name}
+         FROM ims_authority WHERE NAME=#{name}
      </select>
 
 

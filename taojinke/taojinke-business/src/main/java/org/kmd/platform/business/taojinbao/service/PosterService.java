@@ -21,8 +21,11 @@ public class PosterService {
     public void add(Poster poster){
         mapper.add(poster);
     }
-    public Poster getPosterByWeiXinOriginId(String weiXinOriginId){
-        return mapper.getPosterByWeiXinOriginId(weiXinOriginId);
+    public int deleteByOpenId(String openId){
+        return mapper.deleteByOpenId(openId);
+    }
+    public Poster getPosterByOpenId(String openId){
+        return mapper.getPosterByOpenId(openId);
     }
 
 

@@ -17,4 +17,5 @@ public interface AppMapper extends AbstractMapper {
     public List<App> findByCondition(Map<String,Object> map);
     public long getIdByName(String name);
     public String getNameById(long id);
+    public App getById(long id);
 }

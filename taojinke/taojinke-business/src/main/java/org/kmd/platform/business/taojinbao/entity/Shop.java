@@ -9,6 +9,7 @@ package org.kmd.platform.business.taojinbao.entity;
  */
 public class Shop {
     private long id ;
+    private String shopName;
     private long agentId;
     private String  openId;
     private String  qq;
@@ -18,6 +19,7 @@ public class Shop {
     private int status;
     private String pid;
     private long parentId;
+    private String description;
 
     public long getId() {
         return id;
@@ -97,5 +99,21 @@ public class Shop {
 
     public void setParentId(long parentId) {
         this.parentId = parentId;
+    }
+
+    public String getShopName() {
+        return shopName;
+    }
+
+    public void setShopName(String shopName) {
+        this.shopName = shopName;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 }

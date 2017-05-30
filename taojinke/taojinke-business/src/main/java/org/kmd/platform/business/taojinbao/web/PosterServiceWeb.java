@@ -7,7 +7,6 @@ import org.kmd.platform.business.taojinbao.entity.Shop;
 import org.kmd.platform.business.taojinbao.service.*;
 import org.kmd.platform.business.taojinbao.util.AccessToken;
 import org.kmd.platform.business.taojinbao.util.ImageRemarkUtil;
-import org.kmd.platform.business.user.service.UserService;
 import org.kmd.platform.fundamental.logger.PlatformLogger;
 import org.kmd.platform.fundamental.util.json.JsonResultUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,8 +33,6 @@ public class PosterServiceWeb {
 
     @Autowired
     private AgentInfoService agentInfoService;
-    @Autowired
-    private UserService userService;
     @Autowired
     private WeiXinService weiXinService;
     @Autowired
@@ -105,7 +102,7 @@ public class PosterServiceWeb {
         }
         String media_id = resultJSON.getString("media_id");
         Poster poster = new Poster();
-        poster.setWeiXinOriginId(agentInfo.getWeixinOriginalId());
+        poster.setOpenId(openId);
         poster.setAgentId(agentInfo.getAgentId());
         poster.setType(1);
         poster.setMedia_id(media_id);

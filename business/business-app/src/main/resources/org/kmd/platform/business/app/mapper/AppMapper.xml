@@ -4,7 +4,7 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="org.kmd.platform.business.app.mapper.AppMapper">
     <sql id="app_fields">
-		ID,NAME,DESCRIPTION,STATUS,CREATETIME
+		ID,NAME,DESCRIPTION,STATUS,CREATETIME,AUDIT,AGENTMODE,LEVELONE,LEVELTWO,LEVELTHREE
 	</sql>
 
     <resultMap id="appResultMap" type="App">
@@ -13,16 +13,20 @@
         <result property="description" column="DESCRIPTION" />
         <result property="status" column="STATUS"/>
         <result property="createtime" column="CREATETIME"/>
-
+        <result property="audit" column="AUDIT"/>
+        <result property="agentMode" column="AGENTMODE" />
+        <result property="levelOne" column="LEVELONE"/>
+        <result property="levelTwo" column="LEVELTWO"/>
+        <result property="levelThree" column="LEVELTHREE"/>
     </resultMap>
 
     <insert id="add" parameterType="App"  keyProperty="id"
             useGeneratedKeys="true">
         INSERT INTO
-        app(
+        ims_agent(
         <include refid="app_fields" />
         )
-        VALUES (#{id}, #{name}, #{description},#{status},#{createtime});
+        VALUES (#{id}, #{name}, #{description},#{status},#{createtime},#{audit}, #{agentMode}, #{levelOne},#{levelTwo},#{levelThree});
         <selectKey resultType="long" keyProperty="id">
             select
             LAST_INSERT_ID() as id
@@ -31,7 +35,7 @@
 
     <select id="totalCount" parameterType="map" resultType="java.lang.Long">
         SELECT count(*)
-        FROM app
+        FROM ims_agent
         <where>
             <if test="name != null">NAME=#{name}</if>
         </where>
@@ -39,19 +43,23 @@
 
 
     <update id="update" parameterType="App">
-        UPDATE app
+        UPDATE ims_agent
         <set>
             <if test="name != null">NAME=#{name},</if>
             <if test="description != null">DESCRIPTION=#{description},</if>
             <if test="status != null">STATUS=#{status},</if>
             <if test="createtime != null">CREATETIME=#{createtime},</if>
-
+            <if test="audit != null">AUDIT=#{audit},</if>
+            <if test="agentMode != null">AGENTMODE=#{agentMode},</if>
+            <if test="levelOne != null">LEVELONE=#{levelOne},</if>
+            <if test="levelTwo != null">LEVELTWO=#{levelTwo},</if>
+            <if test="levelThree != null">LEVELTHRE=#{levelThree}</if>
         </set>
         WHERE ID = #{id};
     </update>
 
     <delete id="delete" parameterType="App">
-        DELETE FROM app
+        DELETE FROM ims_agent
         <where>
             <if test="id != null">ID=#{id}</if>
 
@@ -62,19 +70,25 @@
     <select id="get" parameterType="App" resultMap="appResultMap">
         SELECT
         <include refid="app_fields" />
-        FROM app WHERE ID=#{id}
+        FROM ims_agent WHERE ID=#{id}
+    </select>
+
+    <select id="getById" parameterType="java.lang.Long" resultMap="appResultMap">
+        SELECT
+        <include refid="app_fields" />
+        FROM ims_agent WHERE ID=#{id}
     </select>
 
     <select id="findByName" parameterType="java.lang.String" resultMap="appResultMap">
         SELECT
         <include refid="app_fields" />
-        FROM app where name=#{name}
+        FROM ims_agent where name=#{name}
     </select>
 
     <select id="findByCondition" parameterType="map" resultMap="appResultMap">
         SELECT
         <include refid="app_fields"/>
-        FROM app
+        FROM ims_agent
         <where>
             <if test="name!=null">NAME=#{name}</if>
             <if test="description!=null">AND DESCRIPTION=#{description}</if>
@@ -86,11 +100,11 @@
     <select id="getIdByName" parameterType="java.lang.String" resultType="java.lang.Long">
          SELECT
          id
-         FROM app WHERE NAME=#{name}
+         FROM ims_agent WHERE NAME=#{name}
      </select>
     <select id="getNameById" parameterType="java.lang.Long" resultType="java.lang.String">
          SELECT
          name
-         FROM app WHERE ID=#{id}
+         FROM ims_agent WHERE ID=#{id}
      </select>
 </mapper>

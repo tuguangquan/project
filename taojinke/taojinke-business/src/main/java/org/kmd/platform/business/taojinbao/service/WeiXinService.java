@@ -22,6 +22,7 @@ import net.sf.json.JSONArray;
 import net.sf.json.JSONException;
 import net.sf.json.JSONObject;
 import org.kmd.platform.business.taojinbao.dto.Material;
+import org.kmd.platform.business.taojinbao.dto.Media_id;
 import org.kmd.platform.business.taojinbao.entity.*;
 import org.kmd.platform.business.taojinbao.mapper.MsgTempMapper;
 import org.kmd.platform.business.taojinbao.servlet.process.impl.ImageRespProcess;
@@ -33,10 +34,7 @@ import org.kmd.platform.business.taojinbao.weixin.Constant;
 import org.kmd.platform.business.taojinbao.weixin.QRCode.QRCode;
 import org.kmd.platform.business.taojinbao.weixin.QRCode.Scene;
 import org.kmd.platform.business.taojinbao.weixin.mass.resp.MassTextMessage;
-import org.kmd.platform.business.taojinbao.weixin.mass.resp.Text;
 
-import org.kmd.platform.business.taojinbao.weixin.test.Template;
-import org.kmd.platform.business.taojinbao.weixin.test.TemplateParam;
 import org.kmd.platform.fundamental.logger.PlatformLogger;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -302,6 +300,7 @@ public class WeiXinService {
                 // 事件类型
                 String eventType = requestMap.get("Event");
                 String eventKey = requestMap.get("EventKey");
+                String fromUserName = requestMap.get("FromUserName");
                 // 订阅
                 if (eventType.equals(MessageUtil.EVENT_TYPE_SUBSCRIBE)) {
                     long parentId = 0;
@@ -314,7 +313,7 @@ public class WeiXinService {
                     MsgSub msgSub = msgSubService.getMsgSubByWeiXinOriginId(weiXinOriginId) ;
                     AgentInfo agentInfo = agentInfoService.getAgentInfoByWeiXinOriginId(weiXinOriginId);
                     //关注者openid
-                    String fromUserName = requestMap.get("FromUserName");
+
                     synchronized (this){                 //微信发多次消息时，可能添加多条信息
                         Shop shop = shopService.getByOpenId(fromUserName);
                         if (shop == null){
@@ -356,7 +355,7 @@ public class WeiXinService {
                 // 自定义菜单点击事件
                 else if (eventType.equals(MessageUtil.EVENT_TYPE_CLICK)) {
                     if (eventKey.equals("V1001_TODAY_MUSIC")){
-                        Poster poster =  posterService.getPosterByWeiXinOriginId(weiXinOriginId) ;
+                        Poster poster =  posterService.getPosterByOpenId(fromUserName) ;
                         if (poster== null){
                             requestMap.put("Content","海报获取失败，请稍后再试！"+weiXinOriginId);
                             return textRespProcess.getRespMessage(requestMap);
@@ -526,6 +525,24 @@ public class WeiXinService {
         }finally{
             log.info("结束上传图文消息内的图片---------------------");
         }
+    }
+
+
+    public boolean del_material( String mid, String accessToken){
+        String url = "https://api.weixin.qq.com/cgi-bin/material/del_material?access_token=ACCESS_TOKEN";
+        url = url.replace("ACCESS_TOKEN", accessToken);
+        // 调用接口ticket
+        Media_id media_id = new Media_id();
+        media_id.setMedia_id(mid);
+        JSONObject jsonObject = JSONObject.fromObject(media_id);
+        JSONObject json = httpRequest(url, "POST",jsonObject.toString());
+        if (null != json) {
+            if (json.getInt("errcode")==0){
+                return true;
+            }else
+                return false;
+        }
+        return false;
     }
 
     //上传媒体文件到微信服务器

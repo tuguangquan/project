@@ -4,7 +4,7 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="org.kmd.platform.business.taojinbao.mapper.ShopMapper">
     <sql id="shop_fields">
-        ID,AGENTID,OPENID,QQ,ZFB,NAME,PHONE,STATUS,PID,PARENTID
+        ID,AGENTID,OPENID,QQ,ZFB,NAME,SHOPNAME,PHONE,STATUS,PID,PARENTID,DESCRIPTION
     </sql>
 
     <resultMap id="ShopResultMap" type="Shop">
@@ -14,18 +14,20 @@
         <result property="qq" column="QQ"/>
         <result property="zfb" column="ZFB"/>
         <result property="name" column="NAME"/>
+        <result property="shopName" column="SHOPNAME"/>
         <result property="phone" column="PHONE"/>
         <result property="status" column="STATUS"/>
         <result property="pid" column="PID"/>
         <result property="parentId" column="PARENTID"/>
+        <result property="description" column="DESCRIPTION"/>
     </resultMap>
 
     <insert id="add" parameterType="Shop">
         INSERT INTO
         ims_agent_shop(
-           AGENTID,OPENID,QQ,ZFB,NAME,PHONE,STATUS,PID,PARENTID
+           AGENTID,OPENID,QQ,ZFB,NAME,SHOPNAME,PHONE,STATUS,PID,PARENTID,DESCRIPTION
         )
-        VALUES (#{agentId},#{openId},#{qq},#{zfb},#{name},#{phone},#{status},#{pid},#{parentId});
+        VALUES (#{agentId},#{openId},#{qq},#{zfb},#{name},#{shopName},#{phone},#{status},#{pid},#{parentId},#{description});
     </insert>
 
     <select id="getByAgentId" parameterType="java.lang.Long" resultMap="ShopResultMap">
@@ -34,10 +36,10 @@
         FROM ims_agent_shop WHERE AGENTID=#{agentId} and STATUS =2
     </select>
 
-    <select id="getByAgentIdWithOutStatue" parameterType="java.lang.Long" resultMap="ShopResultMap">
+    <select id="shopList" parameterType="java.lang.Long" resultMap="ShopResultMap">
         SELECT
         <include refid="shop_fields"/>
-        FROM ims_agent_shop WHERE AGENTID=#{agentId}
+        FROM ims_agent_shop WHERE AGENTID=#{agentId} and STATUS != 0
     </select>
 
     <select id="getByOpenId" parameterType="java.lang.String" resultMap="ShopResultMap">
@@ -55,8 +57,13 @@
             <if test="phone != null">PHONE=#{phone},</if>
             <if test="status !=null">STATUS=#{status},</if>
             <if test="pid !=null">PID=#{pid},</if>
-            <if test="pid !=null">PARENTID=#{parentId}</if>
+            <if test="shopName !=null">SHOPNAME=#{shopName},</if>
+            <if test="description !=null">DESCRIPTION=#{description}</if>
+            <if test="parentId !=null">PARENTID=#{parentId}</if>
         </set>
         WHERE OPENID = #{openId};
     </update>
+    <delete id="delete" parameterType="Shop">
+        DELETE FROM ims_agent_shop where OPENID=#{openId}
+    </delete>
 </mapper>
