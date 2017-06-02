@@ -57,7 +57,7 @@ public class GoodsServiceWeb {
         }
         if (pageIndex!=null && !pageIndex.trim().equals("")){
             try{
-                index = Integer.parseInt(pageIndex);
+                index = Integer.parseInt(pageIndex)*size;
             }catch (Exception e){
                 return JsonResultUtils.getCodeAndMesByString(JsonResultUtils.Code.ERROR.getCode(), "参数不合法!");
             }
