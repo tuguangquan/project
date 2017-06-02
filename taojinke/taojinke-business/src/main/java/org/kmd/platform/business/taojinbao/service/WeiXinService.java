@@ -209,16 +209,20 @@ public class WeiXinService {
         return result;
     }
 
-    public  String getMenu(String accessToken) {
-        // 拼装获取菜单的url
+    public  JSONObject getMenu( String accessToken) {
+
+        JSONObject jsonObject = null;
+
+        // 拼装创建菜单的url
+
         String url = menu_get_url.replace("ACCESS_TOKEN", accessToken);
+
         // 调用接口创建菜单
-        JSONObject jsonObject = httpRequest(url, "POST", null);
-        if (null != jsonObject) {
-            return jsonObject.get("menu").toString();
-        }else{
-            return null;
-        }
+
+        jsonObject = httpRequest(url, "POST", null);
+
+        return jsonObject;
+
     }
 
 

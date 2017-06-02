@@ -32,9 +32,9 @@
 <script>
     var currentUser = null;
     $(document).ready(function(){
+        $.post($.URL.user.login,{"name": "zhangsan@tototo.cc", "password": 1234,"safeCode":12345},userInfoCallback,"json");
 
-
-        $.post("rs/shop/batchDelete",{"openIds":"ofngQ06p2jZfiTdd9q7jtGYLACmM,a,b"},batchDeleteCallback ,"JSON");
+      //  $.post("rs/shop/batchDelete",{"openIds":"ofngQ06p2jZfiTdd9q7jtGYLACmM,a,b"},batchDeleteCallback ,"JSON");
 //        $.post("rs/shop/add",
 //                {"openId":"ofngQ06p2jZfiTdd9q7jtGYLACmM", "qq": "540275450","zfb":"18986157760","name":"tgq","phone":"18986157760"},  createPosterCallback
 //                ,"JSON");
@@ -58,11 +58,13 @@
 
     function listCallback(data){
         if(data!=null){
-            $.post($.URL.user.login,{"name": "tuguangquan", "password": 1234,"safeCode":1234},userInfoCallback,"json");
+
         }
     }
     function userInfoCallback (data){
-        $.post("rs/shop/shopList",null,shopListCallback
+        $.post("rs/goods/findByCondition", {"cateId":1,"topRate":null,
+                    "lowerRate":null,"topPrice":null,"lowerPrice":null,"goodsName":null,
+                    "pageSize":10,"pageIndex":1},shopListCallback
                 ,"JSON");
     }
     function shopListCallback (data){

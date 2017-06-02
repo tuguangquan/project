@@ -75,6 +75,7 @@
          <if test="goods_name!=null">
              AND goods_name like CONCAT('%',#{goods_name},'%')
          </if>
+        limit  #{index},#{size}
 
 
     </select>

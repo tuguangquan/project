@@ -2,6 +2,7 @@ package org.kmd.platform.business.taojinbao.web;
 
 import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
+import org.kmd.platform.business.taojinbao.dto.MenuView;
 import org.kmd.platform.business.taojinbao.entity.AgentInfo;
 import org.kmd.platform.business.taojinbao.entity.MsgSub;
 import org.kmd.platform.business.taojinbao.entity.MsgTemp;
@@ -211,21 +212,23 @@ public class WeixinServiceWeb {
             AccessToken at = weiXinService.getAccessToken(agentInfo.getAppID(),agentInfo.getAppSecret());
             if (null != at) {
                 // 调用接口创建菜单
-                String result = weiXinService.getMenu(at.getToken());
-                // 判断菜单创建结果
-                if (null != result){
-                    logger.info("菜单查询成功！");
-                    return JsonResultUtils.getObjectResultByStringAsDefault(result, JsonResultUtils.Code.SUCCESS);
+                JSONObject result = weiXinService.getMenu(at.getToken());
+                if (result ==null){
+                    return JsonResultUtils.getCodeAndMesByString(JsonResultUtils.Code.ERROR.getCode(), "菜单获取失败!");
                 }else{
-                    logger.info("菜单查询失败");
-                    return JsonResultUtils.getCodeAndMesByString(JsonResultUtils.Code.ERROR.getCode(), "菜单查询失败");
+                    MenuView menuView = new MenuView();
+                    menuView.setGzh_name("宜昌中心人民医院");
+                    menuView.setMenu(result.getJSONObject("menu").toString());
+                    return JsonResultUtils.getObjectResultByStringAsDefault(menuView, JsonResultUtils.Code.SUCCESS);
                 }
             }
+            return JsonResultUtils.getCodeAndMesByString(JsonResultUtils.Code.ERROR.getCode(), "凭证获取失败!");
         } catch (Exception e) {
             e.printStackTrace();
         }
-        return JsonResultUtils.getCodeAndMesByString(JsonResultUtils.Code.ERROR.getCode(), "菜单查询失败");
+        return JsonResultUtils.getCodeAndMesByString(JsonResultUtils.Code.ERROR.getCode(), "菜单获取失败!");
     }
+
     //上传微信素材
     @Produces( MediaType.APPLICATION_JSON + ";charset=UTF-8")
     @Path("/addMaterial")

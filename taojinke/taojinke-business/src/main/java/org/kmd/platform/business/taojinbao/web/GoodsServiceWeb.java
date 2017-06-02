@@ -44,8 +44,26 @@ public class GoodsServiceWeb {
     @Path("/findByCondition")
     @POST
     public String findByCondition(@Context HttpServletRequest request,@FormParam("cateId") String cateId,@FormParam("topRate") String topRate,@FormParam("lowerRate") String lowerRate,
-                                  @FormParam("topPrice") String topPrice,@FormParam("lowerPrice") String lowerPrice,@FormParam("goodsName") String goodsName){
-        List<Goods> goodsList = goodsService.findByCondition(topRate,lowerRate,topPrice,lowerPrice,goodsName);
+                                  @FormParam("topPrice") String topPrice,@FormParam("lowerPrice") String lowerPrice,@FormParam("goodsName") String goodsName,@FormParam("pageSize") String pageSize,@FormParam("pageIndex") String pageIndex){
+        int index=0;
+        int size = 10;
+        if (pageSize!=null && !pageSize.trim().equals("")){
+            try{
+                size = Integer.parseInt(pageSize);
+            }catch (Exception e){
+                return JsonResultUtils.getCodeAndMesByString(JsonResultUtils.Code.ERROR.getCode(), "参数不合法!");
+            }
+
+        }
+        if (pageIndex!=null && !pageIndex.trim().equals("")){
+            try{
+                index = Integer.parseInt(pageIndex);
+            }catch (Exception e){
+                return JsonResultUtils.getCodeAndMesByString(JsonResultUtils.Code.ERROR.getCode(), "参数不合法!");
+            }
+
+        }
+        List<Goods> goodsList = goodsService.findByCondition(topRate,lowerRate,topPrice,lowerPrice,goodsName,index,size);
         return JsonResultUtils.getObjectResultByStringAsDefault(goodsList, JsonResultUtils.Code.SUCCESS);
     }
 
