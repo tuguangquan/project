@@ -106,8 +106,16 @@ $(document).ready(function(){
 		
 		loadShopCommission();
 	});
-	
-	
+    
+    //皮肤设置
+	$("#style_darkgray").click(function(){
+		
+		changeSkinStyle(2);
+	});
+	$("#style_bluefragment").click(function(){
+		
+		changeSkinStyle(1);
+	});
 });
 /******功能方法*******/
 //加载绑定QQ页面
@@ -196,4 +204,15 @@ function loadShopList(){
 }
 function loadShopCommission(){
 	$(".content-wrapper").load("fragment_shop_commission.html");
+}
+//皮肤风格
+function changeSkinStyle(style){
+	switch (style){
+		case 1:$("#header .navbar").css("background-image","url(http://www.ailgvip.com/web/resource/images/gw-bg.jpg)");
+			break;
+		case 2:$("#header .navbar").css("background-image","");
+			break;
+		default:
+			break;
+	}
 }

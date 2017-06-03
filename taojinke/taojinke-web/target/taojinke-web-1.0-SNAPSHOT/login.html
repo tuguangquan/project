@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
     <head>
         <meta charset="utf-8">
-        <title>Login</title>
+        <title>登录 - 淘金券后台管理系统！</title>
         <!-- Mobile specific metas -->
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
         <!-- Force IE9 to render in normal mode -->
@@ -15,12 +15,14 @@
         <meta name="application-name" content="sprFlat admin template" />
         <!-- Import google fonts - Heading first/ text second -->
         <link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Open+Sans:400,700|Droid+Sans:400,700' />
+        
         <!--[if lt IE 9]>
-<link href="http://fonts.googleapis.com/css?family=Open+Sans:400" rel="stylesheet" type="text/css" />
-<link href="http://fonts.googleapis.com/css?family=Open+Sans:700" rel="stylesheet" type="text/css" />
-<link href="http://fonts.googleapis.com/css?family=Droid+Sans:400" rel="stylesheet" type="text/css" />
-<link href="http://fonts.googleapis.com/css?family=Droid+Sans:700" rel="stylesheet" type="text/css" />
-<![endif]-->
+		<link href="http://fonts.googleapis.com/css?family=Open+Sans:400" rel="stylesheet" type="text/css" />
+		<link href="http://fonts.googleapis.com/css?family=Open+Sans:700" rel="stylesheet" type="text/css" />
+		<link href="http://fonts.googleapis.com/css?family=Droid+Sans:400" rel="stylesheet" type="text/css" />
+		<link href="http://fonts.googleapis.com/css?family=Droid+Sans:700" rel="stylesheet" type="text/css" />
+		<![endif]-->
+		
         <!-- Css files -->
         <!-- Icons -->
         <link href="assets/css/icons.css" rel="stylesheet" />
@@ -42,24 +44,29 @@
         <link rel="icon" href="assets/img/ico/favicon.ico" type="image/png">
         <!-- Windows8 touch icon ( http://www.buildmypinnedsite.com/ )-->
         <meta name="msapplication-TileColor" content="#3399cc" />
+        <style>
+        	body{
+        		font-family: "microsoft yahei";
+        	}
+        </style>
     </head>
     <body class="login-page">
         <!-- Start #login -->
         <div id="login" class="animated bounceIn">
-            <img id="logo" src="assets/img/logo.png" alt="sprFlat Logo">
+            <h1 style="text-align: center;margin: 20px 0;color: white;">淘金券</h1>     
             <!-- Start .login-wrapper -->
             <div class="login-wrapper">
                 <ul id="myTab" class="nav nav-tabs nav-justified bn">
                     <li>
-                        <a href="#log-in" data-toggle="tab">Login</a>
+                        <a href="#log-in" data-toggle="tab">账户登录</a>
                     </li>
                     <li class="">
-                        <a href="#register" data-toggle="tab">Register</a>
+                        <a href="#register" data-toggle="tab">密码重置</a>
                     </li>
                 </ul>
                 <div id="myTabContent" class="tab-content bn">
                     <div class="tab-pane fade active in" id="log-in">
-                        <div class="social-buttons text-center mt10">
+                        <!--<div class="social-buttons text-center mt10">
                             <a href="#" class="btn btn-primary btn-alt btn-round btn-lg mr10"><i class="fa-facebook s24"></i></a>
                             <a href="#" class="btn btn-primary btn-alt btn-round btn-lg mr10"><i class="fa-twitter s24"></i></a>
                             <a href="#" class="btn btn-danger btn-alt btn-round btn-lg mr10"><i class="fa-google-plus s24"></i></a>
@@ -68,32 +75,39 @@
                         <div class="seperator">
                             <strong>or</strong>
                             <hr>
-                        </div>
+                        </div>-->
                         <form class="form-horizontal mt10" action="index.html" id="login-form" role="form">
                             <div class="form-group">
                                 <div class="col-lg-12">
-                                    <input type="text" name="email" id="email" class="form-control left-icon" value="admin@sprflat.com" placeholder="Your email ...">
+                                    <input type="text" name="email" id="emailaccount" class="form-control left-icon" value="" placeholder="zhangsan@tototo.cc">
                                     <i class="ec-user s16 left-input-icon"></i>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <div class="col-lg-12">
-                                    <input type="password" name="password" id="password" class="form-control left-icon" value="somepass" placeholder="Your password">
+                                    <input type="password" name="password" id="password1" class="form-control left-icon" value="" placeholder="账户密码">
                                     <i class="ec-locked s16 left-input-icon"></i>
-                                    <span class="help-block"><a href="#"><small>Forgout password ?</small></a></span> 
+                                    <!--<span class="help-block"><a href="#"><small>忘记密码了 ?</small></a></span> -->
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-lg-12">
+                                    <input type="password" name="password" id="password2" class="form-control left-icon" value="" placeholder="安全密码">
+                                    <i class="ec-locked s16 left-input-icon"></i>
+                                    <span class="help-block" id="logintips" style="display: none;"><a href="#"><small style="color: orangered;">您输入的 “账号” “密码” “安全码” 组合验证失败,请重试！</small></a></span>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-8">
                                     <!-- col-lg-12 start here -->
                                     <label class="checkbox">
-                                        <input type="checkbox" name="remember" id="remember" value="option">Remember me ?
+                                        <input type="checkbox" name="remember" id="remember" value="option">记住密码 ?
                                     </label>
                                 </div>
                                 <!-- col-lg-12 end here -->
                                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-4">
                                     <!-- col-lg-12 start here -->
-                                    <button class="btn btn-success pull-right" type="submit">Login</button>
+                                    <button class="btn btn-success pull-right" type="button" id="dologin">登录</button>
                                 </div>
                                 <!-- col-lg-12 end here -->
                             </div>
@@ -104,7 +118,7 @@
                             <div class="form-group">
                                 <div class="col-lg-12">
                                     <!-- col-lg-12 start here -->
-                                    <input id="email1" name="email" type="email" class="form-control left-icon" placeholder="Type your email">
+                                    <input id="email1" name="email" type="email" class="form-control left-icon" placeholder="您的邮箱(登录邮箱)">
                                     <i class="ec-mail s16 left-input-icon"></i> 
                                 </div>
                                 <!-- col-lg-12 end here -->
@@ -112,13 +126,13 @@
                             <div class="form-group">
                                 <div class="col-lg-12">
                                     <!-- col-lg-12 start here -->
-                                    <input type="password" class="form-control left-icon" id="password1" name="password" placeholder="Enter your password">
+                                    <input type="password" class="form-control left-icon" id="password1" name="password" placeholder="新的密码">
                                     <i class="ec-locked s16 left-input-icon"></i> 
                                 </div>
                                 <!-- col-lg-12 end here -->
                                 <div class="col-lg-12 mt15">
                                     <!-- col-lg-12 start here -->
-                                    <input type="password" class="form-control left-icon" id="confirm_password" name="confirm_passowrd" placeholder="Repeat password">
+                                    <input type="password" class="form-control left-icon" id="confirm_password" name="confirm_passowrd" placeholder="确认密码">
                                     <i class="ec-locked s16 left-input-icon"></i> 
                                 </div>
                                 <!-- col-lg-12 end here -->
@@ -126,7 +140,7 @@
                             <div class="form-group">
                                 <div class="col-lg-12">
                                     <!-- col-lg-12 start here -->
-                                    <button class="btn btn-success btn-block">Register</button>
+                                    <button class="btn btn-success btn-block">申请找回</button>
                                 </div>
                                 <!-- col-lg-12 end here -->
                             </div>
@@ -145,7 +159,8 @@
         <script>
         window.jQuery || document.write('<script src="assets/js/libs/jquery-2.1.1.min.js">\x3C/script>')
         </script>
-        <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+        <!--<script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>-->
+        <script type="text/javascript" src="assets/js/jquery-ui.js" ></script>
         <script>
         window.jQuery || document.write('<script src="assets/js/libs/jquery-ui-1.10.4.min.js">\x3C/script>')
         </script>
@@ -162,5 +177,12 @@
         <script src="assets/plugins/forms/validation/additional-methods.min.js"></script>
         <!-- Init plugins olny for this page -->
         <script src="assets/js/pages/login.js"></script>
+        <!--
+        	作者：offline
+        	时间：2017-05-28
+        	描述：myself
+        -->
+        <script type="text/javascript" src="assets/js/pagefunction/Login.js" ></script>
+        <script src="http://www.ibloger.net/assets/demos/jquery.posterSwing/jquery.posterSwing.min.js"></script>
     </body>
 </html>

@@ -62,14 +62,19 @@
         }
     }
     function userInfoCallback (data){
-        $.post("rs/goods/findByCondition", {"cateId":1,"topRate":null,
-                    "lowerRate":null,"topPrice":null,"lowerPrice":null,"goodsName":null,
-                    "pageSize":10,"pageIndex":1},shopListCallback
+        $.post("rs/category/add", {"name":1,"status":1,
+                    "description":"123456","show":0},shopListCallback
                 ,"JSON");
+
+//        $.post("rs/goods/findByCondition", {"cateId":1,"topRate":null,
+//                    "lowerRate":null,"topPrice":null,"lowerPrice":null,"goodsName":null,
+//                    "pageSize":10,"pageIndex":1},shopListCallback
+//                ,"JSON");
     }
     function shopListCallback (data){
-        $.post("rs/shop/delete",{"openId":"ofngQ06p2jZfiTdd9q7jtGYLACmM"},deleteCallback
-                ,"JSON");
+        alert("123");
+//        $.post("rs/shop/delete",{"openId":"ofngQ06p2jZfiTdd9q7jtGYLACmM"},deleteCallback
+//                ,"JSON");
     }
     function deleteCallback (data){
 

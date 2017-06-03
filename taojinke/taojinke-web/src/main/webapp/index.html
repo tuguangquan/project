@@ -1,5 +1,12 @@
 <!DOCTYPE html>
 <html lang="zh">
+	<script>
+		//alert(document.referrer);
+		if(document.referrer == ""){
+			window.location = "login.html";
+			//壮士不必研究这个，没意义！，后台都是session验证！
+		}		
+	</script>
     <head>
         <meta charset="utf-8">
         <title>淘金券后台管理系统 beta v1.0</title>
@@ -14,7 +21,7 @@
         />
         <meta name="application-name" content="sprFlat admin template" />
         <!-- Import google fonts - Heading first/ text second -->
-        <link rel='stylesheet' type='text/css'>
+        <link rel='stylesheet' type='text/css' 
         <!--[if lt IE 9]>
 
         <![endif]-->
@@ -46,7 +53,7 @@
         <!-- Start #header -->
         <div id="header">
             <div class="container-fluid">
-                <div class="navbar">
+                <div class="navbar" style="background-image: url(http://www.ailgvip.com/web/resource/images/gw-bg.jpg);">
                     <div class="navbar-header">
                         <a class="navbar-brand" href="index.html">
                             <i class="im-lightning text-logo-element animated bounceIn" style="color: white;"></i>
@@ -66,11 +73,12 @@
                                 <a href="#" class="full-screen"><i class="fa-fullscreen"></i></a>
                             </li>
                             <li class="dropdown">
-                                <a href="#" data-toggle="dropdown"><i class="ec-cog"></i><span class="notification">10</span></a>
+                                <a href="#" data-toggle="dropdown" title="皮肤风格"><i class="ec-cog"></i></a>
                                 <ul class="dropdown-menu" role="menu">
-                                    <li><a href="#"><i class="en-database"></i> Database <span class="notification">3</span></a>
+                                    <li id="style_darkgray"><a href="javascript:void(0);"><i class="im-wand"></i> 深色淡雅 </a>
+                                    <li id="style_bluefragment"><a href="javascript:void(0);"><i class="im-wand"></i> 蓝色碎影 </a>
                                     </li>
-                                    <li><a href="#"><i class="st-cube"></i> Packages <span class="notification blue">17</span></a>
+                                    <!--<li><a href="#"><i class="st-cube"></i> Packages <span class="notification blue">17</span></a>
                                     </li>
                                     <li><a href="#"><i class="st-health"></i> Disconnects <span class="notification yellow">1</span></a>
                                     </li>
@@ -87,10 +95,10 @@
                                     <li><a href="#"><i class="st-bag"></i> Orders <span class="notification purple">12</span></a>
                                     </li>
                                     <li><a href="#"><i class="ec-contract"></i> Contracts <span class="notification dark">7</span></a>
-                                    </li>
+                                    </li>-->
                                 </ul>
                             </li>
-                            <li class="dropdown">
+                            <!--<li class="dropdown">
                                 <a href="#" data-toggle="dropdown"><i class="ec-mail"></i><span class="notification">4</span></a>
                                 <ul class="dropdown-menu email" role="menu">
                                     <li class="mail-head">
@@ -167,22 +175,23 @@
                                         <a href="email-inbox.html">View all <i class="en-arrow-right7"></i></a>
                                     </li>
                                 </ul>
-                            </li>
+                            </li>-->
                         </ul>
                         <ul class="nav navbar-nav pull-right">
-                            <li>
+                            <!--<li>
                                 <a href="#" id="toggle-header-area"><i class="ec-download"></i></a>
-                            </li>
+                            </li>-->
+                            
                             <li class="dropdown">
-                                <a href="#" data-toggle="dropdown"><i class="br-alarm"></i> <span class="notification">5</span></a>
+                                <a href="#" data-toggle="dropdown"><i class="br-alarm"></i> <span class="notification">1</span></a>
                                 <ul class="dropdown-menu notification-menu right" role="menu">
                                     <li class="clearfix">
                                         <i class="ec-chat"></i> 
-                                        <a href="#" class="notification-user"> Ric Jones </a> 
-                                        <span class="notification-action"> replied to your </span> 
-                                        <a href="#" class="notification-link"> comment</a>
+                                        <a href="#" class="notification-user">系统消息</a> 
+                                        <span class="notification-action"> 详情点击 </span> 
+                                        <a href="#" class="notification-link"> 欢迎新用户！</a>
                                     </li>
-                                    <li class="clearfix">
+                                    <!--<li class="clearfix">
                                         <i class="st-pencil"></i> 
                                         <a href="#" class="notification-user"> SuggeElson </a> 
                                         <span class="notification-action"> just write a </span> 
@@ -205,25 +214,25 @@
                                         <a href="#" class="notification-user"> John Simpson </a> 
                                         <span class="notification-action"> add support </span> 
                                         <a href="#" class="notification-link"> ticket</a>
-                                    </li>
+                                    </li>-->
                                 </ul>
                             </li>
                             <li class="dropdown">
                                 <a href="#" data-toggle="dropdown">
                                     <img class="user-avatar" src="assets/img/Robot_64px.png" alt="icons" style="background-color: white;">888@1234560.NET</a>
                                 <ul class="dropdown-menu right" role="menu">
-                                    <li><a href="profile.html"><i class="st-user"></i> Profile</a>
+                                    <!--<li><a href="profile.html"><i class="st-user"></i> Profile</a>
                                     </li>
                                     <li><a href="file.html"><i class="st-cloud"></i> Files</a>
                                     </li>
-                                    <li><a href="#"><i class="st-settings"></i> Settings</a>
+                                    <li><a href="#"><i class="st-settings"></i> Settings</a>-->
                                     </li>
-                                    <li><a href="login.html"><i class="im-exit"></i> Logout</a>
+                                    <li><a href="login.html"><i class="im-exit"></i> 退出</a>
                                     </li>
                                 </ul>
                             </li>
-                            <li id="toggle-right-sidebar-li"><a href="#" id="toggle-right-sidebar"><i class="ec-users"></i> <span class="notification">3</span></a>
-                            </li>
+                            <!--<li id="toggle-right-sidebar-li"><a href="#" id="toggle-right-sidebar"><i class="ec-users"></i> <span class="notification">3</span></a>
+                            </li>-->
                         </ul>
                     </nav>
                 </div>
@@ -677,7 +686,7 @@
                                             </div>
                                             <div class="tile-content">
                                                 <div class="number">107</div>
-                                                <h3>Orders</h3>
+                                                <h3>所有订单</h3>
                                             </div>
                                         </div>
                                     </div>
@@ -689,7 +698,7 @@
                                             </div>
                                             <div class="tile-content">
                                                 <div class="number">5</div>
-                                                <h3>Settings changed</h3>
+                                                <h3>默认设置</h3>
                                             </div>
                                         </div>
                                     </div>
@@ -707,7 +716,7 @@
                                             </div>
                                             <div class="tile-content">
                                                 <div class="number">24</div>
-                                                <h3>New Comments</h3>
+                                                <h3>评论信息</h3>
                                             </div>
                                         </div>
                                     </div>
@@ -719,7 +728,7 @@
                                             </div>
                                             <div class="tile-content">
                                                 <div class="number">17</div>
-                                                <h3>New emails</h3>
+                                                <h3>系统消息</h3>
                                             </div>
                                         </div>
                                     </div>
@@ -737,7 +746,7 @@
                                             </div>
                                             <div class="tile-content">
                                                 <div class="number">325</div>
-                                                <h3>New users</h3>
+                                                <h3>所有用户</h3>
                                             </div>
                                         </div>
                                     </div>
@@ -749,7 +758,7 @@
                                             </div>
                                             <div class="tile-content">
                                                 <div class="number">2540</div>
-                                                <h3>Searches</h3>
+                                                <h3>搜索次数</h3>
                                             </div>
                                         </div>
                                     </div>
@@ -780,7 +789,7 @@
                                             </div>
                                             <div class="tile-content">
                                                 <div class="number">3548</div>
-                                                <h3>Posts shared</h3>
+                                                <h3>分享次数</h3>
                                             </div>
                                         </div>
                                     </div>

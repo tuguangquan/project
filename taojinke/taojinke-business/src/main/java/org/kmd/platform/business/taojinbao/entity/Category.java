@@ -5,7 +5,13 @@ package org.kmd.platform.business.taojinbao.entity;
  */
 public class Category {
     private Long id;
+    private Long agentId;
     private String name;
+    private String image;
+    private String description;
+    private int status;
+    private int show;
+
 
     public Long getId() {
         return id;
@@ -15,11 +21,51 @@ public class Category {
         this.id = id;
     }
 
+    public Long getAgentId() {
+        return agentId;
+    }
+
+    public void setAgentId(Long agentId) {
+        this.agentId = agentId;
+    }
+
     public String getName() {
         return name;
     }
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public int getStatus() {
+        return status;
+    }
+
+    public void setStatus(int status) {
+        this.status = status;
+    }
+
+    public int getShow() {
+        return show;
+    }
+
+    public void setShow(int show) {
+        this.show = show;
     }
 }

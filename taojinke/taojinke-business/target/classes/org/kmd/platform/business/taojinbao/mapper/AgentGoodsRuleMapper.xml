@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.kmd.platform.business.taojinbao.mapper.AgentGoodsRuleMapper">
+    <sql id="agentGoodsRule_fields">
+        ID,AGENTID,TAOBAO,JD,WX,NETEASE,LOWRATE,TOPRATE,CATEID
+    </sql>
+
+    <resultMap id="AgentGoodsRuleResultMap" type="AgentGoodsRule">
+        <id property="id" column="ID"/>
+        <result property="agentId" column="AGENTID"/>
+        <result property="taobao" column="TAOBAO"/>
+        <result property="jd" column="JD"/>
+        <result property="wx" column="WX"/>
+        <result property="netease" column="NETEASE"/>
+        <result property="lowRate" column="LOWRATE"/>
+        <result property="topRate" column="TOPRATE"/>
+        <result property="cateId" column="CATEID"/>
+    </resultMap>
+
+    <insert id="add" parameterType="AgentGoodsRule"  keyProperty="id"
+            useGeneratedKeys="true">
+        INSERT INTO
+        ims_goods_rule(
+           AGENTID,TAOBAO,JD,WX,NETEASE,LOWRATE,TOPRATE,CATEID
+        )
+        VALUES (#{agentId},#{taobao},#{jd},#{wx},#{netease},#{lowRate},#{topRate},#{cateId});
+        <selectKey resultType="long" keyProperty="id">
+            select
+            LAST_INSERT_ID() as id
+        </selectKey>
+    </insert>
+
+    <update id="update" parameterType="AgentGoodsRule">
+        UPDATE ims_goods_rule
+        <set>
+            <if test="taobao != null">TAOBAO=#{taobao},</if>
+            <if test="jd != null">JD=#{jd},</if>
+            <if test="wx != null">WX=#{wx},</if>
+            <if test="netease != null">NETEASE=#{netease},</if>
+            <if test="topRate != null">TOPRATE=#{topRate},</if>
+            <if test="cateId != null">CATEID=#{cateId},</if>
+            <if test="lowRate !=null">LOWRATE=#{lowRate}</if>
+        </set>
+        WHERE AGENTID = #{agentId};
+    </update>
+
+    <select id="getByAgentId"  parameterType="java.lang.Long" resultMap="AgentGoodsRuleResultMap">
+        SELECT
+        <include refid="agentGoodsRule_fields"/>
+        FROM ims_goods_rule WHERE AGENTID = #{agentId}
+    </select>
+
+
+</mapper>

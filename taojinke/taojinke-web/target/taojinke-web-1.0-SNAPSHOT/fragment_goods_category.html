@@ -14,108 +14,131 @@
     <!-- Page start here ( usual with .row ) -->
     <div class="row">
         <!-- Start .row -->
-        <div class="col-lg-12">
+        <div class="col-lg-12" id="goodscategory_view">
         	<div class="panel panel-default panelMove toggle panelRefresh panelClose" id="spr_0">
                 <!-- Start .panel -->
                 <div class="panel-heading">
                     <h4 class="panel-title">分类操作</h4>
                 <div class="panel-controls panel-controls-hide" style="display: none;"><a href="#" class="panel-refresh"><i class="im-spinner6"></i></a><a href="#" class="toggle panel-minimize"><i class="im-minus"></i></a><a href="#" class="panel-close"><i class="im-close"></i></a></div></div>
                 <div class="panel-body">
-                	<input type="text" class="form-control" placeholder="类别名称" autofocus="autofocus">
                 	<p></p>
-                    <button class="btn btn-success">新建分类</button>
+                    <button class="btn btn-success" id="goodscategory_new">新建分类</button>
                     <button class="btn btn-warning">自动生成</button>
                 </div>
                 
             </div>
             <!---列表开始--->
-            <div class="panel panel-default plain toggle panelClose panelRefresh">
+            <style type="text/css">
+            	td {					    
+					vertical-align: middle!important;
+					text-align: center;
+					}
+				th{
+					text-align: center;
+				}	
+            </style>
+            <div class="panel panel-default panelMove toggle panelRefresh panelClose" id="spr_0">
                 <!-- Start .panel -->
-                <div class="panel-heading white-bg">
-                    <h4 class="panel-title">所有分类</h4>
-                </div>
+                
+                <div class="panel-controls panel-controls-hide" style="display: none;"><a href="#" class="panel-refresh"><i class="im-spinner6"></i></a><a href="#" class="toggle panel-minimize"><i class="im-minus"></i></a><a href="#" class="panel-close"><i class="im-close"></i></a></div>
                 <div class="panel-body">
-                    <table class="table display" id="datatable">
+                    <table class="table">
                         <thead>
                             <tr>
-                                <th>序号</th>
-                                <th>图标</th>
-                                <th>名称</th>
-                                <th>首页展示</th>
-                                <th>状态</th>
+                                <th class="per5" style="text-align: left;">选取</th>
+                                <th class="per5">序号</th>
+                                <th class="per5">图标</th>
+                                <th class="per5">名称</th>
+                                <th class="per5">显示</th>
+                                <th class="per5">平台</th>
+                                <th class="per5">备注</th>
+                                <th class="per5">状态</th>
+                                <th class="per10">操作</th>
+                                
                             </tr>
                         </thead>
                         <tbody>
-                            <tr class="odd gradeX">
-                                <td>Trident</td>
-                                <td>Internet Explorer 4.0</td>
-                                <td>Win 95+</td>
-                                <td class="center">4</td>
-                                <td class="center">X</td>
-                            </tr>
-                            <tr class="even gradeC">
-                                <td>Trident</td>
-                                <td>Internet Explorer 5.0</td>
-                                <td>Win 95+</td>
-                                <td class="center">5</td>
-                                <td class="center">C</td>
-                            </tr>
-                            <tr class="odd gradeA">
-                                <td>Trident</td>
-                                <td>Internet Explorer 5.5</td>
-                                <td>Win 95+</td>
-                                <td class="center">5.5</td>
-                                <td class="center">A</td>
-                            </tr>
-                            <tr class="even gradeA">
-                                <td>Trident</td>
-                                <td>Internet Explorer 6</td>
-                                <td>Win 98+</td>
-                                <td class="center">6</td>
-                                <td class="center">A</td>
-                            </tr>
-                            <tr class="odd gradeA">
-                                <td>Trident</td>
-                                <td>Internet Explorer 7</td>
-                                <td>Win XP SP2+</td>
-                                <td class="center">7</td>
-                                <td class="center">A</td>
-                            </tr>
-                            <tr class="even gradeA">
-                                <td>Trident</td>
-                                <td>AOL browser (AOL desktop)</td>
-                                <td>Win XP</td>
-                                <td class="center">6</td>
-                                <td class="center">A</td>
-                            </tr>                           
-                            <tr class="gradeU">
-                                <td>Other browsers</td>
-                                <td>All others</td>
-                                <td>-</td>
-                                <td class="center">-</td>
-                                <td class="center">U</td>
-                            </tr>
-                        </tbody>
-                        <tfoot>
                             <tr>
-                                <th>Rendering engine</th>
-                                <th>Browser</th>
-                                <th>Platform(s)</th>
-                                <th>Engine version</th>
-                                <th>CSS grade</th>
-                            </tr>
-                        </tfoot>
+                                <td>
+                                    <label class="checkbox">
+                                        <input class="check" type="checkbox" value="option2" style="margin-left: 0;">
+                                    </label>
+                                </td>
+                                <td>1</td>
+                                <td><img src="assets/css/sprflat-theme/images/animated-overlay.gif" height="50px"/> </td>
+                                <td>玩具</td>
+                                <td>首页</td>
+                                <td>所有</td>   
+                                <td>儿童玩具</td>
+                                <td>正常</td>                                
+                                <td><button class="btn btn-primary" id="btn-edit">编辑</button>&nbsp; &nbsp; <button class="btn btn-danger">删除</button> </td> 
+                            </tr>                            
+                        </tbody>                        
+                        
                     </table>
-                <br />
-	            <div class="form-group" style="text-align: left;">
-	        	   <button id="success-notice" type="button" class="btn btn-danger mr15 mb15" style="padding: 10px 30px;">删除</button>
-	            </div>
+                    <!--option buttons-->
+                    <button class="btn btn-danger">删除</button>
                 </div>
             </div>
             
         </div>
+        <!--
+        	作者：offline
+        	时间：2017-05-29
+        	描述：沉底
+        -->
+        <div id="goodscategory_mode" style="top: 0;width: 100%;height: 100%;position: absolute;z-index: 9991;background-color: #e4e9eb;opacity: 0.5;display: none;"></div>
+        
+        <div class="animated fadeInRightBig " id="goodscategory_modify" hidden="hidden" style="margin-left: 45%;top: 0;width: 100%;padding: 0 15px;">
+        	<div class="panel panel-primary panelMove toggle panelRefresh panelClose" id="spr_0" style="box-shadow: 0 1px 10px 1px;">
+                <!-- Start .panel -->
+                <div class="panel-heading">
+                    <h4 class="panel-title" id="goodscategory_editor_title">添加分类</h4>
+                <div class="panel-controls panel-controls-hide" style="display: none;"><a href="#" class="panel-refresh"><i class="im-spinner6"></i></a><a href="#" class="toggle panel-minimize"><i class="im-minus"></i></a><a href="#" class="panel-close"><i class="im-close"></i></a></div></div>
+                <div class="panel-body">
+                	<input type="text" class="form-control" placeholder="类别名称" autofocus="autofocus" style="width: 30%;">
+                		<br />
+                	<select type="text" class="form-control" placeholder="类别状态" autofocus="autofocus" style="width: 30%;">
+                		<option selected="selected">显示</option>
+                		<option >隐藏</option>              		
+                	</select>                		
+                		<br />
+                	<input type="text" class="form-control" placeholder="类别图标" autofocus="autofocus" style="width: 30%;">
+                		<br />
+                	<select type="text" class="form-control" placeholder="类别状态" autofocus="autofocus" style="width: 30%;">
+                		<option selected="selected">所有</option>
+                		<option >淘宝</option>
+                		<option >京东</option>
+                		<option >微客</option>
+                		
+                	</select>
+                		<br />
+                	<select type="text" class="form-control" placeholder="类别状态" autofocus="autofocus" style="width: 30%;">
+                		<option selected="selected">正常</option>
+                		<option >失效</option>
+                	</select>
+                		<br />
+                	<input type="text" class="form-control" placeholder="备注信息" autofocus="autofocus" style="width: 30%;">
+                	<p></p>
+                    <button class="btn btn-success" id="goodscategory_modify_save">保存</button>
+                    <button class="btn btn-warning" id="goodscategory_modify_return">返回</button>
+                    <!--
+                    	作者：offline
+                    	时间：2017-05-29
+                    	描述：ico 上传
+                    -->
+                    
+                    <div id="goodscategory_icon" style="border: 2px dashed #00FF00;height: 53%;width: 20%;margin-left: 35%;top: 100px;position: absolute;border-radius: 10px;text-align: center;vertical-align: middle;padding: 50px 0;cursor: pointer;">
+                    	<h4>点击</h4>
+                    	<h4>设置商品类别图标</h4>
+                    </div>
+                </div>
+                
+            </div>            
+        </div> 
         <!-- End col-lg-12 -->
     </div>
     <!-- End .row -->
     <!-- Page End here -->
 </div>
+<script type="text/javascript" src="assets/js/pagefunction/GoodsCategory.js" ></script>

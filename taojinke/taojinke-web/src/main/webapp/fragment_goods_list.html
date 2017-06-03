@@ -23,45 +23,45 @@
                 <div class="panel-controls panel-controls-hide" style="display: none;"><a href="#" class="panel-refresh"><i class="im-spinner6"></i></a><a href="#" class="toggle panel-minimize"><i class="im-minus"></i></a><a href="#" class="panel-close"><i class="im-close"></i></a></div></div>
                 <div class="panel-body">
 	            	<div class="col-lg-3">
-	            		<input type="text" class="form-control" placeholder="商品名称" autofocus="autofocus">
+	            		<input type="text" class="form-control" placeholder="商品名称" autofocus="autofocus" id="goodsname">
 	            		<br />
-	            		<input type="text" class="form-control" placeholder="售价下限" autofocus="autofocus">
+	            		<input type="text" class="form-control" placeholder="售价下限" autofocus="autofocus" id="goodspricemini">
 	            		<br />
-	            		<input type="text" class="form-control" placeholder="售价上限" autofocus="autofocus">
+	            		<input type="text" class="form-control" placeholder="售价上限" autofocus="autofocus" id="goodspricemax">
 	            	</div>
 	            	<div class="col-lg-3">
-	            		<input type="text" class="form-control" placeholder="佣金上限" autofocus="autofocus">
+	            		<input type="text" class="form-control" placeholder="佣金下限" autofocus="autofocus" id="goodsearnmini">
 	            		<br />
-	            		<input type="text" class="form-control" placeholder="佣金下限" autofocus="autofocus">
+	            		<input type="text" class="form-control" placeholder="佣金上限" autofocus="autofocus" id="goodsearnmax">
 	            		<br />        		
 	            		<span>类别</span>
 	            		&nbsp;
-	            		<select size="1" name="datatable_length" aria-controls="datatable" class="form-control input-small" style="display: inline;">
-	            			<option value="10" selected="selected">不限</option>
-	            			<option value="50">女装</option>
-	            			<option value="25">男装</option>
-	            			<option value="50">夏装</option>
-	            			<option value="100">秋装</option>
+	            		<select size="1" name="datatable_length" aria-controls="datatable" class="form-control input-small" style="display: inline;" id="goodstypeid">
+	            			<option value="1" selected="selected">不限</option>
+	            			<option value="2">女装</option>
+	            			<option value="2">男装</option>
+	            			<option value="3">夏装</option>
+	            			<option value="3">秋装</option>
 	            		</select>
 	            		&nbsp;
 	            		<span>来源</span>
 	            		&nbsp;
-	            		<select size="1" name="datatable_length" aria-controls="datatable" class="form-control input-small" style="display: inline;">
+	            		<select size="1" name="datatable_length" aria-controls="datatable" class="form-control input-small" style="display: inline;" id="goodswhereid">
 	            			<option value="10" selected="selected">所有</option>
-	            			<option value="50">淘宝</option>
-	            			<option value="25">京东</option>
-	            			<option value="50">微信</option>
-	            			<option value="100">考拉</option>
+	            			<option value="1">淘宝</option>
+	            			<option value="2">京东</option>
+	            			<option value="3">微信</option>
+	            			<option value="4">考拉</option>
 	            		</select>
 	            		&nbsp;
-	            		<input type="text" class="form-control input-small" style="display: inline;vertical-align: bottom;" placeholder="显示条数"/>
+	            		<input type="text" class="form-control input-small" style="display: inline;vertical-align: bottom;" placeholder="显示条数" id="goodsmaxitems" value="10"/>
 	            	</div>
 	            	<div class="clearfix">            		
 	            	</div>
 	            	<p></p>
 	            	<p style="margin-left:15px;">输入任意字段都可以搜索！</p>
 	            	<p></p>
-	                <button class="btn btn-success" style="margin-left:15px;"><i class="br-search" style=" vertical-align: middle;"></i> 搜索商品</button>
+	                <button class="btn btn-success" style="margin-left:15px;" id="goodssearch"><i class="br-search" style=" vertical-align: middle;"></i> 搜索商品</button>
                 </div>
             </div>
             <!--
@@ -98,7 +98,7 @@
                                 
                             </tr>
                         </thead>
-                        <tbody>
+                        <tbody id="GoodsListItem">
                             <tr>
                                 <td>
                                     <label class="checkbox">
@@ -202,3 +202,9 @@
     <!-- End .row -->
     <!-- Page End here -->
 </div>
+<!--
+	作者：666@1234560.net
+	时间：2017-05-26
+	描述：商品类别动态
+-->
+<script type="text/javascript" src="assets/js/pagefunction/GoodsList.js" ></script>
