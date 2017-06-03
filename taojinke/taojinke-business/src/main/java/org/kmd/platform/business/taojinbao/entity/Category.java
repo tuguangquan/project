@@ -10,7 +10,7 @@ public class Category {
     private String image;
     private String description;
     private int status;
-    private int show;
+    private int display;
 
 
     public Long getId() {
@@ -61,11 +61,11 @@ public class Category {
         this.status = status;
     }
 
-    public int getShow() {
-        return show;
+    public int getDisplay() {
+        return display;
     }
 
-    public void setShow(int show) {
-        this.show = show;
+    public void setDisplay(int display) {
+        this.display = display;
     }
 }

@@ -4,7 +4,7 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="org.kmd.platform.business.taojinbao.mapper.CategoryMapper">
     <sql id="category_fields">
-        ID,AGENTID,NAME,IMAGE,DESCRIPTION,STATUS,SHOW
+        ID,AGENTID,NAME,IMAGE,DESCRIPTION,STATUS,DISPLAY
     </sql>
 
     <resultMap id="CategoryResultMap" type="Category">
@@ -14,16 +14,16 @@
         <result property="image" column="IMAGE"/>
         <result property="description" column="DESCRIPTION"/>
         <result property="status" column="STATUS"/>
-        <result property="show" column="SHOW"/>
+        <result property="display" column="DISPLAY"/>
     </resultMap>
 
     <insert id="add" parameterType="Category"  keyProperty="id"
             useGeneratedKeys="true">
         INSERT INTO
         ims_goods_category(
-        AGENTID,NAME,IMAGE,DESCRIPTION,STATUS,SHOW
+        AGENTID,NAME,IMAGE,DESCRIPTION,STATUS,DISPLAY
         )
-        VALUES (#{agentId},#{name},#{image},#{description},#{status},#{show});
+        VALUES (#{agentId},#{name},#{image},#{description},#{status},#{display})
         <selectKey resultType="long" keyProperty="id">
             select
             LAST_INSERT_ID() as id
@@ -37,14 +37,14 @@
             <if test="image != null">IMAGE=#{image},</if>
             <if test="description != null">DESCRIPTION=#{description},</if>
             <if test="status != null">STATUS=#{status},</if>
-            <if test="show !=null">SHOW=#{show}</if>
+            <if test="show !=null">DISPLAY=#{display}</if>
         </set>
         WHERE ID=#{id} and AGENTID = #{agentId}  ;
     </update>
 
     <select id="getByAgentId"  parameterType="java.lang.Long" resultMap="CategoryResultMap">
         SELECT
-        <include refid="agentInfo_fields"/>
+        <include refid="category_fields"/>
         FROM ims_goods_category WHERE AGENTID = #{agentId}
     </select>
 

@@ -2,567 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6328e16e-7283-4bff-bff6-5e4f32b565da" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/assets/img/wechatgzh.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/.project" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/entity/AgentGoodsRule.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/mapper/AgentGoodsRuleMapper.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/taojinke/taojinke-business/src/main/resources/org/kmd/platform/business/taojinbao/mapper/AgentGoodsRuleMapper.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/service/AgentGoodsRuleService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/web/AgentGoodsRuleServiceWeb.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/mapper/CategoryMapper.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/taojinke/taojinke-business/src/main/resources/org/kmd/platform/business/taojinbao/mapper/CategoryMapper.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/service/CategoryService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/web/CategoryServiceWeb.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/assets/js/pagefunction/GoodsCategory.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/assets/js/pagefunction/GoodsList.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/assets/js/pagefunction/Login.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/assets/js/pagefunction/ShopList.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/assets/js/pagefunction/WechatFunction.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fundamental/fundamental-orm/target/classes/org/kmd/platform/fundamental/orm/mapper/AbstractMapper.class" afterPath="$PROJECT_DIR$/fundamental/fundamental-orm/target/classes/org/kmd/platform/fundamental/orm/mapper/AbstractMapper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-business/target/classes/org/kmd/platform/business/taojinbao/util/AccessToken.class" afterPath="$PROJECT_DIR$/taojinke/taojinke-business/target/classes/org/kmd/platform/business/taojinbao/util/AccessToken.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-business/target/classes/org/kmd/platform/business/taojinbao/weixin/QRCode/ActionInfo.class" afterPath="$PROJECT_DIR$/taojinke/taojinke-business/target/classes/org/kmd/platform/business/taojinbao/weixin/QRCode/ActionInfo.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-business/target/classes/org/kmd/platform/business/taojinbao/entity/AgentInfo.class" afterPath="$PROJECT_DIR$/taojinke/taojinke-business/target/classes/org/kmd/platform/business/taojinbao/entity/AgentInfo.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-business/target/classes/org/kmd/platform/business/taojinbao/mapper/AgentInfoMapper.class" afterPath="$PROJECT_DIR$/taojinke/taojinke-business/target/classes/org/kmd/platform/business/taojinbao/mapper/AgentInfoMapper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-business/target/classes/org/kmd/platform/business/taojinbao/service/AgentInfoService.class" afterPath="$PROJECT_DIR$/taojinke/taojinke-business/target/classes/org/kmd/platform/business/taojinbao/service/AgentInfoService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-business/target/classes/org/kmd/platform/business/taojinbao/web/AgentInfoServiceWeb.class" afterPath="$PROJECT_DIR$/taojinke/taojinke-business/target/classes/org/kmd/platform/business/taojinbao/web/AgentInfoServiceWeb.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/business/business-app/target/classes/org/kmd/platform/business/app/entity/App.class" afterPath="$PROJECT_DIR$/business/business-app/target/classes/org/kmd/platform/business/app/entity/App.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/business/business-app/target/classes/org/kmd/platform/business/app/mapper/AppMapper.class" afterPath="$PROJECT_DIR$/business/business-app/target/classes/org/kmd/platform/business/app/mapper/AppMapper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/business/business-app/target/classes/org/kmd/platform/business/app/service/AppService.class" afterPath="$PROJECT_DIR$/business/business-app/target/classes/org/kmd/platform/business/app/service/AppService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/business/business-app/target/classes/org/kmd/platform/business/app/web/AppServiceWeb.class" afterPath="$PROJECT_DIR$/business/business-app/target/classes/org/kmd/platform/business/app/web/AppServiceWeb.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-business/target/classes/org/kmd/platform/business/taojinbao/weixin/resp/Article.class" afterPath="$PROJECT_DIR$/taojinke/taojinke-business/target/classes/org/kmd/platform/business/taojinbao/weixin/resp/Article.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/business/business-user/target/classes/org/kmd/platform/business/user/entity/Authority.class" afterPath="$PROJECT_DIR$/business/business-user/target/classes/org/kmd/platform/business/user/entity/Authority.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/business/business-user/target/classes/org/kmd/platform/business/user/mapper/AuthorityMapper.class" afterPath="$PROJECT_DIR$/business/business-user/target/classes/org/kmd/platform/business/user/mapper/AuthorityMapper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/business/business-user/target/classes/org/kmd/platform/business/user/service/AuthorityService.class" afterPath="$PROJECT_DIR$/business/business-user/target/classes/org/kmd/platform/business/user/service/AuthorityService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/business/business-user/target/classes/org/kmd/platform/business/user/web/AuthorityServiceWeb.class" afterPath="$PROJECT_DIR$/business/business-user/target/classes/org/kmd/platform/business/user/web/AuthorityServiceWeb.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-business/target/test-classes/BufferedImageLuminanceSource.class" afterPath="$PROJECT_DIR$/taojinke/taojinke-business/target/test-classes/BufferedImageLuminanceSource.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fundamental/fundamental-exception/target/classes/org/kmd/platform/fundamental/exception/BusinessException.class" afterPath="$PROJECT_DIR$/fundamental/fundamental-exception/target/classes/org/kmd/platform/fundamental/exception/BusinessException.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-business/target/classes/org/kmd/platform/business/taojinbao/entity/Category.class" afterPath="$PROJECT_DIR$/taojinke/taojinke-business/target/classes/org/kmd/platform/business/taojinbao/entity/Category.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fundamental/fundamental-config/target/classes/config/ConfigProperties.class" afterPath="$PROJECT_DIR$/fundamental/fundamental-config/target/classes/config/ConfigProperties.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fundamental/fundamental-config/target/classes/org/kmd/platform/fundamental/config/ConfigProperties.class" afterPath="$PROJECT_DIR$/fundamental/fundamental-config/target/classes/org/kmd/platform/fundamental/config/ConfigProperties.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-business/target/classes/org/kmd/platform/business/taojinbao/weixin/Constant.class" afterPath="$PROJECT_DIR$/taojinke/taojinke-business/target/classes/org/kmd/platform/business/taojinbao/weixin/Constant.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fundamental/fundamental-config/target/classes/config/Constants.class" afterPath="$PROJECT_DIR$/fundamental/fundamental-config/target/classes/config/Constants.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fundamental/fundamental-config/target/classes/org/kmd/platform/fundamental/config/Constants.class" afterPath="$PROJECT_DIR$/fundamental/fundamental-config/target/classes/org/kmd/platform/fundamental/config/Constants.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-business/target/classes/org/kmd/platform/business/taojinbao/servlet/CoreServlet.class" afterPath="$PROJECT_DIR$/taojinke/taojinke-business/target/classes/org/kmd/platform/business/taojinbao/servlet/CoreServlet.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-business/target/classes/org/kmd/platform/business/taojinbao/servlet/CrossOriginControl.class" afterPath="$PROJECT_DIR$/taojinke/taojinke-business/target/classes/org/kmd/platform/business/taojinbao/servlet/CrossOriginControl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/business/business-user/target/classes/org/kmd/platform/business/user/entity/CurrentUser.class" afterPath="$PROJECT_DIR$/business/business-user/target/classes/org/kmd/platform/business/user/entity/CurrentUser.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fundamental/fundamental-dataSource/target/classes/datasource/DbcpFactoryBean.class" afterPath="$PROJECT_DIR$/fundamental/fundamental-dataSource/target/classes/datasource/DbcpFactoryBean.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fundamental/fundamental-dataSource/target/classes/org/kmd/platform/fundamental/datasource/DbcpFactoryBean.class" afterPath="$PROJECT_DIR$/fundamental/fundamental-dataSource/target/classes/org/kmd/platform/fundamental/datasource/DbcpFactoryBean.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fundamental/fundamental-exception/target/classes/org/kmd/platform/fundamental/exception/DuplicateException.class" afterPath="$PROJECT_DIR$/fundamental/fundamental-exception/target/classes/org/kmd/platform/fundamental/exception/DuplicateException.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fundamental/fundamental-exception/target/classes/org/kmd/platform/fundamental/exception/utils/Exceptions.class" afterPath="$PROJECT_DIR$/fundamental/fundamental-exception/target/classes/org/kmd/platform/fundamental/exception/utils/Exceptions.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-business/target/test-classes/FileUtil.class" afterPath="$PROJECT_DIR$/taojinke/taojinke-business/target/test-classes/FileUtil.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fundamental/fundamental-config/target/classes/config/FundamentalConfigProvider.class" afterPath="$PROJECT_DIR$/fundamental/fundamental-config/target/classes/config/FundamentalConfigProvider.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fundamental/fundamental-config/target/classes/org/kmd/platform/fundamental/config/FundamentalConfigProvider.class" afterPath="$PROJECT_DIR$/fundamental/fundamental-config/target/classes/org/kmd/platform/fundamental/config/FundamentalConfigProvider.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-business/target/classes/org/kmd/platform/business/taojinbao/entity/Goods.class" afterPath="$PROJECT_DIR$/taojinke/taojinke-business/target/classes/org/kmd/platform/business/taojinbao/entity/Goods.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-business/target/classes/org/kmd/platform/business/taojinbao/mapper/GoodsMapper.class" afterPath="$PROJECT_DIR$/taojinke/taojinke-business/target/classes/org/kmd/platform/business/taojinbao/mapper/GoodsMapper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-business/target/classes/org/kmd/platform/business/taojinbao/entity/GoodsSelect.class" afterPath="$PROJECT_DIR$/taojinke/taojinke-business/target/classes/org/kmd/platform/business/taojinbao/entity/GoodsSelect.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-business/target/classes/org/kmd/platform/business/taojinbao/mapper/GoodsSelectMapper.class" afterPath="$PROJECT_DIR$/taojinke/taojinke-business/target/classes/org/kmd/platform/business/taojinbao/mapper/GoodsSelectMapper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-business/target/classes/org/kmd/platform/business/taojinbao/service/GoodsSelectService.class" afterPath="$PROJECT_DIR$/taojinke/taojinke-business/target/classes/org/kmd/platform/business/taojinbao/service/GoodsSelectService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-business/target/classes/org/kmd/platform/business/taojinbao/service/GoodsService.class" afterPath="$PROJECT_DIR$/taojinke/taojinke-business/target/classes/org/kmd/platform/business/taojinbao/service/GoodsService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-business/target/classes/org/kmd/platform/business/taojinbao/web/GoodsServiceWeb.class" afterPath="$PROJECT_DIR$/taojinke/taojinke-business/target/classes/org/kmd/platform/business/taojinbao/web/GoodsServiceWeb.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/business/business-user/target/classes/org/kmd/platform/business/user/test/HttpRequest.class" afterPath="$PROJECT_DIR$/business/business-user/target/classes/org/kmd/platform/business/user/test/HttpRequest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-business/target/classes/org/kmd/platform/business/taojinbao/weixin/resp/Image.class" afterPath="$PROJECT_DIR$/taojinke/taojinke-business/target/classes/org/kmd/platform/business/taojinbao/weixin/resp/Image.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-business/target/classes/org/kmd/platform/business/taojinbao/weixin/req/ImageMessageReq.class" afterPath="$PROJECT_DIR$/taojinke/taojinke-business/target/classes/org/kmd/platform/business/taojinbao/weixin/req/ImageMessageReq.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-business/target/classes/org/kmd/platform/business/taojinbao/weixin/resp/ImageMessageResp.class" afterPath="$PROJECT_DIR$/taojinke/taojinke-business/target/classes/org/kmd/platform/business/taojinbao/weixin/resp/ImageMessageResp.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-business/target/classes/org/kmd/platform/business/taojinbao/util/ImageRemarkUtil.class" afterPath="$PROJECT_DIR$/taojinke/taojinke-business/target/classes/org/kmd/platform/business/taojinbao/util/ImageRemarkUtil.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-business/target/test-classes/ImageRemarkUtil.class" afterPath="$PROJECT_DIR$/taojinke/taojinke-business/target/test-classes/ImageRemarkUtil.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-business/target/classes/org/kmd/platform/business/taojinbao/servlet/process/impl/ImageRespProcess.class" afterPath="$PROJECT_DIR$/taojinke/taojinke-business/target/classes/org/kmd/platform/business/taojinbao/servlet/process/impl/ImageRespProcess.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fundamental/fundamental-util/target/classes/org/kmd/platform/fundamental/util/json/JsonMapper.class" afterPath="$PROJECT_DIR$/fundamental/fundamental-util/target/classes/org/kmd/platform/fundamental/util/json/JsonMapper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fundamental/fundamental-util/target/classes/util/json/JsonMapper.class" afterPath="$PROJECT_DIR$/fundamental/fundamental-util/target/classes/util/json/JsonMapper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fundamental/fundamental-util/target/classes/org/kmd/platform/fundamental/util/json/JsonResultUtils$Code.class" afterPath="$PROJECT_DIR$/fundamental/fundamental-util/target/classes/org/kmd/platform/fundamental/util/json/JsonResultUtils$Code.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fundamental/fundamental-util/target/classes/util/json/JsonResultUtils$Code.class" afterPath="$PROJECT_DIR$/fundamental/fundamental-util/target/classes/util/json/JsonResultUtils$Code.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fundamental/fundamental-util/target/classes/org/kmd/platform/fundamental/util/json/JsonResultUtils.class" afterPath="$PROJECT_DIR$/fundamental/fundamental-util/target/classes/org/kmd/platform/fundamental/util/json/JsonResultUtils.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fundamental/fundamental-util/target/classes/util/json/JsonResultUtils.class" afterPath="$PROJECT_DIR$/fundamental/fundamental-util/target/classes/util/json/JsonResultUtils.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-business/target/classes/org/kmd/platform/business/taojinbao/weixin/req/LinkMessageReq.class" afterPath="$PROJECT_DIR$/taojinke/taojinke-business/target/classes/org/kmd/platform/business/taojinbao/weixin/req/LinkMessageReq.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-business/target/classes/org/kmd/platform/business/taojinbao/weixin/req/LocationMessageReq.class" afterPath="$PROJECT_DIR$/taojinke/taojinke-business/target/classes/org/kmd/platform/business/taojinbao/weixin/req/LocationMessageReq.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/business/business-user/target/classes/org/kmd/platform/business/user/util/MD5Encoder.class" afterPath="$PROJECT_DIR$/business/business-user/target/classes/org/kmd/platform/business/user/util/MD5Encoder.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-business/target/test-classes/Main.class" afterPath="$PROJECT_DIR$/taojinke/taojinke-business/target/test-classes/Main.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-business/target/classes/org/kmd/platform/business/taojinbao/weixin/mass/resp/MassBaseMessage.class" afterPath="$PROJECT_DIR$/taojinke/taojinke-business/target/classes/org/kmd/platform/business/taojinbao/weixin/mass/resp/MassBaseMessage.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-business/target/classes/org/kmd/platform/business/taojinbao/weixin/mass/resp/MassImage.class" afterPath="$PROJECT_DIR$/taojinke/taojinke-business/target/classes/org/kmd/platform/business/taojinbao/weixin/mass/resp/MassImage.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-business/target/classes/org/kmd/platform/business/taojinbao/weixin/mass/resp/MassImageMessage.class" afterPath="$PROJECT_DIR$/taojinke/taojinke-business/target/classes/org/kmd/platform/business/taojinbao/weixin/mass/resp/MassImageMessage.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-business/target/classes/org/kmd/platform/business/taojinbao/weixin/mass/resp/MassTextMessage.class" afterPath="$PROJECT_DIR$/taojinke/taojinke-business/target/classes/org/kmd/platform/business/taojinbao/weixin/mass/resp/MassTextMessage.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-business/target/classes/org/kmd/platform/business/taojinbao/weixin/mass/resp/MassVoiceMessage.class" afterPath="$PROJECT_DIR$/taojinke/taojinke-business/target/classes/org/kmd/platform/business/taojinbao/weixin/mass/resp/MassVoiceMessage.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-business/target/classes/org/kmd/platform/business/taojinbao/dto/Material.class" afterPath="$PROJECT_DIR$/taojinke/taojinke-business/target/classes/org/kmd/platform/business/taojinbao/dto/Material.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-business/target/classes/org/kmd/platform/business/taojinbao/dto/Media_id.class" afterPath="$PROJECT_DIR$/taojinke/taojinke-business/target/classes/org/kmd/platform/business/taojinbao/dto/Media_id.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-business/target/classes/org/kmd/platform/business/taojinbao/dto/MenuView.class" afterPath="$PROJECT_DIR$/taojinke/taojinke-business/target/classes/org/kmd/platform/business/taojinbao/dto/MenuView.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-business/target/classes/org/kmd/platform/business/taojinbao/util/MessageUtil$1$1.class" afterPath="$PROJECT_DIR$/taojinke/taojinke-business/target/classes/org/kmd/platform/business/taojinbao/util/MessageUtil$1$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-business/target/classes/org/kmd/platform/business/taojinbao/util/MessageUtil$1.class" afterPath="$PROJECT_DIR$/taojinke/taojinke-business/target/classes/org/kmd/platform/business/taojinbao/util/MessageUtil$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-business/target/classes/org/kmd/platform/business/taojinbao/util/MessageUtil.class" afterPath="$PROJECT_DIR$/taojinke/taojinke-business/target/classes/org/kmd/platform/business/taojinbao/util/MessageUtil.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-business/target/classes/org/kmd/platform/business/taojinbao/entity/MsgSub.class" afterPath="$PROJECT_DIR$/taojinke/taojinke-business/target/classes/org/kmd/platform/business/taojinbao/entity/MsgSub.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-business/target/classes/org/kmd/platform/business/taojinbao/mapper/MsgSubMapper.class" afterPath="$PROJECT_DIR$/taojinke/taojinke-business/target/classes/org/kmd/platform/business/taojinbao/mapper/MsgSubMapper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-business/target/classes/org/kmd/platform/business/taojinbao/service/MsgSubService.class" afterPath="$PROJECT_DIR$/taojinke/taojinke-business/target/classes/org/kmd/platform/business/taojinbao/service/MsgSubService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-business/target/classes/org/kmd/platform/business/taojinbao/entity/MsgTemp.class" afterPath="$PROJECT_DIR$/taojinke/taojinke-business/target/classes/org/kmd/platform/business/taojinbao/entity/MsgTemp.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-business/target/classes/org/kmd/platform/business/taojinbao/mapper/MsgTempMapper.class" afterPath="$PROJECT_DIR$/taojinke/taojinke-business/target/classes/org/kmd/platform/business/taojinbao/mapper/MsgTempMapper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-business/target/classes/org/kmd/platform/business/taojinbao/service/MsgTempService.class" afterPath="$PROJECT_DIR$/taojinke/taojinke-business/target/classes/org/kmd/platform/business/taojinbao/service/MsgTempService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-business/target/classes/org/kmd/platform/business/taojinbao/weixin/resp/Music.class" afterPath="$PROJECT_DIR$/taojinke/taojinke-business/target/classes/org/kmd/platform/business/taojinbao/weixin/resp/Music.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-business/target/classes/org/kmd/platform/business/taojinbao/weixin/resp/MusicMessageResp.class" afterPath="$PROJECT_DIR$/taojinke/taojinke-business/target/classes/org/kmd/platform/business/taojinbao/weixin/resp/MusicMessageResp.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-business/target/classes/org/kmd/platform/business/taojinbao/util/MyX509TrustManager.class" afterPath="$PROJECT_DIR$/taojinke/taojinke-business/target/classes/org/kmd/platform/business/taojinbao/util/MyX509TrustManager.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-business/target/classes/org/kmd/platform/business/taojinbao/weixin/resp/NewsMessageResp.class" afterPath="$PROJECT_DIR$/taojinke/taojinke-business/target/classes/org/kmd/platform/business/taojinbao/weixin/resp/NewsMessageResp.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-business/target/classes/org/kmd/platform/business/taojinbao/servlet/process/impl/NewsRespProcess.class" afterPath="$PROJECT_DIR$/taojinke/taojinke-business/target/classes/org/kmd/platform/business/taojinbao/servlet/process/impl/NewsRespProcess.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fundamental/fundamental-exception/target/classes/org/kmd/platform/fundamental/exception/NotFoundException.class" afterPath="$PROJECT_DIR$/fundamental/fundamental-exception/target/classes/org/kmd/platform/fundamental/exception/NotFoundException.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fundamental/fundamental-logger/target/classes/logger/PlatformLogger.class" afterPath="$PROJECT_DIR$/fundamental/fundamental-logger/target/classes/logger/PlatformLogger.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fundamental/fundamental-logger/target/classes/org/kmd/platform/fundamental/logger/PlatformLogger.class" afterPath="$PROJECT_DIR$/fundamental/fundamental-logger/target/classes/org/kmd/platform/fundamental/logger/PlatformLogger.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-business/target/classes/org/kmd/platform/business/taojinbao/entity/Poster.class" afterPath="$PROJECT_DIR$/taojinke/taojinke-business/target/classes/org/kmd/platform/business/taojinbao/entity/Poster.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-business/target/classes/org/kmd/platform/business/taojinbao/mapper/PosterMapper.class" afterPath="$PROJECT_DIR$/taojinke/taojinke-business/target/classes/org/kmd/platform/business/taojinbao/mapper/PosterMapper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-business/target/classes/org/kmd/platform/business/taojinbao/service/PosterService.class" afterPath="$PROJECT_DIR$/taojinke/taojinke-business/target/classes/org/kmd/platform/business/taojinbao/service/PosterService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-business/target/classes/org/kmd/platform/business/taojinbao/web/PosterServiceWeb.class" afterPath="$PROJECT_DIR$/taojinke/taojinke-business/target/classes/org/kmd/platform/business/taojinbao/web/PosterServiceWeb.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-business/target/classes/org/kmd/platform/business/taojinbao/weixin/QRCode/QRCode.class" afterPath="$PROJECT_DIR$/taojinke/taojinke-business/target/classes/org/kmd/platform/business/taojinbao/weixin/QRCode/QRCode.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-business/target/classes/org/kmd/platform/business/taojinbao/weixin/req/ReqBaseMessage.class" afterPath="$PROJECT_DIR$/taojinke/taojinke-business/target/classes/org/kmd/platform/business/taojinbao/weixin/req/ReqBaseMessage.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-business/target/classes/org/kmd/platform/business/taojinbao/weixin/resp/RespBaseMessage.class" afterPath="$PROJECT_DIR$/taojinke/taojinke-business/target/classes/org/kmd/platform/business/taojinbao/weixin/resp/RespBaseMessage.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-business/target/classes/org/kmd/platform/business/taojinbao/servlet/process/RespProcess.class" afterPath="$PROJECT_DIR$/taojinke/taojinke-business/target/classes/org/kmd/platform/business/taojinbao/servlet/process/RespProcess.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-business/target/classes/org/kmd/platform/business/taojinbao/weixin/QRCode/Scene.class" afterPath="$PROJECT_DIR$/taojinke/taojinke-business/target/classes/org/kmd/platform/business/taojinbao/weixin/QRCode/Scene.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-business/target/classes/org/kmd/platform/business/taojinbao/entity/Shop.class" afterPath="$PROJECT_DIR$/taojinke/taojinke-business/target/classes/org/kmd/platform/business/taojinbao/entity/Shop.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-business/target/classes/org/kmd/platform/business/taojinbao/util/ShopEunm.class" afterPath="$PROJECT_DIR$/taojinke/taojinke-business/target/classes/org/kmd/platform/business/taojinbao/util/ShopEunm.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-business/target/classes/org/kmd/platform/business/taojinbao/dto/ShopExtend.class" afterPath="$PROJECT_DIR$/taojinke/taojinke-business/target/classes/org/kmd/platform/business/taojinbao/dto/ShopExtend.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-business/target/classes/org/kmd/platform/business/taojinbao/mapper/ShopMapper.class" afterPath="$PROJECT_DIR$/taojinke/taojinke-business/target/classes/org/kmd/platform/business/taojinbao/mapper/ShopMapper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-business/target/classes/org/kmd/platform/business/taojinbao/service/ShopService.class" afterPath="$PROJECT_DIR$/taojinke/taojinke-business/target/classes/org/kmd/platform/business/taojinbao/service/ShopService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-business/target/classes/org/kmd/platform/business/taojinbao/web/ShopServiceWeb.class" afterPath="$PROJECT_DIR$/taojinke/taojinke-business/target/classes/org/kmd/platform/business/taojinbao/web/ShopServiceWeb.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-business/target/classes/org/kmd/platform/business/taojinbao/util/SignUtil.class" afterPath="$PROJECT_DIR$/taojinke/taojinke-business/target/classes/org/kmd/platform/business/taojinbao/util/SignUtil.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/business/business-user/target/classes/org/kmd/platform/business/user/entity/SubAuthority.class" afterPath="$PROJECT_DIR$/business/business-user/target/classes/org/kmd/platform/business/user/entity/SubAuthority.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/business/business-user/target/classes/org/kmd/platform/business/user/entity/SubUser.class" afterPath="$PROJECT_DIR$/business/business-user/target/classes/org/kmd/platform/business/user/entity/SubUser.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-business/target/classes/org/kmd/platform/business/taojinbao/weixin/test/Template.class" afterPath="$PROJECT_DIR$/taojinke/taojinke-business/target/classes/org/kmd/platform/business/taojinbao/weixin/test/Template.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-business/target/classes/org/kmd/platform/business/taojinbao/weixin/test/TemplateParam.class" afterPath="$PROJECT_DIR$/taojinke/taojinke-business/target/classes/org/kmd/platform/business/taojinbao/weixin/test/TemplateParam.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/business/business-user/target/classes/org/kmd/platform/business/user/entity/Test.class" afterPath="$PROJECT_DIR$/business/business-user/target/classes/org/kmd/platform/business/user/entity/Test.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-business/target/classes/org/kmd/platform/business/taojinbao/weixin/mass/resp/Text.class" afterPath="$PROJECT_DIR$/taojinke/taojinke-business/target/classes/org/kmd/platform/business/taojinbao/weixin/mass/resp/Text.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-business/target/classes/org/kmd/platform/business/taojinbao/weixin/req/TextMessageReq.class" afterPath="$PROJECT_DIR$/taojinke/taojinke-business/target/classes/org/kmd/platform/business/taojinbao/weixin/req/TextMessageReq.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-business/target/classes/org/kmd/platform/business/taojinbao/weixin/resp/TextMessageResp.class" afterPath="$PROJECT_DIR$/taojinke/taojinke-business/target/classes/org/kmd/platform/business/taojinbao/weixin/resp/TextMessageResp.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-business/target/classes/org/kmd/platform/business/taojinbao/servlet/process/impl/TextRespProcess.class" afterPath="$PROJECT_DIR$/taojinke/taojinke-business/target/classes/org/kmd/platform/business/taojinbao/servlet/process/impl/TextRespProcess.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/business/business-user/target/classes/org/kmd/platform/business/user/entity/User.class" afterPath="$PROJECT_DIR$/business/business-user/target/classes/org/kmd/platform/business/user/entity/User.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/business/business-user/target/classes/org/kmd/platform/business/user/entity/UserAuthority.class" afterPath="$PROJECT_DIR$/business/business-user/target/classes/org/kmd/platform/business/user/entity/UserAuthority.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/business/business-user/target/classes/org/kmd/platform/business/user/mapper/UserAuthorityMapper.class" afterPath="$PROJECT_DIR$/business/business-user/target/classes/org/kmd/platform/business/user/mapper/UserAuthorityMapper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/business/business-user/target/classes/org/kmd/platform/business/user/service/UserAuthorityService.class" afterPath="$PROJECT_DIR$/business/business-user/target/classes/org/kmd/platform/business/user/service/UserAuthorityService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/business/business-user/target/classes/org/kmd/platform/business/user/mapper/UserMapper.class" afterPath="$PROJECT_DIR$/business/business-user/target/classes/org/kmd/platform/business/user/mapper/UserMapper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/business/business-user/target/classes/org/kmd/platform/business/user/service/UserService.class" afterPath="$PROJECT_DIR$/business/business-user/target/classes/org/kmd/platform/business/user/service/UserService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/business/business-user/target/classes/org/kmd/platform/business/user/web/UserServiceWeb.class" afterPath="$PROJECT_DIR$/business/business-user/target/classes/org/kmd/platform/business/user/web/UserServiceWeb.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/business/business-user/target/classes/org/kmd/platform/business/user/test/UserServiceWebTest.class" afterPath="$PROJECT_DIR$/business/business-user/target/classes/org/kmd/platform/business/user/test/UserServiceWebTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-business/target/classes/org/kmd/platform/business/taojinbao/weixin/mass/resp/Voice.class" afterPath="$PROJECT_DIR$/taojinke/taojinke-business/target/classes/org/kmd/platform/business/taojinbao/weixin/mass/resp/Voice.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-business/target/classes/org/kmd/platform/business/taojinbao/weixin/req/VoiceMessageReq.class" afterPath="$PROJECT_DIR$/taojinke/taojinke-business/target/classes/org/kmd/platform/business/taojinbao/weixin/req/VoiceMessageReq.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-business/target/classes/org/kmd/platform/business/taojinbao/service/WeiXinService.class" afterPath="$PROJECT_DIR$/taojinke/taojinke-business/target/classes/org/kmd/platform/business/taojinbao/service/WeiXinService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-business/target/classes/org/kmd/platform/business/taojinbao/web/WeixinServiceWeb.class" afterPath="$PROJECT_DIR$/taojinke/taojinke-business/target/classes/org/kmd/platform/business/taojinbao/web/WeixinServiceWeb.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fundamental/fundamental-util/target/classes/org/kmd/platform/fundamental/util/xss/XSSUtil.class" afterPath="$PROJECT_DIR$/fundamental/fundamental-util/target/classes/org/kmd/platform/fundamental/util/xss/XSSUtil.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fundamental/fundamental-util/target/classes/util/xss/XSSUtil.class" afterPath="$PROJECT_DIR$/fundamental/fundamental-util/target/classes/util/xss/XSSUtil.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/WEB-INF/lib/business-app-1.0-SNAPSHOT.jar" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/WEB-INF/lib/business-app-1.0-SNAPSHOT.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/WEB-INF/lib/business-user-1.0-SNAPSHOT.jar" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/WEB-INF/lib/business-user-1.0-SNAPSHOT.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/WEB-INF/lib/fundamental-config-1.0-SNAPSHOT.jar" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/WEB-INF/lib/fundamental-config-1.0-SNAPSHOT.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/WEB-INF/lib/fundamental-dataSource-1.0-SNAPSHOT.jar" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/WEB-INF/lib/fundamental-dataSource-1.0-SNAPSHOT.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/WEB-INF/lib/fundamental-exception-1.0-SNAPSHOT.jar" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/WEB-INF/lib/fundamental-exception-1.0-SNAPSHOT.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/WEB-INF/lib/fundamental-logger-1.0-SNAPSHOT.jar" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/WEB-INF/lib/fundamental-logger-1.0-SNAPSHOT.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/WEB-INF/lib/fundamental-orm-1.0-SNAPSHOT.jar" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/WEB-INF/lib/fundamental-orm-1.0-SNAPSHOT.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/WEB-INF/lib/fundamental-util-1.0-SNAPSHOT.jar" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/WEB-INF/lib/fundamental-util-1.0-SNAPSHOT.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/WEB-INF/lib/taojinke-business-1.0-SNAPSHOT.jar" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/WEB-INF/lib/taojinke-business-1.0-SNAPSHOT.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/kindeditor/plugins/template/html/1.html" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/kindeditor/plugins/template/html/1.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/kindeditor/plugins/template/html/1.html" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/kindeditor/plugins/template/html/1.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/kindeditor/plugins/template/html/2.html" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/kindeditor/plugins/template/html/2.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/kindeditor/plugins/template/html/2.html" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/kindeditor/plugins/template/html/2.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/kindeditor/plugins/template/html/3.html" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/kindeditor/plugins/template/html/3.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/kindeditor/plugins/template/html/3.html" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/kindeditor/plugins/template/html/3.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/400.html" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/400.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/400.html" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/400.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/401.html" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/401.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/401.html" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/401.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/403.html" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/403.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/403.html" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/403.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/404.html" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/404.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/404.html" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/404.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/405.html" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/405.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/405.html" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/405.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/500.html" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/500.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/500.html" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/500.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/503.html" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/503.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/503.html" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/503.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT.war" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT.war" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/entity/Category.java" afterPath="$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/entity/Category.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/business/business-Web/target/MANIFEST.MF" afterPath="$PROJECT_DIR$/business/business-Web/target/MANIFEST.MF" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/business/business-app/target/MANIFEST.MF" afterPath="$PROJECT_DIR$/business/business-app/target/MANIFEST.MF" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/business/business-menu/target/MANIFEST.MF" afterPath="$PROJECT_DIR$/business/business-menu/target/MANIFEST.MF" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/business/business-user/target/MANIFEST.MF" afterPath="$PROJECT_DIR$/business/business-user/target/MANIFEST.MF" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/business/target/MANIFEST.MF" afterPath="$PROJECT_DIR$/business/target/MANIFEST.MF" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fundamental/fundamental-config/target/MANIFEST.MF" afterPath="$PROJECT_DIR$/fundamental/fundamental-config/target/MANIFEST.MF" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fundamental/fundamental-dataSource/target/MANIFEST.MF" afterPath="$PROJECT_DIR$/fundamental/fundamental-dataSource/target/MANIFEST.MF" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fundamental/fundamental-exception/target/MANIFEST.MF" afterPath="$PROJECT_DIR$/fundamental/fundamental-exception/target/MANIFEST.MF" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fundamental/fundamental-logger/target/MANIFEST.MF" afterPath="$PROJECT_DIR$/fundamental/fundamental-logger/target/MANIFEST.MF" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fundamental/fundamental-orm/target/MANIFEST.MF" afterPath="$PROJECT_DIR$/fundamental/fundamental-orm/target/MANIFEST.MF" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fundamental/fundamental-util/target/MANIFEST.MF" afterPath="$PROJECT_DIR$/fundamental/fundamental-util/target/MANIFEST.MF" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fundamental/target/MANIFEST.MF" afterPath="$PROJECT_DIR$/fundamental/target/MANIFEST.MF" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-business/target/MANIFEST.MF" afterPath="$PROJECT_DIR$/taojinke/taojinke-business/target/MANIFEST.MF" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/MANIFEST.MF" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/MANIFEST.MF" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/META-INF/MANIFEST.MF" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/META-INF/MANIFEST.MF" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/target/MANIFEST.MF" afterPath="$PROJECT_DIR$/taojinke/target/MANIFEST.MF" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MANIFEST.MF" afterPath="$PROJECT_DIR$/target/MANIFEST.MF" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/kindeditor/README.md" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/kindeditor/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/kindeditor/README.md" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/kindeditor/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/blank.html" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/blank.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/blank.html" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/blank.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/bootbox/bootbox.css" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/bootbox/bootbox.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/bootbox/bootbox.css" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/bootbox/bootbox.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/bootbox/bootbox.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/bootbox/bootbox.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/bootbox/bootbox.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/bootbox/bootbox.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/bootbox/bootbox.min.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/bootbox/bootbox.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/bootbox/bootbox.min.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/bootbox/bootbox.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/assets/css/bootstrap.css" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/assets/css/bootstrap.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/assets/css/bootstrap.css" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/assets/css/bootstrap.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/business_Web_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/business_Web_war_exploded.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/buttons.html" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/buttons.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/buttons.html" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/buttons.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/calendar.html" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/calendar.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/calendar.html" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/calendar.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/charts.html" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/charts.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/charts.html" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/charts.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/chosen/chosen.css" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/chosen/chosen.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/chosen/chosen.css" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/chosen/chosen.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/chosen/chosen.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/chosen/chosen.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/chosen/chosen.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/chosen/chosen.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/chosen/chosen.min.css" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/chosen/chosen.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/chosen/chosen.min.css" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/chosen/chosen.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/chosen/chosen.min.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/chosen/chosen.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/chosen/chosen.min.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/chosen/chosen.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/assets/js/clickRespond.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/assets/js/clickRespond.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/assets/js/clickRespond.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/assets/js/clickRespond.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/clipboard/clipboard.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/clipboard/clipboard.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/clipboard/clipboard.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/clipboard/clipboard.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/clipboard/clipboard.min.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/clipboard/clipboard.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/clipboard/clipboard.min.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/clipboard/clipboard.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/colorset.js/colorset.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/colorset.js/colorset.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/colorset.js/colorset.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/colorset.js/colorset.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/colorset.js/colorset.min.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/colorset.js/colorset.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/colorset.js/colorset.min.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/colorset.js/colorset.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/data-tables.html" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/data-tables.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/data-tables.html" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/data-tables.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/datetimepicker/datetimepicker.css" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/datetimepicker/datetimepicker.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/datetimepicker/datetimepicker.css" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/datetimepicker/datetimepicker.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/datetimepicker/datetimepicker.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/datetimepicker/datetimepicker.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/datetimepicker/datetimepicker.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/datetimepicker/datetimepicker.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/datetimepicker/datetimepicker.min.css" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/datetimepicker/datetimepicker.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/datetimepicker/datetimepicker.min.css" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/datetimepicker/datetimepicker.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/datetimepicker/datetimepicker.min.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/datetimepicker/datetimepicker.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/datetimepicker/datetimepicker.min.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/datetimepicker/datetimepicker.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/elements.html" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/elements.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/elements.html" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/elements.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/email-inbox.html" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/email-inbox.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/email-inbox.html" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/email-inbox.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/email-read.html" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/email-read.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/email-read.html" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/email-read.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/email-write.html" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/email-write.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/email-write.html" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/email-write.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/kindeditor/lang/en.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/kindeditor/lang/en.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/kindeditor/lang/en.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/kindeditor/lang/en.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/ieonly/excanvas.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/ieonly/excanvas.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/ieonly/excanvas.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/ieonly/excanvas.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/file.html" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/file.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/file.html" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/file.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/form-validation.html" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/form-validation.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/form-validation.html" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/form-validation.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/form-wizard.html" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/form-wizard.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/form-wizard.html" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/form-wizard.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/forms.html" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/forms.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/forms.html" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/forms.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/fragment_auto_reply.html" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/fragment_auto_reply.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/fragment_auto_reply.html" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/fragment_auto_reply.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/fragment_bind_wechat.html" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/fragment_bind_wechat.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/fragment_bind_wechat.html" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/fragment_bind_wechat.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/fragment_employee_list.html" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/fragment_employee_list.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/fragment_employee_list.html" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/fragment_employee_list.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/fragment_fattention.html" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/fragment_fattention.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/fragment_fattention.html" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/fragment_fattention.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/fragment_goods_category.html" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/fragment_goods_category.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/fragment_goods_category.html" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/fragment_goods_category.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/fragment_goods_list.html" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/fragment_goods_list.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/fragment_goods_list.html" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/fragment_goods_list.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/fragment_menu_settings.html" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/fragment_menu_settings.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/fragment_menu_settings.html" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/fragment_menu_settings.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/fragment_push_report.html" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/fragment_push_report.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/fragment_push_report.html" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/fragment_push_report.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/fragment_shop_list.html" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/fragment_shop_list.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/fragment_shop_list.html" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/fragment_shop_list.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/fragment_shop_settings.html" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/fragment_shop_settings.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/fragment_shop_settings.html" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/fragment_shop_settings.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fundamental/fundamental-config/fundamental-config.iml" afterPath="$PROJECT_DIR$/fundamental/fundamental-config/fundamental-config.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fundamental/fundamental-dataSource/fundamental-dataSource.iml" afterPath="$PROJECT_DIR$/fundamental/fundamental-dataSource/fundamental-dataSource.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fundamental/fundamental-config/src/main/resources/fundamental.config.properties" afterPath="$PROJECT_DIR$/fundamental/fundamental-config/src/main/resources/fundamental.config.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/gallery.html" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/gallery.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/gallery.html" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/gallery.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/grid.html" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/grid.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/grid.html" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/grid.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/hotkey/hotkey.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/hotkey/hotkey.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/hotkey/hotkey.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/hotkey/hotkey.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/hotkey/hotkey.min.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/hotkey/hotkey.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/hotkey/hotkey.min.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/hotkey/hotkey.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/ieonly/html5shiv.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/ieonly/html5shiv.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/ieonly/html5shiv.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/ieonly/html5shiv.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/dist/fonts/icomoon.svg" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/dist/fonts/icomoon.svg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/dist/fonts/icomoon.svg" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/dist/fonts/icomoon.svg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/icons.html" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/icons.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/icons.html" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/icons.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/imgready/imgready.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/imgready/imgready.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/imgready/imgready.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/imgready/imgready.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/imgready/imgready.min.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/imgready/imgready.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/imgready/imgready.min.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/imgready/imgready.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/index.html" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/kindeditor/plugins/baidumap/index.html" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/kindeditor/plugins/baidumap/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/index.html" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/kindeditor/plugins/baidumap/index.html" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/kindeditor/plugins/baidumap/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/indexx.html" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/indexx.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/indexx.html" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/indexx.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/invoice.html" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/invoice.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/invoice.html" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/invoice.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/dist/js/lib/jquery-1.10.2.min.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/dist/js/lib/jquery-1.10.2.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/dist/js/lib/jquery-1.10.2.min.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/dist/js/lib/jquery-1.10.2.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/assets/js/jquery-1.8.3.min.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/assets/js/jquery-1.8.3.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/assets/js/jquery-1.8.3.min.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/assets/js/jquery-1.8.3.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/dist/js/lib/jquery-2.2.1.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/dist/js/lib/jquery-2.2.1.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/dist/js/lib/jquery-2.2.1.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/dist/js/lib/jquery-2.2.1.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/assets/js/jquery-ui.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/assets/js/jquery-ui.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/assets/js/jquery-ui.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/assets/js/jquery-ui.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/jquery/jquery.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/jquery/jquery.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/jquery/jquery.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/jquery/jquery.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/kindeditor/kindeditor.css" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/kindeditor/kindeditor.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/kindeditor/kindeditor.css" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/kindeditor/kindeditor.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/kindeditor/kindeditor.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/kindeditor/kindeditor.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/kindeditor/kindeditor.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/kindeditor/kindeditor.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/kindeditor/kindeditor.min.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/kindeditor/kindeditor.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/kindeditor/kindeditor.min.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/kindeditor/kindeditor.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/assets/css/landing.css" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/assets/css/landing.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/assets/css/landing.css" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/assets/css/landing.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/landing.html" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/landing.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/landing.html" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/landing.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/prettify/lang-apollo.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/prettify/lang-apollo.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/prettify/lang-apollo.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/prettify/lang-apollo.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/prettify/lang-basic.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/prettify/lang-basic.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/prettify/lang-basic.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/prettify/lang-basic.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/prettify/lang-clj.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/prettify/lang-clj.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/prettify/lang-clj.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/prettify/lang-clj.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/prettify/lang-css.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/prettify/lang-css.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/prettify/lang-css.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/prettify/lang-css.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/prettify/lang-dart.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/prettify/lang-dart.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/prettify/lang-dart.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/prettify/lang-dart.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/prettify/lang-erlang.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/prettify/lang-erlang.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/prettify/lang-erlang.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/prettify/lang-erlang.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/prettify/lang-go.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/prettify/lang-go.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/prettify/lang-go.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/prettify/lang-go.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/prettify/lang-hs.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/prettify/lang-hs.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/prettify/lang-hs.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/prettify/lang-hs.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/prettify/lang-lisp.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/prettify/lang-lisp.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/prettify/lang-lisp.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/prettify/lang-lisp.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/prettify/lang-llvm.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/prettify/lang-llvm.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/prettify/lang-llvm.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/prettify/lang-llvm.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/prettify/lang-lua.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/prettify/lang-lua.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/prettify/lang-lua.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/prettify/lang-lua.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/prettify/lang-matlab.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/prettify/lang-matlab.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/prettify/lang-matlab.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/prettify/lang-matlab.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/prettify/lang-ml.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/prettify/lang-ml.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/prettify/lang-ml.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/prettify/lang-ml.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/prettify/lang-mumps.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/prettify/lang-mumps.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/prettify/lang-mumps.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/prettify/lang-mumps.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/prettify/lang-n.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/prettify/lang-n.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/prettify/lang-n.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/prettify/lang-n.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/prettify/lang-pascal.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/prettify/lang-pascal.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/prettify/lang-pascal.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/prettify/lang-pascal.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/prettify/lang-proto.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/prettify/lang-proto.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/prettify/lang-proto.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/prettify/lang-proto.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/prettify/lang-r.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/prettify/lang-r.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/prettify/lang-r.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/prettify/lang-r.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/prettify/lang-rd.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/prettify/lang-rd.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/prettify/lang-rd.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/prettify/lang-rd.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/prettify/lang-scala.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/prettify/lang-scala.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/prettify/lang-scala.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/prettify/lang-scala.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/prettify/lang-sql.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/prettify/lang-sql.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/prettify/lang-sql.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/prettify/lang-sql.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/prettify/lang-tcl.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/prettify/lang-tcl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/prettify/lang-tcl.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/prettify/lang-tcl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/prettify/lang-tex.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/prettify/lang-tex.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/prettify/lang-tex.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/prettify/lang-tex.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/prettify/lang-vb.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/prettify/lang-vb.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/prettify/lang-vb.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/prettify/lang-vb.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/prettify/lang-vhdl.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/prettify/lang-vhdl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/prettify/lang-vhdl.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/prettify/lang-vhdl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/prettify/lang-wiki.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/prettify/lang-wiki.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/prettify/lang-wiki.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/prettify/lang-wiki.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/prettify/lang-xq.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/prettify/lang-xq.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/prettify/lang-xq.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/prettify/lang-xq.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/prettify/lang-yaml.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/prettify/lang-yaml.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/prettify/lang-yaml.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/prettify/lang-yaml.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/list.html" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/list.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/list.html" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/list.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/lockscreen.html" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/lockscreen.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/lockscreen.html" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/lockscreen.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/login.html" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/login.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/login.html" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/login.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/assets/js/pages/login.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/assets/js/pages/login.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/assets/js/pages/login.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/assets/js/pages/login.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/assets/css/main.css" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/assets/css/main.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/assets/css/main.css" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/assets/css/main.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/kindeditor/plugins/baidumap/map.html" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/kindeditor/plugins/baidumap/map.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/kindeditor/plugins/map/map.html" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/kindeditor/plugins/map/map.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/kindeditor/plugins/baidumap/map.html" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/kindeditor/plugins/baidumap/map.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/kindeditor/plugins/map/map.html" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/kindeditor/plugins/map/map.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/maps-google.html" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/maps-google.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/maps-google.html" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/maps-google.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/maps-vector.html" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/maps-vector.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/maps-vector.html" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/maps-vector.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/notifications.html" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/notifications.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/notifications.html" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/notifications.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/offline.html" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/offline.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/offline.html" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/offline.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/panels.html" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/panels.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/panels.html" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/panels.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/assets/css/plugins.css" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/assets/css/plugins.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/assets/css/plugins.css" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/assets/css/plugins.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/kindeditor/plugins/code/prettify.css" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/kindeditor/plugins/code/prettify.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/prettify/prettify.css" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/prettify/prettify.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/kindeditor/plugins/code/prettify.css" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/kindeditor/plugins/code/prettify.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/prettify/prettify.css" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/prettify/prettify.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/kindeditor/plugins/code/prettify.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/kindeditor/plugins/code/prettify.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/prettify/prettify.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/prettify/prettify.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/kindeditor/plugins/code/prettify.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/kindeditor/plugins/code/prettify.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/prettify/prettify.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/prettify/prettify.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/profile.html" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/profile.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/profile.html" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/profile.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/ieonly/respond.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/ieonly/respond.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/ieonly/respond.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/ieonly/respond.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/prettify/run_prettify.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/prettify/run_prettify.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/prettify/run_prettify.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/prettify/run_prettify.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/search.html" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/search.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/search.html" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/search.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/tables.html" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/tables.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/tables.html" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/tables.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-business/src/main/resources/META-INF/spring/taojinke-applicationContext.xml" afterPath="$PROJECT_DIR$/taojinke/taojinke-business/src/main/resources/META-INF/spring/taojinke-applicationContext.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/tiles.html" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/tiles.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/tiles.html" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/tiles.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/assets/plugins/forms/tinymce/skins/lightgray/fonts/tinymce-small.svg" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/assets/plugins/forms/tinymce/skins/lightgray/fonts/tinymce-small.svg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/assets/plugins/forms/tinymce/skins/lightgray/fonts/tinymce-small.svg" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/assets/plugins/forms/tinymce/skins/lightgray/fonts/tinymce-small.svg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/assets/plugins/forms/tinymce/skins/lightgray/fonts/tinymce.svg" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/assets/plugins/forms/tinymce/skins/lightgray/fonts/tinymce.svg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/assets/plugins/forms/tinymce/skins/lightgray/fonts/tinymce.svg" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/assets/plugins/forms/tinymce/skins/lightgray/fonts/tinymce.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-business/src/main/resources/org/kmd/platform/business/taojinbao/mapper/CategoryMapper.xml" afterPath="$PROJECT_DIR$/taojinke/taojinke-business/src/main/resources/org/kmd/platform/business/taojinbao/mapper/CategoryMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-business/target/classes/org/kmd/platform/business/taojinbao/mapper/CategoryMapper.xml" afterPath="$PROJECT_DIR$/taojinke/taojinke-business/target/classes/org/kmd/platform/business/taojinbao/mapper/CategoryMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/web/CategoryServiceWeb.java" afterPath="$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/web/CategoryServiceWeb.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/title.html" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/title.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/typo.html" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/typo.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/typo.html" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/typo.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/ueditor/ueditor.css" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/ueditor/ueditor.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/ueditor/ueditor.css" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/ueditor/ueditor.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/assets/plugins/forms/tinymce/plugins/visualblocks/css/visualblocks.css" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/assets/plugins/forms/tinymce/plugins/visualblocks/css/visualblocks.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/assets/plugins/forms/tinymce/plugins/visualblocks/css/visualblocks.css" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/assets/plugins/forms/tinymce/plugins/visualblocks/css/visualblocks.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/dist/css/wangEditor.css" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/dist/css/wangEditor.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/dist/css/wangEditor.css" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/dist/css/wangEditor.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/dist/js/wangEditor.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/dist/js/wangEditor.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/dist/js/wangEditor.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/dist/js/wangEditor.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/dist/css/wangEditor.less" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/dist/css/wangEditor.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/dist/css/wangEditor.less" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/dist/css/wangEditor.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/dist/js/wangEditor.min.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/dist/js/wangEditor.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/dist/js/wangEditor.min.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/dist/js/wangEditor.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/widgets.html" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/widgets.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/widgets.html" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/widgets.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/wysiwyg.html" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/wysiwyg.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/wysiwyg.html" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/wysiwyg.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/fonts/zenicon.svg" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/fonts/zenicon.svg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/fonts/zenicon.svg" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/fonts/zenicon.svg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/kindeditor/lang/zh_CN.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/kindeditor/lang/zh_CN.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/kindeditor/lang/zh_CN.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/kindeditor/lang/zh_CN.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/kindeditor/lang/zh_TW.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/kindeditor/lang/zh_TW.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/kindeditor/lang/zh_TW.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/kindeditor/lang/zh_TW.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/css/zui-theme.css" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/css/zui-theme.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/css/zui-theme.css" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/css/zui-theme.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/css/zui-theme.min.css" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/css/zui-theme.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/css/zui-theme.min.css" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/css/zui-theme.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/array/zui.array.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/array/zui.array.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/array/zui.array.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/array/zui.array.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/array/zui.array.min.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/array/zui.array.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/array/zui.array.min.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/array/zui.array.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/board/zui.board.css" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/board/zui.board.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/board/zui.board.css" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/board/zui.board.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/board/zui.board.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/board/zui.board.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/board/zui.board.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/board/zui.board.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/board/zui.board.min.css" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/board/zui.board.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/board/zui.board.min.css" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/board/zui.board.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/board/zui.board.min.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/board/zui.board.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/board/zui.board.min.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/board/zui.board.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/calendar/zui.calendar.css" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/calendar/zui.calendar.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/calendar/zui.calendar.css" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/calendar/zui.calendar.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/calendar/zui.calendar.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/calendar/zui.calendar.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/calendar/zui.calendar.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/calendar/zui.calendar.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/calendar/zui.calendar.min.css" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/calendar/zui.calendar.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/calendar/zui.calendar.min.css" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/calendar/zui.calendar.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/calendar/zui.calendar.min.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/calendar/zui.calendar.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/calendar/zui.calendar.min.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/calendar/zui.calendar.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/chart/zui.chart.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/chart/zui.chart.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/chart/zui.chart.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/chart/zui.chart.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/chart/zui.chart.min.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/chart/zui.chart.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/chart/zui.chart.min.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/chart/zui.chart.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/chosenicons/zui.chosenicons.css" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/chosenicons/zui.chosenicons.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/chosenicons/zui.chosenicons.css" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/chosenicons/zui.chosenicons.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/chosenicons/zui.chosenicons.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/chosenicons/zui.chosenicons.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/chosenicons/zui.chosenicons.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/chosenicons/zui.chosenicons.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/chosenicons/zui.chosenicons.min.css" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/chosenicons/zui.chosenicons.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/chosenicons/zui.chosenicons.min.css" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/chosenicons/zui.chosenicons.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/chosenicons/zui.chosenicons.min.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/chosenicons/zui.chosenicons.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/chosenicons/zui.chosenicons.min.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/chosenicons/zui.chosenicons.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/colorpicker/zui.colorpicker.css" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/colorpicker/zui.colorpicker.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/colorpicker/zui.colorpicker.css" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/colorpicker/zui.colorpicker.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/colorpicker/zui.colorpicker.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/colorpicker/zui.colorpicker.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/colorpicker/zui.colorpicker.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/colorpicker/zui.colorpicker.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/colorpicker/zui.colorpicker.min.css" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/colorpicker/zui.colorpicker.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/colorpicker/zui.colorpicker.min.css" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/colorpicker/zui.colorpicker.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/colorpicker/zui.colorpicker.min.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/colorpicker/zui.colorpicker.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/colorpicker/zui.colorpicker.min.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/colorpicker/zui.colorpicker.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/css/zui.css" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/css/zui.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/css/zui.css" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/css/zui.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/dashboard/zui.dashboard.css" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/dashboard/zui.dashboard.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/dashboard/zui.dashboard.css" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/dashboard/zui.dashboard.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/dashboard/zui.dashboard.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/dashboard/zui.dashboard.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/dashboard/zui.dashboard.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/dashboard/zui.dashboard.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/dashboard/zui.dashboard.min.css" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/dashboard/zui.dashboard.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/dashboard/zui.dashboard.min.css" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/dashboard/zui.dashboard.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/dashboard/zui.dashboard.min.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/dashboard/zui.dashboard.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/dashboard/zui.dashboard.min.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/dashboard/zui.dashboard.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/datatable/zui.datatable.css" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/datatable/zui.datatable.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/datatable/zui.datatable.css" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/datatable/zui.datatable.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/datatable/zui.datatable.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/datatable/zui.datatable.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/datatable/zui.datatable.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/datatable/zui.datatable.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/datatable/zui.datatable.min.css" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/datatable/zui.datatable.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/datatable/zui.datatable.min.css" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/datatable/zui.datatable.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/datatable/zui.datatable.min.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/datatable/zui.datatable.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/datatable/zui.datatable.min.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/datatable/zui.datatable.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/imgcutter/zui.imgcutter.css" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/imgcutter/zui.imgcutter.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/imgcutter/zui.imgcutter.css" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/imgcutter/zui.imgcutter.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/imgcutter/zui.imgcutter.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/imgcutter/zui.imgcutter.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/imgcutter/zui.imgcutter.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/imgcutter/zui.imgcutter.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/imgcutter/zui.imgcutter.min.css" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/imgcutter/zui.imgcutter.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/imgcutter/zui.imgcutter.min.css" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/imgcutter/zui.imgcutter.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/imgcutter/zui.imgcutter.min.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/imgcutter/zui.imgcutter.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/imgcutter/zui.imgcutter.min.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/imgcutter/zui.imgcutter.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/js/zui.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/js/zui.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/js/zui.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/js/zui.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/css/zui.lite.css" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/css/zui.lite.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/css/zui.lite.css" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/css/zui.lite.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/js/zui.lite.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/js/zui.lite.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/js/zui.lite.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/js/zui.lite.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/css/zui.lite.min.css" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/css/zui.lite.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/css/zui.lite.min.css" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/css/zui.lite.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/js/zui.lite.min.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/js/zui.lite.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/js/zui.lite.min.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/js/zui.lite.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/migrate1.2/zui.migrate1.2.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/migrate1.2/zui.migrate1.2.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/migrate1.2/zui.migrate1.2.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/migrate1.2/zui.migrate1.2.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/migrate1.2/zui.migrate1.2.min.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/migrate1.2/zui.migrate1.2.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/migrate1.2/zui.migrate1.2.min.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/migrate1.2/zui.migrate1.2.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/css/zui.min.css" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/css/zui.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/css/zui.min.css" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/css/zui.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/js/zui.min.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/js/zui.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/js/zui.min.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/js/zui.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/selectable/zui.selectable.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/selectable/zui.selectable.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/selectable/zui.selectable.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/selectable/zui.selectable.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/selectable/zui.selectable.min.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/selectable/zui.selectable.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/selectable/zui.selectable.min.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/selectable/zui.selectable.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/sortable/zui.sortable.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/sortable/zui.sortable.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/sortable/zui.sortable.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/sortable/zui.sortable.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/sortable/zui.sortable.min.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/sortable/zui.sortable.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/sortable/zui.sortable.min.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/sortable/zui.sortable.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/uploader/zui.uploader.css" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/uploader/zui.uploader.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/uploader/zui.uploader.css" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/uploader/zui.uploader.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/uploader/zui.uploader.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/uploader/zui.uploader.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/uploader/zui.uploader.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/uploader/zui.uploader.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/uploader/zui.uploader.min.css" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/uploader/zui.uploader.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/uploader/zui.uploader.min.css" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/uploader/zui.uploader.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/uploader/zui.uploader.min.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/zui/lib/uploader/zui.uploader.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/uploader/zui.uploader.min.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/zui/lib/uploader/zui.uploader.min.js" />
-      <change type="MOVED" beforePath="E:\project\project\taojinke\taojinke-web\src\main\webapp\assets\js\pagefunction\pushPlatform.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/assets/js/pagefunction/PushPlatform.js" />
-      <change type="MOVED" beforePath="E:\project\project\taojinke\taojinke-web\target\taojinke-web-1.0-SNAPSHOT\assets\js\pagefunction\pushPlatform.js" afterPath="$PROJECT_DIR$/taojinke/taojinke-web/target/taojinke-web-1.0-SNAPSHOT/assets/js/pagefunction/PushPlatform.js" />
     </list>
     <ignored path="project.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -811,23 +258,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="AgentGoodsRuleService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/service/AgentGoodsRuleService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="14" max-vertical-offset="675">
-              <caret line="14" column="50" selection-start-line="14" selection-start-column="50" selection-end-line="14" selection-end-column="50" />
-              <folding>
-                <element signature="e#450#451#0" expanded="true" />
-                <element signature="e#492#493#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="AgentGoodsRuleServiceWeb.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/web/AgentGoodsRuleServiceWeb.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="2646" max-vertical-offset="3321">
+            <state vertical-scroll-proportion="0.0" vertical-offset="1539" max-vertical-offset="3321">
               <caret line="72" column="53" selection-start-line="72" selection-start-column="53" selection-end-line="72" selection-end-column="53" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -836,24 +270,109 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="AgentGoodsRuleMapper.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/taojinke/taojinke-business/src/main/resources/org/kmd/platform/business/taojinbao/mapper/AgentGoodsRuleMapper.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.36129034" vertical-offset="696" max-vertical-offset="1647">
+              <caret line="32" column="13" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
+              <folding>
+                <marker date="1496474947201" expanded="true" signature="1009:1210" placeholder="INSERT INTO ..." />
+                <marker date="1496474947201" expanded="true" signature="1279:1320" placeholder="select LAST_..." />
+                <marker date="1496474947201" expanded="true" signature="1421:1916" placeholder="UPDATE ims_g..." />
+                <marker date="1496474947201" expanded="true" signature="2040:2150" placeholder="SELECT FROM ..ims_goods_rule..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="title.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/title.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.4166665" vertical-offset="1785" max-vertical-offset="2700">
-              <caret line="72" column="5" selection-start-line="72" selection-start-column="5" selection-end-line="72" selection-end-column="5" />
+            <state vertical-scroll-proportion="-7.4166665" vertical-offset="1380" max-vertical-offset="2700">
+              <caret line="61" column="9" selection-start-line="61" selection-start-column="9" selection-end-line="61" selection-end-column="9" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CategoryServiceWeb.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CategoryServiceWeb.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/web/CategoryServiceWeb.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3181818" vertical-offset="945" max-vertical-offset="5346">
-              <caret line="42" column="50" selection-start-line="42" selection-start-column="46" selection-end-line="42" selection-end-column="50" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="2280" max-vertical-offset="5319">
+              <caret line="108" column="36" selection-start-line="108" selection-start-column="36" selection-end-line="108" selection-end-column="36" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Category.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/entity/Category.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1431">
+              <caret line="63" column="29" selection-start-line="63" selection-start-column="29" selection-end-line="63" selection-end-column="29" />
+              <folding>
+                <element signature="e#1203#1204#0" expanded="true" />
+                <element signature="e#1246#1247#0" expanded="true" />
+                <element signature="e#1284#1285#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CategoryMapper.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/taojinke/taojinke-business/src/main/resources/org/kmd/platform/business/taojinbao/mapper/CategoryMapper.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-15.3" vertical-offset="567" max-vertical-offset="1647">
+              <caret line="38" column="30" selection-start-line="38" selection-start-column="30" selection-end-line="38" selection-end-column="30" />
+              <folding>
+                <marker date="1496477690868" expanded="true" signature="885:1069" placeholder="INSERT INTO ..." />
+                <marker date="1496477690868" expanded="true" signature="1137:1178" placeholder="select LAST_..." />
+                <marker date="1496477690868" expanded="true" signature="1273:1684" placeholder="UPDATE ims_g..." />
+                <marker date="1496477690868" expanded="true" signature="1804:1912" placeholder="SELECT FROM ..ims_goods_category..." />
+                <marker date="1496477690868" expanded="true" signature="1986:2064" placeholder="DELETE FROM ..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="web.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/WEB-INF/web.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="1161" max-vertical-offset="2376">
+              <caret line="47" column="73" selection-start-line="47" selection-start-column="73" selection-end-line="47" selection-end-column="73" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CrossOriginControl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/servlet/CrossOriginControl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="525" max-vertical-offset="1404">
+              <caret line="36" column="77" selection-start-line="36" selection-start-column="77" selection-end-line="36" selection-end-column="77" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="datasource-applicationContext.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/fundamental/fundamental-dataSource/src/main/resources/META-INF/spring/datasource-applicationContext.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="351">
+              <caret line="4" column="70" selection-start-line="4" selection-start-column="70" selection-end-line="4" selection-end-column="70" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="fundamental.config.properties" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/fundamental/fundamental-config/src/main/resources/fundamental.config.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="130" max-vertical-offset="729">
+              <caret line="20" column="26" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -882,20 +401,20 @@
         <option value="$PROJECT_DIR$/taojinke/taojinke-business/src/main/resources/org/kmd/platform/business/taojinbao/mapper/GoodsMapper.xml" />
         <option value="$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/service/GoodsService.java" />
         <option value="$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/web/GoodsServiceWeb.java" />
-        <option value="$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/entity/Category.java" />
         <option value="$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/mapper/AgentGoodsRule.java" />
         <option value="$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/mapper/AgentGoodsRuleMapper.java" />
         <option value="$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/service/AgentGoodsRuleService.java" />
         <option value="$PROJECT_DIR$/taojinke/taojinke-business/src/main/resources/META-INF/spring/taojinke-applicationContext.xml" />
         <option value="$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/service/CategoryService.java" />
         <option value="$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/mapper/CategoryMapper.java" />
-        <option value="$PROJECT_DIR$/taojinke/taojinke-business/src/main/resources/org/kmd/platform/business/taojinbao/mapper/CategoryMapper.xml" />
         <option value="$PROJECT_DIR$/fundamental/fundamental-config/src/main/resources/fundamental.config.properties" />
         <option value="$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/entity/AgentGoodsRule.java" />
-        <option value="$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/web/AgentGoodsRuleServiceWeb.java" />
         <option value="$PROJECT_DIR$/taojinke/taojinke-business/src/main/resources/org/kmd/platform/business/taojinbao/mapper/AgentGoodsRuleMapper.xml" />
+        <option value="$PROJECT_DIR$/taojinke/taojinke-business/src/main/resources/org/kmd/platform/business/taojinbao/mapper/CategoryMapper.xml" />
+        <option value="$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/entity/Category.java" />
         <option value="$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/web/CategoryServiceWeb.java" />
         <option value="$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/title.html" />
+        <option value="$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/web/AgentGoodsRuleServiceWeb.java" />
       </list>
     </option>
   </component>
@@ -997,9 +516,9 @@
     <option name="vmOptions" value="-Dmaven.multiModuleProjectDirectory=$M2_HOME" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="249" />
-    <option name="y" value="60" />
-    <option name="width" value="1744" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
     <option name="height" value="1056" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -1196,86 +715,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="taojinke" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="taojinke-web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="taojinke" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="taojinke-web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="libs" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1648,6 +1087,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="fundamental" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fundamental" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fundamental-dataSource" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -2291,30 +1748,30 @@
       <workItem from="1496370186483" duration="1257000" />
       <workItem from="1496372248726" duration="94000" />
       <workItem from="1496458165591" duration="438000" />
-      <workItem from="1496458617705" duration="12833000" />
+      <workItem from="1496458617705" duration="17544000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16913000" />
+    <option name="totallyTimeSpent" value="21624000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="249" y="60" width="1744" height="1056" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3284055" sideWeight="0.19155093" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4783527" sideWeight="0.0921875" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32933104" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.027199075" sideWeight="0.5979381" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.13020833" sideWeight="0.5979381" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.098958336" sideWeight="0.84879726" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.0890625" sideWeight="0.84879726" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3284055" sideWeight="0.8084491" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4783527" sideWeight="0.9078125" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32924694" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.38831615" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -2324,11 +1781,11 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.35910654" sideWeight="0.7689394" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21639785" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23090278" sideWeight="0.7625786" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.203125" sideWeight="0.7631579" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23090278" sideWeight="0.23742138" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.203125" sideWeight="0.23684211" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -2436,15 +1893,27 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/web/CategoryServiceWeb.java</url>
-          <line>43</line>
+          <line>42</line>
           <properties />
           <option name="timeStamp" value="40" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/web/CategoryServiceWeb.java</url>
+          <line>52</line>
+          <properties />
+          <option name="timeStamp" value="41" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/web/CategoryServiceWeb.java</url>
+          <line>57</line>
+          <properties />
+          <option name="timeStamp" value="42" />
         </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="41" />
+      <option name="time" value="43" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -2453,48 +1922,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/taojinke/taojinke-business/src/main/resources/org/kmd/platform/business/taojinbao/mapper/GoodsMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="928" max-vertical-offset="1691">
-          <caret line="77" column="22" selection-start-line="77" selection-start-column="17" selection-end-line="77" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/title.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="921" max-vertical-offset="1805">
-          <caret line="61" column="9" selection-start-line="61" selection-start-column="9" selection-end-line="61" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/web/ShopServiceWeb.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3287">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3976#3988#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/service/WeiXinService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="8341" max-vertical-offset="11419">
-          <caret line="537" column="72" selection-start-line="537" selection-start-column="72" selection-end-line="537" selection-end-column="72" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#get_QR#0;class#WeiXinService#0" expanded="false" />
-            <element signature="method#sendMsgToSomeUser#0;class#WeiXinService#0" expanded="false" />
-            <element signature="e#19494#19502#0" expanded="true" />
-            <element signature="method#addMaterialEver#0;class#WeiXinService#0" expanded="false" />
-            <element signature="method#addMaterialEver#1;class#WeiXinService#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/dto/Material.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="95" max-vertical-offset="722">
@@ -2675,14 +2102,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/taojinke/taojinke-business/src/main/resources/org/kmd/platform/business/taojinbao/mapper/GoodsMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="928" max-vertical-offset="1691">
-          <caret line="77" column="22" selection-start-line="77" selection-start-column="17" selection-end-line="77" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/service/GoodsService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="505" max-vertical-offset="912">
@@ -2728,43 +2147,6 @@
         <state vertical-scroll-proportion="0.280083" vertical-offset="0" max-vertical-offset="213813">
           <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/entity/Category.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="99" max-vertical-offset="2079">
-          <caret line="7" column="25" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
-          <folding>
-            <element signature="e#334#335#0" expanded="true" />
-            <element signature="e#359#360#0" expanded="true" />
-            <element signature="e#393#394#0" expanded="true" />
-            <element signature="e#421#422#0" expanded="true" />
-            <element signature="e#453#454#0" expanded="true" />
-            <element signature="e#483#484#0" expanded="true" />
-            <element signature="e#527#528#0" expanded="true" />
-            <element signature="e#565#566#0" expanded="true" />
-            <element signature="e#596#597#0" expanded="true" />
-            <element signature="e#623#624#0" expanded="true" />
-            <element signature="e#663#664#0" expanded="true" />
-            <element signature="e#695#696#0" expanded="true" />
-            <element signature="e#727#728#0" expanded="true" />
-            <element signature="e#755#756#0" expanded="true" />
-            <element signature="e#797#798#0" expanded="true" />
-            <element signature="e#831#832#0" expanded="true" />
-            <element signature="e#869#870#0" expanded="true" />
-            <element signature="e#903#904#0" expanded="true" />
-            <element signature="e#957#958#0" expanded="true" />
-            <element signature="e#1003#1004#0" expanded="true" />
-            <element signature="e#1033#1034#0" expanded="true" />
-            <element signature="e#1062#1063#0" expanded="true" />
-            <element signature="e#1103#1104#0" expanded="true" />
-            <element signature="e#1139#1140#0" expanded="true" />
-            <element signature="e#1167#1168#0" expanded="true" />
-            <element signature="e#1194#1195#0" expanded="true" />
-            <element signature="e#1231#1232#0" expanded="true" />
-            <element signature="e#1263#1264#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2820,14 +2202,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/fundamental/fundamental-config/src/main/resources/fundamental.config.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.08072488" vertical-offset="86" max-vertical-offset="729">
-          <caret line="5" column="22" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/web/GoodsServiceWeb.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="1377" max-vertical-offset="2754">
@@ -2859,33 +2233,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/taojinke/taojinke-business/src/main/resources/org/kmd/platform/business/taojinbao/mapper/CategoryMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="761" max-vertical-offset="1647">
-          <caret line="41" column="50" selection-start-line="41" selection-start-column="50" selection-end-line="41" selection-end-column="50" />
-          <folding>
-            <marker date="1496469092702" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1496469092702" expanded="true" signature="-1:-1" placeholder="select LAST_..." />
-            <marker date="1496469092702" expanded="true" signature="-1:-1" placeholder="UPDATE ims_g..." />
-            <marker date="1496469092702" expanded="true" signature="-1:-1" placeholder="SELECT FROM ..ims_goods_category..." />
-            <marker date="1496469092702" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/taojinke/taojinke-business/src/main/resources/org/kmd/platform/business/taojinbao/mapper/AgentGoodsRuleMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="891" max-vertical-offset="1647">
-          <caret line="47" column="0" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
-          <folding>
-            <marker date="1496474947201" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1496474947201" expanded="true" signature="-1:-1" placeholder="select LAST_..." />
-            <marker date="1496474947201" expanded="true" signature="-1:-1" placeholder="UPDATE ims_g..." />
-            <marker date="1496474947201" expanded="true" signature="-1:-1" placeholder="SELECT FROM ..ims_goods_rule..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/service/CategoryService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3476112" vertical-offset="194" max-vertical-offset="837">
@@ -2898,9 +2245,103 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/taojinke/taojinke-business/src/main/resources/org/kmd/platform/business/taojinbao/mapper/GoodsMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1025" max-vertical-offset="2403">
+          <caret line="47" column="69" selection-start-line="47" selection-start-column="67" selection-end-line="47" selection-end-column="69" />
+          <folding>
+            <marker date="1496458149177" expanded="true" signature="-1:-1" placeholder="SELECT FROM ..ims_goods_taobao..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/WEB-INF/applicationContext.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="648" max-vertical-offset="1485">
+          <caret line="33" column="12" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fundamental/fundamental-dataSource/src/main/resources/META-INF/spring/datasource-applicationContext.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="351">
+          <caret line="4" column="70" selection-start-line="4" selection-start-column="70" selection-end-line="4" selection-end-column="70" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fundamental/fundamental-config/src/main/resources/fundamental.config.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="130" max-vertical-offset="729">
+          <caret line="20" column="26" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/entity/Category.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1431">
+          <caret line="63" column="29" selection-start-line="63" selection-start-column="29" selection-end-line="63" selection-end-column="29" />
+          <folding>
+            <element signature="e#1203#1204#0" expanded="true" />
+            <element signature="e#1246#1247#0" expanded="true" />
+            <element signature="e#1284#1285#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/title.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.4166665" vertical-offset="1380" max-vertical-offset="2700">
+          <caret line="61" column="9" selection-start-line="61" selection-start-column="9" selection-end-line="61" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1161" max-vertical-offset="2376">
+          <caret line="47" column="73" selection-start-line="47" selection-start-column="73" selection-end-line="47" selection-end-column="73" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/servlet/CrossOriginControl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="363" max-vertical-offset="1404">
+          <caret line="36" column="77" selection-start-line="36" selection-start-column="77" selection-end-line="36" selection-end-column="77" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/taojinke/taojinke-business/src/main/resources/org/kmd/platform/business/taojinbao/mapper/CategoryMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-15.3" vertical-offset="567" max-vertical-offset="1647">
+          <caret line="38" column="30" selection-start-line="38" selection-start-column="30" selection-end-line="38" selection-end-column="30" />
+          <folding>
+            <marker date="1496477690868" expanded="true" signature="885:1069" placeholder="INSERT INTO ..." />
+            <marker date="1496477690868" expanded="true" signature="1137:1178" placeholder="select LAST_..." />
+            <marker date="1496477690868" expanded="true" signature="1273:1684" placeholder="UPDATE ims_g..." />
+            <marker date="1496477690868" expanded="true" signature="1804:1912" placeholder="SELECT FROM ..ims_goods_category..." />
+            <marker date="1496477690868" expanded="true" signature="1986:2064" placeholder="DELETE FROM ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/web/CategoryServiceWeb.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2280" max-vertical-offset="5319">
+          <caret line="108" column="36" selection-start-line="108" selection-start-column="36" selection-end-line="108" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/web/AgentGoodsRuleServiceWeb.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="2646" max-vertical-offset="3321">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1539" max-vertical-offset="3321">
           <caret line="72" column="53" selection-start-line="72" selection-start-column="53" selection-end-line="72" selection-end-column="53" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -2908,20 +2349,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/taojinke/taojinke-web/src/main/webapp/title.html">
+    <entry file="file://$PROJECT_DIR$/taojinke/taojinke-business/src/main/resources/org/kmd/platform/business/taojinbao/mapper/AgentGoodsRuleMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.4166665" vertical-offset="1785" max-vertical-offset="2700">
-          <caret line="72" column="5" selection-start-line="72" selection-start-column="5" selection-end-line="72" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/web/CategoryServiceWeb.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3181818" vertical-offset="945" max-vertical-offset="5346">
-          <caret line="42" column="50" selection-start-line="42" selection-start-column="46" selection-end-line="42" selection-end-column="50" />
+        <state vertical-scroll-proportion="0.36129034" vertical-offset="696" max-vertical-offset="1647">
+          <caret line="32" column="13" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <marker date="1496474947201" expanded="true" signature="1009:1210" placeholder="INSERT INTO ..." />
+            <marker date="1496474947201" expanded="true" signature="1279:1320" placeholder="select LAST_..." />
+            <marker date="1496474947201" expanded="true" signature="1421:1916" placeholder="UPDATE ims_g..." />
+            <marker date="1496474947201" expanded="true" signature="2040:2150" placeholder="SELECT FROM ..ims_goods_rule..." />
           </folding>
         </state>
       </provider>

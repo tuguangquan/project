@@ -20,7 +20,6 @@ import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.MediaType;
-import java.io.File;
 import java.util.List;
 
 /**
@@ -40,7 +39,7 @@ public class CategoryServiceWeb {
     @Path("/add")
     @POST
     public String add(@Context HttpServletRequest request,@FormParam("name") String name,@FormParam("description") String description,@FormParam("status") String status,
-                                  @FormParam("show") String show){
+                                  @FormParam("display") String display){
         long agentId = userService.getCurrentAgentId(request);
         if(agentId==0){
             return JsonResultUtils.getCodeAndMesByString(JsonResultUtils.Code.ERROR.getCode(), "请重新登录!");
@@ -49,7 +48,7 @@ public class CategoryServiceWeb {
         try {
             category.setDescription(description);
             category.setStatus(Integer.parseInt(status));
-            category.setShow(Integer.parseInt(show));
+            category.setDisplay(Integer.parseInt(display));
             category.setName(name);
             categoryService.add(category);
         }catch (Exception e){
@@ -63,7 +62,7 @@ public class CategoryServiceWeb {
     @Path("/update")
     @POST
     public String update(@Context HttpServletRequest request,@FormParam("id") String id,@FormParam("name") String name,@FormParam("description") String description,@FormParam("status") String status,
-                      @FormParam("show") String show){
+                      @FormParam("display") String display){
         long agentId = userService.getCurrentAgentId(request);
         if(agentId==0){
             return JsonResultUtils.getCodeAndMesByString(JsonResultUtils.Code.ERROR.getCode(), "请重新登录!");
@@ -81,8 +80,8 @@ public class CategoryServiceWeb {
             if (status!=null && !status.trim().equals("")){
                 category.setStatus(Integer.parseInt(status));
             }
-            if (show!=null && !show.trim().equals("")){
-                category.setShow(Integer.parseInt(show));
+            if (display!=null && !display.trim().equals("")){
+                category.setDisplay(Integer.parseInt(display));
             }
         }catch (Exception e){
             logger.error("提供的参数不合法",e);
