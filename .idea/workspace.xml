@@ -265,8 +265,8 @@
       <file leaf-file-name="ShopBasicServiceWeb.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/web/ShopBasicServiceWeb.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.42740285" vertical-offset="451" max-vertical-offset="1300">
-              <caret line="33" column="17" selection-start-line="33" selection-start-column="17" selection-end-line="33" selection-end-column="17" />
+            <state vertical-scroll-proportion="0.6952965" vertical-offset="660" max-vertical-offset="1360">
+              <caret line="50" column="8" selection-start-line="50" selection-start-column="8" selection-end-line="50" selection-end-column="8" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -538,8 +538,8 @@
     <option name="vmOptions" value="-Dmaven.multiModuleProjectDirectory=$M2_HOME" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="294" />
-    <option name="y" value="40" />
+    <option name="x" value="503" />
+    <option name="y" value="79" />
     <option name="width" value="1400" />
     <option name="height" value="1000" />
   </component>
@@ -1184,15 +1184,15 @@
       <workItem from="1496372248726" duration="94000" />
       <workItem from="1496458165591" duration="438000" />
       <workItem from="1496458617705" duration="17544000" />
-      <workItem from="1496555447444" duration="13038000" />
+      <workItem from="1496555447444" duration="13288000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34662000" />
+    <option name="totallyTimeSpent" value="34912000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="294" y="40" width="1400" height="1000" extended-state="0" />
+    <frame x="503" y="79" width="1400" height="1000" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1869,8 +1869,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/taojinke/taojinke-business/src/main/java/org/kmd/platform/business/taojinbao/web/ShopBasicServiceWeb.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.42740285" vertical-offset="451" max-vertical-offset="1300">
-          <caret line="33" column="17" selection-start-line="33" selection-start-column="17" selection-end-line="33" selection-end-column="17" />
+        <state vertical-scroll-proportion="0.6952965" vertical-offset="660" max-vertical-offset="1360">
+          <caret line="50" column="8" selection-start-line="50" selection-start-column="8" selection-end-line="50" selection-end-column="8" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

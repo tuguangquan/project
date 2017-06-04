@@ -37,15 +37,18 @@ public class ShopBasicServiceWeb {
         if(title==null ||title.trim().equals("")|| subhead==null|| subhead.trim().equals("")){
              return JsonResultUtils.getCodeAndMesByString(JsonResultUtils.Code.ERROR.getCode(), "参数不能为空!");
         }
+
         long agentId = userService.getCurrentAgentId(request);
         if(agentId==0){
             return JsonResultUtils.getCodeAndMesByString(JsonResultUtils.Code.ERROR.getCode(), "请重新登录!");
         }
+
         AgentInfo agentInfo = agentInfoService.getAgentInfoByAgentId(agentId);
         if(agentInfo ==null){
             return JsonResultUtils.getCodeAndMesByString(JsonResultUtils.Code.ERROR.getCode(), "微信未绑定!");
 
         }
+        
         String originId = agentInfo.getWeixinOriginalId();
         ShopBasic shopBasic = new ShopBasic();
         shopBasic.setAgentId(agentId);
