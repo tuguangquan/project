@@ -9,7 +9,6 @@ import org.kmd.platform.fundamental.util.xss.XSSUtil;
 import java.util.Map;
 
 public final class JsonResultUtils {
-
     public enum Code {
         SUCCESS(200, "操作成功！"), ERROR(500, "对不起，操作出错！"), NOTFOUND(404,
                 "对不起，您请求的资源不存在！"), DUPLICATE(302, "重复操作！"), NOPERM(403,

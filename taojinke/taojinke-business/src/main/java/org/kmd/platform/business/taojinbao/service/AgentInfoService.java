@@ -23,6 +23,7 @@ public class AgentInfoService {
     }
 
     public int update(AgentInfo agentInfo){
+
         return mapper.update(agentInfo);
     }
 

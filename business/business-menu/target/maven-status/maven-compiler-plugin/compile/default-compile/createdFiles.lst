@@ -1,0 +1,8 @@
+org\kmd\platform\business\menu\mapper\MenuMapper.class
+org\kmd\platform\business\menu\web\MenuServiceWeb.class
+org\kmd\platform\business\menu\entity\Menu.class
+org\kmd\platform\business\menu\mapper\AuthorityMenuMapper.class
+org\kmd\platform\business\menu\web\AuthorityMenuServiceWeb.class
+org\kmd\platform\business\menu\service\MenuService.class
+org\kmd\platform\business\menu\service\AuthorityMenuService.class
+org\kmd\platform\business\menu\entity\AuthorityMenu.class

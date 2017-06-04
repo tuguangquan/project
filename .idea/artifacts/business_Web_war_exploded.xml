@@ -101,7 +101,7 @@
         </element>
       </element>
       <element id="directory" name="META-INF">
-        <element id="file-copy" path="E:\project\project\business\business-Web\target/MANIFEST.MF" />
+        <element id="file-copy" path="D:\project\business\business-Web\target/MANIFEST.MF" />
       </element>
       <element id="javaee-facet-resources" facet="business-Web/web/Web" />
     </root>

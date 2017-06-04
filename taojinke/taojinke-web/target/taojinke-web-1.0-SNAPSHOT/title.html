@@ -32,7 +32,7 @@
 <script>
     var currentUser = null;
     $(document).ready(function(){
-        $.post($.URL.user.login,{"name": "zhangsan@tototo.cc", "password": 1234,"safeCode":12345},userInfoCallback,"json");
+        $.post($.URL.user.login,{"name": "zhangsan@tototo.cc", "password": 12345,"safeCode":12345},userInfoCallback,"json");
 
       //  $.post("rs/shop/batchDelete",{"openIds":"ofngQ06p2jZfiTdd9q7jtGYLACmM,a,b"},batchDeleteCallback ,"JSON");
 //        $.post("rs/shop/add",
@@ -62,8 +62,8 @@
         }
     }
     function userInfoCallback (data){
-        $.post("rs/category/add", {"name":1,"status":1,
-                    "description":"123456","display":0},shopListCallback
+        $.post("rs/shopBasic/add", {"title":"wanf","subhead":"wqerwetr",
+                    "description":"sdgfsdg"},shopListCallback
                 ,"JSON");
 
 //        $.post("rs/goods/findByCondition", {"cateId":1,"topRate":null,

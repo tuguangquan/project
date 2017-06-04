@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.kmd.platform.business.taojinbao.mapper.ShopBasicMapper">
+    <sql id="shopbasic_fields">
+		ID,AGENTID,ORIGINID,TITLE,SUBHEAD,DESCRIPTION
+	</sql>
+
+    <resultMap id="AgentInfoResultMap" type="AgentInfo">
+        <id property="id" column="ID"/>
+
+        <result property="agentId" column="AGENTID"/>
+        <result property="originId" column="ORIGINID"/>
+        <result property="title" column="TITLE"/>
+        <result property="subhead" column="SUBHEAD"/>
+        <result property="description" column="DESCRIPTION"/>
+    </resultMap>
+
+    <insert id="add" parameterType="AgentInfo"  keyProperty="id"
+            useGeneratedKeys="true">
+        INSERT INTO
+        ims_shop_basic(
+        AGENTID,ORIGINID,TITLE,SUBHEAD,DESCRIPTION
+        )
+        VALUES (#{agentId},#{originId},#{title},#{subhead},#{description});
+        <selectKey resultType="long" keyProperty="id">
+            select
+            LAST_INSERT_ID() as id
+        </selectKey>
+    </insert>
+
+
+</mapper>

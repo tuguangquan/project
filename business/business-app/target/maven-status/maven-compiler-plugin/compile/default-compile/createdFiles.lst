@@ -1,0 +1,4 @@
+org\kmd\platform\business\app\web\AppServiceWeb.class
+org\kmd\platform\business\app\mapper\AppMapper.class
+org\kmd\platform\business\app\service\AppService.class
+org\kmd\platform\business\app\entity\App.class

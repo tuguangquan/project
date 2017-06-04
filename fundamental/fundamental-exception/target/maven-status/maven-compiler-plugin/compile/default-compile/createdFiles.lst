@@ -1,0 +1,4 @@
+org\kmd\platform\fundamental\exception\utils\Exceptions.class
+org\kmd\platform\fundamental\exception\BusinessException.class
+org\kmd\platform\fundamental\exception\NotFoundException.class
+org\kmd\platform\fundamental\exception\DuplicateException.class
