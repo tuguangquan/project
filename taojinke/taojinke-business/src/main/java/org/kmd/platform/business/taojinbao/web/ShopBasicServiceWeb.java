@@ -35,7 +35,7 @@ public class ShopBasicServiceWeb {
     @POST
     public String add(@Context HttpServletRequest request,@FormParam("title") String title,@FormParam("subhead") String subhead,@FormParam("description") String description)  {
         if(title==null ||title.trim().equals("")|| subhead==null|| subhead.trim().equals("")){
-            return JsonResultUtils.getCodeAndMesByString(JsonResultUtils.Code.ERROR.getCode(), "参数不能为空!");
+             return JsonResultUtils.getCodeAndMesByString(JsonResultUtils.Code.ERROR.getCode(), "参数不能为空!");
         }
         long agentId = userService.getCurrentAgentId(request);
         if(agentId==0){
