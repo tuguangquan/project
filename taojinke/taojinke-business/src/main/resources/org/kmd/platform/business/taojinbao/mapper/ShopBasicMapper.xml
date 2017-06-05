@@ -7,7 +7,7 @@
 		ID,AGENTID,ORIGINID,TITLE,SUBHEAD,DESCRIPTION
 	</sql>
 
-    <resultMap id="AgentInfoResultMap" type="AgentInfo">
+    <resultMap id="ShopBasicResultMap" type="ShopBasic">
         <id property="id" column="ID"/>
 
         <result property="agentId" column="AGENTID"/>
@@ -17,28 +17,31 @@
         <result property="description" column="DESCRIPTION"/>
     </resultMap>
 
-    <insert id="add" parameterType="AgentInfo"  keyProperty="id"
+    <insert id="add" parameterType="ShopBasic"  keyProperty="id"
             useGeneratedKeys="true">
         INSERT INTO
         ims_shop_basic(
         AGENTID,ORIGINID,TITLE,SUBHEAD,DESCRIPTION
         )
         VALUES (#{agentId},#{originId},#{title},#{subhead},#{description});
-        <selectKey resultType="long" keyProperty="id">
-            select
-            LAST_INSERT_ID() as id
-        </selectKey>
+
     </insert>
 
-    <update id="update" parameterType="AgentInfo" >
+    <update id="update" parameterType="ShopBasic" >
         UPDATE ims_shop_basic
         <set>
-            <if test="title != null">TITLE=#{title},</if>
-            <if test="subhead != null">SUBHEAD=#{subhead},</if>
-            <if test="description != null">DESCRIPTION=#{description},</if>
+            <if test="title != null">TITLE=#{title}</if>
+            <if test="subhead != null">SUBHEAD=#{subhead}</if>
+            <if test="description != null">DESCRIPTION=#{description}</if>
 
         </set>
-        WHERE ID=#{id};
+        WHERE ID=#{id} and AGENTID = #{agentId};
     </update>
+
+    <select id="getShopByAgentId" parameterType="java.lang.long" resultMap="ShopResultMap">
+        SELECT
+        <include refid="shopbasic_fields"/>
+        FROM ims_shop_basic WHERE agentId=#{agentId}
+    </select>
 
 </mapper>
