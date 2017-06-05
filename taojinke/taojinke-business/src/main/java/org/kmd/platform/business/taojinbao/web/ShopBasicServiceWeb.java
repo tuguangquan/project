@@ -47,9 +47,9 @@ public class ShopBasicServiceWeb {
             return JsonResultUtils.getCodeAndMesByString(JsonResultUtils.Code.ERROR.getCode(), "请重新登录!");
 
         }
-        AgentInfo agentInfo = agentInfoService.getAgentInfoByAgentId(agentId);
-
-        ShopBasic shopBasic = new ShopBasic();
+       // AgentInfo agentInfo = agentInfoService.getAgentInfoByAgentId(agentId);
+        ShopBasic shopBasic = shopBasicService.getShopBasicByAgentId(agentId);
+        //ShopBasic shopBasic = new ShopBasic();
         long id = shopBasic.getId();
         if (id != 0) {
 
@@ -72,15 +72,13 @@ public class ShopBasicServiceWeb {
             }
             shopBasicService.update(shopBasic);
             return JsonResultUtils.getCodeAndMesByString(JsonResultUtils.Code.SUCCESS.getCode(), "更改成功，审核中！！！");
-        }else {
-
-
+        }else { 
+            AgentInfo agentInfo = agentInfoService.getAgentInfoByAgentId(agentId);
             if (agentInfo == null) {
                 return JsonResultUtils.getCodeAndMesByString(JsonResultUtils.Code.ERROR.getCode(), "微信未绑定!");
 
             }
             String originId = agentInfo.getWeixinOriginalId();
-
             shopBasic.setAgentId(agentId);
             shopBasic.setDescription(description);
             shopBasic.setOriginId(originId);
