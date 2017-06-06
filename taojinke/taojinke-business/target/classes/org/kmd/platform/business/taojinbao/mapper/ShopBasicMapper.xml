@@ -38,7 +38,7 @@
         WHERE ID=#{id} and AGENTID = #{agentId};
     </update>
 
-    <select id="getShopByAgentId" parameterType="java.lang.long" resultMap="ShopResultMap">
+    <select id="getShopByAgentId" parameterType="java.lang.long" resultMap="ShopBasicResultMap">
         SELECT
         <include refid="shopbasic_fields"/>
         FROM ims_shop_basic WHERE agentId=#{agentId}

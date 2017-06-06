@@ -2,7 +2,6 @@ package org.kmd.platform.business.taojinbao.web;
 
 import org.kmd.platform.business.taojinbao.entity.AgentInfo;
 
-import org.kmd.platform.business.taojinbao.entity.Category;
 import org.kmd.platform.business.taojinbao.entity.ShopBasic;
 import org.kmd.platform.business.taojinbao.service.AgentInfoService;
 import org.kmd.platform.business.taojinbao.service.ShopBasicService;
@@ -19,7 +18,6 @@ import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.MediaType;
-import java.util.List;
 
 /**
  * Created by Administrator on 2017\6\4 0004.
@@ -48,7 +46,7 @@ public class ShopBasicServiceWeb {
 
         }
        // AgentInfo agentInfo = agentInfoService.getAgentInfoByAgentId(agentId);
-        ShopBasic shopBasic = shopBasicService.getShopBasicByAgentId(agentId);
+        ShopBasic shopBasic = shopBasicService.getShopByaId (agentId);
         //ShopBasic shopBasic = new ShopBasic();
         long id = shopBasic.getId();
         if (id != 0) {
