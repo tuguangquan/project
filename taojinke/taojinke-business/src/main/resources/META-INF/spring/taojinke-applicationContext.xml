@@ -31,7 +31,7 @@
     <bean id="goodsSelectService" class="org.kmd.platform.business.taojinbao.service.GoodsSelectService" depends-on="mappers"/>
     <bean id="agentGoodsRuleService" class="org.kmd.platform.business.taojinbao.service.AgentGoodsRuleService" depends-on="mappers"/>
     <bean id="categoryService" class="org.kmd.platform.business.taojinbao.service.CategoryService" depends-on="mappers"/>
-    <bean id="shopBasicService" class="org.kmd.platform.business.taojinbao.service.ShopBasicService" depends-on="mappers"/>
+    <!--<bean id="shopBasicService" class="org.kmd.platform.business.taojinbao.service.ShopBasicService" depends-on="mappers"/>-->
 
     <bean id="weiXinService" class="org.kmd.platform.business.taojinbao.service.WeiXinService" depends-on="mappers"/>
     <bean id="newsRespProcess" class="org.kmd.platform.business.taojinbao.servlet.process.impl.NewsRespProcess" depends-on="mappers"/>

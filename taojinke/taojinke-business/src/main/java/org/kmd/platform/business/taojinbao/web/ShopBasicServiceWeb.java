@@ -22,7 +22,7 @@ import javax.ws.rs.core.MediaType;
 /**
  * Created by Administrator on 2017\6\4 0004.
  */
-@Component
+//@Component
 @Path("/shopBasic")
 public class ShopBasicServiceWeb {
     private static PlatformLogger logger = PlatformLogger.getLogger(GoodsServiceWeb.class);
