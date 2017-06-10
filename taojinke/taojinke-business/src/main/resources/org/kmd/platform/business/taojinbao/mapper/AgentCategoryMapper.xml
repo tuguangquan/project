@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.kmd.platform.business.taojinbao.mapper.AgentCategoryMapper">
+    <sql id="agentCategory_fields">
+        ID,AGENTID,categoryId
+    </sql>
+
+    <resultMap id="AgentCategoryResultMap" type="AgentCategory">
+        <id property="id" column="ID"/>
+        <result property="agentId" column="AGENTID"/>
+        <result property="categoryId" column="categoryId"/>
+    </resultMap>
+
+    <insert id="add" parameterType="AgentCategory"  keyProperty="id"
+            useGeneratedKeys="true">
+        INSERT INTO
+        ims_tbk_agent_category(
+           agentId,categoryId
+        )
+        VALUES (#{agentId},#{categoryId});
+        <selectKey resultType="long" keyProperty="id">
+            select
+            LAST_INSERT_ID() as id
+        </selectKey>
+    </insert>
+
+    <select id="getByAgentId"  parameterType="java.lang.Long" resultMap="AgentCategoryResultMap">
+        SELECT
+        <include refid="agentCategory_fields"/>
+        FROM ims_tbk_agent_category WHERE AGENTID = #{agentId}
+    </select>
+
+
+</mapper>

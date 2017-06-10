@@ -40,11 +40,98 @@ public class GoodsServiceWeb {
     @Autowired
     private UserService userService;
 
+//    @Produces( MediaType.APPLICATION_JSON + ";charset=UTF-8")
+//    @Path("/findByCondition")
+//    @POST
+//    public String findByCondition(@Context HttpServletRequest request,@FormParam("cateId") String cateId,@FormParam("topRate") String topRate,@FormParam("lowerRate") String lowerRate,
+//                                  @FormParam("topPrice") String topPrice,@FormParam("lowerPrice") String lowerPrice,@FormParam("goodsName") String goodsName,@FormParam("pageSize") String pageSize,@FormParam("pageIndex") String pageIndex){
+//        int index=0;
+//        int size = 10;
+//        if (pageSize!=null && !pageSize.trim().equals("")){
+//            try{
+//                size = Integer.parseInt(pageSize);
+//            }catch (Exception e){
+//                return JsonResultUtils.getCodeAndMesByString(JsonResultUtils.Code.ERROR.getCode(), "参数不合法!");
+//            }
+//
+//        }
+//        if (pageIndex!=null && !pageIndex.trim().equals("")){
+//            try{
+//                index = Integer.parseInt(pageIndex)*size;
+//            }catch (Exception e){
+//                return JsonResultUtils.getCodeAndMesByString(JsonResultUtils.Code.ERROR.getCode(), "参数不合法!");
+//            }
+//
+//        }
+//        List<Goods> goodsList = goodsService.findByCondition(topRate,lowerRate,topPrice,lowerPrice,goodsName,index,size);
+//        return JsonResultUtils.getObjectResultByStringAsDefault(goodsList, JsonResultUtils.Code.SUCCESS);
+//    }
+//
+//    @Produces( MediaType.APPLICATION_JSON + ";charset=UTF-8")
+//    @Path("/goodsSelect")
+//    @POST
+//    public String goodsSelect(@Context HttpServletRequest request,@FormParam("cateId") String cateId,@FormParam("goodsId") String goodsId){
+//        if(cateId==null ||cateId.trim().equals("")||goodsId==null ||goodsId.trim().equals("")){
+//            return JsonResultUtils.getCodeAndMesByString(JsonResultUtils.Code.ERROR.getCode(), "参数不能为空!");
+//        }
+//        long agentId = userService.getCurrentAgentId(request);
+//        long userId = userService.getCurrentUserId(request);
+//        if(agentId==0|| userId==0){
+//            return JsonResultUtils.getCodeAndMesByString(JsonResultUtils.Code.ERROR.getCode(), "请重新登录!");
+//        }
+//        GoodsSelect goodsSelect = new GoodsSelect();
+//        goodsSelect.setUserId(userId);
+//        goodsSelect.setAgentId(agentId);
+//        goodsSelect.setCate_id(Integer.parseInt(cateId));
+//        goodsSelect.setGoods_id(goodsId);
+//        goodsSelectService.add(goodsSelect);
+//        return JsonResultUtils.getCodeAndMesByString(JsonResultUtils.Code.SUCCESS.getCode(), "添加成功!");
+//    }
+//
+//    @Produces( MediaType.APPLICATION_JSON + ";charset=UTF-8")
+//    @Path("/goodsRemove")
+//    @POST
+//    public String goodsRemove(@Context HttpServletRequest request,@FormParam("goodsId") String goodsId){
+//        long agentId = userService.getCurrentAgentId(request);
+//        long userId = userService.getCurrentUserId(request);
+//        if(agentId==0|| userId==0){
+//            return JsonResultUtils.getCodeAndMesByString(JsonResultUtils.Code.ERROR.getCode(), "请重新登录!");
+//        }
+//        GoodsSelect goodsSelect = new GoodsSelect();
+//        goodsSelect.setGoods_id(goodsId);
+//        goodsSelect.setAgentId(agentId);
+//        goodsSelect.setUserId(userId);
+//        int deleteId = goodsSelectService.delete(goodsSelect);
+//        if (deleteId>0){
+//            return JsonResultUtils.getCodeAndMesByString(JsonResultUtils.Code.SUCCESS.getCode(), "移除选品库成功!");
+//        }
+//        return JsonResultUtils.getCodeAndMesByString(JsonResultUtils.Code.ERROR.getCode(), "当前网络不稳定，请稍后再试!");
+//    }
+
     @Produces( MediaType.APPLICATION_JSON + ";charset=UTF-8")
-    @Path("/findByCondition")
+    @Path("/getAppGoods")
     @POST
-    public String findByCondition(@Context HttpServletRequest request,@FormParam("cateId") String cateId,@FormParam("topRate") String topRate,@FormParam("lowerRate") String lowerRate,
-                                  @FormParam("topPrice") String topPrice,@FormParam("lowerPrice") String lowerPrice,@FormParam("goodsName") String goodsName,@FormParam("pageSize") String pageSize,@FormParam("pageIndex") String pageIndex){
+    public String getAppGoods(@FormParam("categoryId") String categoryId){
+        if(categoryId==null ||categoryId.trim().equals("")){
+            return JsonResultUtils.getCodeAndMesByString(JsonResultUtils.Code.ERROR.getCode(), "参数不能为空!");
+        }
+        int cid;
+        try{
+            cid = Integer.parseInt(categoryId);
+        }catch (Exception e){
+            return JsonResultUtils.getCodeAndMesByString(JsonResultUtils.Code.ERROR.getCode(), "参数不合法!");
+        }
+        List<Goods> goodsList = goodsService.getByCategoryId(cid);
+        return JsonResultUtils.getObjectResultByStringAsDefault(goodsList, JsonResultUtils.Code.SUCCESS);
+    }
+
+
+
+
+    @Produces( MediaType.APPLICATION_JSON + ";charset=UTF-8")
+    @Path("/getLastGoods")
+    @POST
+    public String getLastGoods(@FormParam("pageIndex") String pageIndex,@FormParam("pageSize") String pageSize){
         int index=0;
         int size = 10;
         if (pageSize!=null && !pageSize.trim().equals("")){
@@ -53,7 +140,6 @@ public class GoodsServiceWeb {
             }catch (Exception e){
                 return JsonResultUtils.getCodeAndMesByString(JsonResultUtils.Code.ERROR.getCode(), "参数不合法!");
             }
-
         }
         if (pageIndex!=null && !pageIndex.trim().equals("")){
             try{
@@ -63,52 +149,7 @@ public class GoodsServiceWeb {
             }
 
         }
-        List<Goods> goodsList = goodsService.findByCondition(topRate,lowerRate,topPrice,lowerPrice,goodsName,index,size);
+        List<Goods> goodsList = goodsService.getLastGoods(index,size);
         return JsonResultUtils.getObjectResultByStringAsDefault(goodsList, JsonResultUtils.Code.SUCCESS);
-    }
-
-    @Produces( MediaType.APPLICATION_JSON + ";charset=UTF-8")
-    @Path("/goodsSelect")
-    @POST
-    public String goodsSelect(@Context HttpServletRequest request,@FormParam("cateId") String cateId,@FormParam("goodsId") String goodsId){
-        if(cateId==null ||cateId.trim().equals("")||goodsId==null ||goodsId.trim().equals("")){
-            return JsonResultUtils.getCodeAndMesByString(JsonResultUtils.Code.ERROR.getCode(), "参数不能为空!");
-        }
-        long agentId = userService.getCurrentAgentId(request);
-        long userId = userService.getCurrentUserId(request);
-        if(agentId==0|| userId==0){
-            return JsonResultUtils.getCodeAndMesByString(JsonResultUtils.Code.ERROR.getCode(), "请重新登录!");
-        }
-        GoodsSelect goodsSelect = new GoodsSelect();
-        goodsSelect.setUserId(userId);
-        goodsSelect.setAgentId(agentId);
-        goodsSelect.setCate_id(Integer.parseInt(cateId));
-        goodsSelect.setGoods_id(goodsId);
-        goodsSelectService.add(goodsSelect);
-        return JsonResultUtils.getCodeAndMesByString(JsonResultUtils.Code.SUCCESS.getCode(), "添加成功!");
-    }
-
-    @Produces( MediaType.APPLICATION_JSON + ";charset=UTF-8")
-    @Path("/goodsRemove")
-    @POST
-    public String goodsRemove(@Context HttpServletRequest request,@FormParam("goodsId") String goodsId){
-        long agentId = userService.getCurrentAgentId(request);
-        long userId = userService.getCurrentUserId(request);
-        if(agentId==0|| userId==0){
-            return JsonResultUtils.getCodeAndMesByString(JsonResultUtils.Code.ERROR.getCode(), "请重新登录!");
-        }
-        GoodsSelect goodsSelect = new GoodsSelect();
-        goodsSelect.setGoods_id(goodsId);
-        goodsSelect.setAgentId(agentId);
-        goodsSelect.setUserId(userId);
-        int deleteId = goodsSelectService.delete(goodsSelect);
-        if (deleteId>0){
-            return JsonResultUtils.getCodeAndMesByString(JsonResultUtils.Code.SUCCESS.getCode(), "移除选品库成功!");
-        }
-        return JsonResultUtils.getCodeAndMesByString(JsonResultUtils.Code.ERROR.getCode(), "当前网络不稳定，请稍后再试!");
-    }
-
-    public static void main(String[] args) {
-
     }
 }

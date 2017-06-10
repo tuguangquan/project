@@ -41,6 +41,4 @@ public class TemplateParam {
         this.color = color;
     }
 
-
-
 }

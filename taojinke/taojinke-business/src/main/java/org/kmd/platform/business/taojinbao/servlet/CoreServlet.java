@@ -43,7 +43,7 @@ public class CoreServlet extends HttpServlet{
                if (SignUtil.checkSignature(signature, timestamp, nonce)) {
                         out.print(echostr);
                     }
-             out.close();
+                out.close();
                 out = null;
             }
 

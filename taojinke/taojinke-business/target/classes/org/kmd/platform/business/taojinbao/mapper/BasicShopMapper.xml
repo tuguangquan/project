@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.kmd.platform.business.taojinbao.mapper.BasicShopMapper">
+    <sql id="basicShop_fields">
+        ID,AGENTID,ORIGINID,TITLE,SUBHEAD,DESCRIPTION
+    </sql>
+    <resultMap id="BasicShopResultMap" type="BasicShop">
+        <id property="id" column="ID"/>
+        <result property="agentId" column="AGENTID"/>
+        <result property="originId" column="ORIGINID"/>
+        <result property="title" column="TITLE"/>
+        <result property="subhead" column="SUBHEAD"/>
+        <result property="description" column="DESCRIPTION"/>
+    </resultMap>
+
+    <insert id="add" parameterType="BasicShop"  keyProperty="id"
+            useGeneratedKeys="true">
+        INSERT INTO
+        ims_shop_basic(
+        AGENTID,ORIGINID,TITLE,SUBHEAD,DESCRIPTION
+        )
+        VALUES (#{agentId},#{originId},#{title},#{subhead},#{description})
+        <selectKey resultType="long" keyProperty="id">
+            select
+            LAST_INSERT_ID() as id
+        </selectKey>
+    </insert>
+
+    <update id="update" parameterType="BasicShop">
+        UPDATE ims_shop_basic
+        <set>
+            <if test="title != null">TITLE=#{title},</if>
+            <if test="subhead != null">SUBHEAD=#{subhead},</if>
+            <if test="description != null">DESCRIPTION=#{description}</if>
+        </set>
+        WHERE ID=#{id} and AGENTID = #{agentId};
+    </update>
+
+    <select id="getShopByAgentId" parameterType="java.lang.Long"  resultMap="BasicShopResultMap">
+        SELECT
+        ID,AGENTID,ORIGINID,TITLE,SUBHEAD,DESCRIPTION
+        FROM ims_shop_basic WHERE agentId=#{agentId}
+    </select>
+
+</mapper>

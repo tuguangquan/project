@@ -4,48 +4,85 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="org.kmd.platform.business.taojinbao.mapper.GoodsMapper">
     <sql id="goods_fields">
-		id,goods_id,goods_name,goods_picture,goods_detail_url,shop_name,goods_price,goods_sells,earn_rate,commission_rate,sellers_WANGWANG,taobaoke_short_url,taobaoke_url,tao_kou_ling,discount_coupon,discount_coupon_account,discount_coupondenomination,discount_coupon_start_time,discount_couponend_time,discount_coupon_url,discount_coupon_tao_kou_ling,discount_coupon_short_url,is_maketing_plan,cate_id
+		id,uniacid,displayorder,status,istmall,cate_id,itemid,title,d_title,wenan,itempic,shoptitle,itemfee,itemfee2,itemmsell,itemstatus,stime,etime,itemsdsr,itemsurl,itemurl,itemtkl,itemyhj_sid,itemyhj_id,itemyhj_fee,itemyhj_zl,itemyhj_yl,itemyhj_re,itemyhj_tit,itemyhj_stime,itemyhj_etime,itemyhj_url,itemyhj_tkl,link_jihua,com_jihua,com_queqiao,atime,hit,share,fav,quan_link,isdx,fm,shouru_bili,shouru_yongjin,quan_id,maijia_id,tktype,istop,isms,msnum,iszh,iswxqf,islive,islivetj,isvideo,videourl,livetime,isyz
 	</sql>
 
     <resultMap id="goodsResultMap" type="Goods">
-        <id property="id" column="ID"/>
-        <result property="goods_id" column="GOODS_ID"/>
-        <result property="goods_name" column="GOODS_NAME"/>
-        <result property="goods_picture" column="GOODS_PICTURE"/>
-        <result property="goods_detail_url" column="GOODS_DETAIL_URL"/>
-        <result property="shop_name" column="SHOP_NAME"/>
-        <result property="goods_price" column="GOODS_PRICE"/>
-        <result property="goods_sells" column="GOODS_SELLS"/>
-        <result property="earn_rate" column="EARN_RATE"/>
-        <result property="commission_rate" column="COMMISSION_RATE"/>
-        <result property="sellers_WANGWANG" column="SELLERS_WANGWANG"/>
-        <result property="taobaoke_short_url" column="TAOBAOKE_SHORT_URL"/>
-        <result property="taobaoke_url" column="TAOBAOKE_URL"/>
-        <result property="tao_kou_ling" column="TAO_KOU_LING"/>
-        <result property="discount_coupon" column="DISCOUNT_COUPON"/>
-        <result property="discount_coupon_account" column="DISCOUNT_COUPON_ACCOUNT"/>
-        <result property="discount_coupondenomination" column="DISCOUNT_COUPONDENOMINATION"/>
-        <result property="discount_coupon_start_time" column="DISCOUNT_COUPON_START_TIME"/>
-        <result property="discount_couponend_time" column="DISCOUNT_COUPONEND_TIME"/>
-        <result property="discount_coupon_url" column="DISCOUNT_COUPON_URL"/>
-        <result property="discount_coupon_tao_kou_ling" column="DISCOUNT_COUPON_TAO_KOU_LING"/>
-        <result property="discount_coupon_short_url" column="DISCOUNT_COUPON_SHORT_URL"/>
-        <result property="is_maketing_plan" column="IS_MACKETING_PLAN"/>
-        <result property="cate_id" column="CATE_ID"/>
-
+        <id property="id" column="id"/>
+        <result property="uniacid" column="uniacid"/>
+        <result property="displayorder" column="displayorder"/>
+        <result property="status" column="status"/>
+        <result property="istmall" column="istmall"/>
+        <result property="cate_id" column="cate_id"/>
+        <result property="itemid" column="itemid"/>
+        <result property="title" column="title"/>
+        <result property="d_title" column="d_title"/>
+        <result property="wenan" column="wenan"/>
+        <result property="itempic" column="itempic"/>
+        <result property="shoptitle" column="shoptitle"/>
+        <result property="itemfee" column="itemfee"/>
+        <result property="itemfee2" column="itemfee2"/>
+        <result property="itemmsell" column="itemmsell"/>
+        <result property="itemstatus" column="itemstatus"/>
+        <result property="stime" column="stime"/>
+        <result property="etime" column="etime"/>
+        <result property="itemsdsr" column="itemsdsr"/>
+        <result property="itemsurl" column="itemsurl"/>
+        <result property="itemurl" column="itemurl"/>
+        <result property="itemtkl" column="itemtkl"/>
+        <result property="itemyhj_sid" column="itemyhj_sid"/>
+        <result property="itemyhj_id" column="itemyhj_id"/>
+        <result property="itemyhj_fee" column="itemyhj_fee"/>
+        <result property="itemyhj_zl" column="itemyhj_zl"/>
+        <result property="itemyhj_yl" column="itemyhj_yl"/>
+        <result property="itemyhj_re" column="itemyhj_re"/>
+        <result property="itemyhj_tit" column="itemyhj_tit"/>
+        <result property="itemyhj_stime" column="itemyhj_stime"/>
+        <result property="itemyhj_etime" column="itemyhj_etime"/>
+        <result property="itemyhj_url" column="itemyhj_url"/>
+        <result property="itemyhj_tkl" column="itemyhj_tkl"/>
+        <result property="link_jihua" column="link_jihua"/>
+        <result property="com_jihua" column="com_jihua"/>
+        <result property="com_queqiao" column="com_queqiao"/>
+        <result property="atime" column="atime"/>
+        <result property="hit" column="hit"/>
+        <result property="share" column="share"/>
+        <result property="fav" column="fav"/>
+        <result property="quan_link" column="quan_link"/>
+        <result property="isdx" column="isdx"/>
+        <result property="fm" column="fm"/>
+        <result property="shouru_bili" column="shouru_bili"/>
+        <result property="shouru_yongjin" column="shouru_yongjin"/>
+        <result property="quan_id" column="quan_id"/>
+        <result property="maijia_id" column="maijia_id"/>
+        <result property="tktype" column="tktype"/>
+        <result property="istop" column="istop"/>
+        <result property="isms" column="isms"/>
+        <result property="msnum" column="msnum"/>
+        <result property="iszh" column="iszh"/>
+        <result property="iswxqf" column="iswxqf"/>
+        <result property="islive" column="islive"/>
+        <result property="islivetj" column="islivetj"/>
+        <result property="isvideo" column="isvideo"/>
+        <result property="videourl" column="videourl"/>
+        <result property="livetime" column="livetime"/>
+        <result property="isyz" column="isyz"/>
     </resultMap>
 
     <insert id="add" parameterType="Goods" keyProperty="id"
             useGeneratedKeys="true">
         INSERT INTO
-        ims_goods_taobao(
+        ims_bsht_tbk_all_item(
         <include refid="goods_fields" />
         )
-        VALUES (#{id},#{goods_id},#{goods_name},#{goods_picture},#{goods_detail_url},#{shop_name},
-        #{goods_price},#{goods_sells},#{earn_rate},#{commission_rate},#{sellers_WANGWANG},#{taobaoke_short_url},
-        #{taobaoke_url},#{tao_kou_ling},#{discount_coupon},#{discount_coupon_account},#{discount_coupondenomination},
-        #{discount_coupon_start_time},#{discount_couponend_time},#{discount_coupon_url},#{discount_coupon_tao_kou_ling},
-        #{discount_coupon_short_url},#{is_maketing_plan},#{cate_id});
+        VALUES (#{id},#{uniacid},#{displayorder},#{status},#{istmall},#{cate_id},#{itemid},#{title},
+        #{d_title},#{wenan},#{itempic},#{shoptitle},#{itemfee},#{itemfee2},#{itemmsell},#{itemstatus},
+        #{stime},#{etime},#{itemsdsr},#{itemsurl},#{itemurl},#{itemtkl},#{itemyhj_sid},#{itemyhj_id},
+        #{itemyhj_fee},#{itemyhj_zl},#{itemyhj_yl},#{itemyhj_re},#{itemyhj_tit},#{itemyhj_stime},
+        #{itemyhj_etime},#{itemyhj_url},#{itemyhj_tkl},#{link_jihua},#{com_jihua},#{com_queqiao},#{atime},
+        #{hit},#{share},#{fav},#{quan_link},#{isdx},#{fm},#{shouru_bili},#{shouru_yongjin},#{quan_id},
+        #{maijia_id},#{tktype},#{istop},#{isms},#{msnum},#{iszh},#{iswxqf},#{islive},#{islivetj},#{isvideo},
+        #{videourl},#{livetime},#{isyz});
         <selectKey resultType="long" keyProperty="id">
             select
             LAST_INSERT_ID() as id
@@ -55,7 +92,7 @@
     <select id="findByCondition" parameterType="map" resultMap="goodsResultMap">
         SELECT
         <include refid="goods_fields"/>
-        FROM ims_goods_taobao
+        FROM ims_bsht_tbk_all_item
         where 1 = 1
         <if test="top_rate!=null">
             AND commission_rate <![CDATA[<=]]> #{top_rate}
@@ -76,8 +113,18 @@
              AND goods_name like CONCAT('%',#{goods_name},'%')
          </if>
         limit  #{index},#{size}
+    </select>
 
+    <select id="getByCategoryId" parameterType="java.lang.Integer" resultMap="goodsResultMap">
+        SELECT
+        <include refid="goods_fields"/>
+        FROM ims_bsht_tbk_all_item WHERE cate_id=#{categoryId}
+    </select>
 
+    <select id="getLastGoods"  parameterType="map"  resultMap="goodsResultMap">
+        SELECT
+        <include refid="goods_fields"/>
+        FROM ims_bsht_tbk_all_item order by id desc limit #{index},#{size}
     </select>
 
 

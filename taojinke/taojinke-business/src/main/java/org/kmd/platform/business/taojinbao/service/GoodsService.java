@@ -30,6 +30,19 @@ public class GoodsService {
         return mapper.delete(goods);
     }
 
+    public List<Goods> getByCategoryId(int categoryId){
+        return mapper.getByCategoryId(categoryId);
+    }
+
+
+    public List<Goods> getLastGoods(int index,int size){
+        HashMap<String, Object> map = new HashMap<String, Object>();
+        map.put("index",index);
+        map.put("size",size);
+        return mapper.getLastGoods(map);
+    }
+
+
     public List<Goods> findByCondition(String top_rate,String lower_rate,String top_price,String lower_price,String goods_name,int index,int size){
         HashMap<String, Object> map = new HashMap<String, Object>();
        if (top_rate.equals("")){

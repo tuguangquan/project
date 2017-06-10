@@ -16,7 +16,7 @@ $(document).ready(function(){
 
 //功能函数
 function doLogin(){	
-	$.post("http://api.tototo.cc/kmd/rs/user/login",{
+	$.post("http://123.207.77.16/kmd/rs/user/login",{
 		name:$("#emailaccount").val(),
 		password:$("#password1").val(),
 		safeCode:$("#password2").val()

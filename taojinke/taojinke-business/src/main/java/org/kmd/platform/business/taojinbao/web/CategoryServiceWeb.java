@@ -35,61 +35,40 @@ public class CategoryServiceWeb {
     @Autowired
     private UserService userService;
 
-    @Produces( MediaType.APPLICATION_JSON + ";charset=UTF-8")
-    @Path("/add")
-    @POST
-    public String add(@Context HttpServletRequest request,@FormParam("name") String name,@FormParam("description") String description,@FormParam("status") String status,
-                                  @FormParam("display") String display){
-        long agentId = userService.getCurrentAgentId(request);
-        if(agentId==0){
-            return JsonResultUtils.getCodeAndMesByString(JsonResultUtils.Code.ERROR.getCode(), "请重新登录!");
-        }
-        Category category = new Category();
-        try {
-            category.setDescription(description);
-            category.setStatus(Integer.parseInt(status));
-            category.setDisplay(Integer.parseInt(display));
-            category.setName(name);
-            categoryService.add(category);
-        }catch (Exception e){
-            logger.error("提供的参数不合法",e);
-            return JsonResultUtils.getCodeAndMesByString(JsonResultUtils.Code.ERROR.getCode(), "参数不合法!");
-        }
-        return JsonResultUtils.getObjectResultByStringAsDefault(null, JsonResultUtils.Code.SUCCESS);
-    }
 
-    @Produces( MediaType.APPLICATION_JSON + ";charset=UTF-8")
-    @Path("/update")
-    @POST
-    public String update(@Context HttpServletRequest request,@FormParam("id") String id,@FormParam("name") String name,@FormParam("description") String description,@FormParam("status") String status,
-                      @FormParam("display") String display){
-        long agentId = userService.getCurrentAgentId(request);
-        if(agentId==0){
-            return JsonResultUtils.getCodeAndMesByString(JsonResultUtils.Code.ERROR.getCode(), "请重新登录!");
-        }
-        Category category = new Category();
-        try {
-            category.setId(Long.parseLong(id));
-            category.setAgentId(agentId);
-            if (name!=null && !name.trim().equals("")){
-                category.setName(name);
-            }
-            if (description!=null && !description.trim().equals("")){
-                category.setDescription(description);
-            }
-            if (status!=null && !status.trim().equals("")){
-                category.setStatus(Integer.parseInt(status));
-            }
-            if (display!=null && !display.trim().equals("")){
-                category.setDisplay(Integer.parseInt(display));
-            }
-        }catch (Exception e){
-            logger.error("提供的参数不合法",e);
-            return JsonResultUtils.getCodeAndMesByString(JsonResultUtils.Code.ERROR.getCode(), "参数不合法!");
-        }
-        categoryService.update(category);
-        return JsonResultUtils.getObjectResultByStringAsDefault(null, JsonResultUtils.Code.SUCCESS);
-    }
+
+//    @Produces( MediaType.APPLICATION_JSON + ";charset=UTF-8")
+//    @Path("/update")
+//    @POST
+//    public String update(@Context HttpServletRequest request,@FormParam("id") String id,@FormParam("name") String name,@FormParam("description") String description,@FormParam("status") String status,
+//                      @FormParam("display") String display){
+//        long agentId = userService.getCurrentAgentId(request);
+//        if(agentId==0){
+//            return JsonResultUtils.getCodeAndMesByString(JsonResultUtils.Code.ERROR.getCode(), "请重新登录!");
+//        }
+//        Category category = new Category();
+//        try {
+//            category.setId(Long.parseLong(id));
+//            category.setAgentId(agentId);
+//            if (name!=null && !name.trim().equals("")){
+//                category.setName(name);
+//            }
+//            if (description!=null && !description.trim().equals("")){
+//                category.setDescription(description);
+//            }
+//            if (status!=null && !status.trim().equals("")){
+//                category.setStatus(Integer.parseInt(status));
+//            }
+//            if (display!=null && !display.trim().equals("")){
+//                category.setDisplay(Integer.parseInt(display));
+//            }
+//        }catch (Exception e){
+//            logger.error("提供的参数不合法",e);
+//            return JsonResultUtils.getCodeAndMesByString(JsonResultUtils.Code.ERROR.getCode(), "参数不合法!");
+//        }
+//        categoryService.update(category);
+//        return JsonResultUtils.getObjectResultByStringAsDefault(null, JsonResultUtils.Code.SUCCESS);
+//    }
 
     @Produces( MediaType.APPLICATION_JSON + ";charset=UTF-8")
     @Path("/get")
@@ -104,49 +83,61 @@ public class CategoryServiceWeb {
     }
 
     @Produces( MediaType.APPLICATION_JSON + ";charset=UTF-8")
-    @Path("/delete")
+    @Path("/getAppCategory")
     @POST
-    public String delete(@Context HttpServletRequest request,@FormParam("id") String id){
-        if(id==null ||id.trim().equals("")){
-            return JsonResultUtils.getCodeAndMesByString(JsonResultUtils.Code.ERROR.getCode(), "参数不能为空!");
-        }
+    public String getAppCategory(@Context HttpServletRequest request){
         long agentId = userService.getCurrentAgentId(request);
         if(agentId==0){
             return JsonResultUtils.getCodeAndMesByString(JsonResultUtils.Code.ERROR.getCode(), "请重新登录!");
         }
-        Category category = new Category();
-        category.setId(Long.parseLong(id));
-        category.setAgentId(agentId);
-        int result = categoryService.delete(category);
-        if (result >0){
-            return JsonResultUtils.getCodeAndMesByString(JsonResultUtils.Code.SUCCESS.getCode(), "删除成功!");
-        }else{
-            return JsonResultUtils.getCodeAndMesByString(JsonResultUtils.Code.ERROR.getCode(), "删除失败!");
-        }
+        List<Category> categories = categoryService.getByAgentId(agentId);
+        return JsonResultUtils.getObjectResultByStringAsDefault(categories, JsonResultUtils.Code.SUCCESS);
     }
 
-    //上传用户图片
-    @Produces( MediaType.APPLICATION_JSON + ";charset=UTF-8")
-    @Path("/uploadImage")
-    @POST
-    public String uploadImage(@Context HttpServletRequest request){
-        if(request==null){
-            return JsonResultUtils.getCodeAndMesByStringAsDefault(JsonResultUtils.Code.ERROR);
-        }
-        MultipartResolver resolver = new CommonsMultipartResolver(request.getSession().getServletContext());
-        MultipartHttpServletRequest multipartRequest = resolver.resolveMultipart(request);
-        MultipartFile file = multipartRequest.getFile("filename");
-        String filename = file.getOriginalFilename();
-        String[] temp = filename.split("\\.");
-        String suffix = temp[temp.length-1];
-
-        //获得用户图片路径
-        String userImgRootPath =  FundamentalConfigProvider.get("uploadImage.img.root.path") ;
-        String userImgRelativePath =  FundamentalConfigProvider.get("uploadImage.img.relative.path") ;
-        String userId = multipartRequest.getParameter("userId");
-        if(userId==null||userId.equals("")){
-            return JsonResultUtils.getCodeAndMesByString(JsonResultUtils.Code.ERROR.getCode(),"用户编号不能为空！");
-        }
+//    @Produces( MediaType.APPLICATION_JSON + ";charset=UTF-8")
+//    @Path("/delete")
+//    @POST
+//    public String delete(@Context HttpServletRequest request,@FormParam("id") String id){
+//        if(id==null ||id.trim().equals("")){
+//            return JsonResultUtils.getCodeAndMesByString(JsonResultUtils.Code.ERROR.getCode(), "参数不能为空!");
+//        }
+//        long agentId = userService.getCurrentAgentId(request);
+//        if(agentId==0){
+//            return JsonResultUtils.getCodeAndMesByString(JsonResultUtils.Code.ERROR.getCode(), "请重新登录!");
+//        }
+//        Category category = new Category();
+//        category.setId(Long.parseLong(id));
+//        //category.setAgentId(agentId);
+//        int result = categoryService.delete(category);
+//        if (result >0){
+//            return JsonResultUtils.getCodeAndMesByString(JsonResultUtils.Code.SUCCESS.getCode(), "删除成功!");
+//        }else{
+//            return JsonResultUtils.getCodeAndMesByString(JsonResultUtils.Code.ERROR.getCode(), "删除失败!");
+//        }
+//    }
+//
+//    //上传用户图片
+//    @Produces( MediaType.APPLICATION_JSON + ";charset=UTF-8")
+//    @Path("/uploadImage")
+//    @POST
+//    public String uploadImage(@Context HttpServletRequest request){
+//        if(request==null){
+//            return JsonResultUtils.getCodeAndMesByStringAsDefault(JsonResultUtils.Code.ERROR);
+//        }
+//        MultipartResolver resolver = new CommonsMultipartResolver(request.getSession().getServletContext());
+//        MultipartHttpServletRequest multipartRequest = resolver.resolveMultipart(request);
+//        MultipartFile file = multipartRequest.getFile("filename");
+//        String filename = file.getOriginalFilename();
+//        String[] temp = filename.split("\\.");
+//        String suffix = temp[temp.length-1];
+//
+//        //获得用户图片路径
+//        String userImgRootPath =  FundamentalConfigProvider.get("uploadImage.img.root.path") ;
+//        String userImgRelativePath =  FundamentalConfigProvider.get("uploadImage.img.relative.path") ;
+//        String userId = multipartRequest.getParameter("userId");
+//        if(userId==null||userId.equals("")){
+//            return JsonResultUtils.getCodeAndMesByString(JsonResultUtils.Code.ERROR.getCode(),"用户编号不能为空！");
+//        }
 
 
 //        String userImagePath =  userImgRootPath + userImgRelativePath+"/"+appId+"/"+userName+"."+suffix;
@@ -184,8 +175,8 @@ public class CategoryServiceWeb {
 //        }
 
         // 新增操作时，返回操作状态和状态码给客户端，数据区是为空的
-        return JsonResultUtils.getObjectResultByStringAsDefault(null,JsonResultUtils.Code.SUCCESS);
-    }
+      //  return JsonResultUtils.getObjectResultByStringAsDefault(null,JsonResultUtils.Code.SUCCESS);
+   // }
 
 
 }

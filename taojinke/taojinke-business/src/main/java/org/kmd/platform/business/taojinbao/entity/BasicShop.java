@@ -3,7 +3,7 @@ package org.kmd.platform.business.taojinbao.entity;
 /**
  * Created by Administrator on 2017\6\4 0004.
  */
-public class ShopBasic {
+public class BasicShop {
     private long id;
     private long agentId;
     private String originId;

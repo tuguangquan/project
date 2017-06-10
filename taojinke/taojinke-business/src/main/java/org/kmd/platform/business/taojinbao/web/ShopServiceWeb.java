@@ -2,12 +2,10 @@ package org.kmd.platform.business.taojinbao.web;
 
 import org.kmd.platform.business.taojinbao.dto.ShopExtend;
 import org.kmd.platform.business.taojinbao.entity.AgentInfo;
+import org.kmd.platform.business.taojinbao.entity.Order;
 import org.kmd.platform.business.taojinbao.entity.Poster;
 import org.kmd.platform.business.taojinbao.entity.Shop;
-import org.kmd.platform.business.taojinbao.service.AgentInfoService;
-import org.kmd.platform.business.taojinbao.service.PosterService;
-import org.kmd.platform.business.taojinbao.service.ShopService;
-import org.kmd.platform.business.taojinbao.service.WeiXinService;
+import org.kmd.platform.business.taojinbao.service.*;
 import org.kmd.platform.business.taojinbao.util.AccessToken;
 import org.kmd.platform.business.taojinbao.util.ShopEunm;
 import org.kmd.platform.business.user.service.UserService;
@@ -47,6 +45,9 @@ public class ShopServiceWeb {
     private WeiXinService weixinService;
     @Autowired
     private AgentInfoService agentInfoService;
+
+    @Autowired
+    private OrderService orderService;
 
 
     @Path("/add")

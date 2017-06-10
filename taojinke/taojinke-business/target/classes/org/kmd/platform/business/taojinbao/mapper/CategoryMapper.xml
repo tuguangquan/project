@@ -4,53 +4,40 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="org.kmd.platform.business.taojinbao.mapper.CategoryMapper">
     <sql id="category_fields">
-        ID,AGENTID,NAME,IMAGE,DESCRIPTION,STATUS,DISPLAY
+       id,uniacid,cid,bid,hid,hid2,hid3,tid,tid2,tid3,tid4,name,pic,displayorder,status,isindex,isgy,istopstatus,topurl,toppic,toptxt,toptags
     </sql>
 
     <resultMap id="CategoryResultMap" type="Category">
-        <id property="id" column="ID"/>
-        <result property="agentId" column="AGENTID"/>
-        <result property="name" column="NAME"/>
-        <result property="image" column="IMAGE"/>
-        <result property="description" column="DESCRIPTION"/>
-        <result property="status" column="STATUS"/>
-        <result property="display" column="DISPLAY"/>
+        <id property="id" column="id"/>
+        <result property="uniacid" column="uniacid"/>
+        <result property="cid" column="cid"/>
+        <result property="bid" column="bid"/>
+        <result property="hid" column="hid"/>
+        <result property="hid2" column="hid2"/>
+        <result property="hid3" column="hid3"/>
+        <result property="tid" column="tid"/>
+        <result property="tid2" column="tid2"/>
+        <result property="tid3" column="tid3"/>
+        <result property="tid4" column="tid4"/>
+        <result property="name" column="name"/>
+        <result property="pic" column="pic"/>
+        <result property="displayorder" column="displayorder"/>
+        <result property="status" column="status"/>
+        <result property="isindex" column="isindex"/>
+        <result property="isgy" column="isgy"/>
+        <result property="istopstatus" column="istopstatus"/>
+        <result property="topurl" column="topurl"/>
+        <result property="toppic" column="toppic"/>
+        <result property="toptxt" column="toptxt"/>
+        <result property="toptags" column="toptags"/>
     </resultMap>
 
-    <insert id="add" parameterType="Category"  keyProperty="id"
-            useGeneratedKeys="true">
-        INSERT INTO
-        ims_goods_category(
-        AGENTID,NAME,IMAGE,DESCRIPTION,STATUS,DISPLAY
-        )
-        VALUES (#{agentId},#{name},#{image},#{description},#{status},#{display})
-        <selectKey resultType="long" keyProperty="id">
-            select
-            LAST_INSERT_ID() as id
-        </selectKey>
-    </insert>
 
-    <update id="update" parameterType="Category">
-        UPDATE ims_goods_category
-        <set>
-            <if test="name != null">NAME=#{name},</if>
-            <if test="image != null">IMAGE=#{image},</if>
-            <if test="description != null">DESCRIPTION=#{description},</if>
-            <if test="status != null">STATUS=#{status},</if>
-            <if test="show !=null">DISPLAY=#{display}</if>
-        </set>
-        WHERE ID=#{id} and AGENTID = #{agentId}  ;
-    </update>
-
-    <select id="getByAgentId"  parameterType="java.lang.Long" resultMap="CategoryResultMap">
+    <select id="get"   resultMap="CategoryResultMap">
         SELECT
         <include refid="category_fields"/>
-        FROM ims_goods_category WHERE AGENTID = #{agentId}
+        FROM ims_bsht_tbk_all_cate
     </select>
 
-    <delete id="delete" parameterType="Category">
-        DELETE FROM ims_goods_category
-        WHERE ID=#{id} and AGENTID = #{agentId}
-    </delete>
 
 </mapper>

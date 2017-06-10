@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.kmd.platform.business.taojinbao.mapper.OrderMapper">
+    <sql id="order_fields">
+       id,uniacid,status,shopid,type,itemtitle,itemid,ctime,orderid,etime,orderstatus,orderfee,shouru_bili,shouru_yongjin,pid2,pid3,isjs,isnice
+    </sql>
+    <resultMap id="OrderResultMap" type="Order">
+        <id property="id" column="id"/>
+        <result property="uniacid" column="uniacid"/>
+        <result property="status" column="status"/>
+        <result property="shopid" column="shopid"/>
+        <result property="type" column="type"/>
+        <result property="itemtitle" column="itemtitle"/>
+        <result property="itemid" column="itemid"/>
+        <result property="ctime" column="ctime"/>
+        <result property="orderid" column="orderid"/>
+        <result property="etime" column="etime"/>
+        <result property="orderstatus" column="orderstatus"/>
+        <result property="orderfee" column="orderfee"/>
+        <result property="shouru_bili" column="shouru_bili"/>
+        <result property="shouru_yongjin" column="shouru_yongjin"/>
+        <result property="pid2" column="pid2"/>
+        <result property="pid3" column="pid3"/>
+        <result property="isjs" column="isjs"/>
+        <result property="isnice" column="isnice"/>
+    </resultMap>
+
+    <select id="getShopByPid3" parameterType="java.lang.String"  resultMap="OrderResultMap">
+        SELECT
+        <include refid="order_fields"/>
+        FROM ims_bsht_tbk_order WHERE pid3=#{pid}
+    </select>
+
+    <select id="getByOrderStatus"  parameterType="java.lang.String"  resultMap="goodsResultMap">
+        SELECT
+        <include refid="goods_fields"/>
+        FROM ims_bsht_tbk_order where orderstatus = #{orderStatus}
+    </select>
+
+</mapper>

@@ -62,8 +62,7 @@
         }
     }
     function userInfoCallback (data){
-        $.post("rs/shopBasic/add", {"title":"wanf","subhead":"wqerwetr",
-                    "description":"sdgfsdg"},shopListCallback
+        $.post("rs/basicShop/get",null,shopListCallback
                 ,"JSON");
 
 //        $.post("rs/goods/findByCondition", {"cateId":1,"topRate":null,
@@ -72,6 +71,11 @@
 //                ,"JSON");
     }
     function shopListCallback (data){
+        $.post("rs/basicShop/submit",{"title":"wanftertr","subhead":"wqerasdawetr",
+                    "description":"sdgfsdg"},getCallback
+                ,"JSON");
+    }
+    function getCallback(data){
         alert("123");
 //        $.post("rs/shop/delete",{"openId":"ofngQ06p2jZfiTdd9q7jtGYLACmM"},deleteCallback
 //                ,"JSON");

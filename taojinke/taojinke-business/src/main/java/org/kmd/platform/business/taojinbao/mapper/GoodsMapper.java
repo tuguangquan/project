@@ -15,4 +15,7 @@ import java.util.Map;
  */
 public interface GoodsMapper extends AbstractMapper<Goods> {
     public List<Goods> findByCondition(Map<String,Object> map);
+    public List<Goods> getByCategoryId(int categoryId);
+    public List<Goods> getLastGoods(Map<String,Object> map);
+
 }
